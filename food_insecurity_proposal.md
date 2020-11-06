@@ -1,25 +1,50 @@
-Food Insecuirty in America Proposal
+Food Insecuirty and the SNAP in America Proposal
 ================
 Caroline Andy, Vasili Fokaidis, Stella Li, and Tessa Senders
 11/5/2020
 
-## Food Insecurity in America Proposal
+## Food Insecurity and the SNAP in America
 
 The motivation for this project:
 
 Food insecurity remains a major issue in America with around [38 million
 people nationwide on Supplemental Nutrition Assistance Program (SNAP)
 in 2019](https://www.cbpp.org/research/food-assistance/a-closer-look-at-who-benefits-from-snap-state-by-state-fact-sheets#Alabama).
-This represents about 12% of the total population. We are interested to
-look deeper into the issue of food insecurity in America and the use of
-SNAP to determine what areas and demographics in the US are the most
-affected by food insecurity and what magnitude people suffer from food
-insecurity.
+This represents about 12% of the total population. We are interested in
+looking deeper into the issue of food insecurity in America and the use
+of SNAP to determine what areas and demographics in the US are the most
+affected by food insecurity, by what magnitude people suffer from food
+insecurity, and how has the issue of food insecurity changed over the
+last ten years.
 
 The intended final products:
 
+The final products of this project will include a website and
+visualizations. Within the website, there will be information on the
+analysis of the data set, the findings, the motivation behind the
+project, information on the data set used, and more. Through the use of
+`shinyApp` and `plotly`, we will produce interactive visualizations of
+various variables including demographics, geographical data, and more
+variables regarding food insecurity in America.
+
 The anticipated data sources:
+
+We plan on using the “Map the Meal Gap” data from Feeding America from
+between 2009-2018 in conjunction with corresponding US Census data.
+Specifically, we plan to use US Census data regarding key demographic
+information aligning with our Map the Meal Gap data.
 
 The planned analyses / visualizations / coding challenges:
 
+We plan on analyzing the rate of food insecurity by state. We also plan
+on specifically comparing the issue of food insecurity across New York
+(New York City versus some of the rural counties in the state). We will
+create interactive maps showing the rate of food insecurity in the US
+and in the state of New York.
+
 The planned timeline:
+
+We plan to import and clean all of our data by November 18. After that
+we plan to create all of our summary tables and visualizations by
+November 29. We plan to create our website, screencast, and final report
+by December 3.

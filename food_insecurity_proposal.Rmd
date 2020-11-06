@@ -14,7 +14,7 @@ Food insecurity remains a major issue in America with around [38 million people 
 
 The intended final products:
 
-
+The final products of this project will include a website and visualizations. Within the website, there will be information on the analysis of the data set, the findings, the motivation behind the project, information on the data set used, and more. Through the use of `shinyApp` and `plotly`, we will produce interactive visualizations of various variables including demographics, geographical data, and more variables regarding food insecurity in America.
 
 
 The anticipated data sources:
@@ -24,7 +24,7 @@ We plan on using the "Map the Meal Gap" data from Feeding America from between 2
 
 The planned analyses / visualizations / coding challenges:
 
-We plan on analyzing the rate of food insecurity by state.  We also plan on specifically comparing the issue of food insecurity across New York (New York City versus some of the rural counties in the state).  We will create interactive maps showing the rate of food insecuirty in the US and in the state of New York.
+We plan on analyzing the rate of food insecurity by state.  We also plan on specifically comparing the issue of food insecurity across New York (New York City versus some of the rural counties in the state).  We will create interactive maps showing the rate of food insecurity in the US and in the state of New York.
 
 The planned timeline:
 
