@@ -11,7 +11,7 @@ Food insecurity remains a major issue in America with around [38 million
 people nationwide on Supplemental Nutrition Assistance Program (SNAP)
 in 2019](https://www.cbpp.org/research/food-assistance/a-closer-look-at-who-benefits-from-snap-state-by-state-fact-sheets#Alabama).
 This represents about 12% of the total population. We are interested in
-looking deeper into the issue of food insecurity in America and the use
+looking deeper into the prevalence of food insecurity in America and the use
 of SNAP to determine what areas and demographics in the US are the most
 affected by food insecurity, by what magnitude people suffer from food
 insecurity, and how has the issue of food insecurity changed over the
