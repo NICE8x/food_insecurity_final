@@ -14,7 +14,7 @@ Food insecurity remains a major issue in America with around [38 million people 
 
 The intended final products:
 
-The final product of this project will include a website, scrrencast, and final report about food insecurity in America and specifically the state of New York. Within the website information on the analysis of the data set, the findings, the motivation behind the project, information on the data sets used, summary tables and our interactive plots (including maps) will be provided. Through the use of `shinyApp`, `plotly`, and Flexdashboard, we will produce interactive visualizations of various variables including demographics, geographical data, and other variables regarding food insecurity in America.
+The final product of this project will include a website, screencast, and final report about food insecurity in America and specifically the state of New York. Within the website information on the analysis of the data set, the findings, the motivation behind the project, information on the data sets used, summary tables and our interactive plots (including maps) will be provided. Through the use of `shinyApp`, `plotly`, and Flexdashboard, we will produce interactive visualizations of various variables including demographics, geographical data, and other variables regarding food insecurity in America.
 
 
 The anticipated data sources:
