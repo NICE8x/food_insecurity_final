@@ -7,7 +7,7 @@ UNIs: cma2226, vf2280, cl4043, and ts3349
 
 ## Food Insecurity and the SNAP in America
 
-The motivation for this project:
+The motivation for this project: 
 
 Food insecurity remains a major issue in America with around [38 million
 people nationwide on Supplemental Nutrition Assistance Program (SNAP)
