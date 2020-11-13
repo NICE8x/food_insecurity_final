@@ -1,0 +1,17 @@
+---
+title: "Preparing ACS file"
+output: html_document
+---
+
+```{r load, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(stringr)
+```
+
+```{r read_csv}
+median = read_csv("./ACS_data/ACS_2019_Median_Household_Income.csv") %>%
+  filter(str_detect(GEONAME, "County")) %>%
+  rename("county" = "GEONAME") %>%
+  rename("median_hhold_inc" = "ESTIMATE") %>%
+  select(county, median_hhold_inc)
+```

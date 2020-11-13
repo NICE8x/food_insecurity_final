@@ -34,7 +34,7 @@ other variables regarding food insecurity in America.
 The anticipated data sources:
 
 We plan on using the “Map the Meal Gap” data from Feeding America from
-2009-2018. In addition, we plan to link to American Community Survey US
+2009-2018. In addition, we plan to link to Ameridfsrcan Community Survey US
 Census data on the county and/or state level. Specifically, we plan to
 use geographic summary tables containing breakdowns of relevant social
 determinants of health, including percent of people who are foreign
