@@ -17,19 +17,28 @@ library(readxl)
 Import Map the Meal Gap Data
 
 ```{r import map the meal data}
-path_df = 
+path_1_df = 
 tibble(
-path = list.files("food_insecurity_data"))
+path = list.files("food_insecurity_county1_data"))
 
-path_df = path_df %>%
+path_1_df = path_1_df %>%
   mutate(
-    path = str_c("food_insecurity_data/", path),
+    path = str_c("food_insecurity_county1_data/", path),
     data = map(.x = path, ~read_excel(.x))
 )
 
-for(i in 1:10){
-  
-}
+path_2_df = 
+tibble(
+path = list.files("food_insecurity_county2_data"))
+
+path_2_df = path_2_df %>%
+  mutate(
+    path = str_c("food_insecurity_county2_data/", path),
+    data = map(.x = path, ~read_excel(.x, sheet = 2))
+)
+
+path_df = bind_rows(path_1_df, path_2_df)
+
 
 path_df[[2]][[1]]$FIPS <- as.numeric(path_df[[2]][[1]]$FIPS)
 path_df[[2]][[2]]$`% FI Btwn Thresholds` <- as.numeric(path_df[[2]][[2]]$`% FI Btwn Thresholds`)
@@ -37,6 +46,15 @@ path_df[[2]][[2]]$`% FI Btwn Thresholds` <- as.numeric(path_df[[2]][[2]]$`% FI B
 
 path_df = path_df %>%
   unnest(data) %>%
+  janitor::clean_names() %>%
+  rename(
+    
+  )
+
+
+
+
+
   pivot_longer(
     week_1:week_8,
     names_to = "week",
