@@ -1,0 +1,61 @@
+---
+title: "Map the Meal Gap Data"
+author: "Tessa Senders"
+date: "11/13/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r import libraries}
+library(tidyverse)
+library(readxl)
+```
+
+Import Map the Meal Gap Data
+
+```{r import map the meal data}
+path_df = 
+tibble(
+path = list.files("food_insecurity_data"))
+
+path_df = path_df %>%
+  mutate(
+    path = str_c("food_insecurity_data/", path),
+    data = map(.x = path, ~read_excel(.x))
+)
+
+for(i in 1:10){
+  
+}
+
+path_df[[2]][[1]]$FIPS <- as.numeric(path_df[[2]][[1]]$FIPS)
+path_df[[2]][[2]]$`% FI Btwn Thresholds` <- as.numeric(path_df[[2]][[2]]$`% FI Btwn Thresholds`)
+
+
+path_df = path_df %>%
+  unnest(data) %>%
+  pivot_longer(
+    week_1:week_8,
+    names_to = "week",
+    values_to = "observation"
+  ) %>%
+  mutate(
+    week = as.numeric(str_replace(week, "week_", "")),
+    arm = str_extract(path, "/[a-z][a-z][a-z]"),
+    arm = str_remove(arm, "/"),
+    id = str_extract(path, "[0-9]+")
+  ) %>%
+  select(-path)
+
+```
+
+```{r one dataset}
+read_excel('food_insecurity_data/MMG2011_2009Data_ToShare.xlsx')
+```
+
+
+
+
