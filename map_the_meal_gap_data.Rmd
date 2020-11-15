@@ -40,20 +40,37 @@ path_2_df = path_2_df %>%
 path_df = bind_rows(path_1_df, path_2_df)
 
 
-path_df[[2]][[1]]$FIPS <- as.numeric(path_df[[2]][[1]]$FIPS)
-path_df[[2]][[2]]$`% FI Btwn Thresholds` <- as.numeric(path_df[[2]][[2]]$`% FI Btwn Thresholds`)
+path_df[[2]][[1]]$FIPS = as.numeric(path_df[[2]][[1]]$FIPS)
+path_df[[2]][[2]]$`% FI Btwn Thresholds` = as.numeric(path_df[[2]][[2]]$`% FI Btwn Thresholds`)
+path_df[[2]][[1]]$`Cost Per Meal` = as.numeric(path_df[[2]][[1]]$`Cost Per Meal`)
 
 
 path_df = path_df %>%
   unnest(data) %>%
-  janitor::clean_names() %>%
-  rename(
-    
-  )
+  janitor::clean_names() 
+
+path_df = path_df %>%
+  mutate(state = coalesce(state_name, state),
+         county_code = tolower(county_code),
+         county_state = tolower(county_state),
+         county_state = str_replace(county_state, ",.*", ""),
+         county_state = str_replace(county_state, "county",""),
+         county_state = str_replace(county_state, "parish",""),
+         county_state = str_replace(county_state, "borough", ""),
+         county_state = str_replace(county_state, "census area", ""),
+         county = coalesce(county_code, county_state),
+         fi_rate = coalesce(fi_rate, x2010_food_insecurity_rate, x2011_food_insecurity_rate, x2012_food_insecurity_rate, x2013_food_insecurity_rate, x2014_food_insecurity_rate, x2015_food_insecurity_rate, x2016_food_insecurity_rate, x2017_food_insecurity_rate)
+         ) %>%
+  select(-state_name, -county_code, -county_state) 
+
+         
+  
 
 
+```
 
 
+```{r additional}
 
   pivot_longer(
     week_1:week_8,
