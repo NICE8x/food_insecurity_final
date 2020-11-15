@@ -59,7 +59,8 @@ path_df = path_df %>%
          county_state = str_replace(county_state, "borough", ""),
          county_state = str_replace(county_state, "census area", ""),
          county = coalesce(county_code, county_state),
-         fi_rate = coalesce(fi_rate, x2010_food_insecurity_rate, x2011_food_insecurity_rate, x2012_food_insecurity_rate, x2013_food_insecurity_rate, x2014_food_insecurity_rate, x2015_food_insecurity_rate, x2016_food_insecurity_rate, x2017_food_insecurity_rate)
+         fi_rate = coalesce(fi_rate, x2010_food_insecurity_rate, x2011_food_insecurity_rate, x2012_food_insecurity_rate, x2013_food_insecurity_rate, x2014_food_insecurity_rate, x2015_food_insecurity_rate, x2016_food_insecurity_rate, x2017_food_insecurity_rate),
+         number_food_insecure_individuals = coalesce(number_food_insecure_individuals, number_of_food_insecure_persons_in_2010, number_of_food_insecure_persons_in_2011, number_of_food_insecure_persons_in_2012, number_of_food_insecure_persons_in_2013, number_of_food_insecure_persons_in_2014, number_of_food_insecure_persons_in_2015, number_of_food_insecure_persons_in_2016, number_of_food_insecure_persons_in_2017)
          ) %>%
   select(-state_name, -county_code, -county_state) 
 
