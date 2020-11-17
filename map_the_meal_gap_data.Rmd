@@ -12,6 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r import libraries}
 library(tidyverse)
 library(readxl)
+library(rvest)
+library(httr)
+library(RSelenium)
 ```
 
 Import Map the Meal Gap Data
@@ -76,7 +79,86 @@ map_the_meal_gap_df = map_the_meal_gap_df %>%
   select(year, state, county, fi_rate, number_food_insecure_individuals, low_threshold_in_state, low_threshold_type, high_threshold_in_state, high_threshold_type, percent_fi_low_threshold, percent_fi_btwn_thresholds, percent_fi_high_threshold, weighted_annual_food_budget_shortfall, cost_per_meal, child_fi_rate, number_food_insecure_children, percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl, percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl) 
 ```
 
+```{r food banks list}
+driver <- RSelenium::rsDriver(browser = "chrome",
+                              chromever =
+                                system2(command = "wmic",
+                                        args = 'datafile where name="C:\\\\Program Files (x86)\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe" get Version /value',
+                                        stdout = TRUE,
+                                        stderr = TRUE) %>%
+                                stringr::str_extract(pattern = "(?<=Version=)\\d+\\.\\d+\\.\\d+\\.") %>%
+                                magrittr::extract(!is.na(.)) %>%
+                                stringr::str_replace_all(pattern = "\\.",
+                                                         replacement = "\\\\.") %>%
+                                paste0("^",  .) %>%
+                                stringr::str_subset(string =
+                                                      binman::list_versions(appname = "chromedriver") %>%
+                                                      dplyr::last()) %>%
+                                as.numeric_version() %>%
+                                max() %>%
+                                as.character())
 
+remote_driver <- driver[["client"]] 
+remote_driver$navigate("https://www.feedingamerica.org/find-your-local-foodbank")
+
+
+driver <- remoteDriver(remoteServerAddr = "yourIP", port = 4445L) 
+driver$open()
+driver$navigate("https://www.feedingamerica.org/find-your-local-foodbank")
+
+
+system("sudo docker pull selenium/standalone-chrome",wait=T)
+Sys.sleep(5)
+system("sudo docker run -d -p 4445:4444 selenium/standalone-chrome",wait=T)
+Sys.sleep(5)
+remDr <- remoteDriver(port=4445L, browserName="chrome")
+Sys.sleep(15)
+remDr$open()
+remDr$navigate("https://www.feedingamerica.org/find-your-local-foodbank")
+
+
+
+shell('docker run -d -p 4445:4444 selenium/standalone-chrome')
+remDr <- remoteDriver(remoteServerAddr = "localhost", port = 4445L, browserName = "chrome")
+remDr$open()
+remDr$navigate("https://www.feedingamerica.org/find-your-local-foodbank")
+
+
+library(rJava)
+driver<- rsDriver(browser=c("chrome"))
+remDr <- driver[["client"]]
+remDr$navigate("https://www.feedingamerica.org/find-your-local-foodbank")
+```
+
+
+
+```{r old attempt}
+url = "https://www.feedingamerica.org/find-your-local-foodbank#"
+food_banks_html = read_html(url)
+
+View(food_banks_html)
+
+name_vec = 
+  food_banks_html %>%
+  html_nodes(".name") %>%
+  html_text()
+
+address_phone_vec = 
+  food_banks_html %>%
+  html_nodes("a+ p") %>%
+  html_text()
+
+website_vec = 
+  food_banks_html %>%
+  html_nodes(".url a") %>%
+  html_text()
+
+website_df = 
+  tibble(
+    name = name_vec,
+    address_phone = address_phone_vec,
+    website = website_vec)
+```
 
 
 
