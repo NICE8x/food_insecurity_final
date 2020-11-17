@@ -1,13 +1,11 @@
 ---
-title: "Barebones Website"
+title: "Food Insecurity in America"
 author: "Vasili Fokaidis"
 output:
   html_document:
     toc: true
     toc_float: true
 ---
-
-# This is the barebones of our Food Insecurity in America Project!
 
 ![](https://www.feedingamerica.org/themes/custom/ts_feeding_america/images/svgs/logo-2020.svg)
 
