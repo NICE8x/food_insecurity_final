@@ -121,6 +121,20 @@ food_banks_df_2 <- food_banks_df %>%
 ```
 
 
+```{r get county and zipcode info}
+location_data = GET("https://data.healthcare.gov/resource/geocodes-usa-with-counties.json",  query = list("$limit" = 42522)) %>% 
+  content("text") %>%
+  jsonlite::fromJSON() %>%
+  as_tibble() 
+
+location_data = location_data %>%
+  select(zip, state, latitude, longitude, county)
+
+write_csv(x = location_data, "location_data.csv")
+
+```
+
+
 
 
 
