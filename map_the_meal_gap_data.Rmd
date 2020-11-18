@@ -60,10 +60,10 @@ map_the_meal_gap_df = map_the_meal_gap_df %>%
          county_code = tolower(county_code),
          county_state = tolower(county_state),
          county_state = str_replace(county_state, ",.*", ""),
-         county_state = str_replace(county_state, "county",""),
-         county_state = str_replace(county_state, "parish",""),
-         county_state = str_replace(county_state, "borough", ""),
-         county_state = str_replace(county_state, "census area", ""),
+         county_state = str_replace(county_state, "\\scounty",""),
+         county_state = str_replace(county_state, "\\sparish",""),
+         county_state = str_replace(county_state, "\\sborough", ""),
+         county_state = str_replace(county_state, "\\scensus area", ""),
          county = coalesce(county_code, county_state),
          fi_rate = coalesce(fi_rate, x2010_food_insecurity_rate, x2011_food_insecurity_rate, x2012_food_insecurity_rate, x2013_food_insecurity_rate, x2014_food_insecurity_rate, x2015_food_insecurity_rate, x2016_food_insecurity_rate, x2017_food_insecurity_rate),
          number_food_insecure_individuals = coalesce(number_food_insecure_individuals, number_of_food_insecure_persons_in_2010, number_of_food_insecure_persons_in_2011, number_of_food_insecure_persons_in_2012, number_of_food_insecure_persons_in_2013, number_of_food_insecure_persons_in_2014, number_of_food_insecure_persons_in_2015, number_of_food_insecure_persons_in_2016, number_of_food_insecure_persons_in_2017),
@@ -113,11 +113,11 @@ remDr$close()
 food_banks_df_2 <- food_banks_df %>%
   mutate(phone_number = str_extract(address_phone, "[1-9]\\d{2}\\.\\d{3}\\.\\d{4}"),
          address_phone = str_replace(address_phone, "[1-9]\\d{2}\\.\\d{3}\\.\\d{4}", ""),
-         zipcode = str_extract(address_phone, "\\s[0-9]\\d{4}$"),
+         zip = str_extract(address_phone, "\\s[0-9]\\d{4}$"),
+         zip = str_replace(zip, "\\s", ""),
          address_phone = str_replace(address_phone, "\\s[0-9]\\d{4}$", ""),
          state = str_extract(address_phone, "[A-Z]{2}$")
          )
-  
 ```
 
 
@@ -128,13 +128,33 @@ location_data = GET("https://data.healthcare.gov/resource/geocodes-usa-with-coun
   as_tibble() 
 
 location_data = location_data %>%
-  select(zip, state, latitude, longitude, county)
+  mutate(county = tolower(county)) %>%
+  select(zip, state, latitude, longitude, county) %>%
+  mutate(county = str_replace(county, ",.*", ""),
+         county = str_replace(county, "\\scounty",""),
+         county = str_replace(county, "\\sparish",""),
+         county = str_replace(county, "\\sborough", ""),
+         county = str_replace(county, "\\scensus area", "")
+  )
 
 write_csv(x = location_data, "location_data.csv")
 
 ```
 
+```{r join data}
 
+food_banks_df_2 = left_join(food_banks_df_2, location_data, by = "zip") %>%
+  rename(state = state.x) %>%
+  select(-state.y)
+
+random_zip_from_county = location_data %>%
+  group_by(county) %>%
+filter(row_number() == 1)
+
+map_the_meal_gap_df_2 = left_join(map_the_meal_gap_df, random_zip_from_county, by = "county")
+
+new_DF <- map_the_meal_gap_df_2[is.na(map_the_meal_gap_df_2$latitude),]
+```
 
 
 
