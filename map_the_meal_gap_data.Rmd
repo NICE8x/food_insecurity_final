@@ -103,8 +103,10 @@ map_the_meal_gap_df = map_the_meal_gap_df %>%
          county_state = str_replace(county_state, "sainte genevieve_MO", "ste genevieve_MO"),
          county_state = str_replace(county_state, "salem_VA", "salem city_VA"),
          county_state = str_replace(county_state, "sitka city and_AK", "sitka_AK"),
-         #county_state = str_replace(county_state, "st john the baptist_LA", "saint john the baptist_LA"),
-         #county_state = str_replace(county_state, )
+         county_state = str_replace(county_state, "ste. genevieve_MO", "ste genevieve_MO"),
+         county_state = str_replace(county_state, "valdez cordova_AK", "valdez-cordova_AK"),
+         county_state = str_replace(county_state, " city and_AK", "_AK"),
+         county_state = str_replace(county_state, "yukon koyukuk_AK", "yukon-koyukuk_AK")
          ) %>%
   select(year, state, county, county_state, fi_rate, number_food_insecure_individuals, low_threshold_in_state, low_threshold_type, high_threshold_in_state, high_threshold_type, percent_fi_low_threshold, percent_fi_btwn_thresholds, percent_fi_high_threshold, weighted_annual_food_budget_shortfall, cost_per_meal, child_fi_rate, number_food_insecure_children, percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl, percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl) 
 ```
@@ -191,6 +193,8 @@ map_the_meal_gap_df_2 = left_join(map_the_meal_gap_df, random_zip_from_county, b
   select(-state.y, -county.y)
 
 new_DF <- map_the_meal_gap_df_2[is.na(map_the_meal_gap_df_2$latitude),]
+
+
 ```
 
 
