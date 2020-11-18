@@ -15,6 +15,7 @@ library(readxl)
 library(rvest)
 library(httr)
 library(RSelenium)
+library(stringr)
 ```
 
 Import Map the Meal Gap Data
@@ -107,6 +108,17 @@ remDr$close()
 ```
 
 
+```{r clean up food banks df}
+
+food_banks_df_2 <- food_banks_df %>%
+  mutate(phone_number = str_extract(address_phone, "[1-9]\\d{2}\\.\\d{3}\\.\\d{4}"),
+         address_phone = str_replace(address_phone, "[1-9]\\d{2}\\.\\d{3}\\.\\d{4}", ""),
+         zipcode = str_extract(address_phone, "\\s[0-9]\\d{4}$"),
+         address_phone = str_replace(address_phone, "\\s[0-9]\\d{4}$", ""),
+         state = str_extract(address_phone, "[A-Z]{2}$")
+         )
+  
+```
 
 
 
