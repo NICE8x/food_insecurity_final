@@ -190,9 +190,14 @@ filter(row_number() == 1)
 map_the_meal_gap_df_2 = left_join(map_the_meal_gap_df, random_zip_from_county, by = "county_state") %>%
   rename(state = state.x,
          county = county.x) %>%
-  select(-state.y, -county.y)
+  select(-state.y, -county.y) %>%
+  drop_na(latitude)
 
-new_DF <- map_the_meal_gap_df_2[is.na(map_the_meal_gap_df_2$latitude),]
+write_csv(x = map_the_meal_gap_df_2, "map_the_meal_gap_df_2.csv")
+write_csv(x = food_banks_df_2, "food_banks_df_2.csv")
+
+
+#new_DF <- map_the_meal_gap_df_2[is.na(map_the_meal_gap_df_2$latitude),]
 
 
 ```
