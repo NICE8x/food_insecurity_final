@@ -4895,11 +4895,11 @@ zip,county_state,state,latitude,longitude,county
 12919,clinton_NY,NY,44.98,-73.44,clinton
 12920,franklin_NY,NY,44.92,-74.08,franklin
 12921,clinton_NY,NY,44.88,-73.430000000000007,clinton
-12922,st lawrence_NY,NY,44.28,-74.67,st lawrence
+12922,saint lawrence_NY,NY,44.28,-74.67,saint lawrence
 12923,clinton_NY,NY,44.95,-73.92,clinton
 12924,clinton_NY,NY,44.5,-73.48,clinton
 12926,franklin_NY,NY,44.93,-74.28,franklin
-12927,st lawrence_NY,NY,44.22,-74.83,st lawrence
+12927,saint lawrence_NY,NY,44.22,-74.83,saint lawrence
 12928,essex_NY,NY,43.95,-73.53,essex
 12929,clinton_NY,NY,44.72,-73.709999999999994,clinton
 12930,franklin_NY,NY,44.71,-74.53,franklin
@@ -4916,7 +4916,7 @@ zip,county_state,state,latitude,longitude,county
 12944,essex_NY,NY,44.5,-73.48,essex
 12945,franklin_NY,NY,44.36,-74.25,franklin
 12946,essex_NY,NY,44.28,-73.98,essex
-12949,st lawrence_NY,NY,44.77,-74.650000000000006,st lawrence
+12949,saint lawrence_NY,NY,44.77,-74.650000000000006,saint lawrence
 12950,essex_NY,NY,44.27,-73.569999999999993,essex
 12952,clinton_NY,NY,44.72,-73.92,clinton
 12953,franklin_NY,NY,44.84,-74.290000000000006,franklin
@@ -4929,13 +4929,13 @@ zip,county_state,state,latitude,longitude,county
 12961,essex_NY,NY,44.06,-73.52,essex
 12962,clinton_NY,NY,44.69,-73.55,clinton
 12964,essex_NY,NY,44.14,-73.599999999999994,essex
-12965,st lawrence_NY,NY,44.71,-74.650000000000006,st lawrence
+12965,saint lawrence_NY,NY,44.71,-74.650000000000006,saint lawrence
 12966,franklin_NY,NY,44.79,-74.41,franklin
-12967,st lawrence_NY,NY,44.76,-74.650000000000006,st lawrence
+12967,saint lawrence_NY,NY,44.76,-74.650000000000006,saint lawrence
 12969,franklin_NY,NY,44.71,-74.08,franklin
 12970,franklin_NY,NY,44.43,-74.25,franklin
 12972,clinton_NY,NY,44.58,-73.53,clinton
-12973,st lawrence_NY,NY,44.23,-74.569999999999993,st lawrence
+12973,saint lawrence_NY,NY,44.23,-74.569999999999993,saint lawrence
 12974,essex_NY,NY,44.04,-73.459999999999994,essex
 12975,essex_NY,NY,44.53,-73.42,essex
 12976,franklin_NY,NY,44.47,-74.17,franklin
@@ -5232,85 +5232,85 @@ zip,county_state,state,latitude,longitude,county
 13608,jefferson_NY,NY,44.19,-75.599999999999994,jefferson
 13611,jefferson_NY,NY,43.78,-76.11,jefferson
 13612,jefferson_NY,NY,44,-75.790000000000006,jefferson
-13613,st lawrence_NY,NY,44.8,-74.790000000000006,st lawrence
-13614,st lawrence_NY,NY,44.54,-75.680000000000007,st lawrence
+13613,saint lawrence_NY,NY,44.8,-74.790000000000006,saint lawrence
+13614,saint lawrence_NY,NY,44.54,-75.680000000000007,saint lawrence
 13615,jefferson_NY,NY,44,-75.98,jefferson
 13616,jefferson_NY,NY,44.03,-75.84,jefferson
-13617,st lawrence_NY,NY,44.59,-75.17,st lawrence
+13617,saint lawrence_NY,NY,44.59,-75.17,saint lawrence
 13618,jefferson_NY,NY,44.12,-76.33,jefferson
 13619,jefferson_NY,NY,43.98,-75.599999999999994,jefferson
 13620,lewis_NY,NY,43.88,-75.510000000000005,lewis
-13621,st lawrence_NY,NY,44.86,-75.069999999999993,st lawrence
+13621,saint lawrence_NY,NY,44.86,-75.069999999999993,saint lawrence
 13622,jefferson_NY,NY,44.06,-76.13,jefferson
-13623,st lawrence_NY,NY,44.44,-75.739999999999995,st lawrence
+13623,saint lawrence_NY,NY,44.44,-75.739999999999995,saint lawrence
 13624,jefferson_NY,NY,44.23,-76.08,jefferson
-13625,st lawrence_NY,NY,44.32,-74.819999999999993,st lawrence
+13625,saint lawrence_NY,NY,44.32,-74.819999999999993,saint lawrence
 13626,lewis_NY,NY,43.89,-75.67,lewis
 13627,lewis_NY,NY,43.94,-75.59,lewis
 13628,jefferson_NY,NY,44.03,-75.67,jefferson
-13630,st lawrence_NY,NY,44.48,-75.3,st lawrence
+13630,saint lawrence_NY,NY,44.48,-75.3,saint lawrence
 13631,lewis_NY,NY,43.89,-75.58,lewis
 13632,jefferson_NY,NY,44.13,-76.010000000000005,jefferson
-13633,st lawrence_NY,NY,44.53,-75.41,st lawrence
+13633,saint lawrence_NY,NY,44.53,-75.41,saint lawrence
 13634,jefferson_NY,NY,44,-76.040000000000006,jefferson
-13635,st lawrence_NY,NY,44.32,-75.25,st lawrence
+13635,saint lawrence_NY,NY,44.32,-75.25,saint lawrence
 13636,jefferson_NY,NY,43.73,-76.13,jefferson
 13637,jefferson_NY,NY,44.08,-75.8,jefferson
 13638,jefferson_NY,NY,44.01,-75.739999999999995,jefferson
-13639,st lawrence_NY,NY,44.25,-75.13,st lawrence
+13639,saint lawrence_NY,NY,44.25,-75.13,saint lawrence
 13640,jefferson_NY,NY,44.33,-75.900000000000006,jefferson
 13641,jefferson_NY,NY,44.32,-75.97,jefferson
-13642,st lawrence_NY,NY,44.33,-75.459999999999994,st lawrence
+13642,saint lawrence_NY,NY,44.33,-75.459999999999994,saint lawrence
 13643,jefferson_NY,NY,44.01,-75.69,jefferson
-13645,st lawrence_NY,NY,44.28,-75.42,st lawrence
-13646,st lawrence_NY,NY,44.44,-75.69,st lawrence
-13647,st lawrence_NY,NY,44.51,-75,st lawrence
-13648,st lawrence_NY,NY,44.15,-75.319999999999993,st lawrence
-13649,st. lawrence_NY,NY,44.92,-74.72,st. lawrence
+13645,saint lawrence_NY,NY,44.28,-75.42,saint lawrence
+13646,saint lawrence_NY,NY,44.44,-75.69,saint lawrence
+13647,saint lawrence_NY,NY,44.51,-75,saint lawrence
+13648,saint lawrence_NY,NY,44.15,-75.319999999999993,saint lawrence
+13649,saint  lawrence_NY,NY,44.92,-74.72,saint  lawrence
 13650,jefferson_NY,NY,43.8,-76.19,jefferson
 13651,jefferson_NY,NY,43.86,-76.14,jefferson
-13652,st lawrence_NY,NY,44.46,-75.23,st lawrence
-13654,st lawrence_NY,NY,44.61,-75.400000000000006,st lawrence
+13652,saint lawrence_NY,NY,44.46,-75.23,saint lawrence
+13654,saint lawrence_NY,NY,44.61,-75.400000000000006,saint lawrence
 13655,franklin_NY,NY,44.97,-74.63,franklin
 13656,jefferson_NY,NY,44.18,-75.95,jefferson
 13657,jefferson_NY,NY,44.03,-76.010000000000005,jefferson
-13658,st lawrence_NY,NY,44.72,-75.260000000000005,st lawrence
+13658,saint lawrence_NY,NY,44.72,-75.260000000000005,saint lawrence
 13659,jefferson_NY,NY,43.74,-75.849999999999994,jefferson
-13660,st lawrence_NY,NY,44.75,-75.150000000000006,st lawrence
+13660,saint lawrence_NY,NY,44.75,-75.150000000000006,saint lawrence
 13661,jefferson_NY,NY,43.71,-76.06,jefferson
-13662,st lawrence_NY,NY,44.92,-74.89,st lawrence
-13664,st lawrence_NY,NY,44.58,-75.64,st lawrence
+13662,saint lawrence_NY,NY,44.92,-74.89,saint lawrence
+13664,saint lawrence_NY,NY,44.58,-75.64,saint lawrence
 13665,lewis_NY,NY,44.09,-75.47,lewis
-13666,st lawrence_NY,NY,44.21,-74.97,st lawrence
-13667,st lawrence_NY,NY,44.8,-74.98,st lawrence
-13668,st lawrence_NY,NY,44.74,-74.989999999999995,st lawrence
-13669,st lawrence_NY,NY,44.7,-75.47,st lawrence
-13670,st lawrence_NY,NY,44.18,-75.069999999999993,st lawrence
+13666,saint lawrence_NY,NY,44.21,-74.97,saint lawrence
+13667,saint lawrence_NY,NY,44.8,-74.98,saint lawrence
+13668,saint lawrence_NY,NY,44.74,-74.989999999999995,saint lawrence
+13669,saint lawrence_NY,NY,44.7,-75.47,saint lawrence
+13670,saint lawrence_NY,NY,44.18,-75.069999999999993,saint lawrence
 13671,jefferson_NY,NY,44.28,-75.62,jefferson
-13672,st lawrence_NY,NY,44.63,-74.819999999999993,st lawrence
+13672,saint lawrence_NY,NY,44.63,-74.819999999999993,saint lawrence
 13673,jefferson_NY,NY,44.15,-75.7,jefferson
 13674,jefferson_NY,NY,43.74,-76.040000000000006,jefferson
 13675,jefferson_NY,NY,44.27,-75.84,jefferson
-13676,st lawrence_NY,NY,44.66,-74.98,st lawrence
-13677,st lawrence_NY,NY,44.49,-75.180000000000007,st lawrence
-13678,st. lawrence_NY,NY,44.83,-74.97,st. lawrence
+13676,saint lawrence_NY,NY,44.66,-74.98,saint lawrence
+13677,saint lawrence_NY,NY,44.49,-75.180000000000007,saint lawrence
+13678,saint  lawrence_NY,NY,44.83,-74.97,saint  lawrence
 13679,jefferson_NY,NY,44.32,-75.77,jefferson
-13680,st lawrence_NY,NY,44.59,-75.319999999999993,st lawrence
-13681,st lawrence_NY,NY,44.41,-75.39,st lawrence
+13680,saint lawrence_NY,NY,44.59,-75.319999999999993,saint lawrence
+13681,saint lawrence_NY,NY,44.41,-75.39,saint lawrence
 13682,jefferson_NY,NY,43.81,-75.81,jefferson
-13683,st lawrence_NY,NY,44.96,-74.73,st lawrence
-13684,st lawrence_NY,NY,44.36,-75.040000000000006,st lawrence
+13683,saint lawrence_NY,NY,44.96,-74.73,saint lawrence
+13684,saint lawrence_NY,NY,44.36,-75.040000000000006,saint lawrence
 13685,jefferson_NY,NY,43.94,-76.12,jefferson
-13687,st lawrence_NY,NY,44.5,-74.88,st lawrence
-13690,st lawrence_NY,NY,44.16,-75.03,st lawrence
+13687,saint lawrence_NY,NY,44.5,-74.88,saint lawrence
+13690,saint lawrence_NY,NY,44.16,-75.03,saint lawrence
 13691,jefferson_NY,NY,44.21,-75.790000000000006,jefferson
 13692,jefferson_NY,NY,44.33,-75.94,jefferson
 13693,jefferson_NY,NY,43.99,-76.25,jefferson
-13694,st lawrence_NY,NY,44.85,-75.19,st lawrence
-13695,st lawrence_NY,NY,44.13,-74.92,st lawrence
-13696,st lawrence_NY,NY,44.73,-74.88,st lawrence
-13697,st lawrence_NY,NY,44.74,-74.8,st lawrence
-13699,st lawrence_NY,NY,44.66,-74.98,st lawrence
+13694,saint lawrence_NY,NY,44.85,-75.19,saint lawrence
+13695,saint lawrence_NY,NY,44.13,-74.92,saint lawrence
+13696,saint lawrence_NY,NY,44.73,-74.88,saint lawrence
+13697,saint lawrence_NY,NY,44.74,-74.8,saint lawrence
+13699,saint lawrence_NY,NY,44.66,-74.98,saint lawrence
 13730,chenango_NY,NY,42.22,-75.52,chenango
 13731,delaware_NY,NY,42.18,-74.78,delaware
 13732,tioga_NY,NY,42.07,-76.16,tioga
@@ -8561,10 +8561,10 @@ zip,county_state,state,latitude,longitude,county
 20602,charles_MD,MD,38.64,-76.900000000000006,charles
 20603,charles_MD,MD,38.64,-76.900000000000006,charles
 20604,charles_MD,MD,38.64,-76.900000000000006,charles
-20606,st mary's_MD,MD,38.25,-76.739999999999995,st mary's
+20606,saint mary's_MD,MD,38.25,-76.739999999999995,saint mary's
 20607,prince george's_MD,MD,38.67,-77.010000000000005,prince george's
 20608,prince george's_MD,MD,38.58,-76.7,prince george's
-20609,st mary's_MD,MD,38.270000000000003,-76.739999999999995,st mary's
+20609,saint mary's_MD,MD,38.270000000000003,-76.739999999999995,saint mary's
 20610,calvert_MD,MD,38.520000000000003,-76.599999999999994,calvert
 20611,charles_MD,MD,38.46,-76.98,charles
 20612,charles_MD,MD,38.5,-76.680000000000007,charles
@@ -8572,56 +8572,56 @@ zip,county_state,state,latitude,longitude,county
 20615,calvert_MD,MD,38.409999999999997,-76.540000000000006,calvert
 20616,charles_MD,MD,38.630000000000003,-77.069999999999993,charles
 20617,charles_MD,MD,38.549999999999997,-76.84,charles
-20618,st mary's_MD,MD,38.28,-76.78,st mary's
-20619,st mary's_MD,MD,38.29,-76.489999999999995,st mary's
-20620,st mary's_MD,MD,38.229999999999997,-76.510000000000005,st mary's
-20621,st mary's_MD,MD,38.36,-76.78,st mary's
+20618,saint mary's_MD,MD,38.28,-76.78,saint mary's
+20619,saint mary's_MD,MD,38.29,-76.489999999999995,saint mary's
+20620,saint mary's_MD,MD,38.229999999999997,-76.510000000000005,saint mary's
+20621,saint mary's_MD,MD,38.36,-76.78,saint mary's
 20622,charles_MD,MD,38.47,-76.78,charles
 20623,prince george's_MD,MD,38.729999999999997,-76.819999999999993,prince george's
-20624,st mary's_MD,MD,38.32,-76.72,st mary's
+20624,saint mary's_MD,MD,38.32,-76.72,saint mary's
 20625,charles_MD,MD,38.33,-76.91,charles
-20626,st mary's_MD,MD,38.229999999999997,-76.760000000000005,st mary's
-20627,st. mary's_MD,MD,38.299999999999997,-76.63,st. mary's
-20628,st mary's_MD,MD,38.15,-76.36,st mary's
+20626,saint mary's_MD,MD,38.229999999999997,-76.760000000000005,saint mary's
+20627,saint  mary's_MD,MD,38.299999999999997,-76.63,saint  mary's
+20628,saint mary's_MD,MD,38.15,-76.36,saint mary's
 20629,calvert_MD,MD,38.35,-76.44,calvert
-20630,st mary's_MD,MD,38.17,-76.47,st mary's
+20630,saint mary's_MD,MD,38.17,-76.47,saint mary's
 20632,charles_MD,MD,38.43,-76.97,charles
-20634,st mary's_MD,MD,38.25,-76.489999999999995,st mary's
-20635,st mary's_MD,MD,38.409999999999997,-76.73,st mary's
-20636,st mary's_MD,MD,38.340000000000003,-76.569999999999993,st mary's
+20634,saint mary's_MD,MD,38.25,-76.489999999999995,saint mary's
+20635,saint mary's_MD,MD,38.409999999999997,-76.73,saint mary's
+20636,saint mary's_MD,MD,38.340000000000003,-76.569999999999993,saint mary's
 20637,charles_MD,MD,38.53,-76.78,charles
 20639,calvert_MD,MD,38.61,-76.61,calvert
 20640,charles_MD,MD,38.590000000000003,-77.150000000000006,charles
 20643,charles_MD,MD,38.49,-77.16,charles
 20645,charles_MD,MD,38.299999999999997,-76.86,charles
 20646,charles_MD,MD,38.53,-76.97,charles
-20650,st mary's_MD,MD,38.29,-76.64,st mary's
-20653,st mary's_MD,MD,38.26,-76.44,st mary's
-20656,st. mary's_MD,MD,38.35,-76.67,st. mary's
+20650,saint mary's_MD,MD,38.29,-76.64,saint mary's
+20653,saint mary's_MD,MD,38.26,-76.44,saint mary's
+20656,saint  mary's_MD,MD,38.35,-76.67,saint  mary's
 20657,calvert_MD,MD,38.409999999999997,-76.45,calvert
 20658,charles_MD,MD,38.549999999999997,-77.150000000000006,charles
-20659,st mary's_MD,MD,38.43,-76.73,st mary's
-20660,st mary's_MD,MD,38.369999999999997,-76.69,st mary's
+20659,saint mary's_MD,MD,38.43,-76.73,saint mary's
+20660,saint mary's_MD,MD,38.369999999999997,-76.69,saint mary's
 20661,charles_MD,MD,38.33,-76.91,charles
 20662,charles_MD,MD,38.450000000000003,-77.209999999999994,charles
 20664,charles_MD,MD,38.340000000000003,-76.92,charles
-20667,st mary's_MD,MD,38.22,-76.44,st mary's
-20670,st mary's_MD,MD,38.28,-76.42,st mary's
-20674,st mary's_MD,MD,38.14,-76.5,st mary's
+20667,saint mary's_MD,MD,38.22,-76.44,saint mary's
+20670,saint mary's_MD,MD,38.28,-76.42,saint mary's
+20674,saint mary's_MD,MD,38.14,-76.5,saint mary's
 20675,charles_MD,MD,38.57,-77.010000000000005,charles
 20676,calvert_MD,MD,38.49,-76.540000000000006,calvert
 20677,charles_MD,MD,38.49,-77.040000000000006,charles
 20678,calvert_MD,MD,38.54,-76.58,calvert
-20680,st mary's_MD,MD,38.11,-76.37,st mary's
+20680,saint mary's_MD,MD,38.11,-76.37,saint mary's
 20682,charles_MD,MD,38.340000000000003,-76.92,charles
-20684,st mary's_MD,MD,38.15,-76.41,st mary's
+20684,saint mary's_MD,MD,38.15,-76.41,saint mary's
 20685,calvert_MD,MD,38.47,-76.5,calvert
-20686,st. mary's_MD,MD,38.18,-76.42,st. mary's
-20687,st mary's_MD,MD,38.07,-76.34,st mary's
+20686,saint  mary's_MD,MD,38.18,-76.42,saint  mary's
+20687,saint mary's_MD,MD,38.07,-76.34,saint mary's
 20688,calvert_MD,MD,38.33,-76.45,calvert
 20689,calvert_MD,MD,38.64,-76.569999999999993,calvert
-20690,st mary's_MD,MD,38.15,-76.53,st mary's
-20692,st mary's_MD,MD,38.18,-76.5,st mary's
+20690,saint mary's_MD,MD,38.15,-76.53,saint mary's
+20692,saint mary's_MD,MD,38.18,-76.5,saint mary's
 20693,charles_MD,MD,38.450000000000003,-77.08,charles
 20695,charles_MD,MD,38.590000000000003,-76.97,charles
 20697,prince george's_MD,MD,39.03,-76.900000000000006,prince george's
@@ -13766,7 +13766,7 @@ zip,county_state,state,latitude,longitude,county
 31998,muscogee_GA,GA,32.51,-84.87,muscogee
 31999,muscogee_GA,GA,32.51,-84.87,muscogee
 32003,clay_FL,FL,30.16,-81.7,clay
-32004,st. johns_FL,FL,30.23,-81.38,st. johns
+32004,saint  johns_FL,FL,30.23,-81.38,saint  johns
 32006,clay_FL,FL,30.11,-81.72,clay
 32007,putnam_FL,FL,29.77,-81.63,putnam
 32008,suwannee_FL,FL,29.96,-82.92,suwannee
@@ -13777,7 +13777,7 @@ zip,county_state,state,latitude,longitude,county
 32025,columbia_FL,FL,30.19,-82.64,columbia
 32026,union_FL,FL,30.06,-82.24,union
 32030,clay_FL,FL,30.12,-81.760000000000005,clay
-32033,st johns_FL,FL,29.78,-81.42,st johns
+32033,saint johns_FL,FL,29.78,-81.42,saint johns
 32034,nassau_FL,FL,30.65,-81.44,nassau
 32035,nassau_FL,FL,30.65,-81.44,nassau
 32038,columbia_FL,FL,29.92,-82.71,columbia
@@ -13808,18 +13808,18 @@ zip,county_state,state,latitude,longitude,county
 32072,baker_FL,FL,30.2,-82.42,baker
 32073,clay_FL,FL,30.16,-81.7,clay
 32079,clay_FL,FL,29.98,-81.81,clay
-32080,st johns_FL,FL,29.8,-81.260000000000005,st johns
-32081,st johns_FL,FL,30.08,-81.400000000000006,st johns
-32082,st johns_FL,FL,30.23,-81.38,st johns
+32080,saint johns_FL,FL,29.8,-81.260000000000005,saint johns
+32081,saint johns_FL,FL,30.08,-81.400000000000006,saint johns
+32082,saint johns_FL,FL,30.23,-81.38,saint johns
 32083,union_FL,FL,30.06,-82.23,union
-32084,st johns_FL,FL,29.89,-81.31,st johns
-32085,st. johns_FL,FL,29.89,-81.31,st. johns
-32086,st johns_FL,FL,29.89,-81.31,st johns
+32084,saint johns_FL,FL,29.89,-81.31,saint johns
+32085,saint  johns_FL,FL,29.89,-81.31,saint  johns
+32086,saint johns_FL,FL,29.89,-81.31,saint johns
 32087,baker_FL,FL,30.25,-82.27,baker
 32091,bradford_FL,FL,29.94,-82.11,bradford
-32092,st johns_FL,FL,29.89,-81.31,st johns
+32092,saint johns_FL,FL,29.89,-81.31,saint johns
 32094,suwannee_FL,FL,30.23,-82.81,suwannee
-32095,st johns_FL,FL,29.89,-81.31,st johns
+32095,saint johns_FL,FL,29.89,-81.31,saint johns
 32096,hamilton_FL,FL,30.33,-82.75,hamilton
 32097,nassau_FL,FL,30.63,-81.569999999999993,nassau
 32099,duval_FL,FL,30.33,-81.650000000000006,duval
@@ -13859,7 +13859,7 @@ zip,county_state,state,latitude,longitude,county
 32141,volusia_FL,FL,28.96,-80.900000000000006,volusia
 32142,flagler_FL,FL,29.57,-81.209999999999994,flagler
 32143,flagler_FL,FL,29.42,-81.16,flagler
-32145,st johns_FL,FL,29.71,-81.5,st johns
+32145,saint johns_FL,FL,29.71,-81.5,saint johns
 32147,putnam_FL,FL,29.62,-81.81,putnam
 32148,putnam_FL,FL,29.61,-81.89,putnam
 32149,putnam_FL,FL,29.61,-81.89,putnam
@@ -13942,7 +13942,7 @@ zip,county_state,state,latitude,longitude,county
 32256,duval_FL,FL,30.33,-81.650000000000006,duval
 32257,duval_FL,FL,30.33,-81.650000000000006,duval
 32258,duval_FL,FL,30.33,-81.650000000000006,duval
-32259,st johns_FL,FL,30.08,-81.59,st johns
+32259,saint johns_FL,FL,30.08,-81.59,saint johns
 32260,duval_FL,FL,30.33,-81.650000000000006,duval
 32266,duval_FL,FL,30.31,-81.39,duval
 32267,duval_FL,FL,30.38,-81.41,duval
@@ -15259,31 +15259,31 @@ zip,county_state,state,latitude,longitude,county
 34788,lake_FL,FL,28.8,-81.88,lake
 34789,lake_FL,FL,28.8,-81.88,lake
 34797,lake_FL,FL,28.74,-81.819999999999993,lake
-34945,st lucie_FL,FL,27.44,-80.319999999999993,st lucie
-34946,st lucie_FL,FL,27.44,-80.319999999999993,st lucie
-34947,st lucie_FL,FL,27.44,-80.319999999999993,st lucie
-34948,st. lucie_FL,FL,27.44,-80.319999999999993,st. lucie
-34949,st lucie_FL,FL,27.44,-80.319999999999993,st lucie
-34950,st lucie_FL,FL,27.44,-80.319999999999993,st lucie
-34951,st lucie_FL,FL,27.44,-80.319999999999993,st lucie
-34952,st lucie_FL,FL,27.27,-80.349999999999994,st lucie
-34953,st lucie_FL,FL,27.27,-80.349999999999994,st lucie
-34954,st. lucie_FL,FL,27.44,-80.319999999999993,st. lucie
+34945,saint lucie_FL,FL,27.44,-80.319999999999993,saint lucie
+34946,saint lucie_FL,FL,27.44,-80.319999999999993,saint lucie
+34947,saint lucie_FL,FL,27.44,-80.319999999999993,saint lucie
+34948,saint  lucie_FL,FL,27.44,-80.319999999999993,saint  lucie
+34949,saint lucie_FL,FL,27.44,-80.319999999999993,saint lucie
+34950,saint lucie_FL,FL,27.44,-80.319999999999993,saint lucie
+34951,saint lucie_FL,FL,27.44,-80.319999999999993,saint lucie
+34952,saint lucie_FL,FL,27.27,-80.349999999999994,saint lucie
+34953,saint lucie_FL,FL,27.27,-80.349999999999994,saint lucie
+34954,saint  lucie_FL,FL,27.44,-80.319999999999993,saint  lucie
 34956,martin_FL,FL,27.03,-80.459999999999994,martin
 34957,martin_FL,FL,27.23,-80.23,martin
 34958,martin_FL,FL,27.23,-80.23,martin
 34972,okeechobee_FL,FL,27.24,-80.819999999999993,okeechobee
 34973,okeechobee_FL,FL,27.24,-80.819999999999993,okeechobee
 34974,okeechobee_FL,FL,27.24,-80.819999999999993,okeechobee
-34979,st. lucie_FL,FL,27.44,-80.319999999999993,st. lucie
-34981,st lucie_FL,FL,27.44,-80.319999999999993,st lucie
-34982,st lucie_FL,FL,27.44,-80.319999999999993,st lucie
-34983,st lucie_FL,FL,27.27,-80.349999999999994,st lucie
-34984,st lucie_FL,FL,27.27,-80.349999999999994,st lucie
-34985,st. lucie_FL,FL,27.27,-80.349999999999994,st. lucie
-34986,st lucie_FL,FL,27.27,-80.349999999999994,st lucie
-34987,st lucie_FL,FL,27.27,-80.349999999999994,st lucie
-34988,st. lucie_FL,FL,27.27,-80.349999999999994,st. lucie
+34979,saint  lucie_FL,FL,27.44,-80.319999999999993,saint  lucie
+34981,saint lucie_FL,FL,27.44,-80.319999999999993,saint lucie
+34982,saint lucie_FL,FL,27.44,-80.319999999999993,saint lucie
+34983,saint lucie_FL,FL,27.27,-80.349999999999994,saint lucie
+34984,saint lucie_FL,FL,27.27,-80.349999999999994,saint lucie
+34985,saint  lucie_FL,FL,27.27,-80.349999999999994,saint  lucie
+34986,saint lucie_FL,FL,27.27,-80.349999999999994,saint lucie
+34987,saint lucie_FL,FL,27.27,-80.349999999999994,saint lucie
+34988,saint  lucie_FL,FL,27.27,-80.349999999999994,saint  lucie
 34990,martin_FL,FL,27.16,-80.260000000000005,martin
 34991,martin_FL,FL,27.16,-80.260000000000005,martin
 34992,martin_FL,FL,27.14,-80.180000000000007,martin
@@ -15291,7 +15291,7 @@ zip,county_state,state,latitude,longitude,county
 34995,martin_FL,FL,27.19,-80.239999999999995,martin
 34996,martin_FL,FL,27.19,-80.239999999999995,martin
 34997,martin_FL,FL,27.19,-80.239999999999995,martin
-35004,st clair_AL,AL,33.590000000000003,-86.49,st clair
+35004,saint clair_AL,AL,33.590000000000003,-86.49,saint clair
 35005,jefferson_AL,AL,33.590000000000003,-86.95,jefferson
 35006,jefferson_AL,AL,33.42,-87.19,jefferson
 35007,shelby_AL,AL,33.22,-86.82,shelby
@@ -15323,9 +15323,9 @@ zip,county_state,state,latitude,longitude,county
 35048,jefferson_AL,AL,33.700000000000003,-86.58,jefferson
 35049,blount_AL,AL,33.99,-86.57,blount
 35051,shelby_AL,AL,33.17,-86.6,shelby
-35052,st. clair_AL,AL,33.590000000000003,-86.36,st. clair
+35052,saint  clair_AL,AL,33.590000000000003,-86.36,saint  clair
 35053,cullman_AL,AL,34.07,-87.05,cullman
-35054,st clair_AL,AL,33.450000000000003,-86.34,st clair
+35054,saint clair_AL,AL,33.450000000000003,-86.34,saint clair
 35055,cullman_AL,AL,34.17,-86.83,cullman
 35056,cullman_AL,AL,34.17,-86.83,cullman
 35057,cullman_AL,AL,34.17,-86.83,cullman
@@ -15356,32 +15356,32 @@ zip,county_state,state,latitude,longitude,county
 35097,blount_AL,AL,33.9,-86.62,blount
 35098,cullman_AL,AL,34.18,-87.04,cullman
 35111,tuscaloosa_AL,AL,33.28,-87.12,tuscaloosa
-35112,st clair_AL,AL,33.68,-86.47,st clair
+35112,saint clair_AL,AL,33.68,-86.47,saint clair
 35114,shelby_AL,AL,33.229999999999997,-86.93,shelby
 35115,shelby_AL,AL,33.1,-86.85,shelby
 35116,jefferson_AL,AL,33.74,-86.8,jefferson
 35117,jefferson_AL,AL,33.67,-86.89,jefferson
 35118,jefferson_AL,AL,33.54,-86.97,jefferson
 35119,jefferson_AL,AL,33.68,-86.77,jefferson
-35120,st clair_AL,AL,33.68,-86.39,st clair
+35120,saint clair_AL,AL,33.68,-86.39,saint clair
 35121,blount_AL,AL,33.950000000000003,-86.47,blount
 35123,jefferson_AL,AL,33.74,-86.65,jefferson
 35124,shelby_AL,AL,33.299999999999997,-86.79,shelby
-35125,st clair_AL,AL,33.56,-86.27,st clair
+35125,saint clair_AL,AL,33.56,-86.27,saint clair
 35126,jefferson_AL,AL,33.72,-86.65,jefferson
 35127,jefferson_AL,AL,33.479999999999997,-86.97,jefferson
-35128,st clair_AL,AL,33.56,-86.27,st clair
+35128,saint clair_AL,AL,33.56,-86.27,saint clair
 35130,walker_AL,AL,33.64,-87.14,walker
-35131,st clair_AL,AL,33.74,-86.13,st clair
+35131,saint clair_AL,AL,33.74,-86.13,saint clair
 35133,blount_AL,AL,33.840000000000003,-86.62,blount
-35135,st clair_AL,AL,33.61,-86.2,st clair
+35135,saint clair_AL,AL,33.61,-86.2,saint clair
 35136,coosa_AL,AL,32.880000000000003,-86.21,coosa
 35137,shelby_AL,AL,33.25,-86.79,shelby
 35139,jefferson_AL,AL,33.729999999999997,-86.99,jefferson
 35142,jefferson_AL,AL,33.4,-86.89,jefferson
 35143,shelby_AL,AL,33.07,-86.56,shelby
 35144,shelby_AL,AL,33.25,-86.79,shelby
-35146,st clair_AL,AL,33.770000000000003,-86.47,st clair
+35146,saint clair_AL,AL,33.770000000000003,-86.47,saint clair
 35147,shelby_AL,AL,33.43,-86.5,shelby
 35148,walker_AL,AL,33.75,-87.04,walker
 35149,talladega_AL,AL,33.26,-86.17,talladega
@@ -15398,7 +15398,7 @@ zip,county_state,state,latitude,longitude,county
 35179,cullman_AL,AL,34.26,-86.94,cullman
 35180,jefferson_AL,AL,33.81,-86.8,jefferson
 35181,jefferson_AL,AL,33.68,-86.77,jefferson
-35182,st clair_AL,AL,33.74,-86.43,st clair
+35182,saint clair_AL,AL,33.74,-86.43,saint clair
 35183,coosa_AL,AL,32.93,-86.41,coosa
 35184,bibb_AL,AL,33.11,-87.12,bibb
 35185,shelby_AL,AL,33.380000000000003,-86.6,shelby
@@ -15682,7 +15682,7 @@ zip,county_state,state,latitude,longitude,county
 35950,marshall_AL,AL,34.26,-86.2,marshall
 35951,marshall_AL,AL,34.26,-86.2,marshall
 35952,etowah_AL,AL,34.03,-86.31,etowah
-35953,st clair_AL,AL,33.83,-86.26,st clair
+35953,saint clair_AL,AL,33.83,-86.26,saint clair
 35954,etowah_AL,AL,34.01,-86.1,etowah
 35956,etowah_AL,AL,34.200000000000003,-86.15,etowah
 35957,marshall_AL,AL,34.200000000000003,-86.15,marshall
@@ -15709,7 +15709,7 @@ zip,county_state,state,latitude,longitude,county
 35983,cherokee_AL,AL,34.17,-85.76,cherokee
 35984,dekalb_AL,AL,34.56,-85.58,dekalb
 35986,dekalb_AL,AL,34.49,-85.84,dekalb
-35987,st clair_AL,AL,33.93,-86.19,st clair
+35987,saint clair_AL,AL,33.93,-86.19,saint clair
 35988,dekalb_AL,AL,34.549999999999997,-85.8,dekalb
 35989,dekalb_AL,AL,34.549999999999997,-85.62,dekalb
 35990,etowah_AL,AL,34.06,-86.28,etowah
@@ -20159,27 +20159,27 @@ zip,county_state,state,latitude,longitude,county
 46526,elkhart_IN,IN,41.57,-85.83,elkhart
 46527,elkhart_IN,IN,41.57,-85.83,elkhart
 46528,elkhart_IN,IN,41.57,-85.83,elkhart
-46530,st joseph_IN,IN,41.73,-86.13,st joseph
+46530,saint joseph_IN,IN,41.73,-86.13,saint joseph
 46531,starke_IN,IN,41.32,-86.52,starke
 46532,starke_IN,IN,41.37,-86.58,starke
 46534,starke_IN,IN,41.29,-86.62,starke
-46536,st joseph_IN,IN,41.52,-86.27,st joseph
+46536,saint joseph_IN,IN,41.52,-86.27,saint joseph
 46537,marshall_IN,IN,41.45,-86.3,marshall
 46538,kosciusko_IN,IN,41.32,-85.84,kosciusko
 46539,kosciusko_IN,IN,41.17,-86.03,kosciusko
 46540,elkhart_IN,IN,41.67,-85.7,elkhart
 46542,kosciusko_IN,IN,41.41,-85.84,kosciusko
 46543,elkhart_IN,IN,41.52,-85.69,elkhart
-46544,st joseph_IN,IN,41.66,-86.16,st joseph
-46545,st joseph_IN,IN,41.66,-86.16,st joseph
-46546,st. joseph_IN,IN,41.66,-86.16,st. joseph
+46544,saint joseph_IN,IN,41.66,-86.16,saint joseph
+46545,saint joseph_IN,IN,41.66,-86.16,saint joseph
+46546,saint  joseph_IN,IN,41.66,-86.16,saint  joseph
 46550,elkhart_IN,IN,41.44,-85.98,elkhart
-46552,st joseph_IN,IN,41.7,-86.51,st joseph
+46552,saint joseph_IN,IN,41.7,-86.51,saint joseph
 46553,elkhart_IN,IN,41.5,-85.82,elkhart
-46554,st joseph_IN,IN,41.53,-86.43,st joseph
+46554,saint joseph_IN,IN,41.53,-86.43,saint joseph
 46555,kosciusko_IN,IN,41.32,-85.69,kosciusko
-46556,st. joseph_IN,IN,41.7,-86.24,st. joseph
-46561,st joseph_IN,IN,41.66,-86.07,st joseph
+46556,saint  joseph_IN,IN,41.7,-86.24,saint  joseph
+46561,saint joseph_IN,IN,41.66,-86.07,saint joseph
 46562,kosciusko_IN,IN,41.19,-85.7,kosciusko
 46563,marshall_IN,IN,41.34,-86.31,marshall
 46565,lagrange_IN,IN,41.67,-85.57,lagrange
@@ -20188,30 +20188,30 @@ zip,county_state,state,latitude,longitude,county
 46571,lagrange_IN,IN,41.53,-85.54,lagrange
 46572,marshall_IN,IN,41.4,-86.4,marshall
 46573,elkhart_IN,IN,41.53,-86.01,elkhart
-46574,st joseph_IN,IN,41.46,-86.48,st joseph
+46574,saint joseph_IN,IN,41.46,-86.48,saint joseph
 46580,kosciusko_IN,IN,41.23,-85.85,kosciusko
 46581,kosciusko_IN,IN,41.23,-85.85,kosciusko
 46582,kosciusko_IN,IN,41.23,-85.85,kosciusko
 46590,kosciusko_IN,IN,41.21,-85.81,kosciusko
-46595,st. joseph_IN,IN,41.52,-86.16,st. joseph
-46601,st joseph_IN,IN,41.67,-86.26,st joseph
-46604,st. joseph_IN,IN,41.68,-86.25,st. joseph
-46613,st joseph_IN,IN,41.67,-86.26,st joseph
-46614,st joseph_IN,IN,41.67,-86.26,st joseph
-46615,st joseph_IN,IN,41.67,-86.26,st joseph
-46616,st joseph_IN,IN,41.67,-86.26,st joseph
-46617,st joseph_IN,IN,41.67,-86.26,st joseph
-46619,st joseph_IN,IN,41.67,-86.26,st joseph
-46620,st. joseph_IN,IN,41.68,-86.25,st. joseph
-46624,st. joseph_IN,IN,41.67,-86.26,st. joseph
-46626,st. joseph_IN,IN,41.67,-86.26,st. joseph
-46628,st joseph_IN,IN,41.67,-86.26,st joseph
-46634,st. joseph_IN,IN,41.67,-86.26,st. joseph
-46635,st joseph_IN,IN,41.67,-86.26,st joseph
-46637,st joseph_IN,IN,41.67,-86.26,st joseph
-46660,st. joseph_IN,IN,41.67,-86.26,st. joseph
-46680,st. joseph_IN,IN,41.67,-86.26,st. joseph
-46699,st. joseph_IN,IN,41.67,-86.26,st. joseph
+46595,saint  joseph_IN,IN,41.52,-86.16,saint  joseph
+46601,saint joseph_IN,IN,41.67,-86.26,saint joseph
+46604,saint  joseph_IN,IN,41.68,-86.25,saint  joseph
+46613,saint joseph_IN,IN,41.67,-86.26,saint joseph
+46614,saint joseph_IN,IN,41.67,-86.26,saint joseph
+46615,saint joseph_IN,IN,41.67,-86.26,saint joseph
+46616,saint joseph_IN,IN,41.67,-86.26,saint joseph
+46617,saint joseph_IN,IN,41.67,-86.26,saint joseph
+46619,saint joseph_IN,IN,41.67,-86.26,saint joseph
+46620,saint  joseph_IN,IN,41.68,-86.25,saint  joseph
+46624,saint  joseph_IN,IN,41.67,-86.26,saint  joseph
+46626,saint  joseph_IN,IN,41.67,-86.26,saint  joseph
+46628,saint joseph_IN,IN,41.67,-86.26,saint joseph
+46634,saint  joseph_IN,IN,41.67,-86.26,saint  joseph
+46635,saint joseph_IN,IN,41.67,-86.26,saint joseph
+46637,saint joseph_IN,IN,41.67,-86.26,saint joseph
+46660,saint  joseph_IN,IN,41.67,-86.26,saint  joseph
+46680,saint  joseph_IN,IN,41.67,-86.26,saint  joseph
+46699,saint  joseph_IN,IN,41.67,-86.26,saint  joseph
 46701,noble_IN,IN,41.39,-85.41,noble
 46702,huntington_IN,IN,40.85,-85.6,huntington
 46703,steuben_IN,IN,41.64,-85,steuben
@@ -20889,36 +20889,36 @@ zip,county_state,state,latitude,longitude,county
 47995,white_IN,IN,40.75,-87.04,white
 47996,tippecanoe_IN,IN,40.44,-86.91,tippecanoe
 47997,carroll_IN,IN,40.659999999999997,-86.72,carroll
-48001,st clair_MI,MI,42.61,-82.53,st clair
-48002,st clair_MI,MI,42.92,-82.88,st clair
+48001,saint clair_MI,MI,42.61,-82.53,saint clair
+48002,saint clair_MI,MI,42.92,-82.88,saint clair
 48003,lapeer_MI,MI,42.92,-83.04,lapeer
-48004,st. clair_MI,MI,42.69,-82.69,st. clair
+48004,saint  clair_MI,MI,42.69,-82.69,saint  clair
 48005,macomb_MI,MI,42.84,-82.88,macomb
-48006,st clair_MI,MI,43.05,-82.67,st clair
+48006,saint clair_MI,MI,43.05,-82.67,saint clair
 48007,oakland_MI,MI,42.58,-83.14,oakland
 48009,oakland_MI,MI,42.54,-83.21,oakland
 48012,oakland_MI,MI,42.54,-83.21,oakland
-48014,st clair_MI,MI,43.01,-82.92,st clair
+48014,saint clair_MI,MI,43.01,-82.92,saint clair
 48015,macomb_MI,MI,42.48,-83.02,macomb
 48017,oakland_MI,MI,42.53,-83.15,oakland
 48021,macomb_MI,MI,42.46,-82.94,macomb
-48022,st clair_MI,MI,42.99,-82.76,st clair
-48023,st clair_MI,MI,42.67,-82.64,st clair
+48022,saint clair_MI,MI,42.99,-82.76,saint clair
+48023,saint clair_MI,MI,42.67,-82.64,saint clair
 48025,oakland_MI,MI,42.51,-83.3,oakland
 48026,macomb_MI,MI,42.53,-82.94,macomb
-48027,st clair_MI,MI,42.93,-82.66,st clair
-48028,st clair_MI,MI,42.59,-82.57,st clair
+48027,saint clair_MI,MI,42.93,-82.66,saint clair
+48028,saint clair_MI,MI,42.59,-82.57,saint clair
 48030,oakland_MI,MI,42.46,-83.09,oakland
-48032,st clair_MI,MI,43.15,-82.58,st clair
+48032,saint clair_MI,MI,43.15,-82.58,saint clair
 48033,oakland_MI,MI,42.46,-83.28,oakland
 48034,oakland_MI,MI,42.47,-83.25,oakland
 48035,macomb_MI,MI,42.58,-82.91,macomb
 48036,macomb_MI,MI,42.58,-82.91,macomb
 48037,oakland_MI,MI,42.47,-83.25,oakland
 48038,macomb_MI,MI,42.58,-82.91,macomb
-48039,st clair_MI,MI,42.71,-82.49,st clair
-48040,st clair_MI,MI,42.91,-82.47,st clair
-48041,st clair_MI,MI,42.89,-82.76,st clair
+48039,saint clair_MI,MI,42.71,-82.49,saint clair
+48040,saint clair_MI,MI,42.91,-82.47,saint clair
+48041,saint clair_MI,MI,42.89,-82.76,saint clair
 48042,macomb_MI,MI,42.66,-82.91,macomb
 48043,macomb_MI,MI,42.59,-82.88,macomb
 48044,macomb_MI,MI,42.66,-82.91,macomb
@@ -20926,16 +20926,16 @@ zip,county_state,state,latitude,longitude,county
 48046,macomb_MI,MI,42.59,-82.88,macomb
 48047,macomb_MI,MI,42.68,-82.73,macomb
 48048,macomb_MI,MI,42.73,-82.79,macomb
-48049,st clair_MI,MI,43.03,-82.56,st clair
+48049,saint clair_MI,MI,43.03,-82.56,saint clair
 48050,macomb_MI,MI,42.73,-82.79,macomb
 48051,macomb_MI,MI,42.68,-82.73,macomb
-48054,st clair_MI,MI,42.77,-82.53,st clair
-48059,st clair_MI,MI,43.07,-82.49,st clair
-48060,st clair_MI,MI,42.97,-82.42,st clair
-48061,st. clair_MI,MI,42.97,-82.42,st. clair
+48054,saint clair_MI,MI,42.77,-82.53,saint clair
+48059,saint clair_MI,MI,43.07,-82.49,saint clair
+48060,saint clair_MI,MI,42.97,-82.42,saint clair
+48061,saint  clair_MI,MI,42.97,-82.42,saint  clair
 48062,macomb_MI,MI,42.8,-82.75,macomb
-48063,st clair_MI,MI,42.85,-82.68,st clair
-48064,st clair_MI,MI,42.76,-82.67,st clair
+48063,saint clair_MI,MI,42.85,-82.68,saint clair
+48064,saint clair_MI,MI,42.76,-82.67,saint clair
 48065,macomb_MI,MI,42.8,-83,macomb
 48066,macomb_MI,MI,42.5,-82.93,macomb
 48067,oakland_MI,MI,42.5,-83.15,oakland
@@ -20945,10 +20945,10 @@ zip,county_state,state,latitude,longitude,county
 48071,oakland_MI,MI,42.5,-83.1,oakland
 48072,oakland_MI,MI,42.49,-83.18,oakland
 48073,oakland_MI,MI,42.5,-83.15,oakland
-48074,st clair_MI,MI,42.91,-82.6,st clair
+48074,saint clair_MI,MI,42.91,-82.6,saint clair
 48075,oakland_MI,MI,42.47,-83.25,oakland
 48076,oakland_MI,MI,42.47,-83.25,oakland
-48079,st clair_MI,MI,42.82,-82.49,st clair
+48079,saint clair_MI,MI,42.82,-82.49,saint clair
 48080,macomb_MI,MI,42.49,-82.89,macomb
 48081,macomb_MI,MI,42.49,-82.89,macomb
 48082,macomb_MI,MI,42.49,-82.89,macomb
@@ -20965,7 +20965,7 @@ zip,county_state,state,latitude,longitude,county
 48094,macomb_MI,MI,42.72,-83.03,macomb
 48095,macomb_MI,MI,42.72,-83.03,macomb
 48096,macomb_MI,MI,42.78,-82.93,macomb
-48097,st clair_MI,MI,43.12,-82.79,st clair
+48097,saint clair_MI,MI,43.12,-82.79,saint clair
 48098,oakland_MI,MI,42.58,-83.14,oakland
 48099,oakland_MI,MI,42.58,-83.14,oakland
 48101,wayne_MI,MI,42.25,-83.21,wayne
@@ -21514,9 +21514,9 @@ zip,county_state,state,latitude,longitude,county
 49027,van buren_MI,MI,42.34,-86.07,van buren
 49028,branch_MI,MI,41.87,-85.19,branch
 49029,calhoun_MI,MI,42.1,-85.07,calhoun
-49030,st joseph_MI,MI,41.84,-85.32,st joseph
+49030,saint joseph_MI,MI,41.84,-85.32,saint joseph
 49031,cass_MI,MI,41.91,-86,cass
-49032,st joseph_MI,MI,41.92,-85.52,st joseph
+49032,saint joseph_MI,MI,41.92,-85.52,saint joseph
 49033,calhoun_MI,MI,42.27,-85.06,calhoun
 49034,kalamazoo_MI,MI,42.23,-85.33,kalamazoo
 49035,barry_MI,MI,42.63,-85.3,barry
@@ -21524,9 +21524,9 @@ zip,county_state,state,latitude,longitude,county
 49037,calhoun_MI,MI,42.32,-85.26,calhoun
 49038,berrien_MI,MI,42.18,-86.3,berrien
 49039,berrien_MI,MI,42.19,-86.38,berrien
-49040,st joseph_MI,MI,41.95,-85.32,st joseph
+49040,saint joseph_MI,MI,41.95,-85.32,saint joseph
 49041,kalamazoo_MI,MI,42.28,-85.51,kalamazoo
-49042,st joseph_MI,MI,41.83,-85.66,st joseph
+49042,saint joseph_MI,MI,41.83,-85.66,saint joseph
 49043,van buren_MI,MI,42.29,-86.26,van buren
 49045,van buren_MI,MI,42.1,-85.97,van buren
 49046,barry_MI,MI,42.49,-85.4,barry
@@ -21546,16 +21546,16 @@ zip,county_state,state,latitude,longitude,county
 49063,van buren_MI,MI,42.41,-86.12,van buren
 49064,van buren_MI,MI,42.21,-86.05,van buren
 49065,van buren_MI,MI,42.16,-85.84,van buren
-49066,st joseph_MI,MI,42.03,-85.35,st joseph
+49066,saint joseph_MI,MI,42.03,-85.35,saint joseph
 49067,cass_MI,MI,42.02,-85.81,cass
 49068,calhoun_MI,MI,42.26,-84.95,calhoun
 49069,calhoun_MI,MI,42.27,-84.95,calhoun
 49070,allegan_MI,MI,42.53,-85.63,allegan
 49071,van buren_MI,MI,42.21,-85.78,van buren
-49072,st joseph_MI,MI,42,-85.45,st joseph
+49072,saint joseph_MI,MI,42,-85.45,saint joseph
 49073,barry_MI,MI,42.6,-85.09,barry
 49074,kalamazoo_MI,MI,42.35,-85.52,kalamazoo
-49075,st joseph_MI,MI,41.93,-85.44,st joseph
+49075,saint joseph_MI,MI,41.93,-85.44,saint joseph
 49076,eaton_MI,MI,42.44,-84.92,eaton
 49077,kalamazoo_MI,MI,42.25,-85.67,kalamazoo
 49078,allegan_MI,MI,42.45,-85.69,allegan
@@ -21570,15 +21570,15 @@ zip,county_state,state,latitude,longitude,county
 49088,kalamazoo_MI,MI,42.19,-85.41,kalamazoo
 49089,branch_MI,MI,42,-85.24,branch
 49090,van buren_MI,MI,42.4,-86.27,van buren
-49091,st joseph_MI,MI,41.8,-85.42,st joseph
+49091,saint joseph_MI,MI,41.8,-85.42,saint joseph
 49092,calhoun_MI,MI,42.09,-84.98,calhoun
-49093,st joseph_MI,MI,41.94,-85.63,st joseph
+49093,saint joseph_MI,MI,41.94,-85.63,saint joseph
 49094,branch_MI,MI,42.06,-85.14,branch
 49095,cass_MI,MI,41.91,-85.91,cass
 49096,eaton_MI,MI,42.62,-85.02,eaton
 49097,kalamazoo_MI,MI,42.12,-85.53,kalamazoo
 49098,berrien_MI,MI,42.18,-86.25,berrien
-49099,st joseph_MI,MI,41.79,-85.64,st joseph
+49099,saint joseph_MI,MI,41.79,-85.64,saint joseph
 49101,berrien_MI,MI,41.95,-86.48,berrien
 49102,berrien_MI,MI,41.94,-86.26,berrien
 49103,berrien_MI,MI,41.94,-86.34,berrien
@@ -23519,30 +23519,30 @@ zip,county_state,state,latitude,longitude,county
 53968,juneau_WI,WI,43.65,-90.22,juneau
 53969,columbia_WI,WI,43.49,-89.31,columbia
 54001,polk_WI,WI,45.3,-92.36,polk
-54002,st croix_WI,WI,44.96,-92.37,st croix
+54002,saint croix_WI,WI,44.96,-92.37,saint croix
 54003,pierce_WI,WI,44.77,-92.43,pierce
 54004,barron_WI,WI,45.32,-92.17,barron
 54005,polk_WI,WI,45.25,-92.26,polk
 54006,polk_WI,WI,45.56,-92.64,polk
-54007,st croix_WI,WI,45.18,-92.38,st croix
+54007,saint croix_WI,WI,45.18,-92.38,saint croix
 54009,polk_WI,WI,45.36,-92.63,polk
 54010,pierce_WI,WI,44.72,-92.42,pierce
 54011,pierce_WI,WI,44.73,-92.47,pierce
-54013,st croix_WI,WI,45.05,-92.17,st croix
+54013,saint croix_WI,WI,45.05,-92.17,saint croix
 54014,pierce_WI,WI,44.64,-92.56,pierce
-54015,st croix_WI,WI,44.97,-92.43,st croix
-54016,st croix_WI,WI,44.97,-92.73,st croix
-54017,st croix_WI,WI,45.12,-92.53,st croix
+54015,saint croix_WI,WI,44.97,-92.43,saint croix
+54016,saint croix_WI,WI,44.97,-92.73,saint croix
+54017,saint croix_WI,WI,45.12,-92.53,saint croix
 54020,polk_WI,WI,45.31,-92.69,polk
 54021,pierce_WI,WI,44.75,-92.79,pierce
 54022,pierce_WI,WI,44.85,-92.62,pierce
-54023,st croix_WI,WI,44.98,-92.55,st croix
+54023,saint croix_WI,WI,44.98,-92.55,saint croix
 54024,polk_WI,WI,45.4,-92.63,polk
-54025,st croix_WI,WI,45.12,-92.67,st croix
+54025,saint croix_WI,WI,45.12,-92.67,saint croix
 54026,polk_WI,WI,45.19,-92.53,polk
-54027,st croix_WI,WI,44.95,-92.17,st croix
-54028,st croix_WI,WI,44.95,-92.28,st croix
-54082,st croix_WI,WI,45.07,-92.75,st croix
+54027,saint croix_WI,WI,44.95,-92.17,saint croix
+54028,saint croix_WI,WI,44.95,-92.28,saint croix
+54082,saint croix_WI,WI,45.07,-92.75,saint croix
 54101,oconto_WI,WI,44.78,-88.06,oconto
 54102,marinette_WI,WI,45.5,-88,marinette
 54103,forest_WI,WI,45.65,-88.44,forest
@@ -24362,7 +24362,7 @@ zip,county_state,state,latitude,longitude,county
 55598,hennepin_MN,MN,45.05,-93.63,hennepin
 55599,hennepin_MN,MN,45.05,-93.63,hennepin
 55601,lake_MN,MN,47.25,-91.29,lake
-55602,st louis_MN,MN,47.27,-91.86,st louis
+55602,saint louis_MN,MN,47.27,-91.86,saint louis
 55603,lake_MN,MN,47.41,-91.24,lake
 55604,cook_MN,MN,47.75,-90.34,cook
 55605,cook_MN,MN,47.96,-89.68,cook
@@ -24374,96 +24374,96 @@ zip,county_state,state,latitude,longitude,county
 55614,lake_MN,MN,47.29,-91.27,lake
 55615,cook_MN,MN,47.55,-90.88,cook
 55616,lake_MN,MN,47.03,-91.67,lake
-55701,st louis_MN,MN,46.84,-92.22,st louis
-55702,st louis_MN,MN,46.97,-92.57,st louis
-55703,st louis_MN,MN,47.77,-92.63,st louis
+55701,saint louis_MN,MN,46.84,-92.22,saint louis
+55702,saint louis_MN,MN,46.97,-92.57,saint louis
+55703,saint louis_MN,MN,47.77,-92.63,saint louis
 55704,pine_MN,MN,46.18,-92.78,pine
-55705,st louis_MN,MN,47.53,-92.24,st louis
-55706,st louis_MN,MN,47.64,-91.94,st louis
+55705,saint louis_MN,MN,47.53,-92.24,saint louis
+55706,saint louis_MN,MN,47.64,-91.94,saint louis
 55707,carlton_MN,MN,46.5,-92.68,carlton
-55708,st louis_MN,MN,47.53,-92.35,st louis
+55708,saint louis_MN,MN,47.53,-92.35,saint louis
 55709,itasca_MN,MN,47.29,-93.4,itasca
-55710,st louis_MN,MN,47.64,-92.68,st louis
-55711,st louis_MN,MN,46.86,-92.6,st louis
+55710,saint louis_MN,MN,47.64,-92.68,saint louis
+55711,saint louis_MN,MN,46.86,-92.6,saint louis
 55712,pine_MN,MN,46.28,-92.66,pine
-55713,st louis_MN,MN,47.49,-92.76,st louis
+55713,saint louis_MN,MN,47.49,-92.76,saint louis
 55716,itasca_MN,MN,47.31,-93.26,itasca
-55717,st louis_MN,MN,47.06,-92.4,st louis
+55717,saint louis_MN,MN,47.06,-92.4,saint louis
 55718,carlton_MN,MN,46.66,-92.42,carlton
-55719,st louis_MN,MN,47.48,-92.87,st louis
+55719,saint louis_MN,MN,47.48,-92.87,saint louis
 55720,carlton_MN,MN,46.72,-92.49,carlton
 55721,itasca_MN,MN,47.26,-93.62,itasca
 55722,itasca_MN,MN,47.3,-93.42,itasca
-55723,st louis_MN,MN,47.85,-92.68,st louis
-55724,st louis_MN,MN,47.16,-92.47,st louis
-55725,st louis_MN,MN,48.26,-92.48,st louis
+55723,saint louis_MN,MN,47.85,-92.68,saint louis
+55724,saint louis_MN,MN,47.16,-92.47,saint louis
+55725,saint louis_MN,MN,48.26,-92.48,saint louis
 55726,carlton_MN,MN,46.67,-92.87,carlton
 55730,itasca_MN,MN,47.22,-93.52,itasca
-55731,st louis_MN,MN,47.9,-91.85,st louis
-55732,st louis_MN,MN,47.65,-92.19,st louis
+55731,saint louis_MN,MN,47.9,-91.85,saint louis
+55732,saint louis_MN,MN,47.65,-92.19,saint louis
 55733,carlton_MN,MN,46.7,-92.36,carlton
-55734,st louis_MN,MN,47.46,-92.54,st louis
+55734,saint louis_MN,MN,47.46,-92.54,saint louis
 55735,pine_MN,MN,46.2,-92.92,pine
-55736,st louis_MN,MN,46.92,-92.91,st louis
-55738,st louis_MN,MN,47.28,-92.61,st louis
-55741,st louis_MN,MN,47.49,-92.46,st louis
+55736,saint louis_MN,MN,46.92,-92.91,saint louis
+55738,saint louis_MN,MN,47.28,-92.61,saint louis
+55741,saint louis_MN,MN,47.49,-92.46,saint louis
 55742,itasca_MN,MN,47.16,-93.13,itasca
 55744,itasca_MN,MN,47.22,-93.52,itasca
 55745,itasca_MN,MN,47.22,-93.52,itasca
-55746,st louis_MN,MN,47.4,-92.94,st louis
-55747,st. louis_MN,MN,47.4,-92.94,st. louis
+55746,saint louis_MN,MN,47.4,-92.94,saint louis
+55747,saint  louis_MN,MN,47.4,-92.94,saint  louis
 55748,aitkin_MN,MN,46.98,-93.59,aitkin
 55749,carlton_MN,MN,46.46,-92.38,carlton
-55750,st louis_MN,MN,47.55,-92.11,st louis
-55751,st louis_MN,MN,47.41,-92.64,st louis
+55750,saint louis_MN,MN,47.55,-92.11,saint louis
+55751,saint louis_MN,MN,47.41,-92.64,saint louis
 55752,aitkin_MN,MN,47,-93.26,aitkin
 55753,itasca_MN,MN,47.4,-93.08,itasca
 55756,pine_MN,MN,46.33,-92.58,pine
 55757,carlton_MN,MN,46.48,-92.87,carlton
-55758,st louis_MN,MN,47.52,-92.72,st louis
+55758,saint louis_MN,MN,47.52,-92.72,saint louis
 55760,aitkin_MN,MN,46.6,-93.3,aitkin
-55763,st louis_MN,MN,47.35,-92.36,st louis
+55763,saint louis_MN,MN,47.35,-92.36,saint louis
 55764,itasca_MN,MN,47.32,-93.29,itasca
-55765,st louis_MN,MN,47.07,-92.73,st louis
-55766,st louis_MN,MN,47.24,-92.42,st louis
+55765,saint louis_MN,MN,47.07,-92.73,saint louis
+55766,saint louis_MN,MN,47.24,-92.42,saint louis
 55767,carlton_MN,MN,46.44,-92.76,carlton
-55768,st louis_MN,MN,47.52,-92.62,st louis
+55768,saint louis_MN,MN,47.52,-92.62,saint louis
 55769,itasca_MN,MN,47.38,-93.16,itasca
-55771,st louis_MN,MN,48.06,-92.82,st louis
+55771,saint louis_MN,MN,48.06,-92.82,saint louis
 55772,koochiching_MN,MN,48.11,-93.07,koochiching
 55775,itasca_MN,MN,47.33,-93.19,itasca
-55777,st. louis_MN,MN,47.51,-92.5,st. louis
-55779,st louis_MN,MN,46.85,-92.44,st louis
+55777,saint  louis_MN,MN,47.51,-92.5,saint  louis
+55779,saint louis_MN,MN,46.85,-92.44,saint louis
 55780,carlton_MN,MN,46.67,-92.63,carlton
-55781,st louis_MN,MN,47.66,-93.01,st louis
-55782,st louis_MN,MN,47.81,-92.23,st louis
+55781,saint louis_MN,MN,47.66,-93.01,saint louis
+55782,saint louis_MN,MN,47.81,-92.23,saint louis
 55783,pine_MN,MN,46.38,-92.82,pine
 55784,itasca_MN,MN,47.08,-93.19,itasca
 55785,aitkin_MN,MN,46.89,-93.67,aitkin
 55786,itasca_MN,MN,47.32,-93.36,itasca
 55787,aitkin_MN,MN,46.65,-93.11,aitkin
-55790,st louis_MN,MN,47.81,-92.29,st louis
-55791,st louis_MN,MN,46.89,-92.36,st louis
-55792,st louis_MN,MN,47.51,-92.5,st louis
+55790,saint louis_MN,MN,47.81,-92.29,saint louis
+55791,saint louis_MN,MN,46.89,-92.36,saint louis
+55792,saint louis_MN,MN,47.51,-92.5,saint louis
 55793,itasca_MN,MN,47.13,-93.27,itasca
 55795,pine_MN,MN,46.32,-92.83,pine
-55796,st louis_MN,MN,47.92,-91.8,st louis
+55796,saint louis_MN,MN,47.92,-91.8,saint louis
 55797,carlton_MN,MN,46.61,-92.38,carlton
 55798,carlton_MN,MN,46.67,-93,carlton
-55801,st louis_MN,MN,46.78,-92.11,st louis
-55802,st louis_MN,MN,46.78,-92.11,st louis
-55803,st louis_MN,MN,46.78,-92.11,st louis
-55804,st louis_MN,MN,46.78,-92.11,st louis
-55805,st louis_MN,MN,46.78,-92.11,st louis
-55806,st louis_MN,MN,46.78,-92.11,st louis
-55807,st louis_MN,MN,46.78,-92.11,st louis
-55808,st louis_MN,MN,46.78,-92.11,st louis
-55810,st louis_MN,MN,46.78,-92.11,st louis
-55811,st louis_MN,MN,46.78,-92.11,st louis
-55812,st louis_MN,MN,46.78,-92.11,st louis
-55814,st. louis_MN,MN,46.78,-92.11,st. louis
-55815,st. louis_MN,MN,46.78,-92.11,st. louis
-55816,st. louis_MN,MN,46.78,-92.11,st. louis
+55801,saint louis_MN,MN,46.78,-92.11,saint louis
+55802,saint louis_MN,MN,46.78,-92.11,saint louis
+55803,saint louis_MN,MN,46.78,-92.11,saint louis
+55804,saint louis_MN,MN,46.78,-92.11,saint louis
+55805,saint louis_MN,MN,46.78,-92.11,saint louis
+55806,saint louis_MN,MN,46.78,-92.11,saint louis
+55807,saint louis_MN,MN,46.78,-92.11,saint louis
+55808,saint louis_MN,MN,46.78,-92.11,saint louis
+55810,saint louis_MN,MN,46.78,-92.11,saint louis
+55811,saint louis_MN,MN,46.78,-92.11,saint louis
+55812,saint louis_MN,MN,46.78,-92.11,saint louis
+55814,saint  louis_MN,MN,46.78,-92.11,saint  louis
+55815,saint  louis_MN,MN,46.78,-92.11,saint  louis
+55816,saint  louis_MN,MN,46.78,-92.11,saint  louis
 55901,olmsted_MN,MN,44.01,-92.47,olmsted
 55902,olmsted_MN,MN,44.01,-92.47,olmsted
 55903,olmsted_MN,MN,44.01,-92.47,olmsted
@@ -27299,7 +27299,7 @@ zip,county_state,state,latitude,longitude,county
 62054,greene_IL,IL,39.19,-90.35,greene
 62056,montgomery_IL,IL,39.17,-89.65,montgomery
 62058,madison_IL,IL,38.96,-89.76,madison
-62059,st. clair_IL,IL,38.65,-90.16,st. clair
+62059,saint  clair_IL,IL,38.65,-90.16,saint  clair
 62060,madison_IL,IL,38.67,-90.15,madison
 62061,madison_IL,IL,38.78,-89.77,madison
 62062,madison_IL,IL,38.72,-89.96,madison
@@ -27308,7 +27308,7 @@ zip,county_state,state,latitude,longitude,county
 62067,madison_IL,IL,38.950000000000003,-89.99,madison
 62069,macoupin_IL,IL,39.07,-89.72,macoupin
 62070,calhoun_IL,IL,39.29,-90.75,calhoun
-62071,st. clair_IL,IL,38.630000000000003,-90.15,st. clair
+62071,saint  clair_IL,IL,38.630000000000003,-90.15,saint  clair
 62074,madison_IL,IL,38.97,-89.66,madison
 62075,montgomery_IL,IL,39.299999999999997,-89.28,montgomery
 62076,montgomery_IL,IL,39.340000000000003,-89.21,montgomery
@@ -27333,40 +27333,40 @@ zip,county_state,state,latitude,longitude,county
 62095,madison_IL,IL,38.86,-90.08,madison
 62097,madison_IL,IL,38.93,-89.83,madison
 62098,greene_IL,IL,39.369999999999997,-90.29,greene
-62201,st clair_IL,IL,38.61,-90.13,st clair
-62202,st. clair_IL,IL,38.61,-90.13,st. clair
-62203,st clair_IL,IL,38.61,-90.13,st clair
-62204,st clair_IL,IL,38.61,-90.13,st clair
-62205,st clair_IL,IL,38.61,-90.13,st clair
-62206,st clair_IL,IL,38.61,-90.13,st clair
-62207,st clair_IL,IL,38.61,-90.13,st clair
-62208,st clair_IL,IL,38.590000000000003,-90,st clair
+62201,saint clair_IL,IL,38.61,-90.13,saint clair
+62202,saint  clair_IL,IL,38.61,-90.13,saint  clair
+62203,saint clair_IL,IL,38.61,-90.13,saint clair
+62204,saint clair_IL,IL,38.61,-90.13,saint clair
+62205,saint clair_IL,IL,38.61,-90.13,saint clair
+62206,saint clair_IL,IL,38.61,-90.13,saint clair
+62207,saint clair_IL,IL,38.61,-90.13,saint clair
+62208,saint clair_IL,IL,38.590000000000003,-90,saint clair
 62214,washington_IL,IL,38.39,-89.48,washington
 62215,clinton_IL,IL,38.54,-89.61,clinton
 62216,clinton_IL,IL,38.6,-89.6,clinton
 62217,randolph_IL,IL,38.18,-89.84,randolph
 62218,clinton_IL,IL,38.53,-89.46,clinton
 62219,clinton_IL,IL,38.6,-89.43,clinton
-62220,st clair_IL,IL,38.53,-90,st clair
-62221,st clair_IL,IL,38.53,-90,st clair
-62222,st. clair_IL,IL,38.53,-90,st. clair
-62223,st clair_IL,IL,38.53,-90,st clair
-62224,st. clair_IL,IL,38.49,-89.79,st. clair
-62225,st clair_IL,IL,38.54,-89.85,st clair
-62226,st clair_IL,IL,38.53,-90,st clair
+62220,saint clair_IL,IL,38.53,-90,saint clair
+62221,saint clair_IL,IL,38.53,-90,saint clair
+62222,saint  clair_IL,IL,38.53,-90,saint  clair
+62223,saint clair_IL,IL,38.53,-90,saint clair
+62224,saint  clair_IL,IL,38.49,-89.79,saint  clair
+62225,saint clair_IL,IL,38.54,-89.85,saint clair
+62226,saint clair_IL,IL,38.53,-90,saint clair
 62230,clinton_IL,IL,38.61,-89.52,clinton
 62231,clinton_IL,IL,38.61,-89.37,clinton
-62232,st clair_IL,IL,38.630000000000003,-90.03,st clair
+62232,saint clair_IL,IL,38.630000000000003,-90.03,saint clair
 62233,randolph_IL,IL,37.909999999999997,-89.82,randolph
 62234,madison_IL,IL,38.67,-89.99,madison
 62236,monroe_IL,IL,38.450000000000003,-90.22,monroe
 62237,perry_IL,IL,38.18,-89.6,perry
 62238,perry_IL,IL,38.03,-89.56,perry
-62239,st clair_IL,IL,38.51,-90.2,st clair
-62240,st clair_IL,IL,38.53,-90.23,st clair
+62239,saint clair_IL,IL,38.51,-90.2,saint clair
+62240,saint clair_IL,IL,38.53,-90.23,saint clair
 62241,randolph_IL,IL,38,-89.9,randolph
 62242,randolph_IL,IL,38.08,-89.93,randolph
-62243,st clair_IL,IL,38.42,-89.9,st clair
+62243,saint clair_IL,IL,38.42,-89.9,saint clair
 62244,monroe_IL,IL,38.159999999999997,-90.21,monroe
 62245,clinton_IL,IL,38.549999999999997,-89.53,clinton
 62246,bond_IL,IL,38.880000000000003,-89.4,bond
@@ -27376,21 +27376,21 @@ zip,county_state,state,latitude,longitude,county
 62250,clinton_IL,IL,38.53,-89.26,clinton
 62252,clinton_IL,IL,38.6,-89.29,clinton
 62253,bond_IL,IL,38.74,-89.27,bond
-62254,st clair_IL,IL,38.6,-89.81,st clair
-62255,st clair_IL,IL,38.28,-89.81,st clair
+62254,saint clair_IL,IL,38.6,-89.81,saint clair
+62255,saint clair_IL,IL,38.28,-89.81,saint clair
 62256,monroe_IL,IL,38.22,-90.23,monroe
-62257,st clair_IL,IL,38.25,-89.75,st clair
-62258,st clair_IL,IL,38.5,-89.8,st clair
+62257,saint clair_IL,IL,38.25,-89.75,saint clair
+62258,saint clair_IL,IL,38.5,-89.8,saint clair
 62259,randolph_IL,IL,37.94,-89.86,randolph
-62260,st clair_IL,IL,38.450000000000003,-90.09,st clair
+62260,saint clair_IL,IL,38.450000000000003,-90.09,saint clair
 62261,randolph_IL,IL,38.049999999999997,-90.03,randolph
 62262,fayette_IL,IL,38.92,-89.26,fayette
 62263,washington_IL,IL,38.340000000000003,-89.37,washington
-62264,st clair_IL,IL,38.31,-89.87,st clair
+62264,saint clair_IL,IL,38.31,-89.87,saint clair
 62265,clinton_IL,IL,38.53,-89.69,clinton
 62266,clinton_IL,IL,38.47,-89.67,clinton
 62268,washington_IL,IL,38.26,-89.5,washington
-62269,st clair_IL,IL,38.590000000000003,-89.91,st clair
+62269,saint clair_IL,IL,38.590000000000003,-89.91,saint clair
 62271,washington_IL,IL,38.43,-89.54,washington
 62272,randolph_IL,IL,38.01,-89.61,randolph
 62273,bond_IL,IL,38.770000000000003,-89.56,bond
@@ -27401,12 +27401,12 @@ zip,county_state,state,latitude,longitude,county
 62279,monroe_IL,IL,38.15,-90.13,monroe
 62280,randolph_IL,IL,37.83,-89.69,randolph
 62281,madison_IL,IL,38.71,-89.76,madison
-62282,st clair_IL,IL,38.36,-89.71,st clair
+62282,saint clair_IL,IL,38.36,-89.71,saint clair
 62284,bond_IL,IL,38.89,-89.34,bond
-62285,st clair_IL,IL,38.4,-89.99,st clair
+62285,saint clair_IL,IL,38.4,-89.99,saint clair
 62286,randolph_IL,IL,38.15,-89.71,randolph
 62288,randolph_IL,IL,38,-89.66,randolph
-62289,st clair_IL,IL,38.590000000000003,-89.74,st clair
+62289,saint clair_IL,IL,38.590000000000003,-89.74,saint clair
 62292,randolph_IL,IL,38.21,-89.68,randolph
 62293,clinton_IL,IL,38.6,-89.68,clinton
 62294,madison_IL,IL,38.729999999999997,-89.89,madison
@@ -27856,41 +27856,41 @@ zip,county_state,state,latitude,longitude,county
 62997,perry_IL,IL,37.979999999999997,-89.59,perry
 62998,union_IL,IL,37.53,-89.44,union
 62999,franklin_IL,IL,37.89,-89.05,franklin
-63001,st. louis_MO,MO,38.5,-90.67,st. louis
-63005,st louis_MO,MO,38.65,-90.58,st louis
-63006,st. louis_MO,MO,38.65,-90.58,st. louis
+63001,saint  louis_MO,MO,38.5,-90.67,saint  louis
+63005,saint louis_MO,MO,38.65,-90.58,saint louis
+63006,saint  louis_MO,MO,38.65,-90.58,saint  louis
 63010,jefferson_MO,MO,38.42,-90.36,jefferson
-63011,st louis_MO,MO,38.590000000000003,-90.55,st louis
+63011,saint louis_MO,MO,38.590000000000003,-90.55,saint louis
 63012,jefferson_MO,MO,38.33,-90.4,jefferson
 63013,franklin_MO,MO,38.409999999999997,-91.19,franklin
 63014,franklin_MO,MO,38.67,-91.33,franklin
 63015,franklin_MO,MO,38.42,-90.78,franklin
 63016,jefferson_MO,MO,38.35,-90.64,jefferson
-63017,st louis_MO,MO,38.65,-90.58,st louis
+63017,saint louis_MO,MO,38.65,-90.58,saint louis
 63019,jefferson_MO,MO,38.22,-90.38,jefferson
 63020,jefferson_MO,MO,38.130000000000003,-90.56,jefferson
-63021,st louis_MO,MO,38.590000000000003,-90.55,st louis
-63022,st. louis_MO,MO,38.590000000000003,-90.55,st. louis
+63021,saint louis_MO,MO,38.590000000000003,-90.55,saint louis
+63022,saint  louis_MO,MO,38.590000000000003,-90.55,saint  louis
 63023,jefferson_MO,MO,38.33,-90.68,jefferson
-63024,st. louis_MO,MO,38.590000000000003,-90.55,st. louis
-63025,st louis_MO,MO,38.5,-90.64,st louis
-63026,st louis_MO,MO,38.53,-90.45,st louis
+63024,saint  louis_MO,MO,38.590000000000003,-90.55,saint  louis
+63025,saint louis_MO,MO,38.5,-90.64,saint louis
+63026,saint louis_MO,MO,38.53,-90.45,saint louis
 63028,jefferson_MO,MO,38.22,-90.4,jefferson
 63030,washington_MO,MO,38.159999999999997,-90.73,washington
-63031,st louis_MO,MO,38.79,-90.32,st louis
-63032,st. louis_MO,MO,38.79,-90.32,st. louis
-63033,st louis_MO,MO,38.79,-90.32,st louis
-63034,st louis_MO,MO,38.79,-90.32,st louis
-63036,st francois_MO,MO,37.97,-90.38,st francois
+63031,saint louis_MO,MO,38.79,-90.32,saint louis
+63032,saint  louis_MO,MO,38.79,-90.32,saint  louis
+63033,saint louis_MO,MO,38.79,-90.32,saint louis
+63034,saint louis_MO,MO,38.79,-90.32,saint louis
+63036,saint francois_MO,MO,37.97,-90.38,saint francois
 63037,franklin_MO,MO,38.39,-91.33,franklin
-63038,st louis_MO,MO,38.57,-90.63,st louis
+63038,saint louis_MO,MO,38.57,-90.63,saint louis
 63039,franklin_MO,MO,38.49,-90.81,franklin
-63040,st louis_MO,MO,38.57,-90.65,st louis
+63040,saint louis_MO,MO,38.57,-90.65,saint louis
 63041,franklin_MO,MO,38.28,-90.75,franklin
-63042,st louis_MO,MO,38.770000000000003,-90.35,st louis
-63043,st louis_MO,MO,38.72,-90.47,st louis
-63044,st louis_MO,MO,38.76,-90.42,st louis
-63045,st louis_MO,MO,38.770000000000003,-90.46,st louis
+63042,saint louis_MO,MO,38.770000000000003,-90.35,saint louis
+63043,saint louis_MO,MO,38.72,-90.47,saint louis
+63044,saint louis_MO,MO,38.76,-90.42,saint louis
+63045,saint louis_MO,MO,38.770000000000003,-90.46,saint louis
 63047,jefferson_MO,MO,38.200000000000003,-90.48,jefferson
 63048,jefferson_MO,MO,38.25,-90.38,jefferson
 63049,jefferson_MO,MO,38.46,-90.53,jefferson
@@ -27911,107 +27911,107 @@ zip,county_state,state,latitude,longitude,county
 63071,washington_MO,MO,38.159999999999997,-90.83,washington
 63072,franklin_MO,MO,38.409999999999997,-90.81,franklin
 63073,franklin_MO,MO,38.57,-90.77,franklin
-63074,st louis_MO,MO,38.72,-90.38,st louis
+63074,saint louis_MO,MO,38.72,-90.38,saint louis
 63077,franklin_MO,MO,38.35,-90.98,franklin
 63079,franklin_MO,MO,38.270000000000003,-91.1,franklin
 63080,crawford_MO,MO,38.21,-91.16,crawford
 63084,franklin_MO,MO,38.44,-91.01,franklin
-63087,st francois_MO,MO,38,-90.45,st francois
-63088,st louis_MO,MO,38.549999999999997,-90.48,st louis
+63087,saint francois_MO,MO,38,-90.45,saint francois
+63088,saint louis_MO,MO,38.549999999999997,-90.48,saint louis
 63089,franklin_MO,MO,38.47,-90.88,franklin
 63090,franklin_MO,MO,38.549999999999997,-91.01,franklin
 63091,gasconade_MO,MO,38.380000000000003,-91.4,gasconade
-63099,st. louis_MO,MO,38.53,-90.45,st. louis
-63101,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63102,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63103,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63104,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63105,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63106,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63107,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63108,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63109,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63110,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63111,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63112,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63113,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63114,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63115,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63116,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63117,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63118,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63119,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63120,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63121,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63122,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63123,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63124,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63125,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63126,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63127,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63128,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63129,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63130,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63131,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63132,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63133,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63134,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63135,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63136,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63137,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63138,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63139,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63140,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63141,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63143,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63144,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63145,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63146,st louis_MO,MO,38.630000000000003,-90.24,st louis
-63147,st louis city_MO,MO,38.630000000000003,-90.24,st louis city
-63150,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63151,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63155,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63156,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63157,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63158,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63160,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63163,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63164,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63166,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63167,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63169,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63171,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63177,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63178,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63179,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63180,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63182,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63188,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63190,st. louis city_MO,MO,38.619999999999997,-90.19,st. louis city
-63195,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63196,st. louis city_MO,MO,38.619999999999997,-90.2,st. louis city
-63197,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63198,st. louis city_MO,MO,38.65,-90.56,st. louis city
-63199,st. louis city_MO,MO,38.630000000000003,-90.24,st. louis city
-63301,st charles_MO,MO,38.79,-90.51,st charles
-63302,st. charles_MO,MO,38.79,-90.51,st. charles
-63303,st charles_MO,MO,38.79,-90.51,st charles
-63304,st charles_MO,MO,38.79,-90.51,st charles
+63099,saint  louis_MO,MO,38.53,-90.45,saint  louis
+63101,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63102,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63103,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63104,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63105,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63106,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63107,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63108,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63109,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63110,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63111,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63112,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63113,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63114,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63115,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63116,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63117,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63118,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63119,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63120,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63121,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63122,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63123,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63124,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63125,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63126,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63127,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63128,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63129,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63130,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63131,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63132,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63133,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63134,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63135,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63136,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63137,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63138,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63139,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63140,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63141,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63143,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63144,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63145,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63146,saint louis_MO,MO,38.630000000000003,-90.24,saint louis
+63147,saint louis city_MO,MO,38.630000000000003,-90.24,saint louis city
+63150,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63151,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63155,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63156,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63157,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63158,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63160,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63163,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63164,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63166,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63167,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63169,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63171,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63177,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63178,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63179,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63180,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63182,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63188,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63190,saint  louis city_MO,MO,38.619999999999997,-90.19,saint  louis city
+63195,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63196,saint  louis city_MO,MO,38.619999999999997,-90.2,saint  louis city
+63197,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63198,saint  louis city_MO,MO,38.65,-90.56,saint  louis city
+63199,saint  louis city_MO,MO,38.630000000000003,-90.24,saint  louis city
+63301,saint charles_MO,MO,38.79,-90.51,saint charles
+63302,saint  charles_MO,MO,38.79,-90.51,saint  charles
+63303,saint charles_MO,MO,38.79,-90.51,saint charles
+63304,saint charles_MO,MO,38.79,-90.51,saint charles
 63330,pike_MO,MO,39.26,-90.82,pike
-63332,st charles_MO,MO,38.57,-90.88,st charles
+63332,saint charles_MO,MO,38.57,-90.88,saint charles
 63333,montgomery_MO,MO,39,-91.35,montgomery
 63334,pike_MO,MO,39.33,-91.19,pike
 63336,pike_MO,MO,39.369999999999997,-90.9,pike
-63338,st. charles_MO,MO,38.75,-90.65,st. charles
+63338,saint  charles_MO,MO,38.75,-90.65,saint  charles
 63339,pike_MO,MO,39.340000000000003,-91.34,pike
-63341,st charles_MO,MO,38.630000000000003,-90.78,st charles
+63341,saint charles_MO,MO,38.630000000000003,-90.78,saint charles
 63342,warren_MO,MO,38.6,-90.99,warren
 63343,lincoln_MO,MO,39.17,-90.78,lincoln
 63344,pike_MO,MO,39.229999999999997,-91.01,pike
 63345,audrain_MO,MO,39.270000000000003,-91.57,audrain
-63346,st. charles_MO,MO,38.799999999999997,-90.82,st. charles
+63346,saint  charles_MO,MO,38.799999999999997,-90.82,saint  charles
 63347,lincoln_MO,MO,39.04,-90.74,lincoln
-63348,st charles_MO,MO,38.81,-90.96,st charles
+63348,saint charles_MO,MO,38.81,-90.96,saint charles
 63349,lincoln_MO,MO,38.97,-91.13,lincoln
 63350,montgomery_MO,MO,38.869999999999997,-91.37,montgomery
 63351,montgomery_MO,MO,38.85,-91.3,montgomery
@@ -28022,14 +28022,14 @@ zip,county_state,state,latitude,longitude,county
 63361,montgomery_MO,MO,38.97,-91.5,montgomery
 63362,lincoln_MO,MO,38.94,-90.91,lincoln
 63363,montgomery_MO,MO,38.9,-91.44,montgomery
-63365,st. charles_MO,MO,38.71,-90.88,st. charles
-63366,st charles_MO,MO,38.78,-90.7,st charles
-63367,st charles_MO,MO,38.78,-90.78,st charles
-63368,st charles_MO,MO,38.78,-90.7,st charles
+63365,saint  charles_MO,MO,38.71,-90.88,saint  charles
+63366,saint charles_MO,MO,38.78,-90.7,saint charles
+63367,saint charles_MO,MO,38.78,-90.78,saint charles
+63368,saint charles_MO,MO,38.78,-90.7,saint charles
 63369,lincoln_MO,MO,38.93,-90.74,lincoln
 63370,lincoln_MO,MO,39.08,-91.24,lincoln
-63373,st charles_MO,MO,38.92,-90.34,st charles
-63376,st charles_MO,MO,38.770000000000003,-90.6,st charles
+63373,saint charles_MO,MO,38.92,-90.34,saint charles
+63376,saint charles_MO,MO,38.770000000000003,-90.6,saint charles
 63377,lincoln_MO,MO,39.119999999999997,-91.05,lincoln
 63378,warren_MO,MO,38.64,-91.18,warren
 63379,lincoln_MO,MO,38.97,-90.98,lincoln
@@ -28037,8 +28037,8 @@ zip,county_state,state,latitude,longitude,county
 63382,audrain_MO,MO,39.299999999999997,-91.49,audrain
 63383,warren_MO,MO,38.82,-91.14,warren
 63384,montgomery_MO,MO,39.07,-91.56,montgomery
-63385,st charles_MO,MO,38.81,-90.85,st charles
-63386,st charles_MO,MO,38.86,-90.22,st charles
+63385,saint charles_MO,MO,38.81,-90.85,saint charles
+63386,saint charles_MO,MO,38.86,-90.22,saint charles
 63387,lincoln_MO,MO,39.18,-91.01,lincoln
 63388,callaway_MO,MO,38.909999999999997,-91.7,callaway
 63389,lincoln_MO,MO,38.99,-90.73,lincoln
@@ -28118,30 +28118,30 @@ zip,county_state,state,latitude,longitude,county
 63565,putnam_MO,MO,40.47,-93,putnam
 63566,sullivan_MO,MO,40.049999999999997,-92.9,sullivan
 63567,putnam_MO,MO,40.4,-92.68,putnam
-63601,st francois_MO,MO,37.840000000000003,-90.52,st francois
+63601,saint francois_MO,MO,37.840000000000003,-90.52,saint francois
 63620,iron_MO,MO,37.35,-90.69,iron
 63621,iron_MO,MO,37.58,-90.62,iron
 63622,washington_MO,MO,37.78,-90.84,washington
 63623,iron_MO,MO,37.68,-90.75,iron
-63624,st francois_MO,MO,37.76,-90.62,st francois
+63624,saint francois_MO,MO,37.76,-90.62,saint francois
 63625,reynolds_MO,MO,37.53,-90.93,reynolds
 63626,washington_MO,MO,38.04,-90.62,washington
 63627,ste genevieve_MO,MO,38.01,-90.21,ste genevieve
-63628,st francois_MO,MO,37.92,-90.54,st francois
+63628,saint francois_MO,MO,37.92,-90.54,saint francois
 63629,reynolds_MO,MO,37.450000000000003,-91.21,reynolds
 63630,washington_MO,MO,37.979999999999997,-90.68,washington
 63631,washington_MO,MO,37.76,-90.77,washington
 63632,wayne_MO,MO,37.29,-90.27,wayne
 63633,reynolds_MO,MO,37.43,-90.96,reynolds
 63636,iron_MO,MO,37.28,-90.63,iron
-63637,st francois_MO,MO,37.74,-90.5,st francois
+63637,saint francois_MO,MO,37.74,-90.5,saint francois
 63638,reynolds_MO,MO,37.229999999999997,-90.97,reynolds
-63640,st francois_MO,MO,37.78,-90.42,st francois
+63640,saint francois_MO,MO,37.78,-90.42,saint francois
 63645,madison_MO,MO,37.56,-90.29,madison
 63648,washington_MO,MO,37.83,-90.67,washington
 63650,iron_MO,MO,37.590000000000003,-90.63,iron
-63651,st francois_MO,MO,37.68,-90.38,st francois
-63653,st francois_MO,MO,37.86,-90.58,st francois
+63651,saint francois_MO,MO,37.68,-90.38,saint francois
+63653,saint francois_MO,MO,37.86,-90.58,saint francois
 63654,reynolds_MO,MO,37.450000000000003,-90.82,reynolds
 63655,madison_MO,MO,37.42,-90.16,madison
 63656,iron_MO,MO,37.69,-90.68,iron
@@ -28559,7 +28559,7 @@ zip,county_state,state,latitude,longitude,county
 64720,bates_MO,MO,38.39,-94.35,bates
 64722,bates_MO,MO,38.25,-94.58,bates
 64723,bates_MO,MO,38.340000000000003,-94.58,bates
-64724,st clair_MO,MO,38.19,-94.03,st clair
+64724,saint clair_MO,MO,38.19,-94.03,saint clair
 64725,cass_MO,MO,38.479999999999997,-94.34,cass
 64726,henry_MO,MO,38.549999999999997,-93.95,henry
 64728,vernon_MO,MO,37.69,-94.46,vernon
@@ -28567,7 +28567,7 @@ zip,county_state,state,latitude,longitude,county
 64733,johnson_MO,MO,38.58,-93.85,johnson
 64734,cass_MO,MO,38.67,-94.59,cass
 64735,henry_MO,MO,38.369999999999997,-93.76,henry
-64738,st clair_MO,MO,37.89,-93.62,st clair
+64738,saint clair_MO,MO,37.89,-93.62,saint clair
 64739,cass_MO,MO,38.49,-94.07,cass
 64740,henry_MO,MO,38.25,-93.77,henry
 64741,vernon_MO,MO,37.83,-94.5,vernon
@@ -28585,7 +28585,7 @@ zip,county_state,state,latitude,longitude,county
 64759,barton_MO,MO,37.49,-94.27,barton
 64761,johnson_MO,MO,38.58,-93.69,johnson
 64762,barton_MO,MO,37.549999999999997,-94.51,barton
-64763,st clair_MO,MO,38.14,-93.72,st clair
+64763,saint clair_MO,MO,38.14,-93.72,saint clair
 64765,vernon_MO,MO,37.99,-94.44,vernon
 64766,barton_MO,MO,37.58,-94.15,barton
 64767,vernon_MO,MO,37.75,-94.3,vernon
@@ -28593,15 +28593,15 @@ zip,county_state,state,latitude,longitude,county
 64770,henry_MO,MO,38.25,-93.98,henry
 64771,vernon_MO,MO,37.76,-94.45,vernon
 64772,vernon_MO,MO,37.840000000000003,-94.35,vernon
-64776,st clair_MO,MO,38.04,-93.69,st clair
+64776,saint clair_MO,MO,38.04,-93.69,saint clair
 64778,vernon_MO,MO,37.9,-94.55,vernon
 64779,bates_MO,MO,38.090000000000003,-94.36,bates
 64780,bates_MO,MO,38.07,-94.08,bates
-64781,st clair_MO,MO,37.97,-93.81,st clair
+64781,saint clair_MO,MO,37.97,-93.81,saint clair
 64783,vernon_MO,MO,38.01,-94.11,vernon
 64784,vernon_MO,MO,37.65,-94.29,vernon
 64788,henry_MO,MO,38.450000000000003,-93.99,henry
-64789,st. clair_MO,MO,37.979999999999997,-93.66,st. clair
+64789,saint  clair_MO,MO,37.979999999999997,-93.66,saint  clair
 64790,vernon_MO,MO,37.89,-94.23,vernon
 64801,jasper_MO,MO,37.08,-94.5,jasper
 64802,jasper_MO,MO,37.08,-94.5,jasper
@@ -30412,28 +30412,28 @@ zip,county_state,state,latitude,longitude,county
 70009,jefferson_LA,LA,29.99,-90.17,jefferson
 70010,jefferson_LA,LA,29.99,-90.17,jefferson
 70011,jefferson_LA,LA,29.99,-90.17,jefferson
-70030,st charles_LA,LA,29.8,-90.48,st charles
-70031,st charles_LA,LA,29.85,-90.28,st charles
-70032,st bernard_LA,LA,29.95,-89.99,st bernard
+70030,saint charles_LA,LA,29.8,-90.48,saint charles
+70031,saint charles_LA,LA,29.85,-90.28,saint charles
+70032,saint bernard_LA,LA,29.95,-89.99,saint bernard
 70033,jefferson_LA,LA,29.99,-90.17,jefferson
 70036,jefferson_LA,LA,29.71,-90.12,jefferson
 70037,plaquemines_LA,LA,29.84,-90,plaquemines
 70038,plaquemines_LA,LA,29.32,-89.39,plaquemines
-70039,st charles_LA,LA,29.89,-90.39,st charles
+70039,saint charles_LA,LA,29.89,-90.39,saint charles
 70040,plaquemines_LA,LA,29.62,-89.78,plaquemines
 70041,plaquemines_LA,LA,29.34,-89.49,plaquemines
-70043,st bernard_LA,LA,29.94,-89.96,st bernard
-70044,st bernard_LA,LA,29.94,-89.96,st bernard
-70047,st charles_LA,LA,29.96,-90.36,st charles
-70049,st john the baptist_LA,LA,30.02,-90.55,st john the baptist
+70043,saint bernard_LA,LA,29.94,-89.96,saint bernard
+70044,saint bernard_LA,LA,29.94,-89.96,saint bernard
+70047,saint charles_LA,LA,29.96,-90.36,saint charles
+70049,saint john the baptist_LA,LA,30.02,-90.55,saint john the baptist
 70050,plaquemines_LA,LA,29.41,-89.61,plaquemines
-70051,st john the baptist_LA,LA,30.07,-90.62,st john the baptist
-70052,st james_LA,LA,30.05,-90.69,st james
+70051,saint john the baptist_LA,LA,30.07,-90.62,saint john the baptist
+70052,saint james_LA,LA,30.05,-90.69,saint james
 70053,jefferson_LA,LA,29.91,-90.05,jefferson
 70054,jefferson_LA,LA,29.91,-90.05,jefferson
 70055,jefferson_LA,LA,29.99,-90.17,jefferson
 70056,jefferson_LA,LA,29.91,-90.05,jefferson
-70057,st charles_LA,LA,29.97,-90.42,st charles
+70057,saint charles_LA,LA,29.97,-90.42,saint charles
 70058,jefferson_LA,LA,29.88,-90.06,jefferson
 70059,jefferson_LA,LA,29.88,-90.06,jefferson
 70060,jefferson_LA,LA,29.99,-90.17,jefferson
@@ -30442,27 +30442,27 @@ zip,county_state,state,latitude,longitude,county
 70064,jefferson_LA,LA,29.99,-90.24,jefferson
 70065,jefferson_LA,LA,29.99,-90.24,jefferson
 70067,jefferson_LA,LA,29.68,-90.09,jefferson
-70068,st john the baptist_LA,LA,30.12,-90.46,st john the baptist
-70069,st. john the baptist_LA,LA,30.12,-90.46,st. john the baptist
-70070,st charles_LA,LA,29.92,-90.36,st charles
-70071,st james_LA,LA,30.06,-90.71,st james
+70068,saint john the baptist_LA,LA,30.12,-90.46,saint john the baptist
+70069,saint  john the baptist_LA,LA,30.12,-90.46,saint  john the baptist
+70070,saint charles_LA,LA,29.92,-90.36,saint charles
+70071,saint james_LA,LA,30.06,-90.71,saint james
 70072,jefferson_LA,LA,29.88,-90.11,jefferson
 70073,jefferson_LA,LA,29.88,-90.11,jefferson
-70075,st bernard_LA,LA,29.92,-89.91,st bernard
-70076,st john the baptist_LA,LA,30.06,-90.64,st john the baptist
-70078,st. charles_LA,LA,29.97,-90.38,st. charles
-70079,st charles_LA,LA,30,-90.4,st charles
-70080,st charles_LA,LA,29.87,-90.44,st charles
+70075,saint bernard_LA,LA,29.92,-89.91,saint bernard
+70076,saint john the baptist_LA,LA,30.06,-90.64,saint john the baptist
+70078,saint  charles_LA,LA,29.97,-90.38,saint  charles
+70079,saint charles_LA,LA,30,-90.4,saint charles
+70080,saint charles_LA,LA,29.87,-90.44,saint charles
 70081,plaquemines_LA,LA,29.3,-89.3,plaquemines
 70082,plaquemines_LA,LA,29.57,-89.79,plaquemines
 70083,plaquemines_LA,LA,29.49,-89.7,plaquemines
-70084,st john the baptist_LA,LA,30.07,-90.56,st john the baptist
-70085,st bernard_LA,LA,29.88,-89.51,st bernard
-70086,st james_LA,LA,29.98,-90.87,st james
-70087,st charles_LA,LA,29.95,-90.31,st charles
-70090,st james_LA,LA,29.96,-90.71,st james
+70084,saint john the baptist_LA,LA,30.07,-90.56,saint john the baptist
+70085,saint bernard_LA,LA,29.88,-89.51,saint bernard
+70086,saint james_LA,LA,29.98,-90.87,saint james
+70087,saint charles_LA,LA,29.95,-90.31,saint charles
+70090,saint james_LA,LA,29.96,-90.71,saint james
 70091,plaquemines_LA,LA,29.27,-89.35,plaquemines
-70092,st bernard_LA,LA,29.89,-89.89,st bernard
+70092,saint bernard_LA,LA,29.89,-89.89,saint bernard
 70093,plaquemines_LA,LA,29.85,-89.99,plaquemines
 70094,jefferson_LA,LA,29.9,-90.14,jefferson
 70096,jefferson_LA,LA,29.9,-90.14,jefferson
@@ -30534,9 +30534,9 @@ zip,county_state,state,latitude,longitude,county
 70302,lafourche_LA,LA,29.79,-90.82,lafourche
 70310,lafourche_LA,LA,29.79,-90.82,lafourche
 70339,assumption_LA,LA,29.95,-91.2,assumption
-70340,st mary_LA,LA,29.66,-91.1,st mary
+70340,saint mary_LA,LA,29.66,-91.1,saint mary
 70341,assumption_LA,LA,30.03,-91.04,assumption
-70342,st mary_LA,LA,29.7,-91.23,st mary
+70342,saint mary_LA,LA,29.7,-91.23,saint mary
 70343,terrebonne_LA,LA,29.55,-90.61,terrebonne
 70344,terrebonne_LA,LA,29.44,-90.59,terrebonne
 70345,lafourche_LA,LA,29.52,-90.33,lafourche
@@ -30559,11 +30559,11 @@ zip,county_state,state,latitude,longitude,county
 70374,lafourche_LA,LA,29.64,-90.53,lafourche
 70375,lafourche_LA,LA,29.68,-90.56,lafourche
 70377,terrebonne_LA,LA,29.46,-90.55,terrebonne
-70380,st mary_LA,LA,29.7,-91.19,st mary
-70381,st. mary_LA,LA,29.7,-91.19,st. mary
+70380,saint mary_LA,LA,29.7,-91.19,saint mary
+70381,saint  mary_LA,LA,29.7,-91.19,saint  mary
 70390,assumption_LA,LA,29.93,-91.02,assumption
 70391,assumption_LA,LA,29.99,-91.05,assumption
-70392,st. mary_LA,LA,29.69,-91.3,st. mary
+70392,saint  mary_LA,LA,29.69,-91.3,saint  mary
 70393,assumption_LA,LA,29.98,-90.97,assumption
 70394,lafourche_LA,LA,29.71,-90.59,lafourche
 70395,terrebonne_LA,LA,29.73,-90.82,terrebonne
@@ -30572,49 +30572,49 @@ zip,county_state,state,latitude,longitude,county
 70402,tangipahoa_LA,LA,30.5,-90.46,tangipahoa
 70403,tangipahoa_LA,LA,30.5,-90.46,tangipahoa
 70404,tangipahoa_LA,LA,30.5,-90.46,tangipahoa
-70420,st tammany_LA,LA,30.47,-90.03,st tammany
+70420,saint tammany_LA,LA,30.47,-90.03,saint tammany
 70421,tangipahoa_LA,LA,30.38,-90.4,tangipahoa
 70422,tangipahoa_LA,LA,30.73,-90.51,tangipahoa
 70426,washington_LA,LA,30.96,-89.81,washington
 70427,washington_LA,LA,30.78,-89.86,washington
 70429,washington_LA,LA,30.78,-89.86,washington
-70431,st tammany_LA,LA,30.6,-89.9,st tammany
-70433,st tammany_LA,LA,30.47,-90.11,st tammany
-70434,st. tammany_LA,LA,30.47,-90.11,st. tammany
-70435,st tammany_LA,LA,30.47,-90.11,st tammany
+70431,saint tammany_LA,LA,30.6,-89.9,saint tammany
+70433,saint tammany_LA,LA,30.47,-90.11,saint tammany
+70434,saint  tammany_LA,LA,30.47,-90.11,saint  tammany
+70435,saint tammany_LA,LA,30.47,-90.11,saint tammany
 70436,tangipahoa_LA,LA,30.82,-90.53,tangipahoa
-70437,st tammany_LA,LA,30.63,-90.19,st tammany
+70437,saint tammany_LA,LA,30.63,-90.19,saint tammany
 70438,washington_LA,LA,30.84,-90.14,washington
-70441,st helena_LA,LA,30.82,-90.67,st helena
+70441,saint helena_LA,LA,30.82,-90.67,saint helena
 70442,tangipahoa_LA,LA,30.7,-90.32,tangipahoa
 70443,tangipahoa_LA,LA,30.63,-90.5,tangipahoa
 70444,tangipahoa_LA,LA,30.93,-90.51,tangipahoa
-70445,st tammany_LA,LA,30.3,-89.92,st tammany
+70445,saint tammany_LA,LA,30.3,-89.92,saint tammany
 70446,tangipahoa_LA,LA,30.57,-90.34,tangipahoa
-70447,st tammany_LA,LA,30.39,-90.16,st tammany
-70448,st tammany_LA,LA,30.37,-90.08,st tammany
+70447,saint tammany_LA,LA,30.39,-90.16,saint tammany
+70448,saint tammany_LA,LA,30.37,-90.08,saint tammany
 70449,livingston_LA,LA,30.25,-90.66,livingston
 70450,washington_LA,LA,30.95,-90.27,washington
 70451,tangipahoa_LA,LA,30.54,-90.48,tangipahoa
-70452,st tammany_LA,LA,30.37,-89.74,st tammany
-70453,st helena_LA,LA,30.7,-90.77,st helena
+70452,saint tammany_LA,LA,30.37,-89.74,saint tammany
+70453,saint helena_LA,LA,30.7,-90.77,saint helena
 70454,tangipahoa_LA,LA,30.43,-90.44,tangipahoa
 70455,tangipahoa_LA,LA,30.5,-90.34,tangipahoa
 70456,tangipahoa_LA,LA,30.76,-90.51,tangipahoa
-70457,st. tammany_LA,LA,30.55,-90.1,st. tammany
-70458,st tammany_LA,LA,30.28,-89.77,st tammany
-70459,st. tammany_LA,LA,30.28,-89.77,st. tammany
-70460,st tammany_LA,LA,30.28,-89.77,st tammany
-70461,st tammany_LA,LA,30.28,-89.77,st tammany
+70457,saint  tammany_LA,LA,30.55,-90.1,saint  tammany
+70458,saint tammany_LA,LA,30.28,-89.77,saint tammany
+70459,saint  tammany_LA,LA,30.28,-89.77,saint  tammany
+70460,saint tammany_LA,LA,30.28,-89.77,saint tammany
+70461,saint tammany_LA,LA,30.28,-89.77,saint tammany
 70462,livingston_LA,LA,30.42,-90.54,livingston
-70463,st. tammany_LA,LA,30.64,-89.9,st. tammany
-70464,st tammany_LA,LA,30.47,-89.85,st tammany
+70463,saint  tammany_LA,LA,30.64,-89.9,saint  tammany
+70464,saint tammany_LA,LA,30.47,-89.85,saint tammany
 70465,tangipahoa_LA,LA,30.87,-90.51,tangipahoa
 70466,tangipahoa_LA,LA,30.57,-90.48,tangipahoa
 70467,washington_LA,LA,30.96,-89.81,washington
-70469,st. tammany_LA,LA,30.28,-89.77,st. tammany
-70470,st tammany_LA,LA,30.37,-90.08,st tammany
-70471,st tammany_LA,LA,30.37,-90.08,st tammany
+70469,saint  tammany_LA,LA,30.28,-89.77,saint  tammany
+70470,saint tammany_LA,LA,30.37,-90.08,saint tammany
+70471,saint tammany_LA,LA,30.37,-90.08,saint tammany
 70500,lafayette_LA,LA,30.22,-92.01,lafayette
 70501,lafayette_LA,LA,30.21,-92.02,lafayette
 70502,lafayette_LA,LA,30.21,-92.02,lafayette
@@ -30627,18 +30627,18 @@ zip,county_state,state,latitude,longitude,county
 70509,lafayette_LA,LA,30.21,-92.02,lafayette
 70510,vermilion_LA,LA,29.97,-92.12,vermilion
 70511,vermilion_LA,LA,29.97,-92.12,vermilion
-70512,st landry_LA,LA,30.4,-91.93,st landry
+70512,saint landry_LA,LA,30.4,-91.93,saint landry
 70513,iberia_LA,LA,29.9,-91.91,iberia
-70514,st mary_LA,LA,29.83,-91.55,st mary
+70514,saint mary_LA,LA,29.83,-91.55,saint mary
 70515,evangeline_LA,LA,30.48,-92.6,evangeline
 70516,acadia_LA,LA,30.34,-92.26,acadia
-70517,st martin_LA,LA,30.27,-91.9,st martin
+70517,saint martin_LA,LA,30.27,-91.9,saint martin
 70518,lafayette_LA,LA,30.15,-91.97,lafayette
-70519,st martin_LA,LA,30.08,-91.9,st martin
+70519,saint martin_LA,LA,30.08,-91.9,saint martin
 70520,lafayette_LA,LA,30.31,-92.03,lafayette
-70521,st martin_LA,LA,30.33,-91.84,st martin
-70522,st mary_LA,LA,29.76,-91.42,st mary
-70523,st mary_LA,LA,29.86,-91.53,st mary
+70521,saint martin_LA,LA,30.33,-91.84,saint martin
+70522,saint mary_LA,LA,29.76,-91.42,saint mary
+70523,saint mary_LA,LA,29.86,-91.53,saint mary
 70524,evangeline_LA,LA,30.56,-92.31,evangeline
 70525,acadia_LA,LA,30.4,-92.21,acadia
 70526,acadia_LA,LA,30.21,-92.37,acadia
@@ -30649,19 +30649,19 @@ zip,county_state,state,latitude,longitude,county
 70532,jefferson davis_LA,LA,30.48,-92.69,jefferson davis
 70533,vermilion_LA,LA,29.95,-92.03,vermilion
 70534,acadia_LA,LA,30.18,-92.46,acadia
-70535,st landry_LA,LA,30.49,-92.41,st landry
+70535,saint landry_LA,LA,30.49,-92.41,saint landry
 70537,acadia_LA,LA,30.26,-92.57,acadia
-70538,st mary_LA,LA,29.8,-91.51,st mary
-70540,st mary_LA,LA,29.73,-91.46,st mary
-70541,st landry_LA,LA,30.41,-92.04,st landry
+70538,saint mary_LA,LA,29.8,-91.51,saint mary
+70540,saint mary_LA,LA,29.73,-91.46,saint mary
+70541,saint landry_LA,LA,30.41,-92.04,saint landry
 70542,vermilion_LA,LA,30.02,-92.5,vermilion
 70543,acadia_LA,LA,30.32,-92.49,acadia
 70544,iberia_LA,LA,29.91,-91.67,iberia
 70546,jefferson davis_LA,LA,30.22,-92.65,jefferson davis
 70548,vermilion_LA,LA,30,-92.28,vermilion
 70549,jefferson davis_LA,LA,30.07,-92.67,jefferson davis
-70550,st landry_LA,LA,30.51,-92.18,st landry
-70551,st landry_LA,LA,30.46,-91.98,st landry
+70550,saint landry_LA,LA,30.51,-92.18,saint landry
+70551,saint landry_LA,LA,30.46,-91.98,saint landry
 70552,iberia_LA,LA,30.05,-91.73,iberia
 70554,evangeline_LA,LA,30.63,-92.41,evangeline
 70555,vermilion_LA,LA,30.1,-92.12,vermilion
@@ -30672,20 +30672,20 @@ zip,county_state,state,latitude,longitude,county
 70562,iberia_LA,LA,30,-91.81,iberia
 70563,iberia_LA,LA,30,-91.81,iberia
 70569,iberia_LA,LA,29.92,-91.78,iberia
-70570,st landry_LA,LA,30.52,-92.08,st landry
-70571,st. landry_LA,LA,30.52,-92.08,st. landry
+70570,saint landry_LA,LA,30.52,-92.08,saint landry
+70571,saint  landry_LA,LA,30.52,-92.08,saint  landry
 70575,vermilion_LA,LA,29.91,-92.14,vermilion
 70576,evangeline_LA,LA,30.78,-92.42,evangeline
-70577,st landry_LA,LA,30.55,-91.95,st landry
+70577,saint landry_LA,LA,30.55,-91.95,saint landry
 70578,acadia_LA,LA,30.23,-92.26,acadia
 70580,evangeline_LA,LA,30.67,-92.42,evangeline
 70581,jefferson davis_LA,LA,30.23,-92.74,jefferson davis
-70582,st martin_LA,LA,30.12,-91.83,st martin
+70582,saint martin_LA,LA,30.12,-91.83,saint martin
 70583,lafayette_LA,LA,30.23,-92.09,lafayette
-70584,st landry_LA,LA,30.4,-92.06,st landry
+70584,saint landry_LA,LA,30.4,-92.06,saint landry
 70585,evangeline_LA,LA,30.87,-92.41,evangeline
 70586,evangeline_LA,LA,30.69,-92.28,evangeline
-70589,st landry_LA,LA,30.61,-92.05,st landry
+70589,saint landry_LA,LA,30.61,-92.05,saint landry
 70591,jefferson davis_LA,LA,30.23,-92.81,jefferson davis
 70592,lafayette_LA,LA,30.09,-91.99,lafayette
 70593,lafayette_LA,LA,30.21,-92.02,lafayette
@@ -30748,7 +30748,7 @@ zip,county_state,state,latitude,longitude,county
 70719,west baton rouge_LA,LA,30.39,-91.25,west baton rouge
 70721,iberville_LA,LA,30.22,-91.1,iberville
 70722,east feliciana_LA,LA,30.86,-91.01,east feliciana
-70723,st james_LA,LA,30.02,-90.82,st james
+70723,saint james_LA,LA,30.02,-90.82,saint james
 70725,ascension_LA,LA,30.14,-90.94,ascension
 70726,livingston_LA,LA,30.47,-90.95,livingston
 70727,livingston_LA,LA,30.47,-90.95,livingston
@@ -30763,12 +30763,12 @@ zip,county_state,state,latitude,longitude,county
 70738,ascension_LA,LA,30.23,-90.93,ascension
 70739,east baton rouge_LA,LA,30.52,-91,east baton rouge
 70740,iberville_LA,LA,30.41,-91.43,iberville
-70743,st. james_LA,LA,30.03,-90.75,st. james
+70743,saint  james_LA,LA,30.03,-90.75,saint  james
 70744,livingston_LA,LA,30.58,-90.67,livingston
 70747,pointe coupee_LA,LA,30.88,-91.69,pointe coupee
 70748,east feliciana_LA,LA,30.83,-91.21,east feliciana
 70749,pointe coupee_LA,LA,30.63,-91.41,pointe coupee
-70750,st landry_LA,LA,30.53,-91.75,st landry
+70750,saint landry_LA,LA,30.53,-91.75,saint landry
 70752,pointe coupee_LA,LA,30.57,-91.42,pointe coupee
 70753,pointe coupee_LA,LA,30.93,-91.7,pointe coupee
 70754,livingston_LA,LA,30.5,-90.74,livingston
@@ -30779,7 +30779,7 @@ zip,county_state,state,latitude,longitude,county
 70760,pointe coupee_LA,LA,30.69,-91.45,pointe coupee
 70761,east feliciana_LA,LA,30.96,-91.1,east feliciana
 70762,pointe coupee_LA,LA,30.58,-91.47,pointe coupee
-70763,st james_LA,LA,30.08,-90.77,st james
+70763,saint james_LA,LA,30.08,-90.77,saint james
 70764,iberville_LA,LA,30.28,-91.24,iberville
 70765,iberville_LA,LA,30.28,-91.24,iberville
 70767,west baton rouge_LA,LA,30.45,-91.2,west baton rouge
@@ -30803,7 +30803,7 @@ zip,county_state,state,latitude,longitude,county
 70788,iberville_LA,LA,30.16,-91.14,iberville
 70789,east feliciana_LA,LA,30.91,-91.11,east feliciana
 70791,east baton rouge_LA,LA,30.66,-91.15,east baton rouge
-70792,st james_LA,LA,30.02,-90.78,st james
+70792,saint james_LA,LA,30.02,-90.78,saint james
 70801,east baton rouge_LA,LA,30.44,-91.12,east baton rouge
 70802,east baton rouge_LA,LA,30.44,-91.12,east baton rouge
 70803,east baton rouge_LA,LA,30.44,-91.12,east baton rouge
@@ -31035,17 +31035,17 @@ zip,county_state,state,latitude,longitude,county
 71341,avoyelles_LA,LA,31.05,-92.12,avoyelles
 71342,la salle_LA,LA,31.68,-92.12,la salle
 71343,catahoula_LA,LA,31.62,-91.83,catahoula
-71345,st landry_LA,LA,30.7,-91.95,st landry
+71345,saint landry_LA,LA,30.7,-91.95,saint landry
 71346,rapides_LA,LA,31.08,-92.39,rapides
 71348,rapides_LA,LA,31.36,-92.4,rapides
 71350,avoyelles_LA,LA,31.05,-92.05,avoyelles
 71351,avoyelles_LA,LA,31.12,-92.06,avoyelles
-71353,st landry_LA,LA,30.69,-91.74,st landry
+71353,saint landry_LA,LA,30.69,-91.74,saint landry
 71354,concordia_LA,LA,31.34,-91.66,concordia
 71355,avoyelles_LA,LA,31.03,-91.98,avoyelles
-71356,st landry_LA,LA,30.82,-92.01,st landry
+71356,saint landry_LA,LA,30.82,-92.01,saint landry
 71357,tensas_LA,LA,32.07,-91.23,tensas
-71358,st landry_LA,LA,30.71,-91.9,st landry
+71358,saint landry_LA,LA,30.71,-91.9,saint landry
 71359,rapides_LA,LA,31.33,-92.41,rapides
 71360,rapides_LA,LA,31.33,-92.41,rapides
 71361,rapides_LA,LA,31.33,-92.41,rapides
@@ -31472,10 +31472,10 @@ zip,county_state,state,latitude,longitude,county
 72319,mississippi_AR,AR,35.96,-89.97,mississippi
 72320,lee_AR,AR,34.85,-90.58,lee
 72321,mississippi_AR,AR,35.81,-89.94,mississippi
-72322,st francis_AR,AR,35.07,-90.81,st francis
+72322,saint francis_AR,AR,35.07,-90.81,saint francis
 72324,cross_AR,AR,35.4,-90.75,cross
 72325,crittenden_AR,AR,35.32,-90.24,crittenden
-72326,st francis_AR,AR,35.130000000000003,-90.81,st francis
+72326,saint francis_AR,AR,35.130000000000003,-90.81,saint francis
 72327,crittenden_AR,AR,35.22,-90.32,crittenden
 72328,phillips_AR,AR,34.15,-90.98,phillips
 72329,mississippi_AR,AR,35.54,-89.95,mississippi
@@ -31483,16 +31483,16 @@ zip,county_state,state,latitude,longitude,county
 72331,crittenden_AR,AR,35.270000000000003,-90.46,crittenden
 72332,crittenden_AR,AR,35.1,-90.3,crittenden
 72333,phillips_AR,AR,34.299999999999997,-90.85,phillips
-72335,st francis_AR,AR,35.01,-90.78,st francis
-72336,st. francis_AR,AR,35.01,-90.78,st. francis
+72335,saint francis_AR,AR,35.01,-90.78,saint francis
+72336,saint  francis_AR,AR,35.01,-90.78,saint  francis
 72338,mississippi_AR,AR,35.46,-90.05,mississippi
 72339,crittenden_AR,AR,35.409999999999997,-90.27,crittenden
-72340,st francis_AR,AR,34.96,-90.99,st francis
+72340,saint francis_AR,AR,34.96,-90.99,saint francis
 72341,lee_AR,AR,34.880000000000003,-90.79,lee
 72342,phillips_AR,AR,34.520000000000003,-90.6,phillips
-72346,st francis_AR,AR,35.06,-90.46,st francis
+72346,saint francis_AR,AR,35.06,-90.46,saint francis
 72347,cross_AR,AR,35.4,-90.99,cross
-72348,st francis_AR,AR,34.94,-90.47,st francis
+72348,saint francis_AR,AR,34.94,-90.47,saint francis
 72350,mississippi_AR,AR,35.5,-90.14,mississippi
 72351,mississippi_AR,AR,35.67,-90.09,mississippi
 72352,lee_AR,AR,34.659999999999997,-90.71,lee
@@ -31500,7 +31500,7 @@ zip,county_state,state,latitude,longitude,county
 72354,poinsett_AR,AR,35.6,-90.33,poinsett
 72355,phillips_AR,AR,34.590000000000003,-90.75,phillips
 72358,mississippi_AR,AR,35.75,-89.93,mississippi
-72359,st francis_AR,AR,35.01,-90.73,st francis
+72359,saint francis_AR,AR,35.01,-90.73,saint francis
 72360,lee_AR,AR,34.770000000000003,-90.76,lee
 72364,crittenden_AR,AR,35.200000000000003,-90.2,crittenden
 72365,poinsett_AR,AR,35.53,-90.41,poinsett
@@ -31509,7 +31509,7 @@ zip,county_state,state,latitude,longitude,county
 72368,lee_AR,AR,34.79,-90.98,lee
 72369,phillips_AR,AR,34.39,-90.86,phillips
 72370,mississippi_AR,AR,35.700000000000003,-89.99,mississippi
-72372,st francis_AR,AR,34.97,-90.9,st francis
+72372,saint francis_AR,AR,34.97,-90.9,saint francis
 72373,cross_AR,AR,35.26,-90.55,cross
 72374,phillips_AR,AR,34.53,-90.87,phillips
 72376,crittenden_AR,AR,35.08,-90.24,crittenden
@@ -31522,8 +31522,8 @@ zip,county_state,state,latitude,longitude,county
 72389,phillips_AR,AR,34.4,-90.92,phillips
 72390,phillips_AR,AR,34.54,-90.64,phillips
 72391,mississippi_AR,AR,35.61,-90.24,mississippi
-72392,st francis_AR,AR,34.909999999999997,-91.1,st francis
-72394,st francis_AR,AR,35.020000000000003,-90.68,st francis
+72392,saint francis_AR,AR,34.909999999999997,-91.1,saint francis
+72394,saint francis_AR,AR,35.020000000000003,-90.68,saint francis
 72395,mississippi_AR,AR,35.56,-90.04,mississippi
 72396,cross_AR,AR,35.229999999999997,-90.78,cross
 72401,craighead_AR,AR,35.82,-90.68,craighead
