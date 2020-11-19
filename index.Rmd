@@ -1,0 +1,21 @@
+---
+title: "Food Insecurity in America"
+author: "Vasili Fokaidis"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+![](https://www.feedingamerica.org/themes/custom/ts_feeding_america/images/svgs/logo-2020.svg)
+
+# Link to other pages in this site
+
+[Analysis]
+[Map]
+[Project Report]  
+
+# Links in site navigation
+
+[Email]
+[Github]
