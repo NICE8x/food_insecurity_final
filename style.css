@@ -1,9 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+ 
 
  /*------------- Whole Document---------------- */
 
 body {
-    font-family: 'Antic Slab';
+    font-family: 'Libre Baskerville';
     font-size: 19px;
 }
+
+/* links */
+a { 
+  color: #5ebccf;
+}
+
+a:hover {
+ color: #50a0b0; /* darker color when hovering */
+}
+
+
