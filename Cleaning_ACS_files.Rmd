@@ -56,7 +56,15 @@ acs_df = path_acs_df %>%
 
 acs_df = plyr::join_all(acs_df$data, by = 'GEO_ID', type = 'left') %>%
     janitor::row_to_names(1) %>%
-    janitor::clean_names() 
+    janitor::clean_names() %>%
+    rename(county = geographic_area_name,
+           estimate_total_edu_data = estimate_total,
+           estimate_total_hispanic_data = estimate_total_2,
+           estimate_total_immigration_data = estimate_total_3,
+           estimate_total_income_data = estimate_total_4,
+           estimate_total_ins_status_data = estimate_total_5,
+           estimate_total_race_data = estimate_total_6) %>%
+    select(id, county, starts_with("estimate"))
 ```
 
 
