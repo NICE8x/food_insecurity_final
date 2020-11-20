@@ -8,6 +8,7 @@ output: html_document
 ```{r load, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(stringr)
+library(usdata)
 ```
 
 DELETE BELOW
@@ -67,9 +68,42 @@ acs_df = plyr::join_all(acs_df$data, by = 'GEO_ID', type = 'left') %>%
     select(id, county, starts_with("estimate"))
 ```
 
+Fix county strings so they match the Map the Meal Gap Data.  Add a state column and then a state_county columns.
+
+```{r strings ACS}
+acs_df = acs_df %>%
+  mutate(county = tolower(county)) %>%
+  mutate(state = str_replace(county, "^.*,", ""),
+         state = state2abbr(state),
+        county = str_replace(county, ",.*", ""),
+         county = str_replace(county, "\\scounty",""),
+         county = str_replace(county, "\\sparish",""),
+         county = str_replace(county, "\\sborough", ""),
+         county = str_replace(county, "\\scensus area", ""),
+         county = str_replace(county, "\\smunicipality of", ""),
+         county = str_replace(county, "doãƒâ±a ana", "doña ana"),
+         county = str_replace(county, "^st\\s|^st\\.", "saint ")
+  ) %>%
+  relocate(id, county, state) %>%
+  unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
+  mutate(county_state = str_replace(county_state, "prince of wales-outer ketchikan_AK", "prince of wales-hyder_AK"))
+```
 
 
+Join the ACS and the Map the Meal Gap data from 2017 and save the csv file.
 
+```{r join the ACS and map the meal gap data}
+
+mtm_2017_df = read_csv("./map_the_meal_gap_df.csv") %>%
+  filter(year == "2017")
+
+mtm_acs_2017_df = left_join(mtm_2017_df, acs_df, by = "county_state") %>%
+  rename(state = state.x,
+         county = county.x) %>%
+  select(-state.y, -county.y)
+
+write_csv(x = mtm_acs_2017_df, "mtm_acs_2017_df.csv")
+```
 
 
 
