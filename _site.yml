@@ -17,6 +17,6 @@ navbar:
       href: https://www.feedingamerica.org/
 output:
   html_document:
-    theme: readable
+ 
     css: style.css
     
