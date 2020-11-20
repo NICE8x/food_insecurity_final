@@ -17,4 +17,16 @@ a:hover {
  color: #50a0b0; /* darker color when hovering */
 }
 
+/*----------LOGO above TOC---------*/
+
+#TOC::before {
+  content: "";
+  display: block;
+  height: 200px;
+  margin: 2em 20px 40px 20px;
+  background-image: url("https://www.feedingamerica.org/themes/custom/ts_feeding_america/images/svgs/logo-2020.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
