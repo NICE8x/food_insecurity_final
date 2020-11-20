@@ -1,6 +1,5 @@
 ---
 title: "Food Insecurity in America"
-author: "Vasili Fokaidis"
 output:
   html_document:
     toc: true
