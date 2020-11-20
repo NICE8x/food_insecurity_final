@@ -13,11 +13,12 @@ library(stringr)
 ```{r read_csv}
 acs_load_and_tidy = function(path, var_name) {
   
+  
   df = read_csv(path) %>%
     janitor::clean_names() %>%
-    filter(str_detect(geoname, "County")) %>%
+    #filter(str_detect(geoname, "County")) %>%
     rename("county" = "geoname",
-           var_name = "estimate") %>%
+           !!sym(var_name) := "estimate") %>%
     select(county, var_name)
   
   df

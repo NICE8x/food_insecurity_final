@@ -1,0 +1,1910 @@
+GEO_ID,NAME,K200301_001E,K200301_001M,K200301_002E,K200301_002M,K200301_003E,K200301_003M
+id,Geographic Area Name,Estimate!!Total,Margin of Error!!Total,Estimate!!Total!!Not Hispanic or Latino,Margin of Error!!Total!!Not Hispanic or Latino,Estimate!!Total!!Hispanic or Latino,Margin of Error!!Total!!Hispanic or Latino
+0500000US23007,"Franklin County, Maine",29988,*****,29484,659,504,659
+0500000US23009,"Hancock County, Maine",54497,*****,53687,*****,810,*****
+0500000US23011,"Kennebec County, Maine",121821,*****,119933,*****,1888,*****
+0500000US23013,"Knox County, Maine",39790,*****,39092,402,698,402
+0500000US23015,"Lincoln County, Maine",34204,*****,33822,271,382,271
+0500000US23017,"Oxford County, Maine",57439,*****,56689,*****,750,*****
+0500000US23019,"Penobscot County, Maine",151957,*****,149939,*****,2018,*****
+0500000US23023,"Sagadahoc County, Maine",35392,*****,34788,*****,604,*****
+0500000US23025,"Somerset County, Maine",50626,*****,50063,*****,563,*****
+0500000US23027,"Waldo County, Maine",39832,*****,39530,222,302,222
+0500000US23029,"Washington County, Maine",31593,*****,30898,*****,695,*****
+0500000US23031,"York County, Maine",204191,*****,200714,*****,3477,*****
+0500000US24001,"Allegany County, Maryland",71615,*****,70331,*****,1284,*****
+0500000US24003,"Anne Arundel County, Maryland",573235,*****,528142,*****,45093,*****
+0500000US24005,"Baltimore County, Maryland",832468,*****,786573,*****,45895,*****
+0500000US24009,"Calvert County, Maryland",91502,*****,87836,*****,3666,*****
+0500000US24011,"Caroline County, Maryland",33193,*****,30703,*****,2490,*****
+0500000US24013,"Carroll County, Maryland",167781,*****,161748,*****,6033,*****
+0500000US24015,"Cecil County, Maryland",102746,*****,98190,*****,4556,*****
+0500000US24017,"Charles County, Maryland",159700,*****,150419,*****,9281,*****
+0500000US24019,"Dorchester County, Maryland",32162,*****,31586,496,576,496
+0500000US24021,"Frederick County, Maryland",252022,*****,227836,*****,24186,*****
+0500000US24023,"Garrett County, Maryland",29233,*****,29178,90,55,90
+0500000US24025,"Harford County, Maryland",252160,*****,240645,*****,11515,*****
+0500000US24027,"Howard County, Maryland",321113,*****,299140,*****,21973,*****
+0500000US24031,"Montgomery County, Maryland",1058810,*****,851418,*****,207392,*****
+0500000US24033,"Prince George's County, Maryland",912756,*****,743717,*****,169039,*****
+0500000US24035,"Queen Anne's County, Maryland",49770,*****,47797,*****,1973,*****
+0500000US24037,"St. Mary's County, Maryland",112667,*****,106756,*****,5911,*****
+0500000US24039,"Somerset County, Maryland",25918,*****,25436,245,482,245
+0500000US24041,"Talbot County, Maryland",37103,*****,34476,*****,2627,*****
+0500000US24043,"Washington County, Maryland",150578,*****,142995,*****,7583,*****
+0500000US24045,"Wicomico County, Maryland",102923,*****,97400,*****,5523,*****
+0500000US24047,"Worcester County, Maryland",51690,*****,49888,*****,1802,*****
+0500000US24510,"Baltimore city, Maryland",611648,*****,579153,*****,32495,*****
+0500000US25001,"Barnstable County, Massachusetts",213444,*****,207097,*****,6347,*****
+0500000US25003,"Berkshire County, Massachusetts",126313,*****,120457,*****,5856,*****
+0500000US25005,"Bristol County, Massachusetts",561483,*****,516640,*****,44843,*****
+0500000US25009,"Essex County, Massachusetts",785205,*****,620097,*****,165108,*****
+0500000US25011,"Franklin County, Massachusetts",70702,*****,67846,*****,2856,*****
+0500000US25013,"Hampden County, Massachusetts",469818,*****,351164,*****,118654,*****
+0500000US25015,"Hampshire County, Massachusetts",161834,*****,152698,*****,9136,*****
+0500000US25017,"Middlesex County, Massachusetts",1602947,*****,1474333,*****,128614,*****
+0500000US25021,"Norfolk County, Massachusetts",700322,*****,668399,*****,31923,*****
+0500000US25023,"Plymouth County, Massachusetts",515142,*****,495071,*****,20071,*****
+0500000US25025,"Suffolk County, Massachusetts",797939,*****,614914,*****,183025,*****
+0500000US25027,"Worcester County, Massachusetts",826116,*****,731418,*****,94698,*****
+0500000US26005,"Allegan County, Michigan",116447,*****,107860,*****,8587,*****
+0500000US26007,"Alpena County, Michigan",28462,*****,28266,124,196,124
+0500000US26009,"Antrim County, Michigan",23292,*****,22765,*****,527,*****
+0500000US26015,"Barry County, Michigan",60586,*****,58750,*****,1836,*****
+0500000US26017,"Bay County, Michigan",104239,*****,98660,*****,5579,*****
+0500000US26021,"Berrien County, Michigan",154259,*****,145744,*****,8515,*****
+0500000US26023,"Branch County, Michigan",43410,*****,41360,*****,2050,*****
+0500000US26025,"Calhoun County, Michigan",134128,*****,127061,*****,7067,*****
+0500000US26027,"Cass County, Michigan",51381,*****,49391,*****,1990,*****
+0500000US26029,"Charlevoix County, Michigan",26139,*****,25635,*****,504,*****
+0500000US26031,"Cheboygan County, Michigan",25369,*****,24993,*****,376,*****
+0500000US26033,"Chippewa County, Michigan",37711,*****,37011,*****,700,*****
+0500000US26035,"Clare County, Michigan",30653,*****,30000,450,653,450
+0500000US26037,"Clinton County, Michigan",78443,*****,74907,*****,3536,*****
+0500000US26041,"Delta County, Michigan",35965,*****,35503,*****,462,*****
+0500000US26043,"Dickinson County, Michigan",25415,*****,25035,*****,380,*****
+0500000US26045,"Eaton County, Michigan",109027,*****,103224,*****,5803,*****
+0500000US26047,"Emmet County, Michigan",33193,*****,32634,*****,559,*****
+0500000US26049,"Genesee County, Michigan",407385,*****,393485,*****,13900,*****
+0500000US26051,"Gladwin County, Michigan",25234,*****,24812,*****,422,*****
+0500000US26055,"Grand Traverse County, Michigan",91807,*****,89142,*****,2665,*****
+0500000US26057,"Gratiot County, Michigan",41018,*****,38491,*****,2527,*****
+0500000US26059,"Hillsdale County, Michigan",45879,*****,44838,*****,1041,*****
+0500000US26061,"Houghton County, Michigan",36305,*****,35738,*****,567,*****
+0500000US26063,"Huron County, Michigan",31280,*****,30528,*****,752,*****
+0500000US26065,"Ingham County, Michigan",290186,*****,267726,*****,22460,*****
+0500000US26067,"Ionia County, Michigan",64291,*****,61171,*****,3120,*****
+0500000US26069,"Iosco County, Michigan",25162,*****,24606,*****,556,*****
+0500000US26073,"Isabella County, Michigan",71063,*****,68304,*****,2759,*****
+0500000US26075,"Jackson County, Michigan",158640,*****,153039,*****,5601,*****
+0500000US26077,"Kalamazoo County, Michigan",262985,*****,249988,*****,12997,*****
+0500000US26081,"Kent County, Michigan",648594,*****,580113,*****,68481,*****
+0500000US26087,"Lapeer County, Michigan",88174,*****,84054,*****,4120,*****
+0500000US26089,"Leelanau County, Michigan",21657,*****,20710,*****,947,*****
+0500000US26091,"Lenawee County, Michigan",98623,*****,90762,*****,7861,*****
+0500000US26093,"Livingston County, Michigan",189651,*****,185012,*****,4639,*****
+0500000US26099,"Macomb County, Michigan",871375,*****,848707,*****,22668,*****
+0500000US26101,"Manistee County, Michigan",24427,*****,23665,*****,762,*****
+0500000US26103,"Marquette County, Michigan",66502,*****,65479,*****,1023,*****
+0500000US26105,"Mason County, Michigan",29073,*****,27723,*****,1350,*****
+0500000US26107,"Mecosta County, Michigan",43391,*****,42424,*****,967,*****
+0500000US26109,"Menominee County, Michigan",23046,*****,22635,*****,411,*****
+0500000US26111,"Midland County, Michigan",83411,*****,81104,*****,2307,*****
+0500000US26115,"Monroe County, Michigan",149649,*****,144262,*****,5387,*****
+0500000US26117,"Montcalm County, Michigan",63550,*****,61336,*****,2214,*****
+0500000US26121,"Muskegon County, Michigan",173693,*****,163832,*****,9861,*****
+0500000US26123,"Newaygo County, Michigan",48242,*****,45459,*****,2783,*****
+0500000US26125,"Oakland County, Michigan",1250836,*****,1200226,*****,50610,*****
+0500000US26127,"Oceana County, Michigan",26442,*****,22498,*****,3944,*****
+0500000US26129,"Ogemaw County, Michigan",20981,*****,20513,*****,468,*****
+0500000US26133,"Osceola County, Michigan",23260,*****,22838,*****,422,*****
+0500000US26137,"Otsego County, Michigan",24538,*****,24276,287,262,287
+0500000US26139,"Ottawa County, Michigan",286383,*****,258593,*****,27790,*****
+0500000US26143,"Roscommon County, Michigan",23895,*****,23455,*****,440,*****
+0500000US26145,"Saginaw County, Michigan",191934,*****,175732,*****,16202,*****
+0500000US26147,"St. Clair County, Michigan",159350,*****,153943,*****,5407,*****
+0500000US26149,"St. Joseph County, Michigan",60947,*****,56154,*****,4793,*****
+0500000US26151,"Sanilac County, Michigan",41269,*****,39763,*****,1506,*****
+0500000US26155,"Shiawassee County, Michigan",68446,*****,66454,*****,1992,*****
+0500000US26157,"Tuscola County, Michigan",52764,*****,50990,*****,1774,*****
+0500000US26159,"Van Buren County, Michigan",75353,*****,66621,*****,8732,*****
+0500000US26161,"Washtenaw County, Michigan",367627,*****,350167,*****,17460,*****
+0500000US26163,"Wayne County, Michigan",1753616,*****,1649917,*****,103699,*****
+0500000US26165,"Wexford County, Michigan",33276,*****,32585,298,691,298
+0500000US27003,"Anoka County, Minnesota",351373,*****,335321,*****,16052,*****
+0500000US27005,"Becker County, Minnesota",34098,*****,33392,*****,706,*****
+0500000US27007,"Beltrami County, Minnesota",46513,*****,45428,*****,1085,*****
+0500000US27009,"Benton County, Minnesota",39937,*****,38985,*****,952,*****
+0500000US27013,"Blue Earth County, Minnesota",66973,*****,64567,*****,2406,*****
+0500000US27015,"Brown County, Minnesota",25194,*****,24070,*****,1124,*****
+0500000US27017,"Carlton County, Minnesota",35498,*****,34883,*****,615,*****
+0500000US27019,"Carver County, Minnesota",102119,*****,97805,*****,4314,*****
+0500000US27021,"Cass County, Minnesota",29355,*****,28738,*****,617,*****
+0500000US27025,"Chisago County, Minnesota",55308,*****,54143,*****,1165,*****
+0500000US27027,"Clay County, Minnesota",63569,*****,60694,*****,2875,*****
+0500000US27035,"Crow Wing County, Minnesota",64424,*****,63427,*****,997,*****
+0500000US27037,"Dakota County, Minnesota",421751,*****,391846,*****,29905,*****
+0500000US27039,"Dodge County, Minnesota",20762,*****,19699,*****,1063,*****
+0500000US27041,"Douglas County, Minnesota",37575,*****,37133,554,442,554
+0500000US27045,"Fillmore County, Minnesota",20980,*****,20805,185,175,185
+0500000US27047,"Freeborn County, Minnesota",30535,*****,27583,*****,2952,*****
+0500000US27049,"Goodhue County, Minnesota",46304,*****,44722,*****,1582,*****
+0500000US27053,"Hennepin County, Minnesota",1252024,*****,1164912,*****,87112,*****
+0500000US27057,"Hubbard County, Minnesota",21018,*****,20561,*****,457,*****
+0500000US27059,"Isanti County, Minnesota",39582,*****,38763,*****,819,*****
+0500000US27061,"Itasca County, Minnesota",45137,*****,44488,*****,649,*****
+0500000US27067,"Kandiyohi County, Minnesota",42743,*****,37469,*****,5274,*****
+0500000US27079,"Le Sueur County, Minnesota",28111,*****,26430,*****,1681,*****
+0500000US27083,"Lyon County, Minnesota",25831,*****,24152,*****,1679,*****
+0500000US27085,"McLeod County, Minnesota",35884,*****,33689,*****,2195,*****
+0500000US27091,"Martin County, Minnesota",19850,*****,19657,127,193,127
+0500000US27093,"Meeker County, Minnesota",23131,*****,23066,52,65,52
+0500000US27095,"Mille Lacs County, Minnesota",25872,*****,25249,*****,623,*****
+0500000US27097,"Morrison County, Minnesota",33064,*****,32487,*****,577,*****
+0500000US27099,"Mower County, Minnesota",39566,*****,35049,*****,4517,*****
+0500000US27103,"Nicollet County, Minnesota",33966,*****,32444,*****,1522,*****
+0500000US27105,"Nobles County, Minnesota",21944,*****,15741,*****,6203,*****
+0500000US27109,"Olmsted County, Minnesota",154930,*****,147123,*****,7807,*****
+0500000US27111,"Otter Tail County, Minnesota",58345,*****,56324,*****,2021,*****
+0500000US27115,"Pine County, Minnesota",29203,*****,28368,*****,835,*****
+0500000US27119,"Polk County, Minnesota",31619,*****,30773,602,846,602
+0500000US27123,"Ramsey County, Minnesota",547974,*****,506542,*****,41432,*****
+0500000US27131,"Rice County, Minnesota",65968,*****,60648,*****,5320,*****
+0500000US27137,"St. Louis County, Minnesota",200000,*****,196599,*****,3401,*****
+0500000US27139,"Scott County, Minnesota",145827,*****,138255,*****,7572,*****
+0500000US27141,"Sherburne County, Minnesota",94570,*****,92173,*****,2397,*****
+0500000US27145,"Stearns County, Minnesota",157822,*****,152435,*****,5387,*****
+0500000US27147,"Steele County, Minnesota",36887,*****,33939,*****,2948,*****
+0500000US27153,"Todd County, Minnesota",24515,*****,23069,*****,1446,*****
+0500000US27157,"Wabasha County, Minnesota",21608,*****,21165,334,443,334
+0500000US27163,"Washington County, Minnesota",256348,*****,245645,*****,10703,*****
+0500000US27169,"Winona County, Minnesota",50873,*****,49383,*****,1490,*****
+0500000US27171,"Wright County, Minnesota",134286,*****,130308,*****,3978,*****
+0500000US28001,"Adams County, Mississippi",30739,2481,29196,2563,1543,1128
+0500000US28003,"Alcorn County, Mississippi",37210,*****,35749,1383,1461,1383
+0500000US28011,"Bolivar County, Mississippi",31945,*****,31265,*****,680,*****
+0500000US28027,"Coahoma County, Mississippi",23154,*****,22946,229,208,229
+0500000US28029,"Copiah County, Mississippi",28516,*****,27364,13,1152,14
+0500000US28033,"DeSoto County, Mississippi",178751,*****,170176,*****,8575,*****
+0500000US28035,"Forrest County, Mississippi",75471,*****,73312,*****,2159,*****
+0500000US28039,"George County, Mississippi",24094,*****,23712,501,382,501
+0500000US28043,"Grenada County, Mississippi",21087,*****,20950,220,137,220
+0500000US28045,"Hancock County, Mississippi",47053,*****,45228,*****,1825,*****
+0500000US28047,"Harrison County, Mississippi",205027,*****,193865,*****,11162,*****
+0500000US28049,"Hinds County, Mississippi",239497,*****,235775,*****,3722,*****
+0500000US28057,"Itawamba County, Mississippi",23508,*****,23107,428,401,428
+0500000US28059,"Jackson County, Mississippi",142152,*****,132941,*****,9211,*****
+0500000US28067,"Jones County, Mississippi",67930,*****,64943,*****,2987,*****
+0500000US28071,"Lafayette County, Mississippi",54374,*****,53230,722,1144,722
+0500000US28073,"Lamar County, Mississippi",61374,*****,59753,*****,1621,*****
+0500000US28075,"Lauderdale County, Mississippi",76155,*****,74445,*****,1710,*****
+0500000US28079,"Leake County, Mississippi",22715,*****,22396,584,319,584
+0500000US28081,"Lee County, Mississippi",84933,*****,82694,*****,2239,*****
+0500000US28083,"Leflore County, Mississippi",29223,*****,28873,471,350,471
+0500000US28085,"Lincoln County, Mississippi",34347,*****,33896,531,451,531
+0500000US28087,"Lowndes County, Mississippi",59186,*****,57892,*****,1294,*****
+0500000US28089,"Madison County, Mississippi",104618,*****,101509,*****,3109,*****
+0500000US28091,"Marion County, Mississippi",25069,*****,24662,340,407,340
+0500000US28093,"Marshall County, Mississippi",35619,*****,34210,708,1409,708
+0500000US28095,"Monroe County, Mississippi",35872,*****,35697,191,175,191
+0500000US28099,"Neshoba County, Mississippi",29369,*****,29220,189,149,189
+0500000US28101,"Newton County, Mississippi",22650,2043,22650,2043,0,217
+0500000US28105,"Oktibbeha County, Mississippi",49799,*****,49619,214,180,214
+0500000US28107,"Panola County, Mississippi",33994,*****,33012,1582,982,1582
+0500000US28109,"Pearl River County, Mississippi",55270,*****,53542,*****,1728,*****
+0500000US28113,"Pike County, Mississippi",39468,*****,39189,243,279,243
+0500000US28115,"Pontotoc County, Mississippi",31640,*****,29571,*****,2069,*****
+0500000US28117,"Prentiss County, Mississippi",25261,*****,24684,483,577,483
+0500000US28121,"Rankin County, Mississippi",152080,*****,147900,*****,4180,*****
+0500000US28123,"Scott County, Mississippi",28420,*****,24528,584,3892,584
+0500000US28127,"Simpson County, Mississippi",27977,2464,27977,2464,0,217
+0500000US28133,"Sunflower County, Mississippi",25981,*****,25918,86,63,86
+0500000US28137,"Tate County, Mississippi",28441,*****,27830,708,611,708
+0500000US28139,"Tippah County, Mississippi",21969,*****,20974,885,995,885
+0500000US28145,"Union County, Mississippi",28556,*****,27329,885,1227,885
+0500000US28149,"Warren County, Mississippi",46768,*****,46289,513,479,513
+0500000US28151,"Washington County, Mississippi",46221,*****,45782,414,439,414
+0500000US28153,"Wayne County, Mississippi",20446,*****,20446,217,0,217
+0500000US28163,"Yazoo County, Mississippi",26106,2905,24129,2780,1977,1607
+0500000US29001,"Adair County, Missouri",25377,*****,25146,287,231,287
+0500000US29007,"Audrain County, Missouri",25641,*****,24554,803,1087,803
+0500000US29009,"Barry County, Missouri",35668,*****,32213,*****,3455,*****
+0500000US29019,"Boone County, Missouri",178271,*****,172168,*****,6103,*****
+0500000US29021,"Buchanan County, Missouri",89065,*****,83020,*****,6045,*****
+0500000US29023,"Butler County, Missouri",42666,*****,41768,*****,898,*****
+0500000US29027,"Callaway County, Missouri",45032,*****,44475,585,557,585
+0500000US29029,"Camden County, Missouri",45632,*****,44908,963,724,963
+0500000US29031,"Cape Girardeau County, Missouri",78161,*****,76304,*****,1857,*****
+0500000US29037,"Cass County, Missouri",103724,*****,99087,*****,4637,*****
+0500000US29043,"Christian County, Missouri",85432,*****,82927,*****,2505,*****
+0500000US29047,"Clay County, Missouri",242874,*****,226189,*****,16685,*****
+0500000US29049,"Clinton County, Missouri",20554,*****,19826,468,728,468
+0500000US29051,"Cole County, Missouri",76708,*****,74431,*****,2277,*****
+0500000US29055,"Crawford County, Missouri",23239,2383,22726,2387,513,297
+0500000US29069,"Dunklin County, Missouri",30119,*****,28083,*****,2036,*****
+0500000US29071,"Franklin County, Missouri",103330,*****,101548,*****,1782,*****
+0500000US29077,"Greene County, Missouri",289805,*****,278937,*****,10868,*****
+0500000US29083,"Henry County, Missouri",21718,*****,20954,443,764,443
+0500000US29091,"Howell County, Missouri",40103,*****,39252,*****,851,*****
+0500000US29095,"Jackson County, Missouri",698895,*****,634866,*****,64029,*****
+0500000US29097,"Jasper County, Missouri",120217,*****,110489,*****,9728,*****
+0500000US29099,"Jefferson County, Missouri",223810,*****,219389,*****,4421,*****
+0500000US29101,"Johnson County, Missouri",53897,*****,51506,*****,2391,*****
+0500000US29105,"Laclede County, Missouri",35443,*****,34572,*****,871,*****
+0500000US29107,"Lafayette County, Missouri",32641,*****,31724,*****,917,*****
+0500000US29109,"Lawrence County, Missouri",38434,*****,35582,*****,2852,*****
+0500000US29113,"Lincoln County, Missouri",56183,*****,55832,304,351,304
+0500000US29119,"McDonald County, Missouri",22127,2237,18922,2181,3205,284
+0500000US29127,"Marion County, Missouri",28634,*****,27829,793,805,793
+0500000US29131,"Miller County, Missouri",25228,*****,24773,448,455,448
+0500000US29141,"Morgan County, Missouri",21045,2654,20745,2651,300,326
+0500000US29145,"Newton County, Missouri",58290,*****,55091,*****,3199,*****
+0500000US29147,"Nodaway County, Missouri",22472,*****,22111,351,361,351
+0500000US29159,"Pettis County, Missouri",42558,*****,38687,*****,3871,*****
+0500000US29161,"Phelps County, Missouri",44744,*****,43608,*****,1136,*****
+0500000US29165,"Platte County, Missouri",101187,*****,94923,*****,6264,*****
+0500000US29167,"Polk County, Missouri",31794,*****,30793,465,1001,465
+0500000US29169,"Pulaski County, Missouri",52059,*****,46282,*****,5777,*****
+0500000US29175,"Randolph County, Missouri",24945,*****,24750,170,195,170
+0500000US29177,"Ray County, Missouri",22855,*****,22312,*****,543,*****
+0500000US29183,"St. Charles County, Missouri",395504,*****,382459,*****,13045,*****
+0500000US29187,"St. Francois County, Missouri",66705,*****,65481,946,1224,946
+0500000US29189,"St. Louis County, Missouri",996726,*****,967607,*****,29119,*****
+0500000US29195,"Saline County, Missouri",22660,*****,20365,*****,2295,*****
+0500000US29201,"Scott County, Missouri",38541,*****,37664,*****,877,*****
+0500000US29207,"Stoddard County, Missouri",29369,*****,28849,*****,520,*****
+0500000US29209,"Stone County, Missouri",31699,*****,30952,*****,747,*****
+0500000US29213,"Taney County, Missouri",55355,*****,52079,*****,3276,*****
+0500000US29215,"Texas County, Missouri",25735,*****,24720,423,1015,423
+0500000US29217,"Vernon County, Missouri",20437,*****,20013,*****,424,*****
+0500000US29219,"Warren County, Missouri",34373,*****,33743,683,630,683
+0500000US29221,"Washington County, Missouri",25022,*****,24555,529,467,529
+0500000US29225,"Webster County, Missouri",38665,*****,37839,*****,826,*****
+0500000US29510,"St. Louis city, Missouri",308626,*****,296179,*****,12447,*****
+0500000US30013,"Cascade County, Montana",81654,*****,78013,*****,3641,*****
+0500000US30029,"Flathead County, Montana",100000,*****,97249,*****,2751,*****
+0500000US30031,"Gallatin County, Montana",107810,*****,103885,*****,3925,*****
+0500000US30047,"Lake County, Montana",30273,*****,28916,*****,1357,*****
+0500000US30049,"Lewis and Clark County, Montana",67773,*****,65557,*****,2216,*****
+0500000US30063,"Missoula County, Montana",117441,*****,113646,*****,3795,*****
+0500000US30081,"Ravalli County, Montana",42563,*****,41042,*****,1521,*****
+0500000US30093,"Silver Bow County, Montana",34602,*****,33066,*****,1536,*****
+0500000US30111,"Yellowstone County, Montana",158980,*****,150038,*****,8942,*****
+0500000US31001,"Adams County, Nebraska",31678,*****,28414,*****,3264,*****
+0500000US31019,"Buffalo County, Nebraska",49732,*****,45223,*****,4509,*****
+0500000US31025,"Cass County, Nebraska",25889,*****,25012,*****,877,*****
+0500000US31043,"Dakota County, Nebraska",20186,*****,12167,*****,8019,*****
+0500000US31047,"Dawson County, Nebraska",23709,*****,15622,*****,8087,*****
+0500000US31053,"Dodge County, Nebraska",36707,*****,32131,*****,4576,*****
+0500000US31055,"Douglas County, Nebraska",561620,*****,490346,*****,71274,*****
+0500000US31067,"Gage County, Nebraska",21601,*****,21058,*****,543,*****
+0500000US31079,"Hall County, Nebraska",61519,*****,44370,*****,17149,*****
+0500000US31109,"Lancaster County, Nebraska",314358,*****,291986,*****,22372,*****
+0500000US31111,"Lincoln County, Nebraska",35280,*****,32241,*****,3039,*****
+0500000US31119,"Madison County, Nebraska",35144,*****,29825,*****,5319,*****
+0500000US31141,"Platte County, Nebraska",33175,*****,26843,*****,6332,*****
+0500000US31153,"Sarpy County, Nebraska",181439,*****,164436,*****,17003,*****
+0500000US31155,"Saunders County, Nebraska",21057,*****,20581,*****,476,*****
+0500000US31157,"Scotts Bluff County, Nebraska",36363,*****,27611,*****,8752,*****
+0500000US31177,"Washington County, Nebraska",20721,*****,20071,*****,650,*****
+0500000US32001,"Churchill County, Nevada",24230,*****,21105,1348,3125,1348
+0500000US32003,"Clark County, Nevada",2204079,*****,1515267,*****,688812,*****
+0500000US32005,"Douglas County, Nevada",48309,*****,42091,*****,6218,*****
+0500000US32007,"Elko County, Nevada",52649,*****,39640,*****,13009,*****
+0500000US32019,"Lyon County, Nevada",54122,*****,44766,*****,9356,*****
+0500000US32023,"Nye County, Nevada",44202,*****,37698,*****,6504,*****
+0500000US32031,"Washoe County, Nevada",460587,*****,347283,*****,113304,*****
+0500000US32510,"Carson City, Nevada",54745,*****,41507,*****,13238,*****
+0500000US33001,"Belknap County, New Hampshire",60785,*****,59758,*****,1027,*****
+0500000US33003,"Carroll County, New Hampshire",48064,*****,47187,520,877,520
+0500000US33005,"Cheshire County, New Hampshire",75960,*****,74535,*****,1425,*****
+0500000US33007,"Coos County, New Hampshire",31634,*****,30387,809,1247,809
+0500000US33009,"Grafton County, New Hampshire",89386,*****,87281,*****,2105,*****
+0500000US33011,"Hillsborough County, New Hampshire",409697,*****,382092,*****,27605,*****
+0500000US33013,"Merrimack County, New Hampshire",149216,*****,145964,*****,3252,*****
+0500000US33015,"Rockingham County, New Hampshire",306363,*****,297289,*****,9074,*****
+0500000US33017,"Strafford County, New Hampshire",128613,*****,125513,*****,3100,*****
+0500000US33019,"Sullivan County, New Hampshire",43077,*****,42396,723,681,723
+0500000US34001,"Atlantic County, New Jersey",269918,*****,218578,*****,51340,*****
+0500000US34003,"Bergen County, New Jersey",948406,*****,759353,*****,189053,*****
+0500000US34005,"Burlington County, New Jersey",448596,*****,412313,*****,36283,*****
+0500000US34007,"Camden County, New Jersey",510719,*****,423937,*****,86782,*****
+0500000US34009,"Cape May County, New Jersey",93553,*****,86228,*****,7325,*****
+0500000US34011,"Cumberland County, New Jersey",152538,*****,105627,*****,46911,*****
+0500000US34013,"Essex County, New Jersey",808285,*****,620555,*****,187730,*****
+0500000US34015,"Gloucester County, New Jersey",292206,*****,274074,*****,18132,*****
+0500000US34017,"Hudson County, New Jersey",691643,*****,393270,*****,298373,*****
+0500000US34019,"Hunterdon County, New Jersey",125059,*****,116777,*****,8282,*****
+0500000US34021,"Mercer County, New Jersey",374733,*****,308070,*****,66663,*****
+0500000US34023,"Middlesex County, New Jersey",842798,*****,664294,*****,178504,*****
+0500000US34025,"Monmouth County, New Jersey",626351,*****,557433,*****,68918,*****
+0500000US34027,"Morris County, New Jersey",499693,*****,431540,*****,68153,*****
+0500000US34029,"Ocean County, New Jersey",597943,*****,541977,*****,55966,*****
+0500000US34031,"Passaic County, New Jersey",512607,*****,297996,*****,214611,*****
+0500000US34033,"Salem County, New Jersey",62792,*****,57128,*****,5664,*****
+0500000US34035,"Somerset County, New Jersey",335432,*****,285798,*****,49634,*****
+0500000US34037,"Sussex County, New Jersey",141682,*****,130095,*****,11587,*****
+0500000US34039,"Union County, New Jersey",563892,*****,383558,*****,180334,*****
+0500000US34041,"Warren County, New Jersey",106798,*****,96610,*****,10188,*****
+0500000US35001,"Bernalillo County, New Mexico",676773,*****,337854,*****,338919,*****
+0500000US35005,"Chaves County, New Mexico",64866,*****,28251,*****,36615,*****
+0500000US35006,"Cibola County, New Mexico",28401,812,17735,766,10666,217
+0500000US35009,"Curry County, New Mexico",49812,*****,28776,*****,21036,*****
+0500000US35013,"Do?a Ana County, New Mexico",215579,*****,68167,*****,147412,*****
+0500000US35015,"Eddy County, New Mexico",56997,*****,29038,*****,27959,*****
+0500000US35017,"Grant County, New Mexico",27687,*****,14611,1542,13076,1542
+0500000US35025,"Lea County, New Mexico",68759,*****,28556,*****,40203,*****
+0500000US35029,"Luna County, New Mexico",24544,1033,7090,1487,17454,1899
+0500000US35031,"McKinley County, New Mexico",72564,*****,62232,*****,10332,*****
+0500000US35035,"Otero County, New Mexico",65817,*****,40570,*****,25247,*****
+0500000US35039,"Rio Arriba County, New Mexico",39159,*****,11245,*****,27914,*****
+0500000US35043,"Sandoval County, New Mexico",142507,*****,86911,*****,55596,*****
+0500000US35045,"San Juan County, New Mexico",126926,*****,101346,*****,25580,*****
+0500000US35047,"San Miguel County, New Mexico",27748,*****,7095,1298,20653,1298
+0500000US35049,"Santa Fe County, New Mexico",148750,*****,72820,*****,75930,*****
+0500000US35055,"Taos County, New Mexico",32795,*****,14150,*****,18645,*****
+0500000US35061,"Valencia County, New Mexico",75940,*****,29867,*****,46073,*****
+0500000US36001,"Albany County, New York",309612,*****,291151,*****,18461,*****
+0500000US36003,"Allegany County, New York",46894,*****,46069,315,825,315
+0500000US36005,"Bronx County, New York",1471160,*****,644984,*****,826176,*****
+0500000US36007,"Broome County, New York",193639,*****,185401,*****,8238,*****
+0500000US36009,"Cattaraugus County, New York",77348,*****,75732,*****,1616,*****
+0500000US36011,"Cayuga County, New York",77603,*****,75291,*****,2312,*****
+0500000US36013,"Chautauqua County, New York",129046,*****,119282,*****,9764,*****
+0500000US36015,"Chemung County, New York",85557,*****,82888,*****,2669,*****
+0500000US36017,"Chenango County, New York",47863,*****,46792,*****,1071,*****
+0500000US36019,"Clinton County, New York",80980,*****,78560,*****,2420,*****
+0500000US36021,"Columbia County, New York",60604,*****,57663,*****,2941,*****
+0500000US36023,"Cortland County, New York",47786,*****,46485,*****,1301,*****
+0500000US36025,"Delaware County, New York",45001,*****,43281,*****,1720,*****
+0500000US36027,"Dutchess County, New York",295568,*****,259221,*****,36347,*****
+0500000US36029,"Erie County, New York",925528,*****,874885,*****,50643,*****
+0500000US36031,"Essex County, New York",37956,*****,36620,*****,1336,*****
+0500000US36033,"Franklin County, New York",51116,*****,49258,*****,1858,*****
+0500000US36035,"Fulton County, New York",53877,*****,52217,*****,1660,*****
+0500000US36037,"Genesee County, New York",57956,*****,56004,*****,1952,*****
+0500000US36039,"Greene County, New York",47470,*****,44758,*****,2712,*****
+0500000US36043,"Herkimer County, New York",62240,*****,60832,*****,1408,*****
+0500000US36045,"Jefferson County, New York",114187,*****,105524,*****,8663,*****
+0500000US36047,"Kings County, New York",2648771,*****,2142136,*****,506635,*****
+0500000US36049,"Lewis County, New York",26551,*****,26190,237,361,237
+0500000US36051,"Livingston County, New York",63799,*****,61480,*****,2319,*****
+0500000US36053,"Madison County, New York",70965,*****,69385,*****,1580,*****
+0500000US36055,"Monroe County, New York",747642,*****,681908,*****,65734,*****
+0500000US36057,"Montgomery County, New York",49258,*****,42285,*****,6973,*****
+0500000US36059,"Nassau County, New York",1369514,*****,1134633,*****,234881,*****
+0500000US36061,"New York County, New York",1664727,*****,1229725,*****,435002,*****
+0500000US36063,"Niagara County, New York",211328,*****,205102,*****,6226,*****
+0500000US36065,"Oneida County, New York",231332,*****,218019,*****,13313,*****
+0500000US36067,"Onondaga County, New York",465398,*****,442667,*****,22731,*****
+0500000US36069,"Ontario County, New York",109899,*****,104648,*****,5251,*****
+0500000US36071,"Orange County, New York",382226,*****,303369,*****,78857,*****
+0500000US36073,"Orleans County, New York",40983,*****,39009,*****,1974,*****
+0500000US36075,"Oswego County, New York",118478,*****,115362,*****,3116,*****
+0500000US36077,"Otsego County, New York",60094,*****,57893,*****,2201,*****
+0500000US36079,"Putnam County, New York",99323,*****,84288,*****,15035,*****
+0500000US36081,"Queens County, New York",2358582,*****,1698032,*****,660550,*****
+0500000US01001,"Autauga County, Alabama",55504,*****,54646,937,858,937
+0500000US01003,"Baldwin County, Alabama",212628,*****,202953,*****,9675,*****
+0500000US01005,"Barbour County, Alabama",25270,*****,24206,*****,1064,*****
+0500000US01007,"Bibb County, Alabama",22668,*****,21517,348,1151,348
+0500000US01009,"Blount County, Alabama",58013,*****,52464,*****,5549,*****
+0500000US01015,"Calhoun County, Alabama",114728,*****,110427,*****,4301,*****
+0500000US01017,"Chambers County, Alabama",33713,*****,33249,364,464,364
+0500000US01019,"Cherokee County, Alabama",27329,2267,27101,2249,228,320
+0500000US01021,"Chilton County, Alabama",44067,*****,42962,785,1105,785
+0500000US01025,"Clarke County, Alabama",24351,2441,24129,2436,222,314
+0500000US01031,"Coffee County, Alabama",51874,*****,48190,*****,3684,*****
+0500000US01033,"Colbert County, Alabama",54500,*****,53111,*****,1389,*****
+0500000US01039,"Covington County, Alabama",37092,*****,36741,407,351,407
+0500000US01043,"Cullman County, Alabama",82755,*****,79170,*****,3585,*****
+0500000US01045,"Dale County, Alabama",49226,*****,46020,*****,3206,*****
+0500000US01047,"Dallas County, Alabama",39215,*****,39118,124,97,124
+0500000US01049,"DeKalb County, Alabama",71617,*****,60992,*****,10625,*****
+0500000US01051,"Elmore County, Alabama",81677,*****,79231,*****,2446,*****
+0500000US01053,"Escambia County, Alabama",37447,*****,37232,258,215,258
+0500000US01055,"Etowah County, Alabama",102755,*****,98801,*****,3954,*****
+0500000US01059,"Franklin County, Alabama",31495,*****,26148,*****,5347,*****
+0500000US01061,"Geneva County, Alabama",25816,2326,24634,2254,1182,301
+0500000US01069,"Houston County, Alabama",104346,*****,100839,*****,3507,*****
+0500000US01071,"Jackson County, Alabama",51909,*****,50352,*****,1557,*****
+0500000US01073,"Jefferson County, Alabama",659197,*****,633607,*****,25590,*****
+0500000US01077,"Lauderdale County, Alabama",92538,*****,90061,*****,2477,*****
+0500000US01079,"Lawrence County, Alabama",33049,*****,32362,822,687,822
+0500000US01081,"Lee County, Alabama",161604,*****,155511,*****,6093,*****
+0500000US01083,"Limestone County, Alabama",94402,*****,88665,*****,5737,*****
+0500000US01087,"Macon County, Alabama",20652,1604,20576,1617,76,100
+0500000US01089,"Madison County, Alabama",361046,*****,343318,*****,17728,*****
+0500000US01093,"Marion County, Alabama",29833,*****,29253,501,580,501
+0500000US01095,"Marshall County, Alabama",95548,*****,82249,*****,13299,*****
+0500000US01097,"Mobile County, Alabama",413955,*****,402012,*****,11943,*****
+0500000US01099,"Monroe County, Alabama",24363,2437,24220,2479,143,222
+0500000US01101,"Montgomery County, Alabama",226646,*****,218788,*****,7858,*****
+0500000US01103,"Morgan County, Alabama",118818,*****,108967,*****,9851,*****
+0500000US01107,"Pickens County, Alabama",19119,2202,18212,2107,907,776
+0500000US01109,"Pike County, Alabama",33267,*****,32998,350,269,350
+0500000US01111,"Randolph County, Alabama",22670,*****,22534,245,136,245
+0500000US01113,"Russell County, Alabama",57045,*****,53957,*****,3088,*****
+0500000US01115,"St. Clair County, Alabama",88199,*****,86092,*****,2107,*****
+0500000US01117,"Shelby County, Alabama",213605,*****,201300,*****,12305,*****
+0500000US01121,"Talladega County, Alabama",80065,*****,78214,*****,1851,*****
+0500000US01123,"Tallapoosa County, Alabama",40681,*****,39704,*****,977,*****
+0500000US01125,"Tuscaloosa County, Alabama",207811,*****,200018,*****,7793,*****
+0500000US01127,"Walker County, Alabama",64058,*****,62408,*****,1650,*****
+0500000US01133,"Winston County, Alabama",23722,*****,23533,348,189,348
+0500000US02020,"Anchorage Municipality, Alaska",294356,*****,267408,*****,26948,*****
+0500000US02090,"Fairbanks North Star Borough, Alaska",99703,*****,91630,*****,8073,*****
+0500000US02110,"Juneau City and Borough, Alaska",32094,*****,29965,*****,2129,*****
+0500000US02122,"Kenai Peninsula Borough, Alaska",58617,*****,56177,*****,2440,*****
+0500000US02170,"Matanuska-Susitna Borough, Alaska",106532,*****,101309,*****,5223,*****
+0500000US04001,"Apache County, Arizona",71606,*****,67126,*****,4480,*****
+0500000US04003,"Cochise County, Arizona",124756,*****,80359,*****,44397,*****
+0500000US04005,"Coconino County, Arizona",140776,*****,120873,*****,19903,*****
+0500000US04007,"Gila County, Arizona",53501,*****,43480,*****,10021,*****
+0500000US04009,"Graham County, Arizona",37466,*****,25184,*****,12282,*****
+0500000US04013,"Maricopa County, Arizona",4307033,*****,2967459,*****,1339574,*****
+0500000US04015,"Mohave County, Arizona",207200,*****,173137,*****,34063,*****
+0500000US04017,"Navajo County, Arizona",108956,*****,96673,*****,12283,*****
+0500000US04019,"Pima County, Arizona",1022769,*****,641479,*****,381290,*****
+0500000US04021,"Pinal County, Arizona",430237,*****,300755,*****,129482,*****
+0500000US04023,"Santa Cruz County, Arizona",46212,*****,7665,*****,38547,*****
+0500000US04025,"Yavapai County, Arizona",228168,*****,194996,*****,33172,*****
+0500000US04027,"Yuma County, Arizona",207534,*****,74829,*****,132705,*****
+0500000US05003,"Ashley County, Arkansas",20283,*****,19145,908,1138,908
+0500000US05005,"Baxter County, Arkansas",41355,*****,40380,*****,975,*****
+0500000US05007,"Benton County, Arkansas",266300,*****,221862,*****,44438,*****
+0500000US05009,"Boone County, Arkansas",37381,*****,36458,*****,923,*****
+0500000US05015,"Carroll County, Arkansas",27944,*****,23665,*****,4279,*****
+0500000US05019,"Clark County, Arkansas",22293,*****,21355,745,938,745
+0500000US05023,"Cleburne County, Arkansas",25048,*****,23873,178,1175,178
+0500000US05027,"Columbia County, Arkansas",23627,*****,23193,572,434,572
+0500000US05029,"Conway County, Arkansas",21178,1766,20197,1695,981,347
+0500000US05031,"Craighead County, Arkansas",107115,*****,101570,*****,5545,*****
+0500000US05033,"Crawford County, Arkansas",62996,*****,58035,*****,4961,*****
+0500000US05035,"Crittenden County, Arkansas",48750,*****,47498,*****,1252,*****
+0500000US05045,"Faulkner County, Arkansas",123654,*****,118638,*****,5016,*****
+0500000US05051,"Garland County, Arkansas",98658,*****,93034,*****,5624,*****
+0500000US05055,"Greene County, Arkansas",45053,*****,43784,*****,1269,*****
+0500000US05057,"Hempstead County, Arkansas",26140,1897,22878,2041,3262,803
+0500000US05059,"Hot Spring County, Arkansas",33574,*****,32856,678,718,678
+0500000US05063,"Independence County, Arkansas",37504,*****,35068,*****,2436,*****
+0500000US05069,"Jefferson County, Arkansas",69115,*****,67658,*****,1457,*****
+0500000US05071,"Johnson County, Arkansas",26552,*****,23281,1174,3271,1174
+0500000US05083,"Logan County, Arkansas",21722,*****,21026,*****,696,*****
+0500000US05085,"Lonoke County, Arkansas",72898,*****,69460,*****,3438,*****
+0500000US05091,"Miller County, Arkansas",43984,*****,42499,*****,1485,*****
+0500000US05093,"Mississippi County, Arkansas",42159,*****,40343,*****,1816,*****
+0500000US05103,"Ouachita County, Arkansas",23868,*****,23679,288,189,288
+0500000US05111,"Poinsett County, Arkansas",24154,*****,23428,*****,726,*****
+0500000US05113,"Polk County, Arkansas",20748,2052,18590,2052,2158,2
+0500000US05115,"Pope County, Arkansas",63835,*****,58014,*****,5821,*****
+0500000US05119,"Pulaski County, Arkansas",393956,*****,369631,*****,24325,*****
+0500000US05123,"St. Francis County, Arkansas",25930,*****,25630,263,300,263
+0500000US05125,"Saline County, Arkansas",119323,*****,113592,*****,5731,*****
+0500000US05131,"Sebastian County, Arkansas",128107,*****,109665,*****,18442,*****
+0500000US05139,"Union County, Arkansas",39449,*****,37827,*****,1622,*****
+0500000US05143,"Washington County, Arkansas",231996,*****,192920,*****,39076,*****
+0500000US05145,"White County, Arkansas",79016,*****,75577,*****,3439,*****
+0500000US05149,"Yell County, Arkansas",21523,*****,16591,1174,4932,1174
+0500000US06001,"Alameda County, California",1663190,*****,1289518,*****,373672,*****
+0500000US06005,"Amador County, California",38626,*****,33166,*****,5460,*****
+0500000US06007,"Butte County, California",229294,*****,191725,*****,37569,*****
+0500000US06009,"Calaveras County, California",45670,*****,40158,*****,5512,*****
+0500000US06011,"Colusa County, California",21805,*****,8273,1490,13532,1490
+0500000US06013,"Contra Costa County, California",1147439,*****,852855,*****,294584,*****
+0500000US06015,"Del Norte County, California",27470,*****,22090,1202,5380,1202
+0500000US06017,"El Dorado County, California",188987,*****,164709,*****,24278,*****
+0500000US06019,"Fresno County, California",989255,*****,463320,*****,525935,*****
+0500000US06021,"Glenn County, California",28094,*****,16314,*****,11780,*****
+0500000US06023,"Humboldt County, California",136754,*****,120739,*****,16015,*****
+0500000US06025,"Imperial County, California",182830,*****,28772,*****,154058,*****
+0500000US06029,"Kern County, California",893119,*****,415882,*****,477237,*****
+0500000US06031,"Kings County, California",150101,*****,67808,*****,82293,*****
+0500000US06033,"Lake County, California",64246,*****,51037,*****,13209,*****
+0500000US06035,"Lassen County, California",31163,*****,25242,*****,5921,*****
+0500000US06037,"Los Angeles County, California",10163507,*****,5223902,*****,4939605,*****
+0500000US06039,"Madera County, California",156890,*****,65970,*****,90920,*****
+0500000US06041,"Marin County, California",260955,*****,218879,*****,42076,*****
+0500000US06043,"Mariposa County, California",21073,1831,18008,1776,3065,1106
+0500000US06045,"Mendocino County, California",88018,*****,65683,*****,22335,*****
+0500000US06047,"Merced County, California",272673,*****,110183,*****,162490,*****
+0500000US06053,"Monterey County, California",437907,*****,180441,*****,257466,*****
+0500000US06055,"Napa County, California",140973,*****,92648,*****,48325,*****
+0500000US06057,"Nevada County, California",99814,*****,90376,*****,9438,*****
+0500000US06059,"Orange County, California",3190400,*****,2098513,*****,1091887,*****
+0500000US06061,"Placer County, California",386166,*****,331927,*****,54239,*****
+0500000US06065,"Riverside County, California",2423266,*****,1234273,*****,1188993,*****
+0500000US06067,"Sacramento County, California",1530615,*****,1174673,*****,355942,*****
+0500000US06069,"San Benito County, California",60310,*****,24209,*****,36101,*****
+0500000US06071,"San Bernardino County, California",2157404,*****,1004894,*****,1152510,*****
+0500000US06073,"San Diego County, California",3337685,*****,2207715,*****,1129970,*****
+0500000US06075,"San Francisco County, California",884363,*****,749658,*****,134705,*****
+0500000US06077,"San Joaquin County, California",745424,*****,435357,*****,310067,*****
+0500000US06079,"San Luis Obispo County, California",283405,*****,219277,*****,64128,*****
+0500000US06081,"San Mateo County, California",771410,*****,582456,*****,188954,*****
+0500000US06083,"Santa Barbara County, California",448150,*****,243591,*****,204559,*****
+0500000US06085,"Santa Clara County, California",1938153,*****,1442133,*****,496020,*****
+0500000US06087,"Santa Cruz County, California",275897,*****,182311,*****,93586,*****
+0500000US06089,"Shasta County, California",179921,*****,161731,*****,18190,*****
+0500000US06093,"Siskiyou County, California",43853,*****,38348,*****,5505,*****
+0500000US06095,"Solano County, California",445458,*****,327260,*****,118198,*****
+0500000US06097,"Sonoma County, California",504217,*****,368117,*****,136100,*****
+0500000US06099,"Stanislaus County, California",547899,*****,294123,*****,253776,*****
+0500000US06101,"Sutter County, California",96648,*****,66649,*****,29999,*****
+0500000US06103,"Tehama County, California",63926,*****,47790,*****,16136,*****
+0500000US06107,"Tulare County, California",464493,*****,163847,*****,300646,*****
+0500000US06109,"Tuolumne County, California",54248,*****,47455,*****,6793,*****
+0500000US06111,"Ventura County, California",854223,*****,487957,*****,366266,*****
+0500000US06113,"Yolo County, California",219116,*****,149514,*****,69602,*****
+0500000US06115,"Yuba County, California",77031,*****,55223,*****,21808,*****
+0500000US08001,"Adams County, Colorado",503167,*****,301666,*****,201501,*****
+0500000US08005,"Arapahoe County, Colorado",643052,*****,519095,*****,123957,*****
+0500000US08013,"Boulder County, Colorado",322514,*****,277560,*****,44954,*****
+0500000US08014,"Broomfield County, Colorado",68341,*****,59865,*****,8476,*****
+0500000US08029,"Delta County, Colorado",30568,*****,25907,*****,4661,*****
+0500000US08031,"Denver County, Colorado",704621,*****,493800,*****,210821,*****
+0500000US08035,"Douglas County, Colorado",335299,*****,306081,*****,29218,*****
+0500000US08037,"Eagle County, Colorado",54772,*****,38504,*****,16268,*****
+0500000US08039,"Elbert County, Colorado",25642,*****,23825,*****,1817,*****
+0500000US08041,"El Paso County, Colorado",699232,*****,579949,*****,119283,*****
+0500000US08043,"Fremont County, Colorado",47559,*****,41219,*****,6340,*****
+0500000US08045,"Garfield County, Colorado",59118,*****,42209,*****,16909,*****
+0500000US08059,"Jefferson County, Colorado",574613,*****,486280,*****,88333,*****
+0500000US08067,"La Plata County, Colorado",55589,*****,48455,*****,7134,*****
+0500000US08069,"Larimer County, Colorado",343976,*****,304605,*****,39371,*****
+0500000US08075,"Logan County, Colorado",21896,*****,19267,917,2629,917
+0500000US08077,"Mesa County, Colorado",151616,*****,129538,*****,22078,*****
+0500000US08083,"Montezuma County, Colorado",26140,*****,22838,*****,3302,*****
+0500000US08085,"Montrose County, Colorado",41784,*****,33157,*****,8627,*****
+0500000US08087,"Morgan County, Colorado",28192,*****,17955,*****,10237,*****
+0500000US08101,"Pueblo County, Colorado",166475,*****,94890,*****,71585,*****
+0500000US08107,"Routt County, Colorado",28758,2272,27373,2155,1385,764
+0500000US08117,"Summit County, Colorado",30585,*****,25515,1515,5070,1515
+0500000US08119,"Teller County, Colorado",24646,*****,22660,763,1986,763
+0500000US08123,"Weld County, Colorado",304633,*****,215330,*****,89303,*****
+0500000US09001,"Fairfield County, Connecticut",949921,*****,760879,*****,189042,*****
+0500000US09003,"Hartford County, Connecticut",895388,*****,734011,*****,161377,*****
+0500000US09005,"Litchfield County, Connecticut",182177,*****,170679,*****,11498,*****
+0500000US09007,"Middlesex County, Connecticut",163410,*****,153067,*****,10343,*****
+0500000US09009,"New Haven County, Connecticut",860435,*****,704317,*****,156118,*****
+0500000US09011,"New London County, Connecticut",269033,*****,240589,*****,28444,*****
+0500000US09013,"Tolland County, Connecticut",151461,*****,143046,*****,8415,*****
+0500000US09015,"Windham County, Connecticut",116359,*****,102763,*****,13596,*****
+0500000US10001,"Kent County, Delaware",176824,*****,164121,*****,12703,*****
+0500000US10003,"New Castle County, Delaware",559793,*****,504069,*****,55724,*****
+0500000US10005,"Sussex County, Delaware",225322,*****,204209,*****,21113,*****
+0500000US11001,"District of Columbia, District of Columbia",693972,*****,617446,*****,76526,*****
+0500000US12001,"Alachua County, Florida",266944,*****,240662,*****,26282,*****
+0500000US12003,"Baker County, Florida",28283,*****,28069,197,214,197
+0500000US12005,"Bay County, Florida",183563,*****,171473,*****,12090,*****
+0500000US12007,"Bradford County, Florida",26243,2726,25024,2601,1219,331
+0500000US12009,"Brevard County, Florida",589162,*****,527941,*****,61221,*****
+0500000US12011,"Broward County, Florida",1935878,*****,1361852,*****,574026,*****
+0500000US12015,"Charlotte County, Florida",182033,*****,168990,*****,13043,*****
+0500000US12017,"Citrus County, Florida",145647,*****,137348,*****,8299,*****
+0500000US12019,"Clay County, Florida",212230,*****,191220,*****,21010,*****
+0500000US12021,"Collier County, Florida",372880,*****,269355,*****,103525,*****
+0500000US12023,"Columbia County, Florida",69612,*****,65275,*****,4337,*****
+0500000US12027,"DeSoto County, Florida",36862,*****,24253,2431,12609,2431
+0500000US12031,"Duval County, Florida",937934,*****,847366,*****,90568,*****
+0500000US12033,"Escambia County, Florida",313512,*****,295806,*****,17706,*****
+0500000US12035,"Flagler County, Florida",110510,*****,98964,*****,11546,*****
+0500000US12039,"Gadsden County, Florida",46071,*****,41294,*****,4777,*****
+0500000US12049,"Hardee County, Florida",27411,*****,18518,2663,8893,2663
+0500000US12051,"Hendry County, Florida",40347,*****,17066,2814,23281,2813
+0500000US12053,"Hernando County, Florida",186553,*****,161726,*****,24827,*****
+0500000US12055,"Highlands County, Florida",102883,*****,82508,*****,20375,*****
+0500000US12057,"Hillsborough County, Florida",1408566,*****,1005768,*****,402798,*****
+0500000US12061,"Indian River County, Florida",154383,*****,135098,*****,19285,*****
+0500000US12063,"Jackson County, Florida",48330,*****,46008,*****,2322,*****
+0500000US12069,"Lake County, Florida",346017,*****,292664,*****,53353,*****
+0500000US12071,"Lee County, Florida",739224,*****,582403,*****,156821,*****
+0500000US12073,"Leon County, Florida",290292,*****,271602,*****,18690,*****
+0500000US12075,"Levy County, Florida",40355,*****,37011,*****,3344,*****
+0500000US12081,"Manatee County, Florida",385571,*****,322817,*****,62754,*****
+0500000US12083,"Marion County, Florida",354353,*****,307681,*****,46672,*****
+0500000US12085,"Martin County, Florida",159923,*****,137917,*****,22006,*****
+0500000US12086,"Miami-Dade County, Florida",2751796,*****,864530,*****,1887266,*****
+0500000US12087,"Monroe County, Florida",77013,*****,58134,*****,18879,*****
+0500000US12089,"Nassau County, Florida",82721,*****,79248,*****,3473,*****
+0500000US12091,"Okaloosa County, Florida",202970,*****,184274,*****,18696,*****
+0500000US12093,"Okeechobee County, Florida",45952,1856,34207,1831,11745,702
+0500000US12095,"Orange County, Florida",1348975,*****,925268,*****,423707,*****
+0500000US12097,"Osceola County, Florida",352180,*****,163023,*****,189157,*****
+0500000US12099,"Palm Beach County, Florida",1471150,*****,1142968,*****,328182,*****
+0500000US12101,"Pasco County, Florida",525643,*****,446178,*****,79465,*****
+0500000US12103,"Pinellas County, Florida",970637,*****,876685,*****,93952,*****
+0500000US12105,"Polk County, Florida",686483,*****,533370,*****,153113,*****
+0500000US12107,"Putnam County, Florida",73464,*****,66006,*****,7458,*****
+0500000US12109,"St. Johns County, Florida",243812,*****,226942,*****,16870,*****
+0500000US12111,"St. Lucie County, Florida",313506,*****,253881,*****,59625,*****
+0500000US12113,"Santa Rosa County, Florida",174272,*****,164604,*****,9668,*****
+0500000US12115,"Sarasota County, Florida",419119,*****,380847,*****,38272,*****
+0500000US12117,"Seminole County, Florida",462659,*****,363842,*****,98817,*****
+0500000US12119,"Sumter County, Florida",125165,*****,118060,*****,7105,*****
+0500000US12121,"Suwannee County, Florida",44190,*****,39822,746,4368,746
+0500000US12123,"Taylor County, Florida",25410,1712,23984,1862,1426,717
+0500000US12127,"Volusia County, Florida",538692,*****,464110,*****,74582,*****
+0500000US12129,"Wakulla County, Florida",32120,*****,30816,819,1304,819
+0500000US12131,"Walton County, Florida",68376,*****,64086,*****,4290,*****
+0500000US12133,"Washington County, Florida",24567,*****,24145,291,422,291
+0500000US13009,"Baldwin County, Georgia",44906,*****,43882,*****,1024,*****
+0500000US13013,"Barrow County, Georgia",79061,*****,70387,*****,8674,*****
+0500000US13015,"Bartow County, Georgia",105054,*****,95996,*****,9058,*****
+0500000US13021,"Bibb County, Georgia",152862,*****,147843,*****,5019,*****
+0500000US13029,"Bryan County, Georgia",37060,*****,34582,1099,2478,1099
+0500000US13031,"Bulloch County, Georgia",76149,*****,73237,*****,2912,*****
+0500000US13033,"Burke County, Georgia",22522,*****,22175,255,347,255
+0500000US13035,"Butts County, Georgia",24059,*****,23714,271,345,271
+0500000US13039,"Camden County, Georgia",53044,*****,49446,*****,3598,*****
+0500000US13045,"Carroll County, Georgia",117812,*****,109522,*****,8290,*****
+0500000US13047,"Catoosa County, Georgia",66550,*****,64497,*****,2053,*****
+0500000US13051,"Chatham County, Georgia",290501,*****,271379,*****,19122,*****
+0500000US13055,"Chattooga County, Georgia",25096,2051,23946,2039,1150,405
+0500000US13057,"Cherokee County, Georgia",247573,*****,221952,*****,25621,*****
+0500000US13059,"Clarke County, Georgia",127064,*****,113229,*****,13835,*****
+0500000US13063,"Clayton County, Georgia",285153,*****,247226,*****,37927,*****
+0500000US13067,"Cobb County, Georgia",755754,*****,656839,*****,98915,*****
+0500000US13069,"Coffee County, Georgia",43014,*****,37876,*****,5138,*****
+0500000US13071,"Colquitt County, Georgia",45835,*****,36760,*****,9075,*****
+0500000US13073,"Columbia County, Georgia",151579,*****,141466,*****,10113,*****
+0500000US13077,"Coweta County, Georgia",143114,*****,133022,*****,10092,*****
+0500000US13081,"Crisp County, Georgia",19975,2471,19453,2563,522,536
+0500000US13085,"Dawson County, Georgia",24379,*****,21845,1550,2534,1550
+0500000US13087,"Decatur County, Georgia",25280,2180,23360,2179,1920,176
+0500000US13089,"DeKalb County, Georgia",753253,*****,688183,*****,65070,*****
+0500000US13091,"Dodge County, Georgia",20730,*****,20393,429,337,429
+0500000US13095,"Dougherty County, Georgia",89502,*****,86948,*****,2554,*****
+0500000US13097,"Douglas County, Georgia",143882,*****,129907,*****,13975,*****
+0500000US13103,"Effingham County, Georgia",59982,*****,57366,*****,2616,*****
+0500000US13107,"Emanuel County, Georgia",22558,2001,22148,2028,410,444
+0500000US13111,"Fannin County, Georgia",25322,*****,24665,801,657,801
+0500000US13113,"Fayette County, Georgia",112549,*****,104264,*****,8285,*****
+0500000US13115,"Floyd County, Georgia",97613,*****,86700,*****,10913,*****
+0500000US13117,"Forsyth County, Georgia",227967,*****,206016,*****,21951,*****
+0500000US13119,"Franklin County, Georgia",22820,*****,21594,681,1226,681
+0500000US13121,"Fulton County, Georgia",1041423,*****,965153,*****,76270,*****
+0500000US13123,"Gilmer County, Georgia",30674,*****,27865,1415,2809,1415
+0500000US13127,"Glynn County, Georgia",85282,*****,79338,*****,5944,*****
+0500000US13129,"Gordon County, Georgia",57089,*****,47828,*****,9261,*****
+0500000US13131,"Grady County, Georgia",24819,*****,21341,311,3478,311
+0500000US13135,"Gwinnett County, Georgia",920260,*****,725149,*****,195111,*****
+0500000US13137,"Habersham County, Georgia",44567,*****,37942,*****,6625,*****
+0500000US13139,"Hall County, Georgia",199335,*****,142351,*****,56984,*****
+0500000US13143,"Haralson County, Georgia",29908,2132,29468,2130,440,438
+0500000US13145,"Harris County, Georgia",33915,*****,33130,568,785,568
+0500000US13147,"Hart County, Georgia",28128,1995,27670,1978,458,571
+0500000US13151,"Henry County, Georgia",225813,*****,210297,*****,15516,*****
+0500000US13153,"Houston County, Georgia",153479,*****,143142,*****,10337,*****
+0500000US13157,"Jackson County, Georgia",67519,*****,62461,*****,5058,*****
+0500000US13169,"Jones County, Georgia",28470,*****,28090,494,380,494
+0500000US13175,"Laurens County, Georgia",47330,*****,46077,*****,1253,*****
+0500000US13177,"Lee County, Georgia",29470,*****,28715,822,755,822
+0500000US13179,"Liberty County, Georgia",61386,*****,53536,*****,7850,*****
+0500000US13183,"Long County, Georgia",19658,2784,17074,2827,2584,1088
+0500000US13185,"Lowndes County, Georgia",115489,*****,108778,*****,6711,*****
+0500000US13187,"Lumpkin County, Georgia",32873,*****,31370,1204,1503,1204
+0500000US13189,"McDuffie County, Georgia",21498,*****,20844,773,654,773
+0500000US13195,"Madison County, Georgia",29302,*****,26446,574,2856,574
+0500000US13205,"Mitchell County, Georgia",22292,*****,21861,311,431,311
+0500000US13207,"Monroe County, Georgia",27113,*****,26862,318,251,318
+0500000US13213,"Murray County, Georgia",39782,*****,33736,*****,6046,*****
+0500000US13215,"Muscogee County, Georgia",194058,*****,179357,*****,14701,*****
+0500000US13217,"Newton County, Georgia",108078,*****,102008,*****,6070,*****
+0500000US13219,"Oconee County, Georgia",38028,*****,36135,*****,1893,*****
+0500000US13223,"Paulding County, Georgia",159445,*****,149399,*****,10046,*****
+0500000US13225,"Peach County, Georgia",27099,*****,25384,892,1715,892
+0500000US13227,"Pickens County, Georgia",31588,*****,31404,183,184,183
+0500000US13233,"Polk County, Georgia",42085,*****,36400,*****,5685,*****
+0500000US13237,"Putnam County, Georgia",21730,*****,20268,833,1462,833
+0500000US13245,"Richmond County, Georgia",201800,*****,191691,*****,10109,*****
+0500000US13247,"Rockdale County, Georgia",90312,*****,80850,*****,9462,*****
+0500000US13255,"Spalding County, Georgia",65380,*****,62374,*****,3006,*****
+0500000US13257,"Stephens County, Georgia",25890,*****,25130,681,760,681
+0500000US13261,"Sumter County, Georgia",29847,*****,24836,2861,5011,2861
+0500000US13267,"Tattnall County, Georgia",29640,1958,25929,1957,3711,128
+0500000US13275,"Thomas County, Georgia",44779,*****,43132,*****,1647,*****
+0500000US13277,"Tift County, Georgia",40598,*****,35723,*****,4875,*****
+0500000US13279,"Toombs County, Georgia",26999,*****,25854,1082,1145,1082
+0500000US13285,"Troup County, Georgia",69786,*****,67091,*****,2695,*****
+0500000US13291,"Union County, Georgia",25211,1631,24588,1743,623,616
+0500000US13293,"Upson County, Georgia",26135,*****,25841,366,294,366
+0500000US13295,"Walker County, Georgia",68939,*****,67421,*****,1518,*****
+0500000US13297,"Walton County, Georgia",91600,*****,87576,*****,4024,*****
+0500000US13299,"Ware County, Georgia",35871,*****,35056,515,815,515
+0500000US13303,"Washington County, Georgia",20313,*****,20075,195,238,195
+0500000US13305,"Wayne County, Georgia",29817,*****,27912,*****,1905,*****
+0500000US13311,"White County, Georgia",27847,2473,27581,2484,266,353
+0500000US13313,"Whitfield County, Georgia",104658,*****,67539,*****,37119,*****
+0500000US15001,"Hawaii County, Hawaii",200381,*****,174889,*****,25492,*****
+0500000US15003,"Honolulu County, Hawaii",988650,*****,890826,*****,97824,*****
+0500000US15007,"Kauai County, Hawaii",72159,*****,64198,*****,7961,*****
+0500000US15009,"Maui County, Hawaii",166271,41,147430,36,18841,16
+0500000US16001,"Ada County, Idaho",456849,*****,419280,*****,37569,*****
+0500000US16005,"Bannock County, Idaho",85269,*****,77840,*****,7429,*****
+0500000US16011,"Bingham County, Idaho",45927,*****,37649,*****,8278,*****
+0500000US16013,"Blaine County, Idaho",22963,1663,16879,1649,6084,475
+0500000US16017,"Bonner County, Idaho",43560,*****,42200,*****,1360,*****
+0500000US16019,"Bonneville County, Idaho",114595,*****,99569,*****,15026,*****
+0500000US16027,"Canyon County, Idaho",216699,*****,161826,*****,54873,*****
+0500000US16031,"Cassia County, Idaho",25098,1723,18454,1608,6644,573
+0500000US16039,"Elmore County, Idaho",26597,2249,20776,1901,5821,1005
+0500000US16051,"Jefferson County, Idaho",28446,*****,25459,*****,2987,*****
+0500000US16053,"Jerome County, Idaho",25359,2627,15802,1804,9557,1738
+0500000US16055,"Kootenai County, Idaho",157637,*****,150365,*****,7272,*****
+0500000US16057,"Latah County, Idaho",39333,*****,38653,408,680,408
+0500000US16065,"Madison County, Idaho",39141,*****,36253,*****,2888,*****
+0500000US16067,"Minidoka County, Idaho",21724,1462,12413,1409,9311,466
+0500000US16069,"Nez Perce County, Idaho",40385,*****,38806,*****,1579,*****
+0500000US16075,"Payette County, Idaho",23215,*****,19918,1237,3297,1237
+0500000US16083,"Twin Falls County, Idaho",85124,*****,71119,*****,14005,*****
+0500000US17001,"Adams County, Illinois",66234,*****,65191,*****,1043,*****
+0500000US17007,"Boone County, Illinois",53513,*****,41709,*****,11804,*****
+0500000US17011,"Bureau County, Illinois",33243,*****,30169,*****,3074,*****
+0500000US17019,"Champaign County, Illinois",209399,*****,196898,*****,12501,*****
+0500000US17021,"Christian County, Illinois",33102,*****,32748,288,354,288
+0500000US17027,"Clinton County, Illinois",37614,*****,36434,*****,1180,*****
+0500000US17029,"Coles County, Illinois",51979,*****,50630,*****,1349,*****
+0500000US17031,"Cook County, Illinois",5211263,*****,3883322,*****,1327941,*****
+0500000US17033,"Crawford County, Illinois",20695,1427,19735,1576,960,606
+0500000US17037,"DeKalb County, Illinois",104733,*****,93042,*****,11691,*****
+0500000US17043,"DuPage County, Illinois",930128,*****,795961,*****,134167,*****
+0500000US17049,"Effingham County, Illinois",34132,*****,33431,*****,701,*****
+0500000US17051,"Fayette County, Illinois",21784,*****,21530,161,254,161
+0500000US17055,"Franklin County, Illinois",39041,*****,38334,*****,707,*****
+0500000US17057,"Fulton County, Illinois",35110,*****,34040,492,1070,492
+0500000US17063,"Grundy County, Illinois",50586,*****,45551,*****,5035,*****
+0500000US17073,"Henry County, Illinois",49328,*****,46498,*****,2830,*****
+0500000US17075,"Iroquois County, Illinois",27876,*****,25925,*****,1951,*****
+0500000US17077,"Jackson County, Illinois",58284,*****,55703,*****,2581,*****
+0500000US17081,"Jefferson County, Illinois",38179,*****,37188,*****,991,*****
+0500000US17083,"Jersey County, Illinois",21941,*****,21489,400,452,400
+0500000US17085,"Jo Daviess County, Illinois",21594,*****,20619,170,975,170
+0500000US17089,"Kane County, Illinois",534667,*****,362786,*****,171881,*****
+0500000US17091,"Kankakee County, Illinois",109605,*****,97992,*****,11613,*****
+0500000US17093,"Kendall County, Illinois",126218,*****,102417,*****,23801,*****
+0500000US17095,"Knox County, Illinois",50638,*****,47692,*****,2946,*****
+0500000US17097,"Lake County, Illinois",703520,*****,549687,*****,153833,*****
+0500000US17099,"LaSalle County, Illinois",110067,*****,99275,*****,10792,*****
+0500000US17103,"Lee County, Illinois",34406,*****,32287,*****,2119,*****
+0500000US17105,"Livingston County, Illinois",36518,*****,34815,*****,1703,*****
+0500000US17107,"Logan County, Illinois",29245,*****,28238,*****,1007,*****
+0500000US17109,"McDonough County, Illinois",30823,*****,30210,482,613,482
+0500000US17111,"McHenry County, Illinois",309122,*****,268568,*****,40554,*****
+0500000US17113,"McLean County, Illinois",172290,*****,163769,*****,8521,*****
+0500000US17115,"Macon County, Illinois",105801,*****,103375,*****,2426,*****
+0500000US17117,"Macoupin County, Illinois",45446,*****,44867,*****,579,*****
+0500000US17119,"Madison County, Illinois",265428,*****,256675,*****,8753,*****
+0500000US17121,"Marion County, Illinois",37902,*****,37125,*****,777,*****
+0500000US17133,"Monroe County, Illinois",34097,*****,33571,*****,526,*****
+0500000US17135,"Montgomery County, Illinois",28790,*****,28254,402,536,402
+0500000US17137,"Morgan County, Illinois",33798,*****,33147,314,651,314
+0500000US17141,"Ogle County, Illinois",51063,*****,45813,*****,5250,*****
+0500000US17143,"Peoria County, Illinois",183011,*****,174184,*****,8827,*****
+0500000US17145,"Perry County, Illinois",21285,*****,20610,*****,675,*****
+0500000US17157,"Randolph County, Illinois",32423,*****,31780,400,643,400
+0500000US17161,"Rock Island County, Illinois",144808,*****,126043,*****,18765,*****
+0500000US17163,"St. Clair County, Illinois",262479,*****,251669,*****,10810,*****
+0500000US17165,"Saline County, Illinois",24102,*****,23657,*****,445,*****
+0500000US17167,"Sangamon County, Illinois",196452,*****,191944,*****,4508,*****
+0500000US17173,"Shelby County, Illinois",21719,*****,21509,236,210,236
+0500000US17177,"Stephenson County, Illinois",45054,*****,43256,*****,1798,*****
+0500000US17179,"Tazewell County, Illinois",133526,*****,130427,*****,3099,*****
+0500000US17183,"Vermilion County, Illinois",77909,*****,73967,*****,3942,*****
+0500000US17195,"Whiteside County, Illinois",56118,*****,49384,*****,6734,*****
+0500000US17197,"Will County, Illinois",692661,*****,571511,*****,121150,*****
+0500000US17199,"Williamson County, Illinois",67328,*****,65545,*****,1783,*****
+0500000US17201,"Winnebago County, Illinois",284778,*****,248370,*****,36408,*****
+0500000US17203,"Woodford County, Illinois",38726,*****,38008,*****,718,*****
+0500000US18001,"Adams County, Indiana",35491,*****,33911,*****,1580,*****
+0500000US18003,"Allen County, Indiana",372877,*****,344836,*****,28041,*****
+0500000US18005,"Bartholomew County, Indiana",82040,*****,76547,*****,5493,*****
+0500000US18011,"Boone County, Indiana",65875,*****,63870,*****,2005,*****
+0500000US18015,"Carroll County, Indiana",20039,*****,19198,471,841,471
+0500000US18017,"Cass County, Indiana",37994,*****,32065,*****,5929,*****
+0500000US18019,"Clark County, Indiana",116973,*****,110609,*****,6364,*****
+0500000US18021,"Clay County, Indiana",26198,*****,26126,104,72,104
+0500000US18023,"Clinton County, Indiana",32317,*****,27112,*****,5205,*****
+0500000US18027,"Daviess County, Indiana",33113,*****,31467,*****,1646,*****
+0500000US18029,"Dearborn County, Indiana",49741,*****,48976,539,765,539
+0500000US18031,"Decatur County, Indiana",26737,*****,26221,613,516,613
+0500000US18033,"DeKalb County, Indiana",42836,*****,41649,*****,1187,*****
+0500000US18035,"Delaware County, Indiana",115184,*****,112287,*****,2897,*****
+0500000US18037,"Dubois County, Indiana",42558,*****,39307,*****,3251,*****
+0500000US18039,"Elkhart County, Indiana",205032,*****,172211,*****,32821,*****
+0500000US18041,"Fayette County, Indiana",24764,1958,24711,1936,53,78
+0500000US18043,"Floyd County, Indiana",77071,*****,74549,*****,2522,*****
+0500000US18045,"Fountain County, Indiana",20937,2186,20230,2187,707,245
+0500000US18047,"Franklin County, Indiana",22619,*****,22619,197,0,197
+0500000US18051,"Gibson County, Indiana",33576,*****,33419,209,157,209
+0500000US18053,"Grant County, Indiana",66491,*****,63578,*****,2913,*****
+0500000US18055,"Greene County, Indiana",32177,*****,32003,199,174,199
+0500000US18057,"Hamilton County, Indiana",323747,*****,310616,*****,13131,*****
+0500000US18059,"Hancock County, Indiana",74985,*****,73215,*****,1770,*****
+0500000US18061,"Harrison County, Indiana",39898,*****,39092,656,806,656
+0500000US18063,"Hendricks County, Indiana",163685,*****,157298,*****,6387,*****
+0500000US18065,"Henry County, Indiana",48476,*****,47577,*****,899,*****
+0500000US18067,"Howard County, Indiana",82363,*****,79572,*****,2791,*****
+0500000US18069,"Huntington County, Indiana",36337,*****,35455,*****,882,*****
+0500000US18071,"Jackson County, Indiana",43884,*****,40853,*****,3031,*****
+0500000US18073,"Jasper County, Indiana",33447,*****,31437,*****,2010,*****
+0500000US18075,"Jay County, Indiana",20945,*****,19963,180,982,180
+0500000US18077,"Jefferson County, Indiana",32089,*****,31874,323,215,323
+0500000US18079,"Jennings County, Indiana",27626,*****,26764,506,862,506
+0500000US18081,"Johnson County, Indiana",153897,*****,148275,*****,5622,*****
+0500000US18083,"Knox County, Indiana",37508,*****,36742,*****,766,*****
+0500000US18085,"Kosciusko County, Indiana",79206,*****,72881,*****,6325,*****
+0500000US18087,"LaGrange County, Indiana",39303,*****,37681,*****,1622,*****
+0500000US18089,"Lake County, Indiana",485640,*****,392817,*****,92823,*****
+0500000US18091,"LaPorte County, Indiana",110029,*****,102728,*****,7301,*****
+0500000US18093,"Lawrence County, Indiana",45666,*****,45172,390,494,390
+0500000US18095,"Madison County, Indiana",129498,*****,124175,*****,5323,*****
+0500000US18097,"Marion County, Indiana",950082,*****,850162,*****,99920,*****
+0500000US18099,"Marshall County, Indiana",46498,*****,41678,*****,4820,*****
+0500000US18103,"Miami County, Indiana",35845,*****,34964,553,881,553
+0500000US18105,"Monroe County, Indiana",146986,*****,141838,*****,5148,*****
+0500000US18107,"Montgomery County, Indiana",38525,*****,36623,*****,1902,*****
+0500000US18109,"Morgan County, Indiana",69713,*****,68624,*****,1089,*****
+0500000US18113,"Noble County, Indiana",47452,*****,42494,*****,4958,*****
+0500000US18119,"Owen County, Indiana",20839,*****,20591,472,248,472
+0500000US18127,"Porter County, Indiana",168404,*****,151510,*****,16894,*****
+0500000US18129,"Posey County, Indiana",25595,*****,25458,194,137,194
+0500000US18133,"Putnam County, Indiana",37702,*****,36975,*****,727,*****
+0500000US18135,"Randolph County, Indiana",24922,*****,24092,*****,830,*****
+0500000US18137,"Ripley County, Indiana",28442,*****,27913,*****,529,*****
+0500000US18141,"St. Joseph County, Indiana",270434,*****,246681,*****,23753,*****
+0500000US18143,"Scott County, Indiana",23968,2498,23468,2481,500,460
+0500000US18145,"Shelby County, Indiana",44395,*****,42489,*****,1906,*****
+0500000US18147,"Spencer County, Indiana",20394,*****,19788,*****,606,*****
+0500000US18149,"Starke County, Indiana",22893,*****,22038,533,855,533
+0500000US18151,"Steuben County, Indiana",34484,*****,34202,355,282,355
+0500000US18157,"Tippecanoe County, Indiana",190587,*****,174446,*****,16141,*****
+0500000US18163,"Vanderburgh County, Indiana",181616,*****,176704,*****,4912,*****
+0500000US18167,"Vigo County, Indiana",107516,*****,104625,*****,2891,*****
+0500000US18169,"Wabash County, Indiana",31443,*****,30603,*****,840,*****
+0500000US18173,"Warrick County, Indiana",62530,*****,61991,417,539,417
+0500000US18175,"Washington County, Indiana",27827,*****,27790,65,37,65
+0500000US18177,"Wayne County, Indiana",66185,*****,64247,*****,1938,*****
+0500000US18179,"Wells County, Indiana",27984,*****,27076,*****,908,*****
+0500000US18181,"White County, Indiana",24182,*****,22091,*****,2091,*****
+0500000US18183,"Whitley County, Indiana",33756,*****,33519,233,237,233
+0500000US19011,"Benton County, Iowa",25642,*****,25375,179,267,179
+0500000US19013,"Black Hawk County, Iowa",132648,*****,126932,*****,5716,*****
+0500000US19015,"Boone County, Iowa",26484,*****,25761,*****,723,*****
+0500000US19017,"Bremer County, Iowa",24911,*****,24644,186,267,186
+0500000US19019,"Buchanan County, Iowa",21202,*****,20865,*****,337,*****
+0500000US19021,"Buena Vista County, Iowa",20110,*****,14924,*****,5186,*****
+0500000US19027,"Carroll County, Iowa",20320,*****,20037,215,283,215
+0500000US19033,"Cerro Gordo County, Iowa",43006,*****,40920,*****,2086,*****
+0500000US19045,"Clinton County, Iowa",47010,*****,45513,*****,1497,*****
+0500000US19049,"Dallas County, Iowa",87235,*****,81915,*****,5320,*****
+0500000US19057,"Des Moines County, Iowa",39417,*****,38182,*****,1235,*****
+0500000US19061,"Dubuque County, Iowa",97041,*****,94650,*****,2391,*****
+0500000US19065,"Fayette County, Iowa",19796,*****,19504,227,292,227
+0500000US19087,"Henry County, Iowa",19863,*****,18895,*****,968,*****
+0500000US19099,"Jasper County, Iowa",36966,*****,36159,*****,807,*****
+0500000US19103,"Johnson County, Iowa",149210,*****,140704,*****,8506,*****
+0500000US19105,"Jones County, Iowa",20536,*****,20099,462,437,462
+0500000US19111,"Lee County, Iowa",34295,*****,33052,*****,1243,*****
+0500000US19113,"Linn County, Iowa",224115,*****,216752,*****,7363,*****
+0500000US19125,"Marion County, Iowa",33105,*****,33017,115,88,115
+0500000US19127,"Marshall County, Iowa",40288,*****,31293,*****,8995,*****
+0500000US19139,"Muscatine County, Iowa",42880,*****,35118,*****,7762,*****
+0500000US19149,"Plymouth County, Iowa",25220,*****,23882,*****,1338,*****
+0500000US19153,"Polk County, Iowa",481830,*****,441193,*****,40637,*****
+0500000US19155,"Pottawattamie County, Iowa",93386,*****,86029,*****,7357,*****
+0500000US19163,"Scott County, Iowa",172509,*****,160956,*****,11553,*****
+0500000US19167,"Sioux County, Iowa",34860,*****,31063,*****,3797,*****
+0500000US19169,"Story County, Iowa",97502,*****,94082,*****,3420,*****
+0500000US19179,"Wapello County, Iowa",35044,*****,31231,*****,3813,*****
+0500000US19181,"Warren County, Iowa",50163,*****,48742,*****,1421,*****
+0500000US19183,"Washington County, Iowa",22281,*****,21395,721,886,721
+0500000US19187,"Webster County, Iowa",36605,*****,34862,*****,1743,*****
+0500000US19191,"Winneshiek County, Iowa",20201,*****,19749,*****,452,*****
+0500000US19193,"Woodbury County, Iowa",102429,*****,85378,*****,17051,*****
+0500000US20009,"Barton County, Kansas",26476,*****,22495,*****,3981,*****
+0500000US20015,"Butler County, Kansas",66878,*****,63678,*****,3200,*****
+0500000US20021,"Cherokee County, Kansas",20115,*****,19540,515,575,515
+0500000US20035,"Cowley County, Kansas",35361,*****,31441,*****,3920,*****
+0500000US20037,"Crawford County, Kansas",39034,*****,36871,*****,2163,*****
+0500000US20045,"Douglas County, Kansas",120793,*****,113047,*****,7746,*****
+0500000US20051,"Ellis County, Kansas",28689,*****,27548,781,1141,781
+0500000US20055,"Finney County, Kansas",37084,*****,18440,*****,18644,*****
+0500000US20057,"Ford County, Kansas",34381,*****,15418,*****,18963,*****
+0500000US20059,"Franklin County, Kansas",25733,*****,24627,*****,1106,*****
+0500000US20061,"Geary County, Kansas",33855,*****,28133,*****,5722,*****
+0500000US20079,"Harvey County, Kansas",34544,*****,30354,*****,4190,*****
+0500000US20087,"Jefferson County, Kansas",20099,1139,19653,1070,446,266
+0500000US20091,"Johnson County, Kansas",591178,*****,545904,*****,45274,*****
+0500000US20099,"Labette County, Kansas",20145,*****,19233,*****,912,*****
+0500000US20103,"Leavenworth County, Kansas",81095,*****,75498,*****,5597,*****
+0500000US20111,"Lyon County, Kansas",33392,*****,26251,*****,7141,*****
+0500000US20113,"McPherson County, Kansas",28708,*****,27519,*****,1189,*****
+0500000US20121,"Miami County, Kansas",33461,*****,33276,290,185,290
+0500000US20125,"Montgomery County, Kansas",32556,*****,30496,*****,2060,*****
+0500000US20149,"Pottawatomie County, Kansas",23908,*****,22636,*****,1272,*****
+0500000US20155,"Reno County, Kansas",62510,*****,56663,*****,5847,*****
+0500000US20161,"Riley County, Kansas",74172,*****,68004,*****,6168,*****
+0500000US20169,"Saline County, Kansas",54734,*****,48558,*****,6176,*****
+0500000US20173,"Sedgwick County, Kansas",513687,*****,438541,*****,75146,*****
+0500000US20175,"Seward County, Kansas",22159,*****,8225,1660,13934,1661
+0500000US20177,"Shawnee County, Kansas",178187,*****,156051,*****,22136,*****
+0500000US20191,"Sumner County, Kansas",23159,*****,21898,*****,1261,*****
+0500000US20209,"Wyandotte County, Kansas",165288,*****,117405,*****,47883,*****
+0500000US21003,"Allen County, Kentucky",20933,*****,20684,390,249,390
+0500000US21005,"Anderson County, Kentucky",22544,*****,22212,383,332,383
+0500000US21009,"Barren County, Kentucky",43801,*****,42406,*****,1395,*****
+0500000US21013,"Bell County, Kentucky",28068,2564,28068,2564,0,195
+0500000US21015,"Boone County, Kentucky",130728,*****,125109,*****,5619,*****
+0500000US21017,"Bourbon County, Kentucky",20029,*****,18009,946,2020,946
+0500000US21019,"Boyd County, Kentucky",47979,*****,47335,593,644,593
+0500000US21021,"Boyle County, Kentucky",29924,*****,28907,*****,1017,*****
+0500000US21029,"Bullitt County, Kentucky",80246,*****,78657,*****,1589,*****
+0500000US21035,"Calloway County, Kentucky",38919,*****,37892,*****,1027,*****
+0500000US21037,"Campbell County, Kentucky",92488,*****,90627,*****,1861,*****
+0500000US21043,"Carter County, Kentucky",27144,*****,27144,1,0,195
+0500000US21047,"Christian County, Kentucky",70416,*****,64942,*****,5474,*****
+0500000US21049,"Clark County, Kentucky",36046,*****,35031,*****,1015,*****
+0500000US21051,"Clay County, Kentucky",20570,2870,20162,2876,408,285
+0500000US21059,"Daviess County, Kentucky",100374,*****,97325,*****,3049,*****
+0500000US21067,"Fayette County, Kentucky",321959,*****,298823,*****,23136,*****
+0500000US21071,"Floyd County, Kentucky",36271,*****,36097,283,174,283
+0500000US21073,"Franklin County, Kentucky",50485,*****,48815,*****,1670,*****
+0500000US21081,"Grant County, Kentucky",24984,*****,23528,1084,1456,1084
+0500000US21083,"Graves County, Kentucky",37121,*****,34702,*****,2419,*****
+0500000US21085,"Grayson County, Kentucky",26358,*****,25546,373,812,373
+0500000US21089,"Greenup County, Kentucky",35518,*****,35412,211,106,211
+0500000US21093,"Hardin County, Kentucky",108071,*****,101821,*****,6250,*****
+0500000US21095,"Harlan County, Kentucky",26713,*****,26430,397,283,397
+0500000US21101,"Henderson County, Kentucky",45928,*****,44767,*****,1161,*****
+0500000US21107,"Hopkins County, Kentucky",45547,*****,44604,*****,943,*****
+0500000US21111,"Jefferson County, Kentucky",771158,*****,729938,*****,41220,*****
+0500000US21113,"Jessamine County, Kentucky",53375,*****,51539,*****,1836,*****
+0500000US21115,"Johnson County, Kentucky",22427,2326,22427,2326,0,195
+0500000US21117,"Kenton County, Kentucky",165399,*****,159999,*****,5400,*****
+0500000US21121,"Knox County, Kentucky",31227,*****,31227,1,0,195
+0500000US21125,"Laurel County, Kentucky",60174,*****,60118,92,56,92
+0500000US21133,"Letcher County, Kentucky",22339,*****,22125,318,214,318
+0500000US21137,"Lincoln County, Kentucky",24456,*****,24020,614,436,614
+0500000US21141,"Logan County, Kentucky",27060,*****,27005,74,55,74
+0500000US21145,"McCracken County, Kentucky",65385,*****,63807,*****,1578,*****
+0500000US21151,"Madison County, Kentucky",91226,*****,89000,*****,2226,*****
+0500000US21155,"Marion County, Kentucky",20012,1594,19957,1592,55,95
+0500000US21157,"Marshall County, Kentucky",31382,*****,31205,236,177,236
+0500000US21163,"Meade County, Kentucky",28154,*****,26804,119,1350,119
+0500000US21167,"Mercer County, Kentucky",20058,1629,19671,1479,387,598
+0500000US21173,"Montgomery County, Kentucky",27928,*****,26799,780,1129,780
+0500000US21177,"Muhlenberg County, Kentucky",30816,*****,30355,526,461,526
+0500000US21179,"Nelson County, Kentucky",45640,*****,45370,313,270,313
+0500000US21183,"Ohio County, Kentucky",24182,*****,24014,192,168,192
+0500000US21185,"Oldham County, Kentucky",66415,*****,63782,*****,2633,*****
+0500000US21193,"Perry County, Kentucky",26553,*****,26420,215,133,215
+0500000US21195,"Pike County, Kentucky",58883,*****,58418,571,465,571
+0500000US21199,"Pulaski County, Kentucky",64449,*****,62809,*****,1640,*****
+0500000US21205,"Rowan County, Kentucky",24517,*****,24517,195,0,195
+0500000US21209,"Scott County, Kentucky",54873,*****,52536,*****,2337,*****
+0500000US21211,"Shelby County, Kentucky",47421,*****,42904,*****,4517,*****
+0500000US21227,"Warren County, Kentucky",128845,*****,121867,*****,6978,*****
+0500000US21235,"Whitley County, Kentucky",36214,*****,36128,144,86,144
+0500000US21239,"Woodford County, Kentucky",26368,*****,25315,946,1053,946
+0500000US22001,"Acadia Parish, Louisiana",62590,*****,60874,*****,1716,*****
+0500000US22003,"Allen Parish, Louisiana",25621,*****,23975,552,1646,552
+0500000US22005,"Ascension Parish, Louisiana",122948,*****,116114,*****,6834,*****
+0500000US22007,"Assumption Parish, Louisiana",22526,*****,21965,643,561,643
+0500000US22009,"Avoyelles Parish, Louisiana",40980,*****,40680,267,300,267
+0500000US22011,"Beauregard Parish, Louisiana",36928,*****,35536,*****,1392,*****
+0500000US22015,"Bossier Parish, Louisiana",127634,*****,118992,*****,8642,*****
+0500000US22017,"Caddo Parish, Louisiana",246581,*****,239437,*****,7144,*****
+0500000US22019,"Calcasieu Parish, Louisiana",202445,*****,195140,*****,7305,*****
+0500000US22029,"Concordia Parish, Louisiana",19866,*****,19565,461,301,461
+0500000US22031,"De Soto Parish, Louisiana",27340,*****,26568,*****,772,*****
+0500000US22033,"East Baton Rouge Parish, Louisiana",446268,*****,427502,*****,18766,*****
+0500000US22039,"Evangeline Parish, Louisiana",33708,*****,32157,827,1551,827
+0500000US22043,"Grant Parish, Louisiana",22336,*****,20638,861,1698,861
+0500000US22045,"Iberia Parish, Louisiana",72176,*****,69082,*****,3094,*****
+0500000US22047,"Iberville Parish, Louisiana",33027,*****,31808,1396,1219,1396
+0500000US22051,"Jefferson Parish, Louisiana",439036,*****,373456,*****,65580,*****
+0500000US22053,"Jefferson Davis Parish, Louisiana",31477,*****,31250,197,227,197
+0500000US22055,"Lafayette Parish, Louisiana",242485,*****,230877,*****,11608,*****
+0500000US22057,"Lafourche Parish, Louisiana",98426,*****,94001,*****,4425,*****
+0500000US22061,"Lincoln Parish, Louisiana",47744,*****,46258,*****,1486,*****
+0500000US22063,"Livingston Parish, Louisiana",138228,*****,133135,*****,5093,*****
+0500000US22069,"Natchitoches Parish, Louisiana",39021,*****,38126,*****,895,*****
+0500000US22071,"Orleans Parish, Louisiana",393292,*****,370968,*****,22324,*****
+0500000US22073,"Ouachita Parish, Louisiana",155874,*****,152274,*****,3600,*****
+0500000US22075,"Plaquemines Parish, Louisiana",23348,*****,22724,564,624,564
+0500000US22077,"Pointe Coupee Parish, Louisiana",22268,*****,21749,499,519,499
+0500000US22079,"Rapides Parish, Louisiana",131648,*****,127469,*****,4179,*****
+0500000US22083,"Richland Parish, Louisiana",21807,1752,21054,1778,753,205
+0500000US22085,"Sabine Parish, Louisiana",24018,*****,23067,*****,951,*****
+0500000US22087,"St. Bernard Parish, Louisiana",46202,*****,40477,564,5725,564
+0500000US22089,"St. Charles Parish, Louisiana",52749,*****,49502,*****,3247,*****
+0500000US22093,"St. James Parish, Louisiana",21367,*****,21315,93,52,93
+0500000US22095,"St. John the Baptist Parish, Louisiana",43441,*****,40662,*****,2779,*****
+0500000US22097,"St. Landry Parish, Louisiana",83497,*****,81671,*****,1826,*****
+0500000US22099,"St. Martin Parish, Louisiana",54171,*****,52523,*****,1648,*****
+0500000US22101,"St. Mary Parish, Louisiana",50973,*****,47308,*****,3665,*****
+0500000US22103,"St. Tammany Parish, Louisiana",256327,*****,241569,*****,14758,*****
+0500000US22105,"Tangipahoa Parish, Louisiana",132497,*****,126643,*****,5854,*****
+0500000US22109,"Terrebonne Parish, Louisiana",112086,*****,106301,*****,5785,*****
+0500000US22111,"Union Parish, Louisiana",22571,*****,22127,474,444,474
+0500000US22113,"Vermilion Parish, Louisiana",60136,*****,57998,*****,2138,*****
+0500000US22115,"Vernon Parish, Louisiana",50726,*****,45977,*****,4749,*****
+0500000US22117,"Washington Parish, Louisiana",46633,*****,45596,*****,1037,*****
+0500000US22119,"Webster Parish, Louisiana",39378,*****,39019,271,359,271
+0500000US22121,"West Baton Rouge Parish, Louisiana",26265,*****,24917,521,1348,521
+0500000US23001,"Androscoggin County, Maine",107651,*****,105588,*****,2063,*****
+0500000US23003,"Aroostook County, Maine",67653,*****,66835,*****,818,*****
+0500000US23005,"Cumberland County, Maine",292500,*****,286290,*****,6210,*****
+0500000US36083,"Rensselaer County, New York",159722,*****,151660,*****,8062,*****
+0500000US36085,"Richmond County, New York",479458,*****,390392,*****,89066,*****
+0500000US36087,"Rockland County, New York",328868,*****,269778,*****,59090,*****
+0500000US36089,"St. Lawrence County, New York",109623,*****,107044,*****,2579,*****
+0500000US36091,"Saratoga County, New York",229869,*****,222442,*****,7427,*****
+0500000US36093,"Schenectady County, New York",155565,*****,144750,*****,10815,*****
+0500000US36095,"Schoharie County, New York",31420,*****,30404,*****,1016,*****
+0500000US36099,"Seneca County, New York",34498,*****,33320,*****,1178,*****
+0500000US36101,"Steuben County, New York",96281,*****,94691,*****,1590,*****
+0500000US36103,"Suffolk County, New York",1492953,*****,1201175,*****,291778,*****
+0500000US36105,"Sullivan County, New York",75485,*****,63260,*****,12225,*****
+0500000US36107,"Tioga County, New York",48578,*****,47600,*****,978,*****
+0500000US36109,"Tompkins County, New York",104802,*****,99512,*****,5290,*****
+0500000US36111,"Ulster County, New York",179417,*****,160955,*****,18462,*****
+0500000US36113,"Warren County, New York",64532,*****,62877,*****,1655,*****
+0500000US36115,"Washington County, New York",61620,*****,59900,*****,1720,*****
+0500000US36117,"Wayne County, New York",90670,*****,86610,*****,4060,*****
+0500000US36119,"Westchester County, New York",980244,*****,736524,*****,243720,*****
+0500000US36121,"Wyoming County, New York",40493,*****,39126,*****,1367,*****
+0500000US36123,"Yates County, New York",24955,*****,24615,257,340,257
+0500000US37001,"Alamance County, North Carolina",162391,*****,141521,*****,20870,*****
+0500000US37003,"Alexander County, North Carolina",37286,*****,35496,*****,1790,*****
+0500000US37007,"Anson County, North Carolina",24991,*****,24771,212,220,212
+0500000US37009,"Ashe County, North Carolina",26957,*****,25522,*****,1435,*****
+0500000US37013,"Beaufort County, North Carolina",47088,*****,43394,*****,3694,*****
+0500000US37015,"Bertie County, North Carolina",19224,*****,18786,360,438,360
+0500000US37017,"Bladen County, North Carolina",33478,*****,30840,*****,2638,*****
+0500000US37019,"Brunswick County, North Carolina",130897,*****,124655,*****,6242,*****
+0500000US37021,"Buncombe County, North Carolina",257607,*****,240542,*****,17065,*****
+0500000US37023,"Burke County, North Carolina",89293,*****,83708,*****,5585,*****
+0500000US37025,"Cabarrus County, North Carolina",206872,*****,185283,*****,21589,*****
+0500000US37027,"Caldwell County, North Carolina",81981,*****,77467,*****,4514,*****
+0500000US37031,"Carteret County, North Carolina",68881,*****,65983,*****,2898,*****
+0500000US37033,"Caswell County, North Carolina",24395,2149,22792,2074,1603,718
+0500000US37035,"Catawba County, North Carolina",157974,*****,142420,*****,15554,*****
+0500000US37037,"Chatham County, North Carolina",71472,*****,62556,*****,8916,*****
+0500000US37039,"Cherokee County, North Carolina",27495,2485,26294,2170,1201,808
+0500000US37045,"Cleveland County, North Carolina",97334,*****,93864,*****,3470,*****
+0500000US37047,"Columbus County, North Carolina",55936,*****,54339,1451,1597,1451
+0500000US37049,"Craven County, North Carolina",102578,*****,95205,*****,7373,*****
+0500000US37051,"Cumberland County, North Carolina",332546,*****,293990,*****,38556,*****
+0500000US37053,"Currituck County, North Carolina",26331,*****,25240,466,1091,466
+0500000US37055,"Dare County, North Carolina",36099,*****,33473,*****,2626,*****
+0500000US37057,"Davidson County, North Carolina",165466,*****,153594,*****,11872,*****
+0500000US37059,"Davie County, North Carolina",42456,*****,39542,*****,2914,*****
+0500000US37061,"Duplin County, North Carolina",59039,*****,45689,*****,13350,*****
+0500000US37063,"Durham County, North Carolina",311640,*****,269095,*****,42545,*****
+0500000US37065,"Edgecombe County, North Carolina",52747,*****,52389,387,358,387
+0500000US37067,"Forsyth County, North Carolina",376320,*****,327492,*****,48828,*****
+0500000US37069,"Franklin County, North Carolina",66168,*****,60599,*****,5569,*****
+0500000US37071,"Gaston County, North Carolina",220182,*****,204541,*****,15641,*****
+0500000US37077,"Granville County, North Carolina",59557,*****,54817,*****,4740,*****
+0500000US37079,"Greene County, North Carolina",20854,1461,16355,1442,4499,218
+0500000US37081,"Guilford County, North Carolina",526953,*****,484497,*****,42456,*****
+0500000US37083,"Halifax County, North Carolina",51310,*****,49794,*****,1516,*****
+0500000US37085,"Harnett County, North Carolina",132754,*****,115568,*****,17186,*****
+0500000US37087,"Haywood County, North Carolina",61084,*****,58689,*****,2395,*****
+0500000US37089,"Henderson County, North Carolina",115708,*****,103846,*****,11862,*****
+0500000US37091,"Hertford County, North Carolina",23906,*****,22968,*****,938,*****
+0500000US37093,"Hoke County, North Carolina",54116,*****,46868,*****,7248,*****
+0500000US37097,"Iredell County, North Carolina",175711,*****,162235,*****,13476,*****
+0500000US37099,"Jackson County, North Carolina",42973,*****,41976,988,997,988
+0500000US37101,"Johnston County, North Carolina",196708,*****,169729,*****,26979,*****
+0500000US37105,"Lee County, North Carolina",60430,*****,48798,*****,11632,*****
+0500000US37107,"Lenoir County, North Carolina",56883,*****,52317,*****,4566,*****
+0500000US37109,"Lincoln County, North Carolina",82403,*****,76564,*****,5839,*****
+0500000US37111,"McDowell County, North Carolina",45159,*****,43479,1472,1680,1472
+0500000US37113,"Macon County, North Carolina",34732,*****,32208,*****,2524,*****
+0500000US37115,"Madison County, North Carolina",21746,*****,21288,443,458,443
+0500000US37117,"Martin County, North Carolina",22789,*****,22320,598,469,598
+0500000US37119,"Mecklenburg County, North Carolina",1076837,*****,933437,*****,143400,*****
+0500000US37123,"Montgomery County, North Carolina",27435,*****,23123,*****,4312,*****
+0500000US37125,"Moore County, North Carolina",97264,*****,90726,*****,6538,*****
+0500000US37127,"Nash County, North Carolina",93991,*****,87347,*****,6644,*****
+0500000US37129,"New Hanover County, North Carolina",227198,*****,214667,*****,12531,*****
+0500000US37131,"Northampton County, North Carolina",19862,*****,19258,341,604,341
+0500000US37133,"Onslow County, North Carolina",193893,*****,169596,*****,24297,*****
+0500000US37135,"Orange County, North Carolina",144946,*****,132610,*****,12336,*****
+0500000US37139,"Pasquotank County, North Carolina",39743,*****,37606,*****,2137,*****
+0500000US37141,"Pender County, North Carolina",60958,*****,56490,*****,4468,*****
+0500000US37145,"Person County, North Carolina",39370,*****,37680,*****,1690,*****
+0500000US37147,"Pitt County, North Carolina",179042,*****,167676,*****,11366,*****
+0500000US37149,"Polk County, North Carolina",20558,*****,18867,497,1691,497
+0500000US37151,"Randolph County, North Carolina",143282,*****,126867,*****,16415,*****
+0500000US37153,"Richmond County, North Carolina",44798,*****,41870,*****,2928,*****
+0500000US37155,"Robeson County, North Carolina",132606,*****,120794,*****,11812,*****
+0500000US37157,"Rockingham County, North Carolina",90949,*****,85323,*****,5626,*****
+0500000US37159,"Rowan County, North Carolina",140644,*****,128202,*****,12442,*****
+0500000US37161,"Rutherford County, North Carolina",66551,*****,63647,*****,2904,*****
+0500000US37163,"Sampson County, North Carolina",63430,*****,50854,*****,12576,*****
+0500000US37165,"Scotland County, North Carolina",35093,*****,34064,*****,1029,*****
+0500000US37167,"Stanly County, North Carolina",61482,*****,58821,*****,2661,*****
+0500000US37169,"Stokes County, North Carolina",45717,*****,45302,512,415,512
+0500000US37171,"Surry County, North Carolina",72224,*****,64544,*****,7680,*****
+0500000US37175,"Transylvania County, North Carolina",33956,*****,33243,497,713,497
+0500000US37179,"Union County, North Carolina",231366,*****,205248,*****,26118,*****
+0500000US37181,"Vance County, North Carolina",44211,*****,43376,745,835,745
+0500000US37183,"Wake County, North Carolina",1072203,*****,962336,*****,109867,*****
+0500000US37185,"Warren County, North Carolina",19883,*****,19272,387,611,387
+0500000US37189,"Watauga County, North Carolina",55121,*****,53161,*****,1960,*****
+0500000US37191,"Wayne County, North Carolina",124172,*****,109325,*****,14847,*****
+0500000US37193,"Wilkes County, North Carolina",68576,*****,64109,*****,4467,*****
+0500000US37195,"Wilson County, North Carolina",81671,*****,73076,*****,8595,*****
+0500000US37197,"Yadkin County, North Carolina",37774,*****,33480,*****,4294,*****
+0500000US38015,"Burleigh County, North Dakota",95030,*****,92581,*****,2449,*****
+0500000US38017,"Cass County, North Dakota",177787,*****,172960,*****,4827,*****
+0500000US38035,"Grand Forks County, North Dakota",70795,*****,67818,*****,2977,*****
+0500000US38059,"Morton County, North Dakota",30796,*****,30282,301,514,301
+0500000US38089,"Stark County, North Dakota",30209,*****,28676,*****,1533,*****
+0500000US38093,"Stutsman County, North Dakota",21087,*****,21041,54,46,54
+0500000US38101,"Ward County, North Dakota",68946,*****,64629,*****,4317,*****
+0500000US38105,"Williams County, North Dakota",33349,*****,31022,*****,2327,*****
+0500000US39001,"Adams County, Ohio",27726,*****,26780,67,946,67
+0500000US39003,"Allen County, Ohio",103198,*****,100007,*****,3191,*****
+0500000US39005,"Ashland County, Ohio",53628,*****,52883,*****,745,*****
+0500000US39007,"Ashtabula County, Ohio",97807,*****,93662,*****,4145,*****
+0500000US39009,"Athens County, Ohio",66597,*****,65304,*****,1293,*****
+0500000US39011,"Auglaize County, Ohio",45778,*****,45016,*****,762,*****
+0500000US39013,"Belmont County, Ohio",68029,*****,67676,277,353,277
+0500000US39015,"Brown County, Ohio",43576,*****,43201,435,375,435
+0500000US39017,"Butler County, Ohio",380604,*****,362601,*****,18003,*****
+0500000US39019,"Carroll County, Ohio",27385,*****,26989,*****,396,*****
+0500000US39021,"Champaign County, Ohio",38840,*****,38494,252,346,252
+0500000US39023,"Clark County, Ohio",134557,*****,130088,*****,4469,*****
+0500000US39025,"Clermont County, Ohio",204214,*****,200209,*****,4005,*****
+0500000US39027,"Clinton County, Ohio",42009,*****,41335,*****,674,*****
+0500000US39029,"Columbiana County, Ohio",103077,*****,101308,*****,1769,*****
+0500000US39031,"Coshocton County, Ohio",36544,*****,36264,382,280,382
+0500000US39033,"Crawford County, Ohio",41746,*****,41047,*****,699,*****
+0500000US39035,"Cuyahoga County, Ohio",1248514,*****,1174524,*****,73990,*****
+0500000US39037,"Darke County, Ohio",51536,*****,51125,513,411,513
+0500000US39039,"Defiance County, Ohio",38156,*****,34377,*****,3779,*****
+0500000US39041,"Delaware County, Ohio",200464,*****,195288,*****,5176,*****
+0500000US39043,"Erie County, Ohio",74817,*****,71499,*****,3318,*****
+0500000US39045,"Fairfield County, Ohio",154733,*****,151426,*****,3307,*****
+0500000US39047,"Fayette County, Ohio",28752,*****,28304,405,448,405
+0500000US39049,"Franklin County, Ohio",1291981,*****,1221094,*****,70887,*****
+0500000US39051,"Fulton County, Ohio",42289,*****,38587,*****,3702,*****
+0500000US39053,"Gallia County, Ohio",29973,*****,29785,247,188,247
+0500000US39055,"Geauga County, Ohio",93918,*****,92495,*****,1423,*****
+0500000US39057,"Greene County, Ohio",166752,*****,162090,*****,4662,*****
+0500000US39059,"Guernsey County, Ohio",39093,*****,38860,352,233,352
+0500000US39061,"Hamilton County, Ohio",813822,*****,787173,*****,26649,*****
+0500000US39063,"Hancock County, Ohio",75754,*****,71675,*****,4079,*****
+0500000US39065,"Hardin County, Ohio",31364,*****,31116,163,248,163
+0500000US39069,"Henry County, Ohio",27185,*****,25085,*****,2100,*****
+0500000US39071,"Highland County, Ohio",42971,*****,42848,218,123,218
+0500000US39073,"Hocking County, Ohio",28474,*****,28474,193,0,193
+0500000US39075,"Holmes County, Ohio",43957,*****,43672,324,285,324
+0500000US39077,"Huron County, Ohio",58494,*****,54614,*****,3880,*****
+0500000US39079,"Jackson County, Ohio",32449,*****,31822,476,627,476
+0500000US39081,"Jefferson County, Ohio",66359,*****,65443,*****,916,*****
+0500000US39083,"Knox County, Ohio",61261,*****,60353,*****,908,*****
+0500000US39085,"Lake County, Ohio",230117,*****,220218,*****,9899,*****
+0500000US39087,"Lawrence County, Ohio",60249,*****,60075,210,174,210
+0500000US39089,"Licking County, Ohio",173448,*****,170091,*****,3357,*****
+0500000US39091,"Logan County, Ohio",45325,*****,44868,405,457,405
+0500000US39093,"Lorain County, Ohio",307924,*****,277141,*****,30783,*****
+0500000US39095,"Lucas County, Ohio",430887,*****,400294,*****,30593,*****
+0500000US39097,"Madison County, Ohio",44036,*****,43145,*****,891,*****
+0500000US39099,"Mahoning County, Ohio",229796,*****,216200,*****,13596,*****
+0500000US39101,"Marion County, Ohio",64967,*****,63273,*****,1694,*****
+0500000US39103,"Medina County, Ohio",178371,*****,174667,*****,3704,*****
+0500000US39105,"Meigs County, Ohio",23080,*****,23040,79,40,79
+0500000US39107,"Mercer County, Ohio",40873,*****,40105,*****,768,*****
+0500000US39109,"Miami County, Ohio",105122,*****,103372,*****,1750,*****
+0500000US39113,"Montgomery County, Ohio",531542,*****,515887,*****,15655,*****
+0500000US39119,"Muskingum County, Ohio",86149,*****,85889,206,260,206
+0500000US39123,"Ottawa County, Ohio",40657,*****,38575,*****,2082,*****
+0500000US39127,"Perry County, Ohio",36024,*****,35661,306,363,306
+0500000US39129,"Pickaway County, Ohio",57830,*****,57038,*****,792,*****
+0500000US39131,"Pike County, Ohio",28270,*****,28270,193,0,193
+0500000US39133,"Portage County, Ohio",162277,*****,159299,*****,2978,*****
+0500000US39135,"Preble County, Ohio",41120,*****,40299,314,821,314
+0500000US39137,"Putnam County, Ohio",33878,*****,31780,*****,2098,*****
+0500000US39139,"Richland County, Ohio",120589,*****,118322,*****,2267,*****
+0500000US39141,"Ross County, Ohio",77313,*****,76356,*****,957,*****
+0500000US39143,"Sandusky County, Ohio",59195,*****,53306,*****,5889,*****
+0500000US39145,"Scioto County, Ohio",75929,*****,74907,*****,1022,*****
+0500000US39147,"Seneca County, Ohio",55243,*****,52443,*****,2800,*****
+0500000US39149,"Shelby County, Ohio",48759,*****,48034,*****,725,*****
+0500000US39151,"Stark County, Ohio",372542,*****,364854,*****,7688,*****
+0500000US39153,"Summit County, Ohio",541228,*****,529948,*****,11280,*****
+0500000US39155,"Trumbull County, Ohio",200380,*****,196798,*****,3582,*****
+0500000US39157,"Tuscarawas County, Ohio",92297,*****,89886,*****,2411,*****
+0500000US39159,"Union County, Ohio",56741,*****,56175,404,566,404
+0500000US39161,"Van Wert County, Ohio",28217,*****,27309,*****,908,*****
+0500000US39165,"Warren County, Ohio",228882,*****,222677,*****,6205,*****
+0500000US39167,"Washington County, Ohio",60418,*****,59749,471,669,471
+0500000US39169,"Wayne County, Ohio",116038,*****,113749,*****,2289,*****
+0500000US39171,"Williams County, Ohio",36784,*****,35126,*****,1658,*****
+0500000US39173,"Wood County, Ohio",130492,*****,123196,*****,7296,*****
+0500000US39175,"Wyandot County, Ohio",22029,*****,21393,*****,636,*****
+0500000US40001,"Adair County, Oklahoma",21909,*****,20468,*****,1441,*****
+0500000US40009,"Beckham County, Oklahoma",23289,2000,19900,1860,3389,780
+0500000US40013,"Bryan County, Oklahoma",46319,*****,43613,*****,2706,*****
+0500000US40015,"Caddo County, Oklahoma",29173,*****,25468,*****,3705,*****
+0500000US40017,"Canadian County, Oklahoma",139926,*****,127651,*****,12275,*****
+0500000US40019,"Carter County, Oklahoma",48190,*****,44662,*****,3528,*****
+0500000US40021,"Cherokee County, Oklahoma",48888,*****,45393,*****,3495,*****
+0500000US40027,"Cleveland County, Oklahoma",279641,*****,255383,*****,24258,*****
+0500000US40031,"Comanche County, Oklahoma",121526,*****,105546,*****,15980,*****
+0500000US40037,"Creek County, Oklahoma",71704,*****,68672,*****,3032,*****
+0500000US40039,"Custer County, Oklahoma",28800,*****,23524,*****,5276,*****
+0500000US40041,"Delaware County, Oklahoma",42602,*****,40986,*****,1616,*****
+0500000US40047,"Garfield County, Oklahoma",61581,*****,53925,*****,7656,*****
+0500000US40049,"Garvin County, Oklahoma",27909,*****,25437,*****,2472,*****
+0500000US40051,"Grady County, Oklahoma",54943,*****,51747,*****,3196,*****
+0500000US40065,"Jackson County, Oklahoma",25125,*****,19097,*****,6028,*****
+0500000US40071,"Kay County, Oklahoma",44544,*****,40941,*****,3603,*****
+0500000US40079,"Le Flore County, Oklahoma",49731,*****,46295,*****,3436,*****
+0500000US40081,"Lincoln County, Oklahoma",35142,*****,33945,*****,1197,*****
+0500000US40083,"Logan County, Oklahoma",46784,*****,43889,*****,2895,*****
+0500000US40087,"McClain County, Oklahoma",39343,*****,36203,*****,3140,*****
+0500000US40089,"McCurtain County, Oklahoma",32808,*****,30883,*****,1925,*****
+0500000US40091,"McIntosh County, Oklahoma",19742,*****,19094,399,648,399
+0500000US40097,"Mayes County, Oklahoma",40921,*****,39437,*****,1484,*****
+0500000US40101,"Muskogee County, Oklahoma",69086,*****,64819,*****,4267,*****
+0500000US40109,"Oklahoma County, Oklahoma",787958,*****,649748,*****,138210,*****
+0500000US40111,"Okmulgee County, Oklahoma",38930,*****,37290,*****,1640,*****
+0500000US40113,"Osage County, Oklahoma",47233,*****,45509,*****,1724,*****
+0500000US40115,"Ottawa County, Oklahoma",31312,*****,29512,*****,1800,*****
+0500000US40119,"Payne County, Oklahoma",81575,*****,77711,*****,3864,*****
+0500000US40121,"Pittsburg County, Oklahoma",44184,*****,41962,*****,2222,*****
+0500000US40123,"Pontotoc County, Oklahoma",38224,*****,36188,*****,2036,*****
+0500000US40125,"Pottawatomie County, Oklahoma",72226,*****,68544,*****,3682,*****
+0500000US40131,"Rogers County, Oklahoma",91444,*****,87160,*****,4284,*****
+0500000US40133,"Seminole County, Oklahoma",24878,*****,23593,*****,1285,*****
+0500000US40135,"Sequoyah County, Oklahoma",41252,*****,39519,*****,1733,*****
+0500000US40137,"Stephens County, Oklahoma",43332,*****,40015,*****,3317,*****
+0500000US40139,"Texas County, Oklahoma",20389,974,11270,599,9119,747
+0500000US40143,"Tulsa County, Oklahoma",646266,*****,564061,*****,82205,*****
+0500000US40145,"Wagoner County, Oklahoma",78657,*****,73884,*****,4773,*****
+0500000US40147,"Washington County, Oklahoma",51932,*****,48844,*****,3088,*****
+0500000US40153,"Woodward County, Oklahoma",20463,1389,17806,1316,2657,394
+0500000US41003,"Benton County, Oregon",90951,*****,84162,*****,6789,*****
+0500000US41005,"Clackamas County, Oregon",412672,*****,376958,*****,35714,*****
+0500000US41007,"Clatsop County, Oregon",39182,*****,35830,*****,3352,*****
+0500000US41009,"Columbia County, Oregon",51782,*****,49078,*****,2704,*****
+0500000US41011,"Coos County, Oregon",63888,*****,59716,*****,4172,*****
+0500000US41013,"Crook County, Oregon",23122,*****,21310,1134,1812,1132
+0500000US41015,"Curry County, Oregon",19764,2179,19120,2177,644,556
+0500000US41017,"Deschutes County, Oregon",186875,*****,171896,*****,14979,*****
+0500000US41019,"Douglas County, Oregon",109405,*****,102978,*****,6427,*****
+0500000US41027,"Hood River County, Oregon",23377,*****,17348,1857,6029,1857
+0500000US41029,"Jackson County, Oregon",217479,*****,189434,*****,28045,*****
+0500000US41031,"Jefferson County, Oregon",23760,*****,18042,1492,5718,1490
+0500000US41033,"Josephine County, Oregon",86352,*****,79878,*****,6474,*****
+0500000US41035,"Klamath County, Oregon",66935,*****,58134,*****,8801,*****
+0500000US41039,"Lane County, Oregon",374748,*****,341360,*****,33388,*****
+0500000US41041,"Lincoln County, Oregon",48920,*****,44369,*****,4551,*****
+0500000US41043,"Linn County, Oregon",125047,*****,113652,*****,11395,*****
+0500000US41045,"Malheur County, Oregon",30480,*****,20123,*****,10357,*****
+0500000US41047,"Marion County, Oregon",341286,*****,250300,*****,90986,*****
+0500000US41051,"Multnomah County, Oregon",807555,*****,714099,*****,93456,*****
+0500000US41053,"Polk County, Oregon",83696,*****,71951,*****,11745,*****
+0500000US41057,"Tillamook County, Oregon",26690,*****,23838,*****,2852,*****
+0500000US41059,"Umatilla County, Oregon",76985,*****,56339,*****,20646,*****
+0500000US41061,"Union County, Oregon",26222,*****,24953,*****,1269,*****
+0500000US41065,"Wasco County, Oregon",26437,*****,21581,*****,4856,*****
+0500000US41067,"Washington County, Oregon",588957,*****,489957,*****,99000,*****
+0500000US41071,"Yamhill County, Oregon",105722,*****,88762,*****,16960,*****
+0500000US42001,"Adams County, Pennsylvania",102336,*****,95109,*****,7227,*****
+0500000US42003,"Allegheny County, Pennsylvania",1223048,*****,1197401,*****,25647,*****
+0500000US42005,"Armstrong County, Pennsylvania",65642,*****,65444,197,198,197
+0500000US42007,"Beaver County, Pennsylvania",166140,*****,163515,*****,2625,*****
+0500000US42009,"Bedford County, Pennsylvania",48480,*****,48045,294,435,294
+0500000US42011,"Berks County, Pennsylvania",417854,*****,329901,*****,87953,*****
+0500000US42013,"Blair County, Pennsylvania",123457,*****,121901,*****,1556,*****
+0500000US42015,"Bradford County, Pennsylvania",60853,*****,59976,*****,877,*****
+0500000US42017,"Bucks County, Pennsylvania",628341,*****,594414,*****,33927,*****
+0500000US42019,"Butler County, Pennsylvania",187108,*****,184257,*****,2851,*****
+0500000US42021,"Cambria County, Pennsylvania",133054,*****,130905,*****,2149,*****
+0500000US42025,"Carbon County, Pennsylvania",63853,*****,60880,*****,2973,*****
+0500000US42027,"Centre County, Pennsylvania",162660,*****,157791,*****,4869,*****
+0500000US42029,"Chester County, Pennsylvania",519293,*****,480064,*****,39229,*****
+0500000US42031,"Clarion County, Pennsylvania",38458,*****,37770,466,688,466
+0500000US42033,"Clearfield County, Pennsylvania",79685,*****,78270,498,1415,498
+0500000US42035,"Clinton County, Pennsylvania",38998,*****,38423,*****,575,*****
+0500000US42037,"Columbia County, Pennsylvania",65932,*****,64111,*****,1821,*****
+0500000US42039,"Crawford County, Pennsylvania",86159,*****,85062,*****,1097,*****
+0500000US42041,"Cumberland County, Pennsylvania",250066,*****,240361,*****,9705,*****
+0500000US42043,"Dauphin County, Pennsylvania",275710,*****,250330,*****,25380,*****
+0500000US42045,"Delaware County, Pennsylvania",564696,*****,543202,*****,21494,*****
+0500000US42047,"Elk County, Pennsylvania",30197,*****,30059,164,138,164
+0500000US42049,"Erie County, Pennsylvania",274541,*****,262776,*****,11765,*****
+0500000US42051,"Fayette County, Pennsylvania",131504,*****,129961,*****,1543,*****
+0500000US42055,"Franklin County, Pennsylvania",154234,*****,145306,*****,8928,*****
+0500000US42059,"Greene County, Pennsylvania",36770,*****,36237,353,533,353
+0500000US42061,"Huntingdon County, Pennsylvania",45491,*****,44602,*****,889,*****
+0500000US42063,"Indiana County, Pennsylvania",84953,*****,83874,*****,1079,*****
+0500000US42065,"Jefferson County, Pennsylvania",43804,*****,43405,*****,399,*****
+0500000US42067,"Juniata County, Pennsylvania",24514,*****,23637,*****,877,*****
+0500000US42069,"Lackawanna County, Pennsylvania",210761,*****,194953,*****,15808,*****
+0500000US42071,"Lancaster County, Pennsylvania",542903,*****,485644,*****,57259,*****
+0500000US42073,"Lawrence County, Pennsylvania",87069,*****,85841,*****,1228,*****
+0500000US42075,"Lebanon County, Pennsylvania",139754,*****,121232,*****,18522,*****
+0500000US42077,"Lehigh County, Pennsylvania",366494,*****,276487,*****,90007,*****
+0500000US42079,"Luzerne County, Pennsylvania",317343,*****,279960,*****,37383,*****
+0500000US42081,"Lycoming County, Pennsylvania",113841,*****,111548,*****,2293,*****
+0500000US42083,"McKean County, Pennsylvania",41330,*****,40431,*****,899,*****
+0500000US42085,"Mercer County, Pennsylvania",111750,*****,110066,*****,1684,*****
+0500000US42087,"Mifflin County, Pennsylvania",46388,*****,45751,451,637,451
+0500000US42089,"Monroe County, Pennsylvania",168046,*****,141407,*****,26639,*****
+0500000US42091,"Montgomery County, Pennsylvania",826075,*****,783287,*****,42788,*****
+0500000US42095,"Northampton County, Pennsylvania",303405,*****,263206,*****,40199,*****
+0500000US42097,"Northumberland County, Pennsylvania",92029,*****,88846,*****,3183,*****
+0500000US42099,"Perry County, Pennsylvania",46127,*****,45209,*****,918,*****
+0500000US42101,"Philadelphia County, Pennsylvania",1580863,*****,1346680,*****,234183,*****
+0500000US42103,"Pike County, Pennsylvania",55691,*****,49578,*****,6113,*****
+0500000US42107,"Schuylkill County, Pennsylvania",142569,*****,136317,*****,6252,*****
+0500000US42109,"Snyder County, Pennsylvania",40801,*****,39841,*****,960,*****
+0500000US42111,"Somerset County, Pennsylvania",74501,*****,73357,*****,1144,*****
+0500000US42115,"Susquehanna County, Pennsylvania",40985,*****,40301,*****,684,*****
+0500000US42117,"Tioga County, Pennsylvania",40793,*****,40271,*****,522,*****
+0500000US42119,"Union County, Pennsylvania",44595,*****,41984,639,2611,639
+0500000US42121,"Venango County, Pennsylvania",51762,*****,51175,*****,587,*****
+0500000US42123,"Warren County, Pennsylvania",39659,*****,38999,320,660,320
+0500000US42125,"Washington County, Pennsylvania",207298,*****,203794,*****,3504,*****
+0500000US42127,"Wayne County, Pennsylvania",51205,*****,49791,475,1414,475
+0500000US42129,"Westmoreland County, Pennsylvania",352627,*****,348467,*****,4160,*****
+0500000US42131,"Wyoming County, Pennsylvania",27322,*****,26800,*****,522,*****
+0500000US42133,"York County, Pennsylvania",446078,*****,412494,*****,33584,*****
+0500000US44001,"Bristol County, Rhode Island",48912,*****,48063,577,849,577
+0500000US44003,"Kent County, Rhode Island",163760,*****,155623,*****,8137,*****
+0500000US44005,"Newport County, Rhode Island",83460,*****,78438,*****,5022,*****
+0500000US44007,"Providence County, Rhode Island",637357,*****,492037,*****,145320,*****
+0500000US44009,"Washington County, Rhode Island",126150,*****,122132,*****,4018,*****
+0500000US45001,"Abbeville County, South Carolina",25938,1837,25245,1862,693,793
+0500000US45003,"Aiken County, South Carolina",168179,*****,158468,*****,9711,*****
+0500000US45007,"Anderson County, South Carolina",198759,*****,191197,*****,7562,*****
+0500000US45011,"Barnwell County, South Carolina",21345,*****,20711,330,634,330
+0500000US45013,"Beaufort County, South Carolina",186844,*****,166056,*****,20788,*****
+0500000US45015,"Berkeley County, South Carolina",217937,*****,203577,*****,14360,*****
+0500000US45019,"Charleston County, South Carolina",401438,*****,380922,*****,20516,*****
+0500000US45021,"Cherokee County, South Carolina",57105,*****,54600,*****,2505,*****
+0500000US45023,"Chester County, South Carolina",32301,*****,32022,319,279,319
+0500000US45025,"Chesterfield County, South Carolina",45948,*****,43949,*****,1999,*****
+0500000US45027,"Clarendon County, South Carolina",34057,*****,32967,*****,1090,*****
+0500000US45029,"Colleton County, South Carolina",37611,*****,36344,*****,1267,*****
+0500000US45031,"Darlington County, South Carolina",67265,*****,65905,*****,1360,*****
+0500000US45033,"Dillon County, South Carolina",30665,*****,30210,457,455,457
+0500000US45035,"Dorchester County, South Carolina",156456,*****,147999,*****,8457,*****
+0500000US45037,"Edgefield County, South Carolina",26693,*****,25766,542,927,542
+0500000US45039,"Fairfield County, South Carolina",22607,*****,22250,599,357,599
+0500000US45041,"Florence County, South Carolina",138566,*****,134846,*****,3720,*****
+0500000US45043,"Georgetown County, South Carolina",61607,*****,59728,*****,1879,*****
+0500000US45045,"Greenville County, South Carolina",506837,*****,460557,*****,46280,*****
+0500000US45047,"Greenwood County, South Carolina",70355,*****,66045,*****,4310,*****
+0500000US45049,"Hampton County, South Carolina",19602,*****,19002,458,600,458
+0500000US45051,"Horry County, South Carolina",333268,*****,313159,*****,20109,*****
+0500000US45053,"Jasper County, South Carolina",28458,*****,24499,459,3959,458
+0500000US45055,"Kershaw County, South Carolina",65036,*****,62252,*****,2784,*****
+0500000US45057,"Lancaster County, South Carolina",92550,*****,87611,*****,4939,*****
+0500000US45059,"Laurens County, South Carolina",66848,*****,63570,*****,3278,*****
+0500000US45063,"Lexington County, South Carolina",290642,*****,272967,*****,17675,*****
+0500000US45067,"Marion County, South Carolina",31293,*****,30378,*****,915,*****
+0500000US45069,"Marlboro County, South Carolina",26825,*****,26362,391,463,391
+0500000US45071,"Newberry County, South Carolina",38488,*****,35586,*****,2902,*****
+0500000US45073,"Oconee County, South Carolina",77270,*****,73022,*****,4248,*****
+0500000US45075,"Orangeburg County, South Carolina",87476,*****,85545,*****,1931,*****
+0500000US45077,"Pickens County, South Carolina",123479,*****,118922,*****,4557,*****
+0500000US45079,"Richland County, South Carolina",411592,*****,390334,*****,21258,*****
+0500000US45081,"Saluda County, South Carolina",20452,*****,16528,542,3924,542
+0500000US45083,"Spartanburg County, South Carolina",306854,*****,285877,*****,20977,*****
+0500000US45085,"Sumter County, South Carolina",106847,*****,102506,*****,4341,*****
+0500000US45087,"Union County, South Carolina",27537,*****,27328,256,209,256
+0500000US45089,"Williamsburg County, South Carolina",31134,*****,30089,456,1045,456
+0500000US45091,"York County, South Carolina",266439,*****,251794,*****,14645,*****
+0500000US46005,"Beadle County, South Dakota",20441,1519,18363,1500,2078,174
+0500000US46011,"Brookings County, South Dakota",34255,*****,33307,*****,948,*****
+0500000US46013,"Brown County, South Dakota",39178,*****,38085,*****,1093,*****
+0500000US46029,"Codington County, South Dakota",28099,*****,27462,*****,637,*****
+0500000US46035,"Davison County, South Dakota",21706,1463,21117,1337,589,378
+0500000US46081,"Lawrence County, South Dakota",27551,1985,26780,1984,771,472
+0500000US46083,"Lincoln County, South Dakota",56664,*****,55506,*****,1158,*****
+0500000US46093,"Meade County, South Dakota",29301,1787,27728,1782,1573,91
+0500000US46099,"Minnehaha County, South Dakota",188616,*****,179487,*****,9129,*****
+0500000US46103,"Pennington County, South Dakota",110141,*****,104667,*****,5474,*****
+0500000US46135,"Yankton County, South Dakota",21805,1809,20781,1843,1024,444
+0500000US47001,"Anderson County, Tennessee",76257,*****,74069,*****,2188,*****
+0500000US47003,"Bedford County, Tennessee",48117,*****,42295,*****,5822,*****
+0500000US47009,"Blount County, Tennessee",129929,*****,125644,*****,4285,*****
+0500000US47011,"Bradley County, Tennessee",105560,*****,98953,*****,6607,*****
+0500000US47013,"Campbell County, Tennessee",39648,*****,38877,446,771,446
+0500000US47017,"Carroll County, Tennessee",27860,*****,27528,292,332,292
+0500000US47019,"Carter County, Tennessee",56488,*****,55386,*****,1102,*****
+0500000US47021,"Cheatham County, Tennessee",40330,*****,39132,*****,1198,*****
+0500000US47025,"Claiborne County, Tennessee",31609,*****,30878,462,731,462
+0500000US47029,"Cocke County, Tennessee",35556,*****,34699,*****,857,*****
+0500000US47031,"Coffee County, Tennessee",55034,*****,52706,*****,2328,*****
+0500000US47035,"Cumberland County, Tennessee",59078,*****,57312,*****,1766,*****
+0500000US47037,"Davidson County, Tennessee",691243,*****,620171,*****,71072,*****
+0500000US47043,"Dickson County, Tennessee",52853,*****,52405,415,448,415
+0500000US47045,"Dyer County, Tennessee",37463,*****,36117,*****,1346,*****
+0500000US47047,"Fayette County, Tennessee",40036,*****,38959,*****,1077,*****
+0500000US47051,"Franklin County, Tennessee",41652,*****,40206,*****,1446,*****
+0500000US47053,"Gibson County, Tennessee",49111,*****,47756,*****,1355,*****
+0500000US47055,"Giles County, Tennessee",29401,*****,28527,609,874,609
+0500000US47057,"Grainger County, Tennessee",23144,*****,22295,683,849,683
+0500000US47059,"Greene County, Tennessee",68808,*****,67319,1083,1489,1083
+0500000US47063,"Hamblen County, Tennessee",64277,*****,56607,*****,7670,*****
+0500000US47065,"Hamilton County, Tennessee",361613,*****,340992,*****,20621,*****
+0500000US47069,"Hardeman County, Tennessee",25447,*****,25370,99,77,99
+0500000US47071,"Hardin County, Tennessee",25846,*****,25368,655,478,655
+0500000US47073,"Hawkins County, Tennessee",56459,*****,55823,544,636,544
+0500000US47077,"Henderson County, Tennessee",27751,*****,27730,39,21,39
+0500000US47079,"Henry County, Tennessee",32450,*****,31597,*****,853,*****
+0500000US47081,"Hickman County, Tennessee",24864,*****,24311,444,553,445
+0500000US47089,"Jefferson County, Tennessee",53804,*****,51833,*****,1971,*****
+0500000US47093,"Knox County, Tennessee",461860,*****,442115,*****,19745,*****
+0500000US47097,"Lauderdale County, Tennessee",25274,*****,24727,296,547,296
+0500000US47099,"Lawrence County, Tennessee",43396,*****,42447,*****,949,*****
+0500000US47103,"Lincoln County, Tennessee",33751,*****,32590,*****,1161,*****
+0500000US47105,"Loudon County, Tennessee",52152,*****,47673,*****,4479,*****
+0500000US47107,"McMinn County, Tennessee",52877,*****,50711,*****,2166,*****
+0500000US47109,"McNairy County, Tennessee",26004,*****,25746,301,258,301
+0500000US47111,"Macon County, Tennessee",24079,*****,22291,380,1788,380
+0500000US47113,"Madison County, Tennessee",97643,*****,93870,*****,3773,*****
+0500000US47115,"Marion County, Tennessee",28425,*****,28277,193,148,193
+0500000US47117,"Marshall County, Tennessee",32931,*****,31238,*****,1693,*****
+0500000US47119,"Maury County, Tennessee",92163,*****,86780,*****,5383,*****
+0500000US47123,"Monroe County, Tennessee",46240,*****,44118,*****,2122,*****
+0500000US47125,"Montgomery County, Tennessee",200182,*****,179977,*****,20205,*****
+0500000US47129,"Morgan County, Tennessee",21636,*****,21285,532,351,532
+0500000US47131,"Obion County, Tennessee",30385,*****,29068,*****,1317,*****
+0500000US47133,"Overton County, Tennessee",22012,*****,21672,463,340,463
+0500000US47141,"Putnam County, Tennessee",77674,*****,72682,*****,4992,*****
+0500000US47143,"Rhea County, Tennessee",32691,*****,31046,*****,1645,*****
+0500000US47145,"Roane County, Tennessee",53036,*****,52684,409,352,409
+0500000US47147,"Robertson County, Tennessee",70177,*****,65287,*****,4890,*****
+0500000US47149,"Rutherford County, Tennessee",317157,*****,291663,*****,25494,*****
+0500000US47151,"Scott County, Tennessee",21989,*****,21795,283,194,283
+0500000US47155,"Sevier County, Tennessee",97638,*****,91762,*****,5876,*****
+0500000US47157,"Shelby County, Tennessee",936961,*****,877390,*****,59571,*****
+0500000US47159,"Smith County, Tennessee",21464,2298,21269,2257,195,301
+0500000US47163,"Sullivan County, Tennessee",157158,*****,154222,*****,2936,*****
+0500000US47165,"Sumner County, Tennessee",183545,*****,174511,*****,9034,*****
+0500000US47167,"Tipton County, Tennessee",61366,*****,59757,1312,1609,1312
+0500000US47177,"Warren County, Tennessee",40651,*****,36944,*****,3707,*****
+0500000US47179,"Washington County, Tennessee",127806,*****,123394,*****,4412,*****
+0500000US47183,"Weakley County, Tennessee",33337,*****,32520,*****,817,*****
+0500000US47185,"White County, Tennessee",26753,*****,26567,296,186,296
+0500000US47187,"Williamson County, Tennessee",226257,*****,215400,*****,10857,*****
+0500000US47189,"Wilson County, Tennessee",136442,*****,130684,*****,5758,*****
+0500000US48001,"Anderson County, Texas",57741,*****,47453,*****,10288,*****
+0500000US48005,"Angelina County, Texas",87805,*****,68330,*****,19475,*****
+0500000US48007,"Aransas County, Texas",21394,2828,18397,2461,2997,1567
+0500000US48013,"Atascosa County, Texas",48981,*****,17403,*****,31578,*****
+0500000US48015,"Austin County, Texas",29786,*****,22128,1197,7658,1197
+0500000US48019,"Bandera County, Texas",22351,*****,19488,1419,2863,1419
+0500000US48021,"Bastrop County, Texas",84761,*****,52687,*****,32074,*****
+0500000US48025,"Bee County, Texas",29470,2683,13151,1406,16319,2520
+0500000US48027,"Bell County, Texas",347833,*****,261526,*****,86307,*****
+0500000US48029,"Bexar County, Texas",1958578,*****,777263,*****,1181315,*****
+0500000US48037,"Bowie County, Texas",94012,*****,86720,*****,7292,*****
+0500000US48039,"Brazoria County, Texas",362457,*****,251400,*****,111057,*****
+0500000US48041,"Brazos County, Texas",222830,*****,165451,*****,57379,*****
+0500000US48049,"Brown County, Texas",38053,*****,29548,*****,8505,*****
+0500000US48053,"Burnet County, Texas",46804,*****,36274,*****,10530,*****
+0500000US48055,"Caldwell County, Texas",42338,*****,20211,*****,22127,*****
+0500000US48057,"Calhoun County, Texas",21744,*****,11285,1415,10459,1415
+0500000US48061,"Cameron County, Texas",423725,*****,43557,*****,380168,*****
+0500000US48067,"Cass County, Texas",30012,*****,28654,*****,1358,*****
+0500000US48071,"Chambers County, Texas",41441,*****,32210,*****,9231,*****
+0500000US48073,"Cherokee County, Texas",52240,*****,40077,*****,12163,*****
+0500000US48085,"Collin County, Texas",969603,*****,821163,*****,148440,*****
+0500000US48089,"Colorado County, Texas",21232,*****,16468,1349,4764,1349
+0500000US48091,"Comal County, Texas",141009,*****,102203,*****,38806,*****
+0500000US48097,"Cooke County, Texas",39895,*****,32652,*****,7243,*****
+0500000US48099,"Coryell County, Texas",74913,*****,61211,*****,13702,*****
+0500000US48113,"Dallas County, Texas",2618148,*****,1564790,*****,1053358,*****
+0500000US48121,"Denton County, Texas",836210,*****,673605,*****,162605,*****
+0500000US48123,"DeWitt County, Texas",20226,*****,11503,1349,8723,1349
+0500000US48135,"Ector County, Texas",157087,*****,61923,*****,95164,*****
+0500000US48139,"Ellis County, Texas",173620,*****,127908,*****,45712,*****
+0500000US48141,"El Paso County, Texas",840410,*****,144472,*****,695938,*****
+0500000US48143,"Erath County, Texas",41969,*****,33004,*****,8965,*****
+0500000US48147,"Fannin County, Texas",34446,*****,30640,*****,3806,*****
+0500000US48149,"Fayette County, Texas",25272,*****,19891,*****,5381,*****
+0500000US48157,"Fort Bend County, Texas",764828,*****,577509,*****,187319,*****
+0500000US48165,"Gaines County, Texas",22312,2679,16010,2170,6302,2593
+0500000US48167,"Galveston County, Texas",335036,*****,252704,*****,82332,*****
+0500000US48171,"Gillespie County, Texas",26646,*****,21223,1707,5423,1707
+0500000US48177,"Gonzales County, Texas",21668,1397,10833,1475,10835,1630
+0500000US48179,"Gray County, Texas",21628,1869,14717,1339,6911,1297
+0500000US48181,"Grayson County, Texas",131140,*****,113568,*****,17572,*****
+0500000US48183,"Gregg County, Texas",123367,*****,99984,*****,23383,*****
+0500000US48185,"Grimes County, Texas",29881,2169,23640,1354,6241,1521
+0500000US48187,"Guadalupe County, Texas",159659,*****,98977,*****,60682,*****
+0500000US48189,"Hale County, Texas",34134,*****,13856,*****,20278,*****
+0500000US48199,"Hardin County, Texas",57139,*****,53862,*****,3277,*****
+0500000US48201,"Harris County, Texas",4652980,*****,2654501,*****,1998479,*****
+0500000US48203,"Harrison County, Texas",66661,*****,57670,*****,8991,*****
+0500000US48209,"Hays County, Texas",214485,*****,130773,*****,83712,*****
+0500000US48213,"Henderson County, Texas",81064,*****,70607,*****,10457,*****
+0500000US48215,"Hidalgo County, Texas",860661,*****,67148,*****,793513,*****
+0500000US48217,"Hill County, Texas",35852,*****,28391,*****,7461,*****
+0500000US48219,"Hockley County, Texas",23088,*****,11985,*****,11103,*****
+0500000US48221,"Hood County, Texas",58273,*****,50868,*****,7405,*****
+0500000US48223,"Hopkins County, Texas",36496,*****,30323,*****,6173,*****
+0500000US48225,"Houston County, Texas",23021,*****,21512,646,1509,646
+0500000US48227,"Howard County, Texas",36040,*****,20761,*****,15279,*****
+0500000US48231,"Hunt County, Texas",93872,*****,78450,*****,15422,*****
+0500000US48233,"Hutchinson County, Texas",20272,1589,14892,1643,5380,449
+0500000US48241,"Jasper County, Texas",35561,*****,33182,*****,2379,*****
+0500000US48245,"Jefferson County, Texas",256299,*****,203074,*****,53225,*****
+0500000US48249,"Jim Wells County, Texas",40871,*****,7922,*****,32949,*****
+0500000US48251,"Johnson County, Texas",167301,*****,131617,*****,35684,*****
+0500000US48253,"Jones County, Texas",21609,1547,15412,1166,6197,1007
+0500000US48257,"Kaufman County, Texas",122883,*****,96550,*****,26333,*****
+0500000US48259,"Kendall County, Texas",44026,*****,33395,*****,10631,*****
+0500000US48265,"Kerr County, Texas",51720,*****,37838,*****,13882,*****
+0500000US48273,"Kleberg County, Texas",32618,1711,8777,599,23841,1676
+0500000US48277,"Lamar County, Texas",49587,*****,45689,*****,3898,*****
+0500000US48281,"Lampasas County, Texas",19947,2911,15608,2472,4339,1418
+0500000US48285,"Lavaca County, Texas",20062,*****,15860,1198,4202,1198
+0500000US48291,"Liberty County, Texas",83658,*****,62926,*****,20732,*****
+0500000US48293,"Limestone County, Texas",21769,2268,17486,1670,4283,1284
+0500000US48299,"Llano County, Texas",21210,*****,18104,1707,3106,1707
+0500000US48303,"Lubbock County, Texas",305225,*****,196842,*****,108383,*****
+0500000US48309,"McLennan County, Texas",251259,*****,184828,*****,66431,*****
+0500000US48321,"Matagorda County, Texas",36840,*****,21112,*****,15728,*****
+0500000US48323,"Maverick County, Texas",58216,*****,2843,*****,55373,*****
+0500000US48325,"Medina County, Texas",50066,*****,24095,*****,25971,*****
+0500000US48329,"Midland County, Texas",165049,*****,90786,*****,74263,*****
+0500000US48331,"Milam County, Texas",25053,*****,18398,*****,6655,*****
+0500000US48339,"Montgomery County, Texas",570934,*****,433404,*****,137530,*****
+0500000US48341,"Moore County, Texas",19301,2316,10181,1580,9120,2169
+0500000US48347,"Nacogdoches County, Texas",65580,*****,52784,*****,12796,*****
+0500000US48349,"Navarro County, Texas",48701,*****,35382,*****,13319,*****
+0500000US48355,"Nueces County, Texas",361221,*****,130474,*****,230747,*****
+0500000US48361,"Orange County, Texas",85047,*****,78494,*****,6553,*****
+0500000US48363,"Palo Pinto County, Texas",28570,*****,22893,*****,5677,*****
+0500000US48365,"Panola County, Texas",23243,*****,20695,1104,2548,1104
+0500000US48367,"Parker County, Texas",133463,*****,117195,*****,16268,*****
+0500000US48373,"Polk County, Texas",49162,*****,41637,*****,7525,*****
+0500000US48375,"Potter County, Texas",120458,*****,74278,*****,46180,*****
+0500000US48381,"Randall County, Texas",134442,*****,105169,*****,29273,*****
+0500000US48397,"Rockwall County, Texas",96788,*****,79632,*****,17156,*****
+0500000US48401,"Rusk County, Texas",52833,*****,43917,*****,8916,*****
+0500000US48407,"San Jacinto County, Texas",28270,*****,23676,971,4594,971
+0500000US48409,"San Patricio County, Texas",67215,*****,28269,*****,38946,*****
+0500000US48419,"Shelby County, Texas",25829,1974,20583,1984,5246,115
+0500000US48423,"Smith County, Texas",227727,*****,182986,*****,44741,*****
+0500000US48427,"Starr County, Texas",64454,*****,135,136,64319,136
+0500000US48439,"Tarrant County, Texas",2054475,*****,1461023,*****,593452,*****
+0500000US48441,"Taylor County, Texas",136290,*****,102925,*****,33365,*****
+0500000US48449,"Titus County, Texas",32904,*****,18663,*****,14241,*****
+0500000US48451,"Tom Green County, Texas",118019,*****,70846,*****,47173,*****
+0500000US48453,"Travis County, Texas",1226698,*****,810542,*****,416156,*****
+0500000US48457,"Tyler County, Texas",21539,*****,20606,535,933,535
+0500000US48459,"Upshur County, Texas",41281,*****,37695,*****,3586,*****
+0500000US48463,"Uvalde County, Texas",30188,1095,9362,442,20826,1117
+0500000US48465,"Val Verde County, Texas",49205,*****,8692,*****,40513,*****
+0500000US48467,"Van Zandt County, Texas",55182,*****,49163,*****,6019,*****
+0500000US48469,"Victoria County, Texas",92084,*****,48817,*****,43267,*****
+0500000US48471,"Walker County, Texas",72245,*****,59156,*****,13089,*****
+0500000US48473,"Waller County, Texas",51307,*****,35849,*****,15458,*****
+0500000US48477,"Washington County, Texas",35043,*****,27744,1725,7299,1725
+0500000US48479,"Webb County, Texas",274794,*****,12305,*****,262489,*****
+0500000US48481,"Wharton County, Texas",41968,*****,24591,*****,17377,*****
+0500000US48485,"Wichita County, Texas",132000,*****,106701,*****,25299,*****
+0500000US48489,"Willacy County, Texas",24633,2765,2420,1168,22213,2739
+0500000US48491,"Williamson County, Texas",547545,*****,413294,*****,134251,*****
+0500000US48493,"Wilson County, Texas",49304,*****,29683,*****,19621,*****
+0500000US48497,"Wise County, Texas",66181,*****,53284,*****,12897,*****
+0500000US48499,"Wood County, Texas",44314,*****,39850,*****,4464,*****
+0500000US48503,"Young County, Texas",20077,2045,17032,1590,3045,1248
+0500000US49003,"Box Elder County, Utah",54079,*****,49010,*****,5069,*****
+0500000US49005,"Cache County, Utah",124438,*****,110997,*****,13441,*****
+0500000US49007,"Carbon County, Utah",20295,*****,17632,*****,2663,*****
+0500000US49011,"Davis County, Utah",347637,*****,314062,*****,33575,*****
+0500000US49013,"Duchesne County, Utah",21634,1215,20155,1125,1479,379
+0500000US49021,"Iron County, Utah",51001,*****,46511,*****,4490,*****
+0500000US49035,"Salt Lake County, Utah",1135649,*****,928035,*****,207614,*****
+0500000US49039,"Sanpete County, Utah",30035,*****,27099,*****,2936,*****
+0500000US49041,"Sevier County, Utah",21316,*****,20237,*****,1079,*****
+0500000US49043,"Summit County, Utah",41106,*****,36511,*****,4595,*****
+0500000US49045,"Tooele County, Utah",67456,*****,59156,*****,8300,*****
+0500000US49047,"Uintah County, Utah",35150,*****,32251,*****,2899,*****
+0500000US49049,"Utah County, Utah",606425,*****,535089,*****,71336,*****
+0500000US49051,"Wasatch County, Utah",32106,*****,28038,837,4068,838
+0500000US49053,"Washington County, Utah",165662,*****,148495,*****,17167,*****
+0500000US49057,"Weber County, Utah",251769,*****,205572,*****,46197,*****
+0500000US50001,"Addison County, Vermont",36776,*****,35930,*****,846,*****
+0500000US50003,"Bennington County, Vermont",35594,*****,34594,640,1000,640
+0500000US50005,"Caledonia County, Vermont",30164,*****,29673,*****,491,*****
+0500000US50007,"Chittenden County, Vermont",162372,*****,158566,*****,3806,*****
+0500000US50011,"Franklin County, Vermont",49025,*****,48263,*****,762,*****
+0500000US50015,"Lamoille County, Vermont",25337,*****,24959,292,378,292
+0500000US50017,"Orange County, Vermont",28974,*****,28574,265,400,265
+0500000US50019,"Orleans County, Vermont",26841,*****,26771,90,70,90
+0500000US50021,"Rutland County, Vermont",59087,*****,58187,*****,900,*****
+0500000US50023,"Washington County, Vermont",58290,*****,57149,*****,1141,*****
+0500000US50025,"Windham County, Vermont",42869,*****,41864,*****,1005,*****
+0500000US50027,"Windsor County, Vermont",55100,*****,54208,*****,892,*****
+0500000US51001,"Accomack County, Virginia",32545,*****,29591,*****,2954,*****
+0500000US51003,"Albemarle County, Virginia",107702,*****,101408,*****,6294,*****
+0500000US51009,"Amherst County, Virginia",31594,*****,30840,*****,754,*****
+0500000US51013,"Arlington County, Virginia",234965,*****,198228,*****,36737,*****
+0500000US51015,"Augusta County, Virginia",75144,*****,73127,*****,2017,*****
+0500000US51019,"Bedford County, Virginia",77974,*****,76254,*****,1720,*****
+0500000US51023,"Botetourt County, Virginia",33192,*****,32601,*****,591,*****
+0500000US51027,"Buchanan County, Virginia",20824,2058,20783,2056,41,38
+0500000US51031,"Campbell County, Virginia",55010,*****,53662,*****,1348,*****
+0500000US51033,"Caroline County, Virginia",30461,*****,29658,554,803,554
+0500000US51035,"Carroll County, Virginia",29708,*****,28860,609,848,609
+0500000US51041,"Chesterfield County, Virginia",343599,*****,313211,*****,30388,*****
+0500000US51047,"Culpeper County, Virginia",51282,*****,45808,*****,5474,*****
+0500000US51053,"Dinwiddie County, Virginia",28208,*****,27681,533,527,533
+0500000US51059,"Fairfax County, Virginia",1148433,*****,961843,*****,186590,*****
+0500000US51061,"Fauquier County, Virginia",69465,*****,63674,*****,5791,*****
+0500000US51065,"Fluvanna County, Virginia",23327,2500,22470,2503,857,577
+0500000US51067,"Franklin County, Virginia",56445,*****,54854,*****,1591,*****
+0500000US51069,"Frederick County, Virginia",86484,*****,79154,*****,7330,*****
+0500000US51073,"Gloucester County, Virginia",37292,*****,36790,443,502,443
+0500000US51075,"Goochland County, Virginia",22685,*****,21881,281,804,281
+0500000US51083,"Halifax County, Virginia",34563,*****,34049,671,514,671
+0500000US51085,"Hanover County, Virginia",105923,*****,102686,*****,3237,*****
+0500000US51087,"Henrico County, Virginia",327898,*****,309388,*****,18510,*****
+0500000US51089,"Henry County, Virginia",51227,*****,48463,*****,2764,*****
+0500000US51093,"Isle of Wight County, Virginia",36552,*****,35402,*****,1150,*****
+0500000US51095,"James City County, Virginia",75524,*****,71242,*****,4282,*****
+0500000US51099,"King George County, Virginia",26337,*****,24646,887,1691,887
+0500000US51105,"Lee County, Virginia",23758,*****,23170,247,588,247
+0500000US51107,"Loudoun County, Virginia",398080,*****,342860,*****,55220,*****
+0500000US51109,"Louisa County, Virginia",35860,*****,34693,719,1167,719
+0500000US51117,"Mecklenburg County, Virginia",30686,*****,29796,*****,890,*****
+0500000US51121,"Montgomery County, Virginia",98559,*****,95392,*****,3167,*****
+0500000US51127,"New Kent County, Virginia",22601,1855,21064,1870,1537,1008
+0500000US51137,"Orange County, Virginia",36073,*****,34290,*****,1783,*****
+0500000US51139,"Page County, Virginia",23731,*****,23731,204,0,204
+0500000US51143,"Pittsylvania County, Virginia",61258,*****,59677,*****,1581,*****
+0500000US51145,"Powhatan County, Virginia",28601,*****,28152,281,449,281
+0500000US51147,"Prince Edward County, Virginia",22703,*****,21788,663,915,663
+0500000US51149,"Prince George County, Virginia",38606,2012,35559,1966,3047,226
+0500000US51153,"Prince William County, Virginia",463023,*****,353726,*****,109297,*****
+0500000US51155,"Pulaski County, Virginia",34184,*****,33502,551,682,551
+0500000US51161,"Roanoke County, Virginia",93730,*****,90810,*****,2920,*****
+0500000US51163,"Rockbridge County, Virginia",22659,*****,22170,665,489,665
+0500000US51165,"Rockingham County, Virginia",80227,*****,74598,*****,5629,*****
+0500000US51167,"Russell County, Virginia",27048,*****,26980,134,68,134
+0500000US51169,"Scott County, Virginia",21865,*****,20987,804,878,804
+0500000US51171,"Shenandoah County, Virginia",43225,*****,40026,*****,3199,*****
+0500000US51173,"Smyth County, Virginia",30656,*****,29849,494,807,494
+0500000US51177,"Spotsylvania County, Virginia",133033,*****,119937,*****,13096,*****
+0500000US51179,"Stafford County, Virginia",146649,*****,127893,*****,18756,*****
+0500000US51185,"Tazewell County, Virginia",41095,*****,40898,201,197,201
+0500000US51187,"Warren County, Virginia",39563,*****,38855,571,708,571
+0500000US51191,"Washington County, Virginia",54387,*****,53777,412,610,412
+0500000US51195,"Wise County, Virginia",38586,*****,37893,758,693,758
+0500000US51197,"Wythe County, Virginia",27940,2332,27799,2309,141,207
+0500000US51199,"York County, Virginia",67739,*****,63329,*****,4410,*****
+0500000US51510,"Alexandria city, Virginia",160035,*****,133405,*****,26630,*****
+0500000US51540,"Charlottesville city, Virginia",48019,*****,45323,*****,2696,*****
+0500000US51550,"Chesapeake city, Virginia",240397,*****,225576,*****,14821,*****
+0500000US51590,"Danville city, Virginia",41130,*****,39304,*****,1826,*****
+0500000US51600,"Fairfax city, Virginia",24097,*****,20892,1375,3205,1375
+0500000US51630,"Fredericksburg city, Virginia",28359,*****,26262,1333,2097,1333
+0500000US51650,"Hampton city, Virginia",134669,*****,126956,*****,7713,*****
+0500000US51660,"Harrisonburg city, Virginia",54215,*****,43503,*****,10712,*****
+0500000US51670,"Hopewell city, Virginia",21174,2893,20159,2759,1015,763
+0500000US51680,"Lynchburg city, Virginia",80995,*****,77742,*****,3253,*****
+0500000US51683,"Manassas city, Virginia",41501,*****,26518,2264,14983,2264
+0500000US51700,"Newport News city, Virginia",179388,*****,163100,*****,16288,*****
+0500000US51710,"Norfolk city, Virginia",244703,*****,225100,*****,19603,*****
+0500000US51730,"Petersburg city, Virginia",31750,*****,30101,*****,1649,*****
+0500000US51740,"Portsmouth city, Virginia",94572,*****,90371,*****,4201,*****
+0500000US51760,"Richmond city, Virginia",227032,*****,211731,*****,15301,*****
+0500000US51770,"Roanoke city, Virginia",99837,*****,93471,*****,6366,*****
+0500000US51775,"Salem city, Virginia",25862,*****,25649,298,213,298
+0500000US51790,"Staunton city, Virginia",24528,*****,23086,298,1442,298
+0500000US51800,"Suffolk city, Virginia",90237,*****,86232,*****,4005,*****
+0500000US51810,"Virginia Beach city, Virginia",450435,*****,413712,*****,36723,*****
+0500000US51820,"Waynesboro city, Virginia",22327,*****,20923,543,1404,543
+0500000US51840,"Winchester city, Virginia",27932,*****,22881,1572,5051,1572
+0500000US53003,"Asotin County, Washington",22536,*****,21390,1050,1146,1050
+0500000US53005,"Benton County, Washington",198171,*****,154765,*****,43406,*****
+0500000US53007,"Chelan County, Washington",76533,*****,55006,*****,21527,*****
+0500000US53009,"Clallam County, Washington",75474,*****,70695,*****,4779,*****
+0500000US53011,"Clark County, Washington",474643,*****,428828,*****,45815,*****
+0500000US53015,"Cowlitz County, Washington",106910,*****,97254,*****,9656,*****
+0500000US53017,"Douglas County, Washington",41945,*****,28619,*****,13326,*****
+0500000US53021,"Franklin County, Washington",92125,*****,43039,*****,49086,*****
+0500000US53025,"Grant County, Washington",95158,*****,55476,*****,39682,*****
+0500000US53027,"Grays Harbor County, Washington",72697,*****,65424,*****,7273,*****
+0500000US53029,"Island County, Washington",83159,*****,76625,*****,6534,*****
+0500000US53031,"Jefferson County, Washington",31234,*****,30105,*****,1129,*****
+0500000US53033,"King County, Washington",2188649,*****,1976237,*****,212412,*****
+0500000US53035,"Kitsap County, Washington",266414,*****,245702,*****,20712,*****
+0500000US53037,"Kittitas County, Washington",46205,*****,42077,*****,4128,*****
+0500000US53039,"Klickitat County, Washington",21811,*****,18789,1425,3022,1425
+0500000US53041,"Lewis County, Washington",78200,*****,70270,*****,7930,*****
+0500000US53045,"Mason County, Washington",63710,*****,57410,*****,6300,*****
+0500000US53047,"Okanogan County, Washington",41742,*****,33378,*****,8364,*****
+0500000US53049,"Pacific County, Washington",21626,*****,19518,*****,2108,*****
+0500000US53053,"Pierce County, Washington",876764,*****,781120,*****,95644,*****
+0500000US53057,"Skagit County, Washington",125619,*****,102602,*****,23017,*****
+0500000US53061,"Snohomish County, Washington",801633,*****,719824,*****,81809,*****
+0500000US53063,"Spokane County, Washington",506152,*****,477103,*****,29049,*****
+0500000US53065,"Stevens County, Washington",44730,*****,43048,*****,1682,*****
+0500000US53067,"Thurston County, Washington",280588,*****,255370,*****,25218,*****
+0500000US53071,"Walla Walla County, Washington",60567,*****,47654,*****,12913,*****
+0500000US53073,"Whatcom County, Washington",221404,*****,200584,*****,20820,*****
+0500000US53075,"Whitman County, Washington",49046,*****,45893,*****,3153,*****
+0500000US53077,"Yakima County, Washington",250193,*****,126500,*****,123693,*****
+0500000US54003,"Berkeley County, West Virginia",114920,*****,109955,*****,4965,*****
+0500000US54005,"Boone County, West Virginia",22349,*****,22256,157,93,157
+0500000US54009,"Brooke County, West Virginia",23857,2012,23695,2006,162,188
+0500000US54011,"Cabell County, West Virginia",94958,*****,93612,*****,1346,*****
+0500000US54019,"Fayette County, West Virginia",43521,*****,43272,240,249,240
+0500000US54025,"Greenbrier County, West Virginia",35287,*****,34981,417,306,417
+0500000US54027,"Hampshire County, West Virginia",24807,2618,24714,2630,93,157
+0500000US54029,"Hancock County, West Virginia",29448,*****,29093,282,355,282
+0500000US54033,"Harrison County, West Virginia",67811,*****,67442,287,369,287
+0500000US54035,"Jackson County, West Virginia",28976,*****,28976,1,0,200
+0500000US54037,"Jefferson County, West Virginia",56338,*****,53138,*****,3200,*****
+0500000US54039,"Kanawha County, West Virginia",183293,*****,181247,*****,2046,*****
+0500000US54043,"Lincoln County, West Virginia",20825,*****,20489,528,336,528
+0500000US54045,"Logan County, West Virginia",32925,*****,32494,398,431,398
+0500000US54049,"Marion County, West Virginia",56337,*****,55573,*****,764,*****
+0500000US54051,"Marshall County, West Virginia",31190,*****,30976,316,214,316
+0500000US54053,"Mason County, West Virginia",26801,*****,26801,1,0,200
+0500000US54055,"Mercer County, West Virginia",59753,*****,59156,575,597,575
+0500000US54059,"Mingo County, West Virginia",24127,*****,24127,200,0,200
+0500000US54061,"Monongalia County, West Virginia",105030,*****,102745,*****,2285,*****
+0500000US54067,"Nicholas County, West Virginia",25043,*****,25043,1,0,200
+0500000US54069,"Ohio County, West Virginia",42035,*****,41572,*****,463,*****
+0500000US54077,"Preston County, West Virginia",33679,*****,33061,383,618,383
+0500000US54079,"Putnam County, West Virginia",56792,*****,56619,228,173,228
+0500000US54081,"Raleigh County, West Virginia",75022,*****,74565,609,457,609
+0500000US54083,"Randolph County, West Virginia",28785,*****,28785,200,0,200
+0500000US54097,"Upshur County, West Virginia",24465,*****,24268,190,197,190
+0500000US54099,"Wayne County, West Virginia",40153,*****,39953,314,200,314
+0500000US54107,"Wood County, West Virginia",85104,*****,84152,*****,952,*****
+0500000US55001,"Adams County, Wisconsin",19973,*****,19183,*****,790,*****
+0500000US55005,"Barron County, Wisconsin",45251,*****,44097,*****,1154,*****
+0500000US55009,"Brown County, Wisconsin",262052,*****,239213,*****,22839,*****
+0500000US55015,"Calumet County, Wisconsin",50067,*****,47858,*****,2209,*****
+0500000US55017,"Chippewa County, Wisconsin",63813,*****,62605,*****,1208,*****
+0500000US55019,"Clark County, Wisconsin",34679,*****,33015,*****,1664,*****
+0500000US55021,"Columbia County, Wisconsin",57248,*****,55322,*****,1926,*****
+0500000US55025,"Dane County, Wisconsin",536416,*****,501671,*****,34745,*****
+0500000US55027,"Dodge County, Wisconsin",87786,*****,83523,*****,4263,*****
+0500000US55029,"Door County, Wisconsin",27483,*****,26642,*****,841,*****
+0500000US55031,"Douglas County, Wisconsin",43284,*****,42585,*****,699,*****
+0500000US55033,"Dunn County, Wisconsin",44693,*****,43836,*****,857,*****
+0500000US55035,"Eau Claire County, Wisconsin",103671,*****,101133,*****,2538,*****
+0500000US55039,"Fond du Lac County, Wisconsin",102548,*****,97167,*****,5381,*****
+0500000US55043,"Grant County, Wisconsin",51999,*****,51104,*****,895,*****
+0500000US55045,"Green County, Wisconsin",36851,*****,35718,*****,1133,*****
+0500000US55049,"Iowa County, Wisconsin",23715,*****,23296,*****,419,*****
+0500000US55053,"Jackson County, Wisconsin",20529,*****,19812,*****,717,*****
+0500000US55055,"Jefferson County, Wisconsin",84832,*****,78773,*****,6059,*****
+0500000US55057,"Juneau County, Wisconsin",26576,*****,25760,*****,816,*****
+0500000US55059,"Kenosha County, Wisconsin",168521,*****,146330,*****,22191,*****
+0500000US55061,"Kewaunee County, Wisconsin",20445,*****,19803,*****,642,*****
+0500000US55063,"La Crosse County, Wisconsin",118274,*****,116029,*****,2245,*****
+0500000US55067,"Langlade County, Wisconsin",20466,778,20323,757,143,142
+0500000US55069,"Lincoln County, Wisconsin",27838,*****,27408,*****,430,*****
+0500000US55071,"Manitowoc County, Wisconsin",79175,*****,76043,*****,3132,*****
+0500000US55073,"Marathon County, Wisconsin",135732,*****,131818,*****,3914,*****
+0500000US55075,"Marinette County, Wisconsin",40310,*****,39611,*****,699,*****
+0500000US55079,"Milwaukee County, Wisconsin",952085,*****,807909,*****,144176,*****
+0500000US55081,"Monroe County, Wisconsin",45625,*****,43570,*****,2055,*****
+0500000US55083,"Oconto County, Wisconsin",37553,*****,37214,378,339,378
+0500000US55085,"Oneida County, Wisconsin",35254,*****,34884,163,370,163
+0500000US55087,"Outagamie County, Wisconsin",186059,*****,177826,*****,8233,*****
+0500000US55089,"Ozaukee County, Wisconsin",88429,*****,85825,*****,2604,*****
+0500000US55093,"Pierce County, Wisconsin",41901,*****,41032,*****,869,*****
+0500000US55095,"Polk County, Wisconsin",43450,*****,42610,*****,840,*****
+0500000US55097,"Portage County, Wisconsin",70474,*****,68205,*****,2269,*****
+0500000US55101,"Racine County, Wisconsin",196071,*****,170262,*****,25809,*****
+0500000US55105,"Rock County, Wisconsin",162309,*****,147961,*****,14348,*****
+0500000US55109,"St. Croix County, Wisconsin",88703,*****,86575,*****,2128,*****
+0500000US55111,"Sauk County, Wisconsin",63981,*****,60766,*****,3215,*****
+0500000US55115,"Shawano County, Wisconsin",40935,*****,39769,*****,1166,*****
+0500000US55117,"Sheboygan County, Wisconsin",115344,*****,107856,*****,7488,*****
+0500000US55119,"Taylor County, Wisconsin",20321,*****,19920,*****,401,*****
+0500000US55121,"Trempealeau County, Wisconsin",29472,*****,26981,*****,2491,*****
+0500000US55123,"Vernon County, Wisconsin",30759,*****,30267,*****,492,*****
+0500000US55125,"Vilas County, Wisconsin",21683,*****,21137,*****,546,*****
+0500000US55127,"Walworth County, Wisconsin",103082,*****,91368,*****,11714,*****
+0500000US55131,"Washington County, Wisconsin",135101,*****,130672,*****,4429,*****
+0500000US55133,"Waukesha County, Wisconsin",400621,*****,381562,*****,19059,*****
+0500000US55135,"Waupaca County, Wisconsin",51225,*****,49604,*****,1621,*****
+0500000US55137,"Waushara County, Wisconsin",24369,*****,22739,*****,1630,*****
+0500000US55139,"Winnebago County, Wisconsin",170414,*****,163485,*****,6929,*****
+0500000US55141,"Wood County, Wisconsin",73126,*****,70919,*****,2207,*****
+0500000US56001,"Albany County, Wyoming",38332,*****,34657,*****,3675,*****
+0500000US56005,"Campbell County, Wyoming",46242,*****,42322,*****,3920,*****
+0500000US56013,"Fremont County, Wyoming",39803,*****,37101,*****,2702,*****
+0500000US56021,"Laramie County, Wyoming",98327,*****,83816,*****,14511,*****
+0500000US56025,"Natrona County, Wyoming",79547,*****,72833,*****,6714,*****
+0500000US56029,"Park County, Wyoming",29568,*****,27581,1427,1987,1427
+0500000US56033,"Sheridan County, Wyoming",30989,2245,29177,2231,1812,172
+0500000US56037,"Sweetwater County, Wyoming",43534,*****,36460,*****,7074,*****
+0500000US56039,"Teton County, Wyoming",23444,2238,20763,2197,2681,1398
+0500000US56041,"Uinta County, Wyoming",20495,*****,18773,737,1722,737
+0500000US72003,"Aguada Municipio, Puerto Rico",38118,*****,1599,1098,36519,1098
+0500000US72005,"Aguadilla Municipio, Puerto Rico",53164,*****,1140,1004,52024,1004
+0500000US72007,"Aguas Buenas Municipio, Puerto Rico",25850,*****,0,262,25850,1
+0500000US72009,"Aibonito Municipio, Puerto Rico",23108,*****,90,147,23018,147
+0500000US72011,"Añasco Municipio, Puerto Rico",27142,2390,1076,891,26066,2290
+0500000US72013,"Arecibo Municipio, Puerto Rico",86066,*****,371,434,85695,434
+0500000US72019,"Barranquitas Municipio, Puerto Rico",28511,*****,0,262,28511,1
+0500000US72021,"Bayamón Municipio, Puerto Rico",179565,*****,961,455,178604,455
+0500000US72023,"Cabo Rojo Municipio, Puerto Rico",48824,*****,220,364,48604,364
+0500000US72025,"Caguas Municipio, Puerto Rico",129604,*****,1815,1030,127789,1030
+0500000US72027,"Camuy Municipio, Puerto Rico",31732,*****,0,262,31732,1
+0500000US72029,"Canóvanas Municipio, Puerto Rico",45823,*****,0,262,45823,262
+0500000US72031,"Carolina Municipio, Puerto Rico",154489,*****,2421,1498,152068,1498
+0500000US72033,"Cataño Municipio, Puerto Rico",24374,*****,131,184,24243,184
+0500000US72035,"Cayey Municipio, Puerto Rico",44027,*****,0,262,44027,262
+0500000US72041,"Cidra Municipio, Puerto Rico",39813,*****,408,691,39405,691
+0500000US72043,"Coamo Municipio, Puerto Rico",39071,*****,0,262,39071,262
+0500000US72045,"Comerío Municipio, Puerto Rico",19343,*****,0,262,19343,1
+0500000US72047,"Corozal Municipio, Puerto Rico",33694,*****,410,395,33284,395
+0500000US72051,"Dorado Municipio, Puerto Rico",37026,*****,1422,1410,35604,1410
+0500000US72053,"Fajardo Municipio, Puerto Rico",31324,*****,526,472,30798,472
+0500000US72057,"Guayama Municipio, Puerto Rico",41282,*****,523,587,40759,587
+0500000US72061,"Guaynabo Municipio, Puerto Rico",87328,*****,2356,2257,84972,2257
+0500000US72063,"Gurabo Municipio, Puerto Rico",47109,*****,442,468,46667,468
+0500000US72065,"Hatillo Municipio, Puerto Rico",40111,*****,0,262,40111,1
+0500000US72069,"Humacao Municipio, Puerto Rico",52771,*****,709,724,52062,724
+0500000US72071,"Isabela Municipio, Puerto Rico",41949,*****,397,522,41552,522
+0500000US72075,"Juana Díaz Municipio, Puerto Rico",46400,*****,219,231,46181,231
+0500000US72079,"Lajas Municipio, Puerto Rico",22929,*****,0,262,22929,1
+0500000US72081,"Lares Municipio, Puerto Rico",27237,2411,55,101,27182,2401
+0500000US72085,"Las Piedras Municipio, Puerto Rico",37659,*****,0,262,37659,1
+0500000US72087,"Loíza Municipio, Puerto Rico",25926,*****,0,262,25926,262
+0500000US72091,"Manatí Municipio, Puerto Rico",39103,*****,430,343,38673,343
+0500000US72097,"Mayagüez Municipio, Puerto Rico",75525,*****,5,10,75520,10
+0500000US72099,"Moca Municipio, Puerto Rico",36328,*****,221,284,36107,284
+0500000US72101,"Morovis Municipio, Puerto Rico",31066,3749,0,262,31066,3749
+0500000US72103,"Naguabo Municipio, Puerto Rico",26177,*****,0,262,26177,3
+0500000US72105,"Naranjito Municipio, Puerto Rico",28306,*****,0,262,28306,1
+0500000US72107,"Orocovis Municipio, Puerto Rico",21109,*****,180,298,20929,298
+0500000US72111,"Peñuelas Municipio, Puerto Rico",20447,*****,234,350,20213,350
+0500000US72113,"Ponce Municipio, Puerto Rico",140859,*****,240,258,140619,258
+0500000US72115,"Quebradillas Municipio, Puerto Rico",23734,*****,0,262,23734,1
+0500000US72119,"Río Grande Municipio, Puerto Rico",50128,*****,71,119,50057,119
+0500000US72121,"Sabana Grande Municipio, Puerto Rico",23474,2760,0,262,23474,2760
+0500000US72123,"Salinas Municipio, Puerto Rico",28216,*****,7,13,28209,13
+0500000US72125,"San Germán Municipio, Puerto Rico",28593,3041,243,208,28350,3053
+0500000US72127,"San Juan Municipio, Puerto Rico",337288,*****,4198,1170,333090,1170
+0500000US72129,"San Lorenzo Municipio, Puerto Rico",37379,*****,0,262,37379,3
+0500000US72131,"San Sebastián Municipio, Puerto Rico",37306,*****,762,726,36544,726
+0500000US72133,"Santa Isabel Municipio, Puerto Rico",21863,*****,0,262,21863,1
+0500000US72135,"Toa Alta Municipio, Puerto Rico",73217,*****,867,758,72350,758
+0500000US72137,"Toa Baja Municipio, Puerto Rico",78092,*****,1042,607,77050,607
+0500000US72139,"Trujillo Alto Municipio, Puerto Rico",66675,*****,557,427,66118,427
+0500000US72141,"Utuado Municipio, Puerto Rico",30711,2567,187,242,30524,2507
+0500000US72143,"Vega Alta Municipio, Puerto Rico",37566,*****,0,262,37566,3
+0500000US72145,"Vega Baja Municipio, Puerto Rico",52436,*****,376,310,52060,310
+0500000US72149,"Villalba Municipio, Puerto Rico",22528,*****,183,194,22345,195
+0500000US72151,"Yabucoa Municipio, Puerto Rico",34066,3792,0,262,34066,3792
+0500000US72153,"Yauco Municipio, Puerto Rico",35635,*****,0,262,35635,262
+0500000US72077,"Juncos Municipio, Puerto Rico",null,null,null,null,null,null
+0500000US47173,"Union County, Tennessee",null,null,null,null,null,null
+0500000US54057,"Mineral County, West Virginia",null,null,null,null,null,null
+0500000US39117,"Morrow County, Ohio",null,null,null,null,null,null
+0500000US54109,"Wyoming County, West Virginia",null,null,null,null,null,null
+0500000US72017,"Barceloneta Municipio, Puerto Rico",null,null,null,null,null,null
+0500000US13321,"Worth County, Georgia",null,null,null,null,null,null
+0500000US22041,"Franklin Parish, Louisiana",null,null,null,null,null,null
+0500000US01091,"Marengo County, Alabama",null,null,null,null,null,null
+0500000US21217,"Taylor County, Kentucky",null,null,null,null,null,null
+0500000US19123,"Mahaska County, Iowa",null,null,null,null,null,null
+0500000US21231,"Wayne County, Kentucky",null,null,null,null,null,null
+0500000US22067,"Morehouse Parish, Louisiana",null,null,null,null,null,null
