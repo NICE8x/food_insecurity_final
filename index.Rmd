@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-![](https://www.feedingamerica.org/themes/custom/ts_feeding_america/images/svgs/logo-2020.svg)
+
 
 # Link to other pages in this site
 
