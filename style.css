@@ -33,3 +33,39 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+/*----------------ADDING WHITE SPACE-------------*/
+
+.title {
+  margin-top: 2em !important;
+  margin-bottom: 0.75em;
+}
+
+.section h1,
+.section h2, 
+.section h3, 
+.section h4, 
+.section h5 { 
+  padding-top: 3em !important; /*adding so much padding because theme adds a margin-top: -65px by default */
+  margin-bottom: 0.75em;
+}
+
+  /* Space Between TOC and 
+  Righthand side content on large screens */
+
+ @media (min-width: 992px) {
+    .col-md-9 {
+      width: 65%;
+      padding-left: 5em !important;
+    }
+ }
+ 
+   #header.fluid-row::before {
+   content: "";
+   height: 150px;
+   width: 150px;
+   float: right;
+   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Food_Bank_icon.svg/600px-Food_Bank_icon.svg.png");
+   background-size: contain;
+   background-position: center center;
+   background-repeat: no-repeat;
+ }
