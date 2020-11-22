@@ -14,8 +14,8 @@ output:
 
 # Link to other pages in this site
 
-[County Maps]
-[Project Report]  
+[County Maps]\
+[Project Report]\
 [Analysis]
 
 # Links in site navigation
