@@ -11,36 +11,7 @@ library(stringr)
 library(usdata)
 ```
 
-DELETE BELOW
 
-```{r read_csv}
-acs_load_and_tidy = function(path, var_name) {
-  df = read_csv(path) %>%
-    janitor::clean_names() %>%
-    rename("county" = "geoname",
-           !!sym(var_name) := "estimate") %>%
-    select(county, var_name)
-  
-  df
-}
-
-acs_list = 
-  list(
-    acs_load_and_tidy("./ACS_data/ACS_2017_Median_Household_Income.csv", "hhold_inc"),
-    acs_load_and_tidy("./ACS_data/ACS_2017_Percent_AmInd.csv", "am_ind"),
-    acs_load_and_tidy("./ACS_data/ACS_2017_Percent_Asian.csv", "asian"),
-    acs_load_and_tidy("./ACS_data/ACS_2017_Percent_Black.csv", "black"),
-    acs_load_and_tidy("./ACS_data/ACS_2017_Percent_White_NonHispanic.csv", "white"),
-    acs_load_and_tidy("./ACS_data/ACS_2017_Percent_Multiple_Races.csv", "multiple_race"),
-    acs_load_and_tidy("./ACS_data/ACS_2017_Percent_Foreign_Born.csv", "foreign_born"),
-    acs_load_and_tidy("./ACS_data/ACS_2017_Percent_Children_without_Insurance.csv", "kids_no_ins"),
-    acs_load_and_tidy("./ACS_data/ACS_2017_Percent_Households_with_SNAP.csv", "SNAP"),
-    acs_load_and_tidy("./ACS_data/ACS_2017_Percent_People_25+_With_HS_Degree.csv", "hs_degree"),
-    acs_load_and_tidy("./ACS_data/ACS_2017_Percent_People_25+_With_Bachelors.csv", "bachelors"),
-    acs_load_and_tidy("./ACS_data/ACS_2017_Percent_People_25+_With_Advanced_Degree.csv", "adv_degree"))
-
-acs_tidy = plyr::join_all(acs_list, by = 'county', type = 'left')
-```
 
 Import demographic data for 2017 and join it together.
 
