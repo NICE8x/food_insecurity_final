@@ -18,6 +18,4 @@ navbar:
 output:
   html_document:
     css: style.css
-    includes:
-      in_header: hero-image.html
     
