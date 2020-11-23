@@ -10,6 +10,11 @@ output:
     
 ---
 
+<style>
+body {
+    position: absolute;
+    left: 0px;}
+</style>
 
 
 # Link to other pages in this site
