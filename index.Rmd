@@ -4,15 +4,24 @@ output:
   html_document:
     toc: true
     toc_float: true
+    includes:
+      in_header: 
+      - hero-image.html
+    
 ---
 
+<style>
+body {
+    position: absolute;
+    left: 0px;}
+</style>
 
 
 # Link to other pages in this site
 
+[County Maps]\
+[Project Report]\
 [Analysis]
-[Map]
-[Project Report]  
 
 # Links in site navigation
 
