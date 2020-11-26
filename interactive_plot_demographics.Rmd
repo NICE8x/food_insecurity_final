@@ -8,6 +8,8 @@ runtime: shiny
 
 ```{r import libraries}
 library(tidyverse)
+library(plotly)
+library(rjson)
 ```
 
 
@@ -61,9 +63,64 @@ You can also use the `shinyApp` function to define an application inline rather 
 
 In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
 
+Import FIPS data, tidy it and join it to the map the meal gap data.
+```{r fips data}
+fips_df = readxl::read_xlsx("./all-geocodes-v2018.xlsx", skip = 3) %>%
+  janitor::clean_names() %>%
+  filter(state_code_fips != "00") %>%
+  rename(county = area_name_including_legal_statistical_area_description)
+
+states_fips_df = read_delim("./national_fips.txt", delim = "|") %>%
+  janitor::clean_names() %>%
+  select(state, stusab) %>%
+  rename(state_code_fips = state)
+
+fips_df = left_join(fips_df, states_fips_df, by = "state_code_fips")
+  
+
+```
 
 
 
+
+
+
+
+```{r plot attempt}
+url <- 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
+counties <- rjson::fromJSON(file=url)
+url2<- "https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv"
+df <- read.csv(url2, colClasses=c(fips="character"))
+g <- list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('white')
+)
+fig <- plot_ly()
+fig <- fig %>% add_trace(
+    type="choropleth",
+    geojson=counties,
+    locations=df$fips,
+    z=df$unemp,
+    colorscale="Viridis",
+    zmin=0,
+    zmax=12,
+    marker=list(line=list(
+      width=0)
+    )
+  )
+fig <- fig %>% colorbar(title = "Unemployment Rate (%)")
+fig <- fig %>% layout(
+    title = "2016 US Unemployment by County"
+)
+
+fig <- fig %>% layout(
+    geo = g
+  )
+
+fig
+```
 
 
 
