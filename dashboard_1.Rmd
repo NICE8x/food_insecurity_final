@@ -39,14 +39,26 @@ race_plot =
     other = as.numeric(other),
     two_or_more = as.numeric(two_or_more)
   )
+```
 
-per_race = function(x) {
+Percent function, and percents of each race by county.
+
+```{r}
+per_f = function(x) {
   
   race_plot %>%
-  mutate(
-    per_white = white / total
-  )
+    mutate(
+      x = x/race_plot$total
+    )
 }
 
+race_plot = 
+  race_plot %>%
+  mutate(
+    white = per_f(white),
+    black = per_f(black),
+    am_ind_al_nat = per_f(am_ind_al_nat),
+    asian = per_f(asian)
+  )
 ```
 
