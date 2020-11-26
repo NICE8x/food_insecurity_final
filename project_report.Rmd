@@ -1,0 +1,187 @@
+---
+title: "Project Report"
+output: html_document
+---
+
+## Food insecurity by selected NY state counties
+
+Counties = New York, Queens, Kings, Bronx, Saint Lawrence
+
+Food insecurity rate by county
+
+```{r}
+library(tidyverse)
+
+read_csv("map_the_meal_gap_df.csv") %>%
+  filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
+                             "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
+                             "westchester_NY")) %>%
+  mutate(county = fct_reorder(county, desc(fi_rate))) %>%
+  ggplot(aes(x = county, y = fi_rate)) +
+  geom_boxplot() + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(
+    title = "Food Insecurity Rates of Select New York State Counties",
+    x = "County",
+    y = "Food Insecurity Rate",
+    caption = "Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017")
+
+```
+
+Number of food insecure individuals by county
+
+```{r}
+read_csv("map_the_meal_gap_df.csv") %>%
+  filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
+                             "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
+                             "westchester_NY")) %>%
+  mutate(county = fct_reorder(county, desc(number_food_insecure_individuals))) %>%
+  ggplot(aes(x = county, y = number_food_insecure_individuals)) +
+  geom_boxplot() + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(
+    title = "Number of Food Insecure Individuals in Select New York State Counties",
+    x = "County",
+    y = "Number of Food Insecure Individuals",
+    caption = "Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017")
+```
+
+Child food insecurity rate by county
+
+```{r}
+read_csv("map_the_meal_gap_df.csv") %>%
+  filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
+                             "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
+                             "westchester_NY")) %>%
+  mutate(county = fct_reorder(county, desc(child_fi_rate))) %>%
+  ggplot(aes(x = county, y = child_fi_rate)) +
+  geom_boxplot() + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(
+    title = "Child Food Insecurity Rates of Select New York State Counties",
+    x = "County",
+    y = "Child Food Insecurity Rate",
+    caption = "Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017")
+```
+
+Number of food insecure children by county
+
+```{r}
+read_csv("map_the_meal_gap_df.csv") %>%
+  filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
+                             "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
+                             "westchester_NY")) %>%
+  mutate(county = fct_reorder(county, desc(number_food_insecure_children))) %>%
+  ggplot(aes(x = county, y = number_food_insecure_children)) +
+  geom_boxplot() + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(
+    title = "Number of Food Insecure Children in Select New York State Counties",
+    x = "County",
+    y = "Number of Food Insecure Children",
+    caption = "Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017")
+```
+
+
+
+### Food insecurity by US region
+
+Mean food insecurity by region
+
+```{r}
+state = c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL",
+          "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT",
+          "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
+          "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY")
+region = c("S", "W", "W", "S", "W", "W", "NE", "S", "S", "S", "W", "W", "MW", "MW", 
+           "MW", "MW", "S", "S", "NE", "S", "NE", "MW", "MW", "S", "MW", "W", "MW", 
+           "W", "NE", "NE", "W", "NE", "S", "MW", "MW", "S", "W", "NE", "NE", "S", 
+           "MW", "S", "S", "W", "NE", "S", "W", "S", "MW", "W")
+
+x_walk = tibble(state, region)
+food = read_csv("map_the_meal_gap_df.csv") 
+
+merge(food, x_walk, by = "state") %>%
+  mutate(region = str_replace(region, "MW", "Midwest"),
+         region = str_replace(region, "W", "West"),
+         region = str_replace(region, "NE", "Northeast"),
+         region = str_replace(region, "S", "South")) %>%
+  group_by(region, year) %>%
+  summarize(mean_fi = mean(fi_rate)) %>%
+  ungroup() %>%
+  mutate(region = fct_reorder(region, desc(mean_fi))) %>%
+  ggplot(aes(x = region, y = mean_fi)) +
+  geom_boxplot() + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(
+    title = "Mean Food Insecurity Rate by US Region",
+    x = "Region",
+    y = "Mean Food Insecurity Rate",
+    caption = "Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017")
+```
+
+Mean number of food insecure people by region
+
+```{r}
+merge(food, x_walk, by = "state") %>%
+  mutate(region = str_replace(region, "MW", "Midwest"),
+         region = str_replace(region, "W", "West"),
+         region = str_replace(region, "NE", "Northeast"),
+         region = str_replace(region, "S", "South")) %>%
+  group_by(region, year) %>%
+  summarize(mean_num_fi_ind = mean(number_food_insecure_individuals)) %>%
+  ungroup() %>%
+  mutate(region = fct_reorder(region, desc(mean_num_fi_ind))) %>%
+  ggplot(aes(x = region, y = mean_num_fi_ind)) +
+  geom_boxplot() + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(
+    title = "Mean Number of Food Insecure People by US Region",
+    x = "Region",
+    y = "Mean Number of Food Insecure Individuals",
+    caption = "Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017")
+```
+
+Mean child food insecurity rate by region
+
+```{r}
+merge(food, x_walk, by = "state") %>%
+  mutate(region = str_replace(region, "MW", "Midwest"),
+         region = str_replace(region, "W", "West"),
+         region = str_replace(region, "NE", "Northeast"),
+         region = str_replace(region, "S", "South")) %>%
+  group_by(region, year) %>%
+  summarize(mean_child_fi_rate = mean(child_fi_rate)) %>%
+  ungroup() %>%
+  mutate(region = fct_reorder(region, desc(mean_child_fi_rate))) %>%
+  ggplot(aes(x = region, y = mean_child_fi_rate)) +
+  geom_boxplot() + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(
+    title = "Mean Child Food Insecurity Rate by US Region",
+    x = "Region",
+    y = "Mean Child Food Insecurity Rate",
+    caption = "Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017")
+```
+
+Mean number of food insecure children by region
+
+```{r}
+merge(food, x_walk, by = "state") %>%
+  mutate(region = str_replace(region, "MW", "Midwest"),
+         region = str_replace(region, "W", "West"),
+         region = str_replace(region, "NE", "Northeast"),
+         region = str_replace(region, "S", "South")) %>%
+  group_by(region, year) %>%
+  summarize(mean_num_fi_kids = mean(number_food_insecure_children)) %>%
+  ungroup() %>%
+  mutate(region = fct_reorder(region, desc(mean_num_fi_kids))) %>%
+  ggplot(aes(x = region, y = mean_num_fi_kids)) +
+  geom_boxplot() + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(
+    title = "Mean Number of Food Insecure Children by US Region",
+    x = "Region",
+    y = "Mean Number of Food Insecure Children",
+    caption = "Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017")
+```
