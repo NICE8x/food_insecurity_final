@@ -31,10 +31,10 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
-Read in data. And manipulate respective data to make scatter plots.
+Read in acs race data and acs hispanic data. And manipulate respective data to make scatter plots.
 
 ```{r}
-race_plot = 
+race_df = 
   read_csv("ACS_data/ACS_2017_race.csv") %>%
   rename(
     total = "K200201_001E",
@@ -123,6 +123,89 @@ race_plot =
     county_state = str_replace(county_state, "WA_FL", "washington_FL"),
     county_state = str_replace(county_state, "DE_IN", "delaware_IN")
   )
+
+hispanic_df = 
+  read_csv("ACS_data/ACS_2017_hispanic.csv") %>%
+   rename(
+    total = "K200301_001E",
+    hispanic = "K200301_003E",
+    county_state = "NAME"
+  ) %>%
+  janitor::clean_names() %>%
+  select(geo_id, county_state, total, hispanic) %>%
+  slice(-1) %>%
+  mutate(
+    total = as.numeric(total),
+    hispanic = as.numeric(hispanic),
+    county_state = str_remove_all(county_state, "Parish"),
+    county_state = tolower(county_state),
+    county_state = str_replace(county_state, " county, ", "_"),
+    county_state = str_replace(county_state, " , ", "_"),
+    county_state = str_replace(county_state, "st. ", "saint "),
+    county_state = str_replace(county_state, "alabama", "AL"),
+    county_state = str_replace(county_state, "alaska", "AK"),
+    county_state = str_replace(county_state, "arkansas", "AR"),
+    county_state = str_replace(county_state, "arizona", "AZ"),
+    county_state = str_replace(county_state, "california", "CA"),
+    county_state = str_replace(county_state, "colorado", "CO"),
+    county_state = str_replace(county_state, "connecticut", "CT"),
+    county_state = str_replace(county_state, "delaware", "DE"),
+    county_state = str_replace(county_state, "district of columbia, district of columbia", "district of columbia_DC"),
+    county_state = str_replace(county_state, "florida", "FL"),
+    county_state = str_replace(county_state, "georgia", "GA"),
+    county_state = str_replace(county_state, "hawaii", "HI"),
+    county_state = str_replace(county_state, "idaho", "ID"),
+    county_state = str_replace(county_state, "illinois", "IL"),
+    county_state = str_replace(county_state, "indiana", "IN"),
+    county_state = str_replace(county_state, "iowa", "IA"),
+    county_state = str_replace(county_state, "kansas", "KS"),
+    county_state = str_replace(county_state, "kentucky", "KY"),
+    county_state = str_replace(county_state, "louisiana", "LA"),
+    county_state = str_replace(county_state, "maine", "ME"),
+    county_state = str_replace(county_state, "maryland", "MD"),
+    county_state = str_replace(county_state, "massachusetts", "MA"),
+    county_state = str_replace(county_state, "michigan", "MI"),
+    county_state = str_replace(county_state, "minnesota", "MN"),
+    county_state = str_replace(county_state, "mississippi", "MS"),
+    county_state = str_replace(county_state, "missouri", "MO"),
+    county_state = str_replace(county_state, "montana", "MT"),
+    county_state = str_replace(county_state, "nebraska", "NE"),
+    county_state = str_replace(county_state, "nevada", "NV"),
+    county_state = str_replace(county_state, "new hampshire", "NH"),
+    county_state = str_replace(county_state, "new jersey", "NJ"),
+    county_state = str_replace(county_state, "new mexico", "NM"),
+    county_state = str_replace(county_state, "new york", "NY"),
+    county_state = str_replace(county_state, "north carolina", "NC"),
+    county_state = str_replace(county_state, "north dakota", "ND"),
+    county_state = str_replace(county_state, "ohia", "OH"),
+    county_state = str_replace(county_state, "oklahoma", "OK"),
+    county_state = str_replace(county_state, "oregon", "OR"),
+    county_state = str_replace(county_state, "pennsylvania", "PA"),
+    county_state = str_replace(county_state, "rhode island", "RI"),
+    county_state = str_replace(county_state, "south carolina", "SC"),
+    county_state = str_replace(county_state, "south dakota", "SD"),
+    county_state = str_replace(county_state, "tennessee", "TN"),
+    county_state = str_replace(county_state, "texas", "TX"),
+    county_state = str_replace(county_state, "utah", "UT"),
+    county_state = str_replace(county_state, "vermont", "VT"),
+    county_state = str_replace(county_state, "west virginia", "WV"),
+    county_state = str_replace(county_state, "virginia", "VA"),
+    county_state = str_replace(county_state, "washington", "WA"),
+    county_state = str_replace(county_state, "wisconsin", "WI"),
+    county_state = str_replace(county_state, "wyoming", "WY"),
+    county_state = str_replace(county_state, "puerto rico", "PR"),
+    county_state = str_replace(county_state, "do?a ana_NM", "doña ana_NM"),
+    county_state = str_replace(county_state, "HI_hawaii", "hawaii_HI"),
+    county_state = str_replace(county_state, "MS_AR", "mississippi_AR"),
+    county_state = str_replace(county_state, "NV_CA", "nevada_CA"),
+    county_state = str_replace(county_state, "WA_FL", "washington_FL"),
+    county_state = str_replace(county_state, "DE_IN", "delaware_IN"),
+    county_state = str_replace(county_state, "WA_ME", "washington_ME"),
+    county_state = str_replace(county_state, "WA_MD", "washington_MD")
+  )
+
+
+  
 ```
 
 Percent function, and percents of each race by county.
@@ -130,12 +213,18 @@ Percent function, and percents of each race by county.
 ```{r}
 per_f = function(x) {
 
-  x/race_plot$total * 100
+  x/race_df$total * 100
   
 }
 
-race_plot = 
-  race_plot %>%
+per_f_h = function(y) {
+  
+  y/hispanic_df$total * 100
+  
+}
+
+race_df = 
+  race_df %>%
   mutate(
     white = per_f(white),
     black = per_f(black),
@@ -145,6 +234,16 @@ race_plot =
     other = per_f(other),
     two_or_more = per_f(two_or_more)
   )
+
+hispanic_df = 
+  hispanic_df %>%
+  mutate(
+    hispanic = per_f_h(hispanic)
+  ) %>%
+  select(county_state, hispanic)
+
+race_hisp_df =
+  inner_join(x = race_df, y = hispanic_df, by = "county_state", all = TRUE)
 ```
 
 Read in 2017 mtm data, and merge with acs race data (race_plot).
@@ -154,7 +253,7 @@ mtm_2017 =
   read_csv("mtm_acs_2017_df.csv")
 
 mtm_2017_acs_2017_race_df = 
-  inner_join(x = race_plot, y = mtm_2017, by = "county_state", all = TRUE)
+  inner_join(x = race_hisp_df, y = mtm_2017, by = "county_state", all = TRUE)
 
 write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
 ```
@@ -166,7 +265,7 @@ race_per_plot =
   
 mtm_2017_acs_2017_race_df %>%
   pivot_longer(
-    white:two_or_more,
+    white:hispanic,
     names_to = "race",
     values_to = "percents"
   ) %>%
@@ -178,6 +277,7 @@ mtm_2017_acs_2017_race_df %>%
     race = str_replace(race, "nat_ha_pac_isl", "Native Hawaiian and Other Pacific Islander"),
     race = str_replace(race, "other", "Other Race"),
     race = str_replace(race, "two_or_more", "Two or More Races"),
+    race = str_replace(race, "hispanic", "Hispanic")
     ) %>%
   select(county_state, total, race, percents, fi_rate) %>%
   drop_na() %>%
