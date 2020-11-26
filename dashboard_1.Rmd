@@ -10,8 +10,25 @@ output:
 
 ```{r}
 library(tidyverse)
+library(gganimate)
 
+knitr::opts_chunk$set(
+	echo = TRUE,
+	warning = FALSE,
+	fig.width = 8, 
+  fig.height = 6,
+  out.width = "90%"
+)
 
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+
+options(
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis"
+)
+
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
 ```
 
 Read in data. And manipulate respective data to make scatter plots.
@@ -142,17 +159,40 @@ mtm_2017_acs_2017_race_df =
 write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
 ```
 
+Making transitioning graph for food insecurity by percent of race in each county across the U.S.
 
 ```{r}
-white_scatter_plot = 
-  mtm_2017_acs_2017_race_df %>%
-  select(county_state, white, fi_rate) %>%
+race_per_plot =
+  
+mtm_2017_acs_2017_race_df %>%
+  pivot_longer(
+    white:two_or_more,
+    names_to = "race",
+    values_to = "percents"
+  ) %>%
+  mutate(
+    race = str_replace(race, "white", "White"),
+    race = str_replace(race, "black", "Black"),
+    race = str_replace(race, "am_ind_al_nat", "American Indian and Alaska Native"),
+    race = str_replace(race, "asian", "Asian"),
+    race = str_replace(race, "nat_ha_pac_isl", "Native Hawaiian and Other Pacific Islander"),
+    race = str_replace(race, "other", "Other Race"),
+    race = str_replace(race, "two_or_more", "Two or More Races"),
+    ) %>%
+  select(county_state, total, race, percents, fi_rate) %>%
   drop_na() %>%
-  ggplot(aes(x = fi_rate, y = white, color = county_state)) + 
-  geom_point(show.legend = FALSE) +
+  ggplot(aes(x = fi_rate, y = percents, size = total, color = race)) + 
+  geom_point(show.legend = FALSE, alpha = 0.8) +
   labs(
+    title = '{closest_state}',
     x = "Food Insecurity Rate",
-    y = "% White Demographic"
+    y = "% Race in County"
   ) +
-  theme_bw()
+  theme_bw() +
+  transition_states(race, transition_length = 1, state_length = 3, wrap = TRUE) + 
+  enter_fade() + 
+  exit_fade() +
+  ease_aes('cubic-in-out')
+
+animate(race_per_plot, fps = 5, height = 500, width = 1000)
 ```
