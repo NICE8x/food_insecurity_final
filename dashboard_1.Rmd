@@ -1,5 +1,52 @@
 ---
 title: "dashboard_1"
-output: html_document
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
 ---
+
+```{r}
+library(tidyverse)
+```
+
+Read in data.
+
+```{r}
+race_plot = 
+  read_csv("ACS_data/ACS_2017_race.csv") %>%
+  rename(
+    total = "K200201_001E",
+    white = "K200201_002E",
+    black = "K200201_003E",
+    am_ind_al_nat = "K200201_004E",
+    asian = "K200201_005E",
+    nat_ha_pac_isl = "K200201_006E",
+    other = "K200201_007E",
+    two_or_more = "K200201_008E"
+  ) %>%
+  janitor::clean_names() %>%
+  select(geo_id, name, total, white, black, am_ind_al_nat, asian, nat_ha_pac_isl, other, two_or_more) %>%
+  slice(-1) %>%
+  mutate(
+    total = as.numeric(total),
+    white = as.numeric(white),
+    black = as.numeric(black),
+    am_ind_al_nat = as.numeric(am_ind_al_nat),
+    asian = as.numeric(asian),
+    nat_ha_pac_isl = as.numeric(nat_ha_pac_isl), 
+    other = as.numeric(other),
+    two_or_more = as.numeric(two_or_more)
+  )
+
+per_race = function(x) {
+  
+  race_plot %>%
+  mutate(
+    per_white = white / total
+  )
+}
+
+```
 
