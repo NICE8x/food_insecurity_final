@@ -1,5 +1,6 @@
 ---
 title: "dashboard_1"
+author: "Vasili Fokaidis"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -91,7 +92,8 @@ race_plot =
     county_state = str_replace(county_state, "washington", "WA"),
     county_state = str_replace(county_state, "west virginia", "WV"),
     county_state = str_replace(county_state, "wisconsin", "WI"),
-    county_state = str_replace(county_state, "wyoming", "WY")
+    county_state = str_replace(county_state, "wyoming", "WY"),
+    county_state = str_replace(county_state, "puerto rico", "PR")
   )
 ```
 
@@ -117,10 +119,15 @@ race_plot =
   )
 ```
 
-Read in 2017 mtm data.
+Read in 2017 mtm data, and merge with acs race data (race_plot).
 
 ```{r}
 mtm_2017 = 
   read_csv("mtm_acs_2017_df.csv")
+
+mtm_2017_acs_2017_race_df = 
+  inner_join(x = race_plot, y = mtm_2017, by = "county_state", all = TRUE)
+
+write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
 ```
 
