@@ -10,6 +10,8 @@ output:
 
 ```{r}
 library(tidyverse)
+
+
 ```
 
 Read in data. And manipulate respective data to make scatter plots.
@@ -40,8 +42,11 @@ race_plot =
     nat_ha_pac_isl = as.numeric(nat_ha_pac_isl), 
     other = as.numeric(other),
     two_or_more = as.numeric(two_or_more),
+    county_state = str_remove_all(county_state, "Parish"),
     county_state = tolower(county_state),
     county_state = str_replace(county_state, " county, ", "_"),
+    county_state = str_replace(county_state, " , ", "_"),
+    county_state = str_replace(county_state, "st. ", "saint "),
     county_state = str_replace(county_state, "alabama", "AL"),
     county_state = str_replace(county_state, "alaska", "AK"),
     county_state = str_replace(county_state, "arkansas", "AR"),
@@ -50,7 +55,7 @@ race_plot =
     county_state = str_replace(county_state, "colorado", "CO"),
     county_state = str_replace(county_state, "connecticut", "CT"),
     county_state = str_replace(county_state, "delaware", "DE"),
-    county_state = str_replace(county_state, "district of columbia", "DC"),
+    county_state = str_replace(county_state, "district of columbia, district of columbia", "district of columbia_DC"),
     county_state = str_replace(county_state, "florida", "FL"),
     county_state = str_replace(county_state, "georgia", "GA"),
     county_state = str_replace(county_state, "hawaii", "HI"),
@@ -60,7 +65,7 @@ race_plot =
     county_state = str_replace(county_state, "iowa", "IA"),
     county_state = str_replace(county_state, "kansas", "KS"),
     county_state = str_replace(county_state, "kentucky", "KY"),
-    county_state = str_replace(county_state, "lousiana", "LA"),
+    county_state = str_replace(county_state, "louisiana", "LA"),
     county_state = str_replace(county_state, "maine", "ME"),
     county_state = str_replace(county_state, "maryland", "MD"),
     county_state = str_replace(county_state, "massachusetts", "MA"),
@@ -88,12 +93,18 @@ race_plot =
     county_state = str_replace(county_state, "texas", "TX"),
     county_state = str_replace(county_state, "utah", "UT"),
     county_state = str_replace(county_state, "vermont", "VT"),
+    county_state = str_replace(county_state, "west virginia", "WV"),
     county_state = str_replace(county_state, "virginia", "VA"),
     county_state = str_replace(county_state, "washington", "WA"),
-    county_state = str_replace(county_state, "west virginia", "WV"),
     county_state = str_replace(county_state, "wisconsin", "WI"),
     county_state = str_replace(county_state, "wyoming", "WY"),
-    county_state = str_replace(county_state, "puerto rico", "PR")
+    county_state = str_replace(county_state, "puerto rico", "PR"),
+    county_state = str_replace(county_state, "do?a ana_NM", "doña ana_NM"),
+    county_state = str_replace(county_state, "HI_hawaii", "hawaii_HI"),
+    county_state = str_replace(county_state, "MS_AR", "mississippi_AR"),
+    county_state = str_replace(county_state, "NV_CA", "nevada_CA"),
+    county_state = str_replace(county_state, "WA_FL", "washington_FL"),
+    county_state = str_replace(county_state, "DE_IN", "delaware_IN")
   )
 ```
 
@@ -131,3 +142,17 @@ mtm_2017_acs_2017_race_df =
 write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
 ```
 
+
+```{r}
+white_scatter_plot = 
+  mtm_2017_acs_2017_race_df %>%
+  select(county_state, white, fi_rate) %>%
+  drop_na() %>%
+  ggplot(aes(x = fi_rate, y = white, color = county_state)) + 
+  geom_point(show.legend = FALSE) +
+  labs(
+    x = "Food Insecurity Rate",
+    y = "% White Demographic"
+  ) +
+  theme_bw()
+```
