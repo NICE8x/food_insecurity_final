@@ -6,7 +6,7 @@ navbar:
     - text: "County Maps"
       href: map.html
     - text: "See the Gap"
-      href: dashboard.html
+      href: see_the_gap.html
     - text: "Project Report"
       href: project_report.html
     - text: "Analysis"
