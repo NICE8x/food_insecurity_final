@@ -267,3 +267,104 @@ mtm_2017_edu_2017_att_df %>%
 
 animate(edu_per_plot, fps = 5, height = 500, width = 1000)
 ```
+
+Read in insurance acs data.
+
+```{r}
+ins_status = 
+  read_csv("ACS_data/ACS_2017_ins_status.csv") %>%
+   rename(
+    total = "K202701_001E",
+    tot_under_19 = "K202701_002E",
+    y_under_19 = "K202701_003E",
+    n_under_19 = "K202701_004E",
+    tot_19_64 = "K202701_005E",
+    y_19_64 = "K202701_006E",
+    n_19_64 = "K202701_007E",
+    tot_65_over = "K202701_008E",
+    y_65_over = "K202701_009E",
+    n_65_over = "K202701_010E"
+  ) %>%
+  janitor::clean_names() %>%
+  select(geo_id, total, tot_under_19, y_under_19, n_under_19, tot_19_64, y_19_64, n_19_64, tot_65_over, y_65_over, n_65_over) %>%
+  slice(-1) %>%
+  mutate(
+    total = as.numeric(total),
+    tot_under_19 = as.numeric(tot_under_19),
+    y_under_19 = as.numeric(y_under_19),
+    n_under_19 = as.numeric(n_under_19),
+    tot_19_64 = as.numeric(tot_19_64),
+    y_19_64 = as.numeric(y_19_64),
+    n_19_64 = as.numeric(n_19_64),
+    tot_65_over = as.numeric(tot_65_over),
+    y_65_over = as.numeric(y_65_over),
+    n_65_over = as.numeric(n_65_over)
+    )
+```
+
+Percent function, and percents for insurance status % by county.
+
+```{r}
+per_f_ins = function(x, y) {
+
+  x/y * 100
+  
+}
+
+ins_status = 
+  ins_status %>%
+  mutate(
+    y_under_19 = per_f_ins(y_under_19, tot_under_19),
+    n_under_19 = per_f_ins(n_under_19, tot_under_19),
+    y_19_64 = per_f_ins(y_19_64, tot_19_64),
+    n_19_64 = per_f_ins(n_19_64, tot_19_64),
+    y_65_over = per_f_ins(y_65_over, tot_65_over),
+    n_65_over = per_f_ins(n_65_over, tot_65_over)
+  )
+
+```
+
+Merge with acs insurance data.
+
+```{r}
+mtm_2017_ins_2017_status_df =
+  inner_join(x = ins_status, y = mtm_2017, by = "geo_id", all = TRUE)
+```
+
+Making transitioning graph for food insecurity by percent of insurance status category in each county across the U.S.
+
+```{r}
+ins_status_plot =
+  
+mtm_2017_ins_2017_status_df %>%
+  select(-tot_19_64, -tot_under_19, - tot_65_over) %>%
+  pivot_longer(
+    y_under_19:n_65_over,
+    names_to = "ins_status",
+    values_to = "percents"
+  ) %>%
+  mutate(
+    ins_status = str_replace(ins_status, "y_under_19", "Under Age 19 With Insurance"),
+    ins_status = str_replace(ins_status, "n_under_19", "Under Age 19 Without Insurance"),
+    ins_status = str_replace(ins_status, "y_19_64", "Ages 19 to 64 With Insurance"),
+    ins_status = str_replace(ins_status, "n_19_64", "Ages 19 to 64 Without Insurance"),
+    ins_status = str_replace(ins_status, "y_65_over", "Over Age 65 With Insurance"),
+    ins_status = str_replace(ins_status, "n_65_over", "Over Age 65 Without Insurance"),
+    ) %>%
+  select(geo_id, total, ins_status, percents, fi_rate) %>%
+  drop_na() %>%
+  ggplot(aes(x = fi_rate, y = percents, size = total, color = ins_status)) + 
+  geom_point(show.legend = FALSE, alpha = 0.8) +
+  labs(
+    title = '{closest_state}',
+    x = "Food Insecurity Rate",
+    y = "% of Individuals"
+  ) +
+  theme_bw() +
+  transition_states(ins_status, transition_length = 1, state_length = 3, wrap = TRUE) + 
+  enter_fade() + 
+  exit_fade() +
+  ease_aes('cubic-in-out')
+
+animate(ins_status_plot, fps = 5, height = 500, width = 1000)
+```
