@@ -58,70 +58,7 @@ race_df =
     asian = as.numeric(asian),
     nat_ha_pac_isl = as.numeric(nat_ha_pac_isl), 
     other = as.numeric(other),
-    two_or_more = as.numeric(two_or_more),
-    county_state = str_remove_all(county_state, "Parish"),
-    county_state = tolower(county_state),
-    county_state = str_replace(county_state, " county, ", "_"),
-    county_state = str_replace(county_state, " , ", "_"),
-    county_state = str_replace(county_state, "st. ", "saint "),
-    county_state = str_replace(county_state, "alabama", "AL"),
-    county_state = str_replace(county_state, "alaska", "AK"),
-    county_state = str_replace(county_state, "arkansas", "AR"),
-    county_state = str_replace(county_state, "arizona", "AZ"),
-    county_state = str_replace(county_state, "california", "CA"),
-    county_state = str_replace(county_state, "colorado", "CO"),
-    county_state = str_replace(county_state, "connecticut", "CT"),
-    county_state = str_replace(county_state, "delaware", "DE"),
-    county_state = str_replace(county_state, "district of columbia, district of columbia", "district of columbia_DC"),
-    county_state = str_replace(county_state, "florida", "FL"),
-    county_state = str_replace(county_state, "georgia", "GA"),
-    county_state = str_replace(county_state, "hawaii", "HI"),
-    county_state = str_replace(county_state, "idaho", "ID"),
-    county_state = str_replace(county_state, "illinois", "IL"),
-    county_state = str_replace(county_state, "indiana", "IN"),
-    county_state = str_replace(county_state, "iowa", "IA"),
-    county_state = str_replace(county_state, "kansas", "KS"),
-    county_state = str_replace(county_state, "kentucky", "KY"),
-    county_state = str_replace(county_state, "louisiana", "LA"),
-    county_state = str_replace(county_state, "maine", "ME"),
-    county_state = str_replace(county_state, "maryland", "MD"),
-    county_state = str_replace(county_state, "massachusetts", "MA"),
-    county_state = str_replace(county_state, "michigan", "MI"),
-    county_state = str_replace(county_state, "minnesota", "MN"),
-    county_state = str_replace(county_state, "mississippi", "MS"),
-    county_state = str_replace(county_state, "missouri", "MO"),
-    county_state = str_replace(county_state, "montana", "MT"),
-    county_state = str_replace(county_state, "nebraska", "NE"),
-    county_state = str_replace(county_state, "nevada", "NV"),
-    county_state = str_replace(county_state, "new hampshire", "NH"),
-    county_state = str_replace(county_state, "new jersey", "NJ"),
-    county_state = str_replace(county_state, "new mexico", "NM"),
-    county_state = str_replace(county_state, "new york", "NY"),
-    county_state = str_replace(county_state, "north carolina", "NC"),
-    county_state = str_replace(county_state, "north dakota", "ND"),
-    county_state = str_replace(county_state, "ohia", "OH"),
-    county_state = str_replace(county_state, "oklahoma", "OK"),
-    county_state = str_replace(county_state, "oregon", "OR"),
-    county_state = str_replace(county_state, "pennsylvania", "PA"),
-    county_state = str_replace(county_state, "rhode island", "RI"),
-    county_state = str_replace(county_state, "south carolina", "SC"),
-    county_state = str_replace(county_state, "south dakota", "SD"),
-    county_state = str_replace(county_state, "tennessee", "TN"),
-    county_state = str_replace(county_state, "texas", "TX"),
-    county_state = str_replace(county_state, "utah", "UT"),
-    county_state = str_replace(county_state, "vermont", "VT"),
-    county_state = str_replace(county_state, "west virginia", "WV"),
-    county_state = str_replace(county_state, "virginia", "VA"),
-    county_state = str_replace(county_state, "washington", "WA"),
-    county_state = str_replace(county_state, "wisconsin", "WI"),
-    county_state = str_replace(county_state, "wyoming", "WY"),
-    county_state = str_replace(county_state, "puerto rico", "PR"),
-    county_state = str_replace(county_state, "do?a ana_NM", "doña ana_NM"),
-    county_state = str_replace(county_state, "HI_hawaii", "hawaii_HI"),
-    county_state = str_replace(county_state, "MS_AR", "mississippi_AR"),
-    county_state = str_replace(county_state, "NV_CA", "nevada_CA"),
-    county_state = str_replace(county_state, "WA_FL", "washington_FL"),
-    county_state = str_replace(county_state, "DE_IN", "delaware_IN")
+    two_or_more = as.numeric(two_or_more)
   )
 
 hispanic_df = 
@@ -136,72 +73,7 @@ hispanic_df =
   slice(-1) %>%
   mutate(
     total = as.numeric(total),
-    hispanic = as.numeric(hispanic),
-    county_state = str_remove_all(county_state, "Parish"),
-    county_state = tolower(county_state),
-    county_state = str_replace(county_state, " county, ", "_"),
-    county_state = str_replace(county_state, " , ", "_"),
-    county_state = str_replace(county_state, "st. ", "saint "),
-    county_state = str_replace(county_state, "alabama", "AL"),
-    county_state = str_replace(county_state, "alaska", "AK"),
-    county_state = str_replace(county_state, "arkansas", "AR"),
-    county_state = str_replace(county_state, "arizona", "AZ"),
-    county_state = str_replace(county_state, "california", "CA"),
-    county_state = str_replace(county_state, "colorado", "CO"),
-    county_state = str_replace(county_state, "connecticut", "CT"),
-    county_state = str_replace(county_state, "delaware", "DE"),
-    county_state = str_replace(county_state, "district of columbia, district of columbia", "district of columbia_DC"),
-    county_state = str_replace(county_state, "florida", "FL"),
-    county_state = str_replace(county_state, "georgia", "GA"),
-    county_state = str_replace(county_state, "hawaii", "HI"),
-    county_state = str_replace(county_state, "idaho", "ID"),
-    county_state = str_replace(county_state, "illinois", "IL"),
-    county_state = str_replace(county_state, "indiana", "IN"),
-    county_state = str_replace(county_state, "iowa", "IA"),
-    county_state = str_replace(county_state, "kansas", "KS"),
-    county_state = str_replace(county_state, "kentucky", "KY"),
-    county_state = str_replace(county_state, "louisiana", "LA"),
-    county_state = str_replace(county_state, "maine", "ME"),
-    county_state = str_replace(county_state, "maryland", "MD"),
-    county_state = str_replace(county_state, "massachusetts", "MA"),
-    county_state = str_replace(county_state, "michigan", "MI"),
-    county_state = str_replace(county_state, "minnesota", "MN"),
-    county_state = str_replace(county_state, "mississippi", "MS"),
-    county_state = str_replace(county_state, "missouri", "MO"),
-    county_state = str_replace(county_state, "montana", "MT"),
-    county_state = str_replace(county_state, "nebraska", "NE"),
-    county_state = str_replace(county_state, "nevada", "NV"),
-    county_state = str_replace(county_state, "new hampshire", "NH"),
-    county_state = str_replace(county_state, "new jersey", "NJ"),
-    county_state = str_replace(county_state, "new mexico", "NM"),
-    county_state = str_replace(county_state, "new york", "NY"),
-    county_state = str_replace(county_state, "north carolina", "NC"),
-    county_state = str_replace(county_state, "north dakota", "ND"),
-    county_state = str_replace(county_state, "ohia", "OH"),
-    county_state = str_replace(county_state, "oklahoma", "OK"),
-    county_state = str_replace(county_state, "oregon", "OR"),
-    county_state = str_replace(county_state, "pennsylvania", "PA"),
-    county_state = str_replace(county_state, "rhode island", "RI"),
-    county_state = str_replace(county_state, "south carolina", "SC"),
-    county_state = str_replace(county_state, "south dakota", "SD"),
-    county_state = str_replace(county_state, "tennessee", "TN"),
-    county_state = str_replace(county_state, "texas", "TX"),
-    county_state = str_replace(county_state, "utah", "UT"),
-    county_state = str_replace(county_state, "vermont", "VT"),
-    county_state = str_replace(county_state, "west virginia", "WV"),
-    county_state = str_replace(county_state, "virginia", "VA"),
-    county_state = str_replace(county_state, "washington", "WA"),
-    county_state = str_replace(county_state, "wisconsin", "WI"),
-    county_state = str_replace(county_state, "wyoming", "WY"),
-    county_state = str_replace(county_state, "puerto rico", "PR"),
-    county_state = str_replace(county_state, "do?a ana_NM", "doña ana_NM"),
-    county_state = str_replace(county_state, "HI_hawaii", "hawaii_HI"),
-    county_state = str_replace(county_state, "MS_AR", "mississippi_AR"),
-    county_state = str_replace(county_state, "NV_CA", "nevada_CA"),
-    county_state = str_replace(county_state, "WA_FL", "washington_FL"),
-    county_state = str_replace(county_state, "DE_IN", "delaware_IN"),
-    county_state = str_replace(county_state, "WA_ME", "washington_ME"),
-    county_state = str_replace(county_state, "WA_MD", "washington_MD")
+    hispanic = as.numeric(hispanic)
   )
 
 
@@ -240,22 +112,23 @@ hispanic_df =
   mutate(
     hispanic = per_f_h(hispanic)
   ) %>%
-  select(county_state, hispanic)
+  select(geo_id, hispanic)
 
 race_hisp_df =
-  inner_join(x = race_df, y = hispanic_df, by = "county_state", all = TRUE)
+  inner_join(x = race_df, y = hispanic_df, by = "geo_id", all = TRUE)
 ```
 
-Read in 2017 mtm data, and merge with acs race data (race_plot).
+Read in 2017 mtm data, and merge with acs race data.
 
 ```{r}
 mtm_2017 = 
-  read_csv("mtm_acs_2017_df.csv")
+  read_csv("mtm_acs_2017_df.csv") %>%
+  rename(
+    geo_id = id
+  )
 
 mtm_2017_acs_2017_race_df = 
-  inner_join(x = race_hisp_df, y = mtm_2017, by = "county_state", all = TRUE)
-
-write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
+  inner_join(x = race_hisp_df, y = mtm_2017, by = "geo_id", all = TRUE)
 ```
 
 Making transitioning graph for food insecurity by percent of race in each county across the U.S.
@@ -279,14 +152,14 @@ mtm_2017_acs_2017_race_df %>%
     race = str_replace(race, "two_or_more", "Two or More Races"),
     race = str_replace(race, "hispanic", "Hispanic")
     ) %>%
-  select(county_state, total, race, percents, fi_rate) %>%
+  select(geo_id, total, race, percents, fi_rate) %>%
   drop_na() %>%
   ggplot(aes(x = fi_rate, y = percents, size = total, color = race)) + 
   geom_point(show.legend = FALSE, alpha = 0.8) +
   labs(
     title = '{closest_state}',
     x = "Food Insecurity Rate",
-    y = "% Race in County"
+    y = "% Race Within Each County"
   ) +
   theme_bw() +
   transition_states(race, transition_length = 1, state_length = 3, wrap = TRUE) + 
@@ -295,4 +168,102 @@ mtm_2017_acs_2017_race_df %>%
   ease_aes('cubic-in-out')
 
 animate(race_per_plot, fps = 5, height = 500, width = 1000)
+```
+
+Read in education attainment acs data.
+
+```{r}
+edu_att = 
+  read_csv("ACS_data/ACS_2017_edu.csv") %>%
+   rename(
+    total = "K201501_001E",
+    less_9th = "K201501_002E",
+    nineth_to_12th = "K201501_003E",
+    hs_grad = "K201501_004E",
+    some_coll = "K201501_005E",
+    assoc_deg = "K201501_006E",
+    bach_deg = "K201501_007E",
+    grad_or_prof = "K201501_008E",
+    county_state = "NAME"
+  ) %>%
+  janitor::clean_names() %>%
+  select(geo_id, total, less_9th, nineth_to_12th, hs_grad, some_coll, assoc_deg, bach_deg, grad_or_prof) %>%
+  slice(-1) %>%
+  mutate(
+    total = as.numeric(total),
+    less_9th = as.numeric(less_9th),
+    nineth_to_12th = as.numeric(nineth_to_12th),
+    hs_grad = as.numeric(hs_grad),
+    some_coll = as.numeric(some_coll),
+    assoc_deg = as.numeric(assoc_deg),
+    bach_deg = as.numeric(bach_deg),
+    grad_or_prof = as.numeric(grad_or_prof))
+```
+
+Percent function, and percents for education attainment % by county.
+
+```{r}
+per_f_edu = function(x) {
+
+  x/edu_att$total * 100
+  
+}
+
+edu_att = 
+  edu_att %>%
+  mutate(
+    less_9th = per_f_edu(less_9th),
+    nineth_to_12th = per_f_edu(nineth_to_12th),
+    hs_grad = per_f_edu(hs_grad),
+    some_coll = per_f_edu(some_coll),
+    assoc_deg = per_f_edu(assoc_deg),
+    bach_deg = per_f_edu(bach_deg),
+    grad_or_prof = per_f_edu(grad_or_prof)
+  )
+
+```
+
+Merge with acs education data.
+
+```{r}
+mtm_2017_edu_2017_att_df =
+  inner_join(x = edu_att, y = mtm_2017, by = "geo_id", all = TRUE)
+```
+
+Making transitioning graph for food insecurity by percent of education attainment category in each county across the U.S.
+
+```{r}
+edu_per_plot =
+  
+mtm_2017_edu_2017_att_df %>%
+  pivot_longer(
+    less_9th:grad_or_prof,
+    names_to = "edu_att",
+    values_to = "percents"
+  ) %>%
+  mutate(
+    edu_att = str_replace(edu_att, "less_9th", "Less Than 9th Grade"),
+    edu_att = str_replace(edu_att, "nineth_to_12th", "9th to 12th Grade"),
+    edu_att = str_replace(edu_att, "hs_grad", "High School Graduate"),
+    edu_att = str_replace(edu_att, "some_coll", "Some College"),
+    edu_att = str_replace(edu_att, "assoc_deg", "Associate's Degree"),
+    edu_att = str_replace(edu_att, "bach_deg", "Bachelor's Degree"),
+    edu_att = str_replace(edu_att, "grad_or_prof", "Graduate or Professional Degree")
+    ) %>%
+  select(geo_id, total, edu_att, percents, fi_rate) %>%
+  drop_na() %>%
+  ggplot(aes(x = fi_rate, y = percents, size = total, color = edu_att)) + 
+  geom_point(show.legend = FALSE, alpha = 0.8) +
+  labs(
+    title = '{closest_state}',
+    x = "Food Insecurity Rate",
+    y = "% Education Attainment Within Each County"
+  ) +
+  theme_bw() +
+  transition_states(edu_att, transition_length = 1, state_length = 3, wrap = TRUE) + 
+  enter_fade() + 
+  exit_fade() +
+  ease_aes('cubic-in-out')
+
+animate(edu_per_plot, fps = 5, height = 500, width = 1000)
 ```
