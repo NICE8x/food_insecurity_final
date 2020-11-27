@@ -12,7 +12,7 @@
 <meta name="author" content="Vasili Fokaidis" />
 
 
-<title>dashboard_1</title>
+<title>See the Gap</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -282,7 +282,7 @@ $(document).ready(function () {
   <a href="map.html">County Maps</a>
 </li>
 <li>
-  <a href="dashboard.html">Food Insecurity Rates </a>
+  <a href="dashboard.html">See the Gap</a>
 </li>
 <li>
   <a href="project_report.html">Project Report</a>
@@ -317,19 +317,19 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">dashboard_1</h1>
+<h1 class="title toc-ignore">See the Gap</h1>
 <h4 class="author">Vasili Fokaidis</h4>
 
 </div>
 
 
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ─────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
 ## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
 ## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>library(gganimate)
@@ -492,10 +492,12 @@ race_hisp_df =
 ## )</code></pre>
 <pre><code>## See spec(...) for full column specifications.</code></pre>
 <pre class="r"><code>mtm_2017_acs_2017_race_df = 
-  inner_join(x = race_hisp_df, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)</code></pre>
+  inner_join(x = race_hisp_df, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
+
+write_csv(x = mtm_2017_acs_2017_race_df, &quot;mtm_2017_acs_2017_race_df.csv&quot;)</code></pre>
 <p>Making transitioning graph for food insecurity by percent of race in each county across the U.S.</p>
-<div id="column" class="section level2">
-<h2>Column</h2>
+<div id="row" class="section level2">
+<h2>Row</h2>
 <div id="chart-a" class="section level3">
 <h3>Chart A</h3>
 <pre class="r"><code>race_per_plot =
@@ -600,12 +602,11 @@ edu_att =
   )</code></pre>
 <p>Merge with acs education data.</p>
 <pre class="r"><code>mtm_2017_edu_2017_att_df =
-  inner_join(x = edu_att, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)</code></pre>
+  inner_join(x = edu_att, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
+
+write_csv(x = mtm_2017_edu_2017_att_df, &quot;mtm_2017_edu_2017_att_df.csv&quot;)</code></pre>
 <p>Making transitioning graph for food insecurity by percent of education attainment category in each county across the U.S.</p>
 </div>
-</div>
-<div id="column-1" class="section level2">
-<h2>Column</h2>
 <div id="chart-b" class="section level3">
 <h3>Chart B</h3>
 <pre class="r"><code>edu_per_plot =
@@ -696,12 +697,14 @@ ins_status =
   )</code></pre>
 <p>Merge with acs insurance data.</p>
 <pre class="r"><code>mtm_2017_ins_2017_status_df =
-  inner_join(x = ins_status, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)</code></pre>
+  inner_join(x = ins_status, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
+
+write_csv(x = mtm_2017_ins_2017_status_df, &quot;mtm_2017_ins_2017_status_df.csv&quot;)</code></pre>
 <p>Making transitioning graph for food insecurity by percent of insurance status category in each county across the U.S.</p>
 </div>
 </div>
-<div id="column-2" class="section level2">
-<h2>Column</h2>
+<div id="row-1" class="section level2">
+<h2>Row</h2>
 <div id="chart-c" class="section level3">
 <h3>Chart C</h3>
 <pre class="r"><code>ins_status_plot =
@@ -805,12 +808,11 @@ income_brac =
   )</code></pre>
 <p>Merge with acs income data.</p>
 <pre class="r"><code>mtm_2017_income_2017_brac_df =
-  inner_join(x = income_brac, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)</code></pre>
+  inner_join(x = income_brac, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
+
+write_csv(x = mtm_2017_income_2017_brac_df, &quot;mtm_2017_income_2017_brac_df.csv&quot;)</code></pre>
 <p>Making transitioning graph for food insecurity by percent of income bracket in each county across the U.S.</p>
 </div>
-</div>
-<div id="column-3" class="section level2">
-<h2>Column</h2>
 <div id="chart-d" class="section level3">
 <h3>Chart D</h3>
 <pre class="r"><code>income_brac_plot =

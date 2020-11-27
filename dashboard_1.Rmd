@@ -3,7 +3,7 @@ title: "See the Gap"
 author: "Vasili Fokaidis"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: rows
     vertical_layout: fill
     source: embed
 ---
@@ -136,7 +136,7 @@ write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
 
 Making transitioning graph for food insecurity by percent of race in each county across the U.S.
 
-Column
+Row
 -----------------------------------------------------------------------
 
 ### Chart A
@@ -242,8 +242,6 @@ write_csv(x = mtm_2017_edu_2017_att_df, "mtm_2017_edu_2017_att_df.csv")
 
 Making transitioning graph for food insecurity by percent of education attainment category in each county across the U.S.
 
-Column
------------------------------------------------------------------------
 
 ### Chart B
 ```{r}
@@ -349,7 +347,7 @@ write_csv(x = mtm_2017_ins_2017_status_df, "mtm_2017_ins_2017_status_df.csv")
 
 Making transitioning graph for food insecurity by percent of insurance status category in each county across the U.S.
 
-Column
+Row
 -----------------------------------------------------------------------
 
 ### Chart C
@@ -453,8 +451,6 @@ write_csv(x = mtm_2017_income_2017_brac_df, "mtm_2017_income_2017_brac_df.csv")
 
 Making transitioning graph for food insecurity by percent of income bracket in each county across the U.S.
 
-Column
------------------------------------------------------------------------
 
 ### Chart D
 ```{r}
