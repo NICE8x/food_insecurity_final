@@ -5,6 +5,8 @@ navbar:
   right:
     - text: "County Maps"
       href: map.html
+    - text: "Food Insecurity Rates "
+      href: dashboard.html
     - text: "Project Report"
       href: project_report.html
     - text: "Analysis"

@@ -1,5 +1,5 @@
 ---
-title: "dashboard_1"
+title: "Food Insecurity Rates"
 author: "Vasili Fokaidis"
 output: 
   flexdashboard::flex_dashboard:
@@ -11,6 +11,7 @@ output:
 ```{r}
 library(tidyverse)
 library(gganimate)
+library(flexdashboard)
 
 knitr::opts_chunk$set(
 	echo = TRUE,
@@ -129,9 +130,16 @@ mtm_2017 =
 
 mtm_2017_acs_2017_race_df = 
   inner_join(x = race_hisp_df, y = mtm_2017, by = "geo_id", all = TRUE)
+
+write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
 ```
 
 Making transitioning graph for food insecurity by percent of race in each county across the U.S.
+
+Column
+-----------------------------------------------------------------------
+
+### Chart A
 
 ```{r}
 race_per_plot =
@@ -228,10 +236,16 @@ Merge with acs education data.
 ```{r}
 mtm_2017_edu_2017_att_df =
   inner_join(x = edu_att, y = mtm_2017, by = "geo_id", all = TRUE)
+
+write_csv(x = mtm_2017_edu_2017_att_df, "mtm_2017_edu_2017_att_df.csv")
 ```
 
 Making transitioning graph for food insecurity by percent of education attainment category in each county across the U.S.
 
+Column
+-----------------------------------------------------------------------
+
+### Chart B
 ```{r}
 edu_per_plot =
   
@@ -329,10 +343,16 @@ Merge with acs insurance data.
 ```{r}
 mtm_2017_ins_2017_status_df =
   inner_join(x = ins_status, y = mtm_2017, by = "geo_id", all = TRUE)
+
+write_csv(x = mtm_2017_ins_2017_status_df, "mtm_2017_ins_2017_status_df.csv")
 ```
 
 Making transitioning graph for food insecurity by percent of insurance status category in each county across the U.S.
 
+Column
+-----------------------------------------------------------------------
+
+### Chart C
 ```{r}
 ins_status_plot =
   
@@ -427,10 +447,16 @@ Merge with acs income data.
 ```{r}
 mtm_2017_income_2017_brac_df =
   inner_join(x = income_brac, y = mtm_2017, by = "geo_id", all = TRUE)
+
+write_csv(x = mtm_2017_income_2017_brac_df, "mtm_2017_income_2017_brac_df.csv")
 ```
 
-Making transitioning graph for food insecurity by percent of insurance status category in each county across the U.S.
+Making transitioning graph for food insecurity by percent of income bracket in each county across the U.S.
 
+Column
+-----------------------------------------------------------------------
+
+### Chart D
 ```{r}
 income_brac_plot =
   

@@ -20,6 +20,7 @@ body {
 # Link to other pages in this site
 
 [County Maps]\
+[Food Insecurity Rates]\
 [Project Report]\
 [Analysis]
 
