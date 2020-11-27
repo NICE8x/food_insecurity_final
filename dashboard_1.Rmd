@@ -368,3 +368,101 @@ mtm_2017_ins_2017_status_df %>%
 
 animate(ins_status_plot, fps = 5, height = 500, width = 1000)
 ```
+
+Read in income acs data.
+
+```{r}
+income_brac = 
+  read_csv("ACS_data/ACS_2017_income.csv") %>%
+   rename(
+    total = "K201901_001E",
+    less_20 = "K201901_002E",
+    twenty_39 = "K201901_003E",
+    forty_59 = "K201901_004E",
+    sixty_99 = "K201901_005E",
+    hun_149 = "K201901_006E",
+    hunfifty_199 = "K201901_007E",
+    twohun_more = "K201901_008E"
+  ) %>%
+  janitor::clean_names() %>%
+  select(geo_id, total, less_20, twenty_39, forty_59, sixty_99, hun_149, hunfifty_199, twohun_more) %>%
+  slice(-1) %>%
+  mutate(
+    total = as.numeric(total),
+    less_20 = as.numeric(less_20),
+    twenty_39 = as.numeric(twenty_39),
+    forty_59 = as.numeric(forty_59),
+    sixty_99 = as.numeric(sixty_99),
+    hun_149 = as.numeric(hun_149),
+    hunfifty_199 = as.numeric(hunfifty_199),
+    twohun_more = as.numeric(twohun_more)
+    )
+```
+
+Percent function, and percents for income bracket % by county.
+
+```{r}
+per_f_inco = function(x) {
+
+  x/income_brac$total * 100
+  
+}
+
+income_brac = 
+  income_brac %>%
+  mutate(
+    less_20 = per_f_inco(less_20),
+    twenty_39 = per_f_inco(twenty_39),
+    forty_59 = per_f_inco(forty_59),
+    sixty_99 = per_f_inco(sixty_99),
+    hun_149 = per_f_inco(hun_149),
+    hunfifty_199 = per_f_inco(hunfifty_199),
+    twohun_more = per_f_inco(twohun_more)
+  )
+
+```
+
+Merge with acs income data.
+
+```{r}
+mtm_2017_income_2017_brac_df =
+  inner_join(x = income_brac, y = mtm_2017, by = "geo_id", all = TRUE)
+```
+
+Making transitioning graph for food insecurity by percent of insurance status category in each county across the U.S.
+
+```{r}
+income_brac_plot =
+  
+mtm_2017_income_2017_brac_df %>%
+  pivot_longer(
+    less_20:twohun_more,
+    names_to = "income_brac",
+    values_to = "percents"
+  ) %>%
+  mutate(
+    income_brac = str_replace(income_brac, "less_20", "Less Than $20,000"),
+    income_brac = str_replace(income_brac, "twenty_39", "Between $20,000 and $39,999"),
+    income_brac = str_replace(income_brac, "forty_59", "Between $40,000 and $59,999"),
+    income_brac = str_replace(income_brac, "sixty_99", "Between $60,000 and $99,999"),
+    income_brac = str_replace(income_brac, "hun_149", "Between $100,000 and $149,999"),
+    income_brac = str_replace(income_brac, "hunfifty_199", "Between $150,000 and $199,999"),
+    income_brac = str_replace(income_brac, "twohun_more", "$200,000 or More")
+    ) %>%
+  select(geo_id, total, income_brac, percents, fi_rate) %>%
+  drop_na() %>%
+  ggplot(aes(x = fi_rate, y = percents, size = total, color = income_brac)) + 
+  geom_point(show.legend = FALSE, alpha = 0.8) +
+  labs(
+    title = '{closest_state}',
+    x = "Food Insecurity Rate",
+    y = "% of Individuals in Each Income Bracket"
+  ) +
+  theme_bw() +
+  transition_states(income_brac, transition_length = 1, state_length = 3, wrap = TRUE) + 
+  enter_fade() + 
+  exit_fade() +
+  ease_aes('cubic-in-out')
+
+animate(income_brac_plot, fps = 5, height = 500, width = 1000)
+```
