@@ -10,6 +10,8 @@ runtime: shiny
 library(tidyverse)
 library(plotly)
 library(rjson)
+library(rvest)
+library(httr)
 ```
 
 
@@ -63,19 +65,36 @@ You can also use the `shinyApp` function to define an application inline rather 
 
 In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
 
-Import FIPS data, tidy it and join it to the map the meal gap data.
+Import FIPS data (https://mdreducation.com/ >pdfs > US_FIPS_Codes), tidy it and join it to the map the meal gap data.
 ```{r fips data}
-fips_df = readxl::read_xlsx("./all-geocodes-v2018.xlsx", skip = 3) %>%
+fips_df = readxl::read_xls("./fips_data/US_FIPS_Codes.xls", skip = 1) %>%
   janitor::clean_names() %>%
-  filter(state_code_fips != "00") %>%
-  rename(county = area_name_including_legal_statistical_area_description)
+  rename(county = county_name) %>%
+  unite("fips", c("fips_state", "fips_county"), sep = "") %>%
+  mutate(county = tolower(county),
+         state = tolower(state),
+         county = str_replace(county, ",.*", ""),
+         county = str_replace(county, "\\scounty",""),
+         county = str_replace(county, "\\sparish",""),
+         county = str_replace(county, "\\sborough", ""),
+         county = str_replace(county, "\\scensus area", ""),
+         county = str_replace(county, "\\smunicipality of", ""),
+         county = str_replace(county, "doãƒâ±a ana", "doña ana"),
+         county = str_replace(county, "^st\\s|^st\\.", "saint ")
+  )
 
-states_fips_df = read_delim("./national_fips.txt", delim = "|") %>%
+states_fips_df = read_delim("./fips_data/national_fips.txt", delim = "|") %>%
   janitor::clean_names() %>%
   select(state, stusab) %>%
-  rename(state_code_fips = state)
+  rename(state_code_fips = state,
+         state = stusab)
 
-fips_df = left_join(fips_df, states_fips_df, by = "state_code_fips")
+fips_df = left_join(fips_df, states_fips_df, by = "state_code_fips") %>%
+  unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
+  mutate(county_state = str_replace(county_state, "prince of wales-outer ketchikan_AK", "prince of wales-hyder_AK"))
+
+fips_df = fips_df %>%
+  select(county_state, consolidtated_city_code_fips)
   
 
 ```
