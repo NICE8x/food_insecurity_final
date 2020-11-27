@@ -1,5 +1,5 @@
 ---
-title: "Food Insecurity Rates"
+title: "See the Gap"
 author: "Vasili Fokaidis"
 output: 
   flexdashboard::flex_dashboard:
