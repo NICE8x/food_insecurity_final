@@ -8,6 +8,11 @@ runtime: shiny
 
 ```{r import libraries}
 library(tidyverse)
+library(plotly)
+library(rjson)
+library(rvest)
+library(httr)
+library(usdata)
 ```
 
 
@@ -61,9 +66,93 @@ You can also use the `shinyApp` function to define an application inline rather 
 
 In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
 
+Import FIPS data (https://mdreducation.com/ >pdfs > US_FIPS_Codes), tidy it and join it to the map the meal gap data.
+```{r fips data}
+fips_df = readxl::read_xls("./fips_data/US_FIPS_Codes.xls", skip = 1) %>%
+  janitor::clean_names() %>%
+  rename(county = county_name) %>%
+  unite("fips", c("fips_state", "fips_county"), sep = "") %>%
+  mutate(county = tolower(county),
+         state = state2abbr(state),
+         county = str_replace(county, ",.*", ""),
+         county = str_replace(county, "\\scounty",""),
+         county = str_replace(county, "\\sparish",""),
+         county = str_replace(county, "\\sborough", ""),
+         county = str_replace(county, "\\scensus area", ""),
+         county = str_replace(county, "\\smunicipality of", ""),
+         county = str_replace(county, "dona ana", "doña ana"),
+         county = str_replace(county, "^st\\s|^st\\.", "saint "),
+         county = str_replace(county, "de kalb", "dekalb")
+  ) %>%
+unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
+  mutate(county_state = str_replace(county_state, "prince of wales-outer ketchikan_AK", "prince of wales-hyder_AK"),
+         county_state = str_replace(county_state, "matanuska susitna_AK", "matanuska-susitna_AK"),
+         county_state = str_replace(county_state, "valdez cordova_AK", "valdez-cordova_AK"),
+         county_state = str_replace(county_state, "juneau_AK", "city and of juneau_AK"),
+         county_state = str_replace(county_state, "dekalb_TN", "de kalb_TN"),
+         county_state = str_replace(county_state, "dekalb_IN", "de kalb_IN"),
+         county_state = str_replace(county_state, "dewitt_IL", "de witt_IL"),
+         county_state = str_replace(county_state, "de soto_MS", "desoto_MS"),
+         county_state = str_replace(county_state, "de soto_FL", "desoto_FL"),
+         county_state = str_replace(county_state, "du page_IL", "dupage_IL"),
+         county_state = str_replace(county_state, "skagway hoonah angoon_AK", "hoonah-angoon_AK"),
+         county_state = str_replace(county_state, "skagway hoonah angoon_AK", "hoonah-angoon_AK"),
+         county_state = str_replace(county_state, "wrangell petersburg_AK", "petersburg_AK"),
+         county_state = str_replace(county_state, "prince georges_MD", "prince george's_MD"),
+         county_state = str_replace(county_state, "prince wales ketchikan_AK", "prince of wales-hyder_AK")
+) %>%
+  select(county_state, fips)
+
+
+map_the_meal_gap_df = read_csv("./map_the_meal_gap_df.csv")
+
+mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state")
+
+new_DF <- mtm_fips_df[is.na(mtm_fips_df$fips),]
+
+```
 
 
 
+
+
+
+
+```{r plot attempt}
+url <- 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
+counties <- rjson::fromJSON(file=url)
+url2<- "https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv"
+df <- read.csv(url2, colClasses=c(fips="character"))
+g <- list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('white')
+)
+fig <- plot_ly()
+fig <- fig %>% add_trace(
+    type="choropleth",
+    geojson=counties,
+    locations=df$fips,
+    z=df$unemp,
+    colorscale="Viridis",
+    zmin=0,
+    zmax=12,
+    marker=list(line=list(
+      width=0)
+    )
+  )
+fig <- fig %>% colorbar(title = "Unemployment Rate (%)")
+fig <- fig %>% layout(
+    title = "2016 US Unemployment by County"
+)
+
+fig <- fig %>% layout(
+    geo = g
+  )
+
+fig
+```
 
 
 

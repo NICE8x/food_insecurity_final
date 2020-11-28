@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Caroline Andy" />
+
+<meta name="date" content="2020-11-27" />
+
+<title>dashboard_2</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.9.2.1/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="map.html">County Maps</a>
+</li>
+<li>
+  <a href="see_the_gap.html">See the Gap</a>
+</li>
+<li>
+  <a href="project_report.html">Project Report</a>
+</li>
+<li>
+  <a href="analysist.html">Analysis</a>
+</li>
+<li>
+  <a href="mailto:&lt;vf2280@cumc.columbia.edu&gt;">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/vf2280/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.feedingamerica.org/">
+    <span class="fa fa-globe-americas"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">dashboard_2</h1>
+<h4 class="author">Caroline Andy</h4>
+<h4 class="date">11/27/2020</h4>
+
+</div>
+
+
+<hr />
+<div id="food-insecurity-rates-in-select-new-york-state-counties" class="section level3">
+<h3>Food Insecurity Rates in Select New York State Counties</h3>
+<pre class="r"><code>read_csv(&quot;map_the_meal_gap_df.csv&quot;) %&gt;%
+  filter(county_state %in% c(&quot;saint lawrence_NY&quot;, &quot;albany_NY&quot;, &quot;chautauqua_NY&quot;, 
+                             &quot;new york_NY&quot;, &quot;queens_NY&quot;, &quot;kings_NY&quot;, &quot;bronx_NY&quot;,
+                             &quot;westchester_NY&quot;)) %&gt;%
+  mutate(county = fct_reorder(county, desc(fi_rate))) %&gt;%
+  plot_ly(y = ~fi_rate, color = ~county, type = &quot;box&quot;, colors = &quot;viridis&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   state = col_character(),
+##   county = col_character(),
+##   county_state = col_character(),
+##   low_threshold_type = col_character(),
+##   high_threshold_type = col_character(),
+##   zip = col_character()
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<div id="htmlwidget-d02243f6e2149dce4bc3" style="width:90%;height:576px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d02243f6e2149dce4bc3">{"x":{"visdat":{"ea3b41f805eb":["function () ","plotlyVisDat"]},"cur_data":"ea3b41f805eb","attrs":{"ea3b41f805eb":{"y":{},"color":{},"colors":"viridis","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"box"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"fi_rate"},"xaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(68,1,84,0.5)","y":[0.212,0.201,0.187,0.161,0.161,0.16,0.232,0.218,0.188],"type":"box","name":"bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(70,50,126,0.5)","y":[0.184,0.184,0.2,0.188,0.182,0.171,0.204,0.201,0.198],"type":"box","name":"kings","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(54,92,141,0.5)","y":[0.14,0.131,0.151,0.139,0.133,0.126,0.163,0.162,0.153],"type":"box","name":"new york","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(39,127,142,0.5)","y":[0.153,0.147,0.139,0.139,0.134,0.132,0.125,0.136,0.148],"type":"box","name":"saint lawrence","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(31,161,135,0.5)","y":[0.132,0.127,0.131,0.115,0.109,0.105,0.14,0.14,0.133],"type":"box","name":"queens","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(74,193,109,0.5)","y":[0.139,0.133,0.13,0.127,0.124,0.123,0.11,0.126,0.137],"type":"box","name":"chautauqua","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(159,218,58,0.5)","y":[0.118,0.121,0.131,0.13,0.122,0.12,0.115,0.126,0.133],"type":"box","name":"albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(253,231,37,0.5)","y":[0.1,0.101,0.088,0.081,0.077,0.077,0.098,0.101,0.094],"type":"box","name":"westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<hr />
+</div>
+<div id="number-of-food-insecure-individuals-by-new-york-state-county" class="section level3">
+<h3>Number of Food Insecure Individuals by New York State County</h3>
+<pre class="r"><code>read_csv(&quot;map_the_meal_gap_df.csv&quot;) %&gt;%
+  filter(county_state %in% c(&quot;saint lawrence_NY&quot;, &quot;albany_NY&quot;, &quot;chautauqua_NY&quot;, 
+                             &quot;new york_NY&quot;, &quot;queens_NY&quot;, &quot;kings_NY&quot;, &quot;bronx_NY&quot;,
+                             &quot;westchester_NY&quot;)) %&gt;%
+  mutate(county = fct_reorder(county, desc(number_food_insecure_individuals))) %&gt;%
+  plot_ly(y = ~number_food_insecure_individuals, color = ~county, type = &quot;box&quot;, colors = &quot;viridis&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   state = col_character(),
+##   county = col_character(),
+##   county_state = col_character(),
+##   low_threshold_type = col_character(),
+##   high_threshold_type = col_character(),
+##   zip = col_character()
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<div id="htmlwidget-612da299cdff948cab63" style="width:90%;height:576px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-612da299cdff948cab63">{"x":{"visdat":{"ea3b76f43a02":["function () ","plotlyVisDat"]},"cur_data":"ea3b76f43a02","attrs":{"ea3b76f43a02":{"y":{},"color":{},"colors":"viridis","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"box"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"number_food_insecure_individuals"},"xaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(68,1,84,0.5)","y":[467340,454190,515420,488560,473350,451740,507190,505290,502240],"type":"box","name":"kings","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(70,50,126,0.5)","y":[300580,279670,298250,264440,251010,244830,310140,312830,300190],"type":"box","name":"queens","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(54,92,141,0.5)","y":[292320,275030,264910,229800,231590,233450,319060,302750,262580],"type":"box","name":"bronx","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(39,127,142,0.5)","y":[226190,206770,243570,226420,216680,208590,259340,258970,246120],"type":"box","name":"new york","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(31,161,135,0.5)","y":[95320,94500,84970,78390,75080,75400,92940,95870,90040],"type":"box","name":"westchester","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(74,193,109,0.5)","y":[35230,36750,40020,40070,37650,36970,35070,38400,40650],"type":"box","name":"albany","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(159,218,58,0.5)","y":[18670,17980,17300,16910,16360,16150,14860,16990,18330],"type":"box","name":"chautauqua","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(253,231,37,0.5)","y":[16750,16410,15610,15550,14890,14670,13940,15290,16610],"type":"box","name":"saint lawrence","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<hr />
+</div>
+<div id="child-food-insecurity-rates-by-select-new-york-state-counties" class="section level3">
+<h3>Child Food Insecurity Rates by Select New York State Counties</h3>
+<pre class="r"><code>read_csv(&quot;map_the_meal_gap_df.csv&quot;) %&gt;%
+  filter(county_state %in% c(&quot;saint lawrence_NY&quot;, &quot;albany_NY&quot;, &quot;chautauqua_NY&quot;, 
+                             &quot;new york_NY&quot;, &quot;queens_NY&quot;, &quot;kings_NY&quot;, &quot;bronx_NY&quot;,
+                             &quot;westchester_NY&quot;)) %&gt;%
+  mutate(county = fct_reorder(county, desc(child_fi_rate))) %&gt;%
+  plot_ly(y = ~child_fi_rate, color = ~county, type = &quot;box&quot;, colors = &quot;viridis&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   state = col_character(),
+##   county = col_character(),
+##   county_state = col_character(),
+##   low_threshold_type = col_character(),
+##   high_threshold_type = col_character(),
+##   zip = col_character()
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<div id="htmlwidget-b7909f6810435881c4d4" style="width:90%;height:576px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b7909f6810435881c4d4">{"x":{"visdat":{"ea3b7e60ae39":["function () ","plotlyVisDat"]},"cur_data":"ea3b7e60ae39","attrs":{"ea3b7e60ae39":{"y":{},"color":{},"colors":"viridis","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"box"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"child_fi_rate"},"xaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(68,1,84,0.5)","y":[0.318,0.291,0.256,0.235,0.234,0.226,0.306,0.296,0.278],"type":"box","name":"bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(70,50,126,0.5)","y":[0.268,0.243,0.265,0.241,0.225,0.229,0.237,0.248,0.272],"type":"box","name":"saint lawrence","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(54,92,141,0.5)","y":[0.268,0.237,0.253,0.234,0.224,0.217,0.229,0.246,0.256],"type":"box","name":"chautauqua","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(39,127,142,0.5)","y":[0.251,0.227,0.246,0.222,0.211,0.201,0.236,0.242,0.252],"type":"box","name":"kings","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(31,161,135,0.5)","y":[0.249,0.213,0.19,0.18,0.163,0.164,0.222,0.22,0.209],"type":"box","name":"new york","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(74,193,109,0.5)","y":[0.212,0.188,0.195,0.176,0.165,0.157,0.195,0.203,0.206],"type":"box","name":"queens","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(159,218,58,0.5)","y":[0.183,0.166,0.187,0.173,0.158,0.159,0.162,0.178,0.187],"type":"box","name":"albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(253,231,37,0.5)","y":[0.177,0.153,0.144,0.139,0.127,0.135,0.15,0.162,0.16],"type":"box","name":"westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<hr />
+</div>
+<div id="number-of-food-insecure-children-by-new-york-state-county" class="section level3">
+<h3>Number of Food Insecure Children by New York State County</h3>
+<pre class="r"><code>read_csv(&quot;map_the_meal_gap_df.csv&quot;) %&gt;%
+  filter(county_state %in% c(&quot;saint lawrence_NY&quot;, &quot;albany_NY&quot;, &quot;chautauqua_NY&quot;, 
+                             &quot;new york_NY&quot;, &quot;queens_NY&quot;, &quot;kings_NY&quot;, &quot;bronx_NY&quot;,
+                             &quot;westchester_NY&quot;)) %&gt;%
+  mutate(county = fct_reorder(county, desc(number_food_insecure_children))) %&gt;%
+  plot_ly(y = ~number_food_insecure_children, color = ~county, type = &quot;box&quot;, colors = &quot;viridis&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   state = col_character(),
+##   county = col_character(),
+##   county_state = col_character(),
+##   low_threshold_type = col_character(),
+##   high_threshold_type = col_character(),
+##   zip = col_character()
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<div id="htmlwidget-a33c1b5314835c88137f" style="width:90%;height:576px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a33c1b5314835c88137f">{"x":{"visdat":{"ea3b24c28745":["function () ","plotlyVisDat"]},"cur_data":"ea3b24c28745","attrs":{"ea3b24c28745":{"y":{},"color":{},"colors":"viridis","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"box"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"number_food_insecure_children"},"xaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(68,1,84,0.5)","y":[160340,133620,148550,134680,128320,122330,140750,144640,151280],"type":"box","name":"kings","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(70,50,126,0.5)","y":[124760,106000,94020,86420,85860,82880,113320,109360,102210],"type":"box","name":"bronx","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(54,92,141,0.5)","y":[104460,85540,91290,82760,78130,74530,89850,93910,95890],"type":"box","name":"queens","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(39,127,142,0.5)","y":[64930,50670,45200,42940,39100,39280,53250,52470,49480],"type":"box","name":"new york","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(31,161,135,0.5)","y":[41260,34500,32330,31210,28330,29900,34110,36870,36270],"type":"box","name":"westchester","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(74,193,109,0.5)","y":[11360,10070,11110,10230,9240,9260,9900,10710,11200],"type":"box","name":"albany","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(159,218,58,0.5)","y":[7950,6940,7190,6530,6160,5900,6820,7230,7400],"type":"box","name":"chautauqua","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(253,231,37,0.5)","y":[6170,5690,6210,5580,5170,5210,5690,5850,6410],"type":"box","name":"saint lawrence","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
