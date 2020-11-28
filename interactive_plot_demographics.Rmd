@@ -10,6 +10,10 @@ runtime: shiny
 library(tidyverse)
 library(plotly)
 library(rjson)
+library(rvest)
+library(httr)
+library(usdata)
+library(shiny)
 ```
 
 
@@ -18,13 +22,6 @@ library(rjson)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This R Markdown document is made interactive using Shiny. Unlike the more traditional workflow of creating static reports, you can now create documents that allow your readers to change the assumptions underlying your analysis and see the results immediately. 
-
-To learn more, see [Interactive Documents](http://rmarkdown.rstudio.com/authoring_shiny.html).
-
-## Inputs and Outputs
-
-You can embed Shiny inputs and outputs in your document. Outputs are automatically updated whenever inputs change.  This demonstrates how a standard R plot can be made interactive by wrapping it in the Shiny `renderPlot` function. The `selectInput` and `sliderInput` functions create the input widgets used to drive the plot.
 
 ```{r eruptions, echo=FALSE}
 inputPanel(
@@ -63,20 +60,49 @@ You can also use the `shinyApp` function to define an application inline rather 
 
 In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
 
-Import FIPS data, tidy it and join it to the map the meal gap data.
+Import FIPS data (https://mdreducation.com/ >pdfs > US_FIPS_Codes), tidy it and join it to the map the meal gap data.
 ```{r fips data}
-fips_df = readxl::read_xlsx("./all-geocodes-v2018.xlsx", skip = 3) %>%
+fips_df = readxl::read_xls("./fips_data/US_FIPS_Codes.xls", skip = 1) %>%
   janitor::clean_names() %>%
-  filter(state_code_fips != "00") %>%
-  rename(county = area_name_including_legal_statistical_area_description)
+  rename(county = county_name) %>%
+  unite("fips", c("fips_state", "fips_county"), sep = "") %>%
+  mutate(county = tolower(county),
+         state = state2abbr(state),
+         county = str_replace(county, ",.*", ""),
+         county = str_replace(county, "\\scounty",""),
+         county = str_replace(county, "\\sparish",""),
+         county = str_replace(county, "\\sborough", ""),
+         county = str_replace(county, "\\scensus area", ""),
+         county = str_replace(county, "\\smunicipality of", ""),
+         county = str_replace(county, "dona ana", "doña ana"),
+         county = str_replace(county, "^st\\s|^st\\.", "saint "),
+         county = str_replace(county, "de kalb", "dekalb")
+  ) %>%
+unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
+  mutate(county_state = str_replace(county_state, "prince of wales-outer ketchikan_AK", "prince of wales-hyder_AK"),
+         county_state = str_replace(county_state, "matanuska susitna_AK", "matanuska-susitna_AK"),
+         county_state = str_replace(county_state, "valdez cordova_AK", "valdez-cordova_AK"),
+         county_state = str_replace(county_state, "juneau_AK", "city and of juneau_AK"),
+         county_state = str_replace(county_state, "dekalb_TN", "de kalb_TN"),
+         county_state = str_replace(county_state, "dekalb_IN", "de kalb_IN"),
+         county_state = str_replace(county_state, "dewitt_IL", "de witt_IL"),
+         county_state = str_replace(county_state, "de soto_MS", "desoto_MS"),
+         county_state = str_replace(county_state, "de soto_FL", "desoto_FL"),
+         county_state = str_replace(county_state, "du page_IL", "dupage_IL"),
+         county_state = str_replace(county_state, "skagway hoonah angoon_AK", "hoonah-angoon_AK"),
+         county_state = str_replace(county_state, "skagway hoonah angoon_AK", "hoonah-angoon_AK"),
+         county_state = str_replace(county_state, "wrangell petersburg_AK", "petersburg_AK"),
+         county_state = str_replace(county_state, "prince georges_MD", "prince george's_MD"),
+         county_state = str_replace(county_state, "prince wales ketchikan_AK", "prince of wales-hyder_AK")
+) %>%
+  select(county_state, fips)
 
-states_fips_df = read_delim("./national_fips.txt", delim = "|") %>%
-  janitor::clean_names() %>%
-  select(state, stusab) %>%
-  rename(state_code_fips = state)
 
-fips_df = left_join(fips_df, states_fips_df, by = "state_code_fips")
-  
+map_the_meal_gap_df = read_csv("./map_the_meal_gap_df.csv")
+
+mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state")
+
+new_DF <- mtm_fips_df[is.na(mtm_fips_df$fips),]
 
 ```
 
