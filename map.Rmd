@@ -1,7 +1,7 @@
 ---
-title: "interactive_plot_demographics"
-author: "Stella Li"
-date: "11/25/2020"
+title: "map"
+author: "Tessa Senders"
+date: "11/28/2020"
 output: html_document
 runtime: shiny
 ---
@@ -17,53 +17,6 @@ library(shiny)
 ```
 
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-
-```{r eruptions, echo=FALSE}
-inputPanel(
-  selectInput("n_breaks", label = "Number of bins:",
-              choices = c(10, 20, 35, 50), selected = 20),
-  
-  sliderInput("bw_adjust", label = "Bandwidth adjustment:",
-              min = 0.2, max = 2, value = 1, step = 0.2)
-)
-
-renderPlot({
-  hist(faithful$eruptions, probability = TRUE, breaks = as.numeric(input$n_breaks),
-       xlab = "Duration (minutes)", main = "Geyser eruption duration")
-  
-  dens <- density(faithful$eruptions, adjust = input$bw_adjust)
-  lines(dens, col = "blue")
-})
-```
-
-## Embedded Application
-
-It's also possible to embed an entire Shiny application within an R Markdown document using the `shinyAppDir` function. This example embeds a Shiny application located in another directory:
-
-```{r tabsets, echo=FALSE}
-shinyAppDir(
-  system.file("examples/06_tabsets", package = "shiny"),
-  options = list(
-    width = "100%", height = 550
-  )
-)
-```
-
-Note the use of the `height` parameter to determine how much vertical space the embedded application should occupy.
-
-You can also use the `shinyApp` function to define an application inline rather then in an external directory.
-
-In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
-
-
-
-
-Import FIPS data (https://mdreducation.com/ >pdfs > US_FIPS_Codes), tidy it and join it to the map the meal gap data.
 
 ```{r fips data}
 fips_df = readxl::read_xls("./fips_data/US_FIPS_Codes.xls", skip = 1) %>%
@@ -111,60 +64,10 @@ map_the_meal_gap_df = read_csv("./map_the_meal_gap_df.csv")
 mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state") %>%
   drop_na(fips)
 
-new_DF <- mtm_fips_df[is.na(mtm_fips_df$fips),]
-
 ```
 
 
 
-
-
-Plotly of Food Insecurity Rate in 2017
-
-```{r plot attempt}
-url <- 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
-counties <- rjson::fromJSON(file=url)
-
-g <- list(
-  scope = 'usa',
-  projection = list(type = 'albers usa'),
-  showlakes = TRUE,
-  lakecolor = toRGB('white')
-)
-
-z_df = mtm_fips_df %>% 
-  filter(year == 2017) %>%
-  mutate(fi_rate = fi_rate * 100)
-
-fig <- plot_ly()
-fig <- fig %>% add_trace(
-    type="choropleth",
-    geojson=counties,
-    locations=z_df$fips,
-    z=z_df$fi_rate,
-    colorscale="Viridis",
-    zmin=0,
-    zmax=40,
-    marker=list(line=list(
-      width=0)
-    )
-  )
-fig <- fig %>% colorbar(title = "Food Insecurity Rate (%)")
-fig <- fig %>% layout(
-    title = "2017 US Food Insecurity Rate by County"
-)
-
-fig <- fig %>% layout(
-    geo = g
-  )
-
-fig
-```
-
-
-
-
-Plotly of Food Insecurity Rate for Each Year
 
 ```{r plot attempt 2}
 
@@ -223,14 +126,3 @@ fig <- fig %>% layout(
 
 fig
 ```
-
-
-
-
-
-
-
-
-
-
-
