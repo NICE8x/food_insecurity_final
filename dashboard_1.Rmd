@@ -487,3 +487,8 @@ mtm_2017_income_2017_brac_df %>%
 
 animate(income_brac_plot, fps = 5, height = 500, width = 1000)
 ```
+
+```{r}
+rmarkdown::render("dashboard_1.Rmd", output_format = "flexdashboard::flex_dashboard")
+```
+
