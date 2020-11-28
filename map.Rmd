@@ -101,8 +101,8 @@ z_df = mtm_fips_df %>%
   filter(year == input[["year"]]) %>%
   mutate(fi_rate = fi_rate * 100)
 
-fig <- plot_ly()
-fig <- fig %>% add_trace(
+plot_ly() %>% 
+  add_trace(
     type="choropleth",
     geojson=counties,
     locations=z_df$fips,
@@ -113,16 +113,11 @@ fig <- fig %>% add_trace(
     marker=list(line=list(
       width=0)
     )
-  )
-})
-fig <- fig %>% colorbar(title = "Food Insecurity Rate (%)")
-fig <- fig %>% layout(
-    title = "US Food Insecurity Rate by County"
-)
-
-fig <- fig %>% layout(
+  ) %>%
+  colorbar(title = "Food Insecurity Rate (%)") %>% 
+  layout(
+    title = "US Food Insecurity Rate by County",
     geo = g
-  )
-
-fig
+)
+})
 ```
