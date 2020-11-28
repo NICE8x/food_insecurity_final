@@ -73,9 +73,9 @@ mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state") %>%
 ```{r plot attempt 2}
 
 year_choices = mtm_fips_df %>%
-mutate(year = factor(year, levels = c("2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"))) %>%
 pull(year) %>% 
-  unique()
+  unique() %>%
+  sort()
 
 selectInput(
   "year",
@@ -106,8 +106,8 @@ plot_ly() %>%
   add_trace(
     type="choropleth",
     geojson=counties,
-    locations=z_df$fips,
-    z=z_df$fi_rate,
+    locations=~(z_df$fips),
+    z=~(z_df$fi_rate),
     colorscale="Viridis",
     zmin=0,
     zmax=40,
