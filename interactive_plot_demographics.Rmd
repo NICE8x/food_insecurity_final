@@ -60,7 +60,11 @@ You can also use the `shinyApp` function to define an application inline rather 
 
 In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
 
+
+
+
 Import FIPS data (https://mdreducation.com/ >pdfs > US_FIPS_Codes), tidy it and join it to the map the meal gap data.
+
 ```{r fips data}
 fips_df = readxl::read_xls("./fips_data/US_FIPS_Codes.xls", skip = 1) %>%
   janitor::clean_names() %>%
@@ -104,7 +108,8 @@ unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
 
 map_the_meal_gap_df = read_csv("./map_the_meal_gap_df.csv")
 
-mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state")
+mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state") %>%
+  drop_na(fips)
 
 new_DF <- mtm_fips_df[is.na(mtm_fips_df$fips),]
 
@@ -114,35 +119,39 @@ new_DF <- mtm_fips_df[is.na(mtm_fips_df$fips),]
 
 
 
-
+Plotly of Food Insecurity Rate in 2017
 
 ```{r plot attempt}
 url <- 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
 counties <- rjson::fromJSON(file=url)
-url2<- "https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv"
-df <- read.csv(url2, colClasses=c(fips="character"))
+
 g <- list(
   scope = 'usa',
   projection = list(type = 'albers usa'),
   showlakes = TRUE,
   lakecolor = toRGB('white')
 )
+
+z_df = mtm_fips_df %>% 
+  filter(year == 2017) %>%
+  mutate(fi_rate = fi_rate * 100)
+
 fig <- plot_ly()
 fig <- fig %>% add_trace(
     type="choropleth",
     geojson=counties,
-    locations=df$fips,
-    z=df$unemp,
+    locations=z_df$fips,
+    z=z_df$fi_rate,
     colorscale="Viridis",
     zmin=0,
-    zmax=12,
+    zmax=40,
     marker=list(line=list(
       width=0)
     )
   )
-fig <- fig %>% colorbar(title = "Unemployment Rate (%)")
+fig <- fig %>% colorbar(title = "Food Insecurity Rate (%)")
 fig <- fig %>% layout(
-    title = "2016 US Unemployment by County"
+    title = "2017 US Food Insecurity Rate by County"
 )
 
 fig <- fig %>% layout(
@@ -155,7 +164,65 @@ fig
 
 
 
+Plotly of Food Insecurity Rate for Each Year
 
+```{r plot attempt}
+
+year_choices = mtm_fips_df %>%
+mutate(year = factor(year, levels = c("2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"))) %>%
+pull(year) %>% 
+  unique()
+
+selectInput(
+  "year",
+  h3("Year"),
+  choices = year_choices
+)
+
+renderPrint(
+  input[["year"]]
+)
+
+url <- 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
+counties <- rjson::fromJSON(file=url)
+
+g <- list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('white')
+)
+
+renderPlotly({
+z_df = mtm_fips_df %>% 
+  filter(year == input[["year"]]) %>%
+  mutate(fi_rate = fi_rate * 100)
+
+fig <- plot_ly()
+fig <- fig %>% add_trace(
+    type="choropleth",
+    geojson=counties,
+    locations=z_df$fips,
+    z=z_df$fi_rate,
+    colorscale="Viridis",
+    zmin=0,
+    zmax=40,
+    marker=list(line=list(
+      width=0)
+    )
+  )
+})
+fig <- fig %>% colorbar(title = "Food Insecurity Rate (%)")
+fig <- fig %>% layout(
+    title = "US Food Insecurity Rate by County"
+)
+
+fig <- fig %>% layout(
+    geo = g
+  )
+
+fig
+```
 
 
 
