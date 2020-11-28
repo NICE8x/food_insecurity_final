@@ -93,7 +93,13 @@ unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
          county_state = str_replace(county_state, "dekalb_IN", "de kalb_IN"),
          county_state = str_replace(county_state, "dewitt_IL", "de witt_IL"),
          county_state = str_replace(county_state, "de soto_MS", "desoto_MS"),
-         county_state = str_replace(county_state, "de soto_FL", "desoto_FL")
+         county_state = str_replace(county_state, "de soto_FL", "desoto_FL"),
+         county_state = str_replace(county_state, "du page_IL", "dupage_IL"),
+         county_state = str_replace(county_state, "skagway hoonah angoon_AK", "hoonah-angoon_AK"),
+         county_state = str_replace(county_state, "skagway hoonah angoon_AK", "hoonah-angoon_AK"),
+         county_state = str_replace(county_state, "wrangell petersburg_AK", "petersburg_AK"),
+         county_state = str_replace(county_state, "prince georges_MD", "prince george's_MD"),
+         county_state = str_replace(county_state, "prince wales ketchikan_AK", "prince of wales-hyder_AK")
 ) %>%
   select(county_state, fips)
 
