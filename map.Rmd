@@ -1,8 +1,9 @@
 ---
-title: "map"
-author: "Tessa Senders"
-date: "11/28/2020"
-output: html_document
+title: "County Maps"
+output:
+  html_document:
+    toc: false
+    toc_float: false
 runtime: shiny
 ---
 
