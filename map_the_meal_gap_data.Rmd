@@ -84,6 +84,7 @@ map_the_meal_gap_df = map_the_meal_gap_df %>%
          county = str_replace(county, "dona ana", "doña ana"),
          county = str_replace(county, "du page", "dupage"),
          county = str_replace(county, "^st\\s|^st\\.", "saint "),
+         county = str_replace(county, "^juneau", "city and of juneau"),
          fi_rate = coalesce(fi_rate, x2010_food_insecurity_rate, x2011_food_insecurity_rate, x2012_food_insecurity_rate, x2013_food_insecurity_rate, x2014_food_insecurity_rate, x2015_food_insecurity_rate, x2016_food_insecurity_rate, x2017_food_insecurity_rate),
          number_food_insecure_individuals = coalesce(number_food_insecure_individuals, number_of_food_insecure_persons_in_2010, number_of_food_insecure_persons_in_2011, number_of_food_insecure_persons_in_2012, number_of_food_insecure_persons_in_2013, number_of_food_insecure_persons_in_2014, number_of_food_insecure_persons_in_2015, number_of_food_insecure_persons_in_2016, number_of_food_insecure_persons_in_2017),
          child_fi_rate = coalesce(child_fi_rate, x2010_child_food_insecurity_rate, x2011_child_food_insecurity_rate, x2012_child_food_insecurity_rate, as.numeric(x2013_child_food_insecurity_rate), x2014_child_food_insecurity_rate, x2015_child_food_insecurity_rate, x2016_child_food_insecurity_rate, x2017_child_food_insecurity_rate),
@@ -121,7 +122,6 @@ map_the_meal_gap_df = map_the_meal_gap_df %>%
          county_state = str_replace(county_state, "valdez cordova_AK", "valdez-cordova_AK"),
          county_state = str_replace(county_state, " city and_AK", "_AK"),
          county_state = str_replace(county_state, "yukon koyukuk_AK", "yukon-koyukuk_AK"),
-         county_state = str_replace(county_state, "juneau_AK", "city and of juneau_AK"),
          county = county_state,
          county = str_replace(county, "_.*$", ""),
          ) %>%
