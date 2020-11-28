@@ -99,7 +99,11 @@ unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
          county_state = str_replace(county_state, "skagway hoonah angoon_AK", "hoonah-angoon_AK"),
          county_state = str_replace(county_state, "wrangell petersburg_AK", "petersburg_AK"),
          county_state = str_replace(county_state, "prince georges_MD", "prince george's_MD"),
-         county_state = str_replace(county_state, "prince wales ketchikan_AK", "prince of wales-hyder_AK")
+         county_state = str_replace(county_state, "prince wales ketchikan_AK", "prince of wales-hyder_AK"),
+         county_state = str_replace(county_state, "queen annes_MD", "queen anne's_MD"),
+         county_state = str_replace(county_state, "radford_VA", "radford city_VA"),
+         county_state = str_replace(county_state, "saint marys_MD", "saint mary's_MD"),
+         county_state = str_replace(county_state, "yukon koyukuk_AK", "yukon-koyukuk_AK")
 ) %>%
   select(county_state, fips)
 

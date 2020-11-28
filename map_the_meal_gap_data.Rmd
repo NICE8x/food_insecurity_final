@@ -121,6 +121,7 @@ map_the_meal_gap_df = map_the_meal_gap_df %>%
          county_state = str_replace(county_state, "valdez cordova_AK", "valdez-cordova_AK"),
          county_state = str_replace(county_state, " city and_AK", "_AK"),
          county_state = str_replace(county_state, "yukon koyukuk_AK", "yukon-koyukuk_AK"),
+         county_state = str_replace(county_state, "juneau_AK", "city and of juneau_AK"),
          county = county_state,
          county = str_replace(county, "_.*$", ""),
          ) %>%
