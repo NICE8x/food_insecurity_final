@@ -99,8 +99,8 @@ g <- list(
 
 renderPlotly({
 z_df = mtm_fips_df %>% 
-  filter(year == input[["year"]]) %>%
-  mutate(fi_rate = fi_rate * 100)
+  dplyr::filter(year == input[["year"]]) %>%
+  dplyr::mutate(fi_rate = fi_rate * 100)
 
 plot_ly() %>% 
   add_trace(
