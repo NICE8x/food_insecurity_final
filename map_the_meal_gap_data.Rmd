@@ -207,7 +207,6 @@ Select one zip code within a county to represent each county and save this data 
 Save the two new csv files.
 
 ```{r join data}
-
 food_banks_df = left_join(food_banks_df, location_data, by = "zip") %>%
   rename(state = state.x) %>%
   select(-state.y)

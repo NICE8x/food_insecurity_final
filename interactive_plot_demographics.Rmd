@@ -225,7 +225,9 @@ fig
 ```
 
 
+Plot for 2017 Updated
 
+<<<<<<< HEAD
 ```{r}
 #Specify shinyApp(ui, server)
 shinyApp(options = list(height = 1000), 
@@ -344,6 +346,60 @@ shinyApp(options = list(height = 1000),
            
          }
 )
+=======
+```{r plot attempt 2017 updated}
+
+year_choices = mtm_fips_df %>%
+pull(year) %>% 
+  unique() %>%
+  sort()
+
+selectInput(
+  "year",
+  h3("Year"),
+  choices = year_choices
+)
+
+renderPrint(
+  input[["year"]]
+)
+
+url <- 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
+counties <- rjson::fromJSON(file=url)
+
+g <- list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('white')
+)
+
+z_df = mtm_fips_df %>%
+  mutate(fi_rate = fi_rate * 100)
+
+renderPlotly({
+z_df %>% 
+  dplyr::filter(year == rlang::sym(input[["year"]]))%>%
+plot_ly() %>% 
+  add_trace(
+    type="choropleth",
+    geojson=counties,
+    locations=~(fips),
+    z=~(fi_rate),
+    colorscale="Viridis",
+    zmin=0,
+    zmax=40,
+    marker=list(line=list(
+      width=0)
+    )
+  ) %>%
+  colorbar(title = "Food Insecurity Rate (%)") %>% 
+  layout(
+    title = "US Food Insecurity Rate by County",
+    geo = g
+)
+})
+>>>>>>> e69a6cdbe7debcafe92f21a69bc66abe57f1fe2f
 ```
 
 
