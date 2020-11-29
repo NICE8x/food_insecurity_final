@@ -16,6 +16,7 @@ library(httr)
 library(usdata)
 library(shiny)
 library(leaflet)
+library(stringr)
 ```
 
 
@@ -71,59 +72,7 @@ mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state") %>%
 
 
 
-```{r plot attempt 2}
 
-year_choices = mtm_fips_df %>%
-pull(year) %>% 
-  unique() %>%
-  sort()
-
-selectInput(
-  "year",
-  h3("Year"),
-  choices = year_choices
-)
-
-renderPrint(
-  input[["year"]]
-)
-
-url <- 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
-counties <- rjson::fromJSON(file=url)
-
-g <- list(
-  scope = 'usa',
-  projection = list(type = 'albers usa'),
-  showlakes = TRUE,
-  lakecolor = toRGB('white')
-)
-
-z_df = mtm_fips_df %>%
-  mutate(fi_rate = fi_rate * 100)
-
-renderPlotly({
-z_df %>% 
-  dplyr::filter(year == rlang::sym(input[["year"]]))%>%
-plot_ly() %>% 
-  add_trace(
-    type="choropleth",
-    geojson=counties,
-    locations=~(fips),
-    z=~(fi_rate),
-    colorscale="Viridis",
-    zmin=0,
-    zmax=40,
-    marker=list(line=list(
-      width=0)
-    )
-  ) %>%
-  colorbar(title = "Food Insecurity Rate (%)") %>% 
-  layout(
-    title = "US Food Insecurity Rate by County",
-    geo = g
-)
-})
-```
 
 
 
@@ -147,11 +96,24 @@ renderPrint(
 selectInput(
   "food insecurity metric",
   h3("Food Insecurity Metric"),
-  choices = c("fi_rate", "number_food_insecure_individuals", "low_threshold_in_state", "high_threshold_in_state", "percent_fi_low_threshold", "percent_fi_btwn_thresholds", "percent_fi_high_threshold", "weighted_annual_food_budget_shortfall", "cost_per_meal", "child_fi_rate", "number_food_insecure_children", "percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl", "percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl")
+  choices = c("Food Insecurity Rate" = "fi_rate", "Number of Food Insecure Individuals" = "number_food_insecure_individuals","Low Threshold in State" = "low_threshold_in_state", "High Threshold in State" = "high_threshold_in_state", "Food Insecurity Rate Low Threshold (%)" = "percent_fi_low_threshold","Food Insecurity Rate Between Threshold (%)" = "percent_fi_btwn_thresholds",   "Food Insecurity Rate High Threshold (%)" = "percent_fi_high_threshold", "Weighted Annual Food Budget Shortfall ($)" = "weighted_annual_food_budget_shortfall", "Cost Per Meal ($)" = "cost_per_meal", "Child Food Insecurity Rate (%)" = "child_fi_rate", "Number of Food Insecure Children" = "number_food_insecure_children", "Children in Food Insecure Households with Household Incomes Below 185 Percent of the Federal Poverty Levell (%)" = "percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl", "Children in Food Insecure Households with Household Incomes Above 185 Percent of the Federal Poverty Levell (%)" = "percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl")
 )
 
 renderPrint(
   input[["food insecurity metric"]]
+)
+
+#state_abbs = c(state.abb, "DC")
+
+selectInput(
+  "state",
+  h3("State"),
+  choices = list("USA", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
+"KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY")
+)
+
+renderPrint(
+  input[["state"]]
 )
 
 url <- 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
@@ -174,7 +136,68 @@ z_df = mtm_fips_df %>%
          percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl = percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl *100
   )
 
+
+  
 renderPlotly({
+if(input[["state"]] != "USA"){
+  
+z_df %>% 
+  dplyr::filter(year == rlang::sym(input[["year"]]))%>%
+  dplyr:: filter(state == input[["state"]]) %>%
+plot_ly() %>% 
+  add_trace(
+    type="choropleth",
+    geojson=counties,
+    locations=~(fips),
+    z=~(eval(as.name(input[["food insecurity metric"]]))), 
+    text = ~county_state,
+    colorscale="Viridis",
+    zmin=0,
+    zmax=case_when(
+  input[["food insecurity metric"]] == "fi_rate" ~ 40,
+  input[["food insecurity metric"]] == "number_food_insecure_individuals" ~ 1749600,
+  input[["food insecurity metric"]] == "low_threshold_in_state" ~ 2,
+  input[["food insecurity metric"]] == "high_threshold_in_state" ~ 2,
+  input[["food insecurity metric"]] == "percent_fi_low_threshold" ~ 100,
+  input[["food insecurity metric"]] == "percent_fi_btwn_thresholds" ~ 78,
+  input[["food insecurity metric"]] == "percent_fi_high_threshold"  ~ 100,
+  input[["food insecurity metric"]] == "weighted_annual_food_budget_shortfall" ~ 815943000,
+  input[["food insecurity metric"]] == "cost_per_meal" ~ 7,
+  input[["food insecurity metric"]] == "child_fi_rate" ~ 53,
+  input[["food insecurity metric"]] == "number_food_insecure_children" ~ 734490,
+  input[["food insecurity metric"]] == "percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl" ~ 100,
+  input[["food insecurity metric"]] ==  "percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl" ~ 100
+),
+    marker=list(line=list(
+      width=0)
+    )
+  ) %>%
+  colorbar(title = case_when(
+  input[["food insecurity metric"]] == "fi_rate" ~ "Food Insecurity Rate (%)",
+  input[["food insecurity metric"]] == "number_food_insecure_individuals" ~ "Number of Food Insecure Individuals",
+  input[["food insecurity metric"]] == "low_threshold_in_state" ~ "Low Threshold in State",
+  input[["food insecurity metric"]] == "high_threshold_in_state" ~ "High Threshold in State",
+  input[["food insecurity metric"]] == "percent_fi_low_threshold" ~ "Food Insecurity Rate Low Threshold (%)",
+  input[["food insecurity metric"]] == "percent_fi_btwn_thresholds" ~ "Food Insecurity Rate Between Threshold (%)",
+  input[["food insecurity metric"]] == "percent_fi_high_threshold"  ~ "Food Insecurity Rate High Threshold (%)",
+  input[["food insecurity metric"]] == "weighted_annual_food_budget_shortfall" ~ "Weighted Annual Food Budget Shortfall ($)",
+  input[["food insecurity metric"]] == "cost_per_meal" ~ "Cost Per Meal ($)",
+  input[["food insecurity metric"]] == "child_fi_rate" ~ "Child Food Insecurity Rate (%)",
+  input[["food insecurity metric"]] == "number_food_insecure_children" ~ "Number of Food Insecure Children",
+  input[["food insecurity metric"]] == "percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl" ~ "Children in Food Insecure Households with Household Incomes Below 185 Percent of the Federal Poverty Levell (%)",
+  input[["food insecurity metric"]] ==  "percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl" ~ "Children in Food Insecure Households with Household Incomes Above 185 Percent of the Federal Poverty Levell (%)"
+)
+           ) %>% 
+  layout(
+    title = "US Food Insecurity Metrics by County",
+    geo = g
+)
+
+}
+
+
+else{
+  
 z_df %>% 
   dplyr::filter(year == rlang::sym(input[["year"]]))%>%
 plot_ly() %>% 
@@ -216,7 +239,7 @@ plot_ly() %>%
   input[["food insecurity metric"]] == "weighted_annual_food_budget_shortfall" ~ "Weighted Annual Food Budget Shortfall ($)",
   input[["food insecurity metric"]] == "cost_per_meal" ~ "Cost Per Meal ($)",
   input[["food insecurity metric"]] == "child_fi_rate" ~ "Child Food Insecurity Rate (%)",
-  input[["food insecurity metric"]] == "number_food_insecure_children" ~ "Numver of Food Insecure Children",
+  input[["food insecurity metric"]] == "number_food_insecure_children" ~ "Number of Food Insecure Children",
   input[["food insecurity metric"]] == "percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl" ~ "Children in Food Insecure Households with Household Incomes Below 185 Percent of the Federal Poverty Levell (%)",
   input[["food insecurity metric"]] ==  "percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl" ~ "Children in Food Insecure Households with Household Incomes Above 185 Percent of the Federal Poverty Levell (%)"
 )
@@ -225,7 +248,12 @@ plot_ly() %>%
     title = "US Food Insecurity Metrics by County",
     geo = g
 )
-})
+}
+}
+
+  )
+  
+
 ```
 
 
