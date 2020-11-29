@@ -1,0 +1,237 @@
+---
+title: "Map the Meal Gap Data"
+author: "Tessa Senders"
+date: "11/13/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r import libraries}
+library(tidyverse)
+library(readxl)
+library(rvest)
+library(httr)
+library(RSelenium)
+library(stringr)
+```
+
+Import Map the Meal Gap County Data 
+
+```{r import map the meal data}
+path_1_df = 
+tibble(
+path = list.files("food_insecurity_county1_data"))
+
+path_1_df = path_1_df %>%
+  mutate(
+    path = str_c("food_insecurity_county1_data/", path),
+    data = map(.x = path, ~read_excel(.x))
+)
+
+path_2_df = 
+tibble(
+path = list.files("food_insecurity_county2_data"))
+
+path_2_df = path_2_df %>%
+  mutate(
+    path = str_c("food_insecurity_county2_data/", path),
+    data = map(.x = path, ~read_excel(.x, sheet = 2))
+)
+
+map_the_meal_gap_df = bind_rows(path_1_df, path_2_df)
+```
+
+
+Fix the variable types on datasets that do not match the other datasets.
+
+```{r fix varable types}
+map_the_meal_gap_df[[2]][[1]]$FIPS = as.numeric(map_the_meal_gap_df[[2]][[1]]$FIPS)
+map_the_meal_gap_df[[2]][[2]]$`% FI Btwn Thresholds` = as.numeric(map_the_meal_gap_df[[2]][[2]]$`% FI Btwn Thresholds`)
+map_the_meal_gap_df[[2]][[1]]$`Cost Per Meal` = as.numeric(map_the_meal_gap_df[[2]][[1]]$`Cost Per Meal`)
+```
+
+
+Unnest the data and clean names.
+
+```{r unnest}
+map_the_meal_gap_df = map_the_meal_gap_df %>%
+  unnest(data) %>%
+  janitor::clean_names() 
+```
+
+
+Fix the county names to match location data and coalesce the same variables into one column.  Create an additional county_state variable to match data to location data.  Select only the new columns from coalescing.
+
+```{r mutate}
+map_the_meal_gap_df = map_the_meal_gap_df %>%
+  mutate(year = str_extract(path, "_[0-9]{4}"),
+         year = str_remove(year, "_"),
+         state = coalesce(state_name, state),
+         county_code = tolower(county_code),
+         county_state = tolower(county_state),
+         county = coalesce(county_code, county_state),
+         county = str_replace(county, ",.*", ""),
+         county = str_replace(county, "\\scounty",""),
+         county = str_replace(county, "\\sparish",""),
+         county = str_replace(county, "\\sborough", ""),
+         county = str_replace(county, "\\scensus area", ""),
+         county = str_replace(county, "\\smunicipality", ""),
+         county = str_replace(county, "covington city", "covington"),
+         county = str_replace(county, "do¤a ana", "doña ana"),
+         county = str_replace(county, "dona ana", "doña ana"),
+         county = str_replace(county, "du page", "dupage"),
+         county = str_replace(county, "^st\\s|^st\\.", "saint "),
+         fi_rate = coalesce(fi_rate, x2010_food_insecurity_rate, x2011_food_insecurity_rate, x2012_food_insecurity_rate, x2013_food_insecurity_rate, x2014_food_insecurity_rate, x2015_food_insecurity_rate, x2016_food_insecurity_rate, x2017_food_insecurity_rate),
+         number_food_insecure_individuals = coalesce(number_food_insecure_individuals, number_of_food_insecure_persons_in_2010, number_of_food_insecure_persons_in_2011, number_of_food_insecure_persons_in_2012, number_of_food_insecure_persons_in_2013, number_of_food_insecure_persons_in_2014, number_of_food_insecure_persons_in_2015, number_of_food_insecure_persons_in_2016, number_of_food_insecure_persons_in_2017),
+         child_fi_rate = coalesce(child_fi_rate, x2010_child_food_insecurity_rate, x2011_child_food_insecurity_rate, x2012_child_food_insecurity_rate, as.numeric(x2013_child_food_insecurity_rate), x2014_child_food_insecurity_rate, x2015_child_food_insecurity_rate, x2016_child_food_insecurity_rate, x2017_child_food_insecurity_rate),
+         number_food_insecure_children = coalesce(number_food_insecure_children, number_of_food_insecure_children_in_2010, number_of_food_insecure_children_in_2011, number_of_food_insecure_children_in_2012, number_of_food_insecure_children_in_2013, number_of_food_insecure_children_in_2014, number_of_food_insecure_children_in_2015, number_of_food_insecure_children_in_2016, number_of_food_insecure_children_in_2017),
+         cost_per_meal =
+           coalesce(cost_per_meal, x2010_cost_per_meal, x2012_cost_per_meal, x2013_cost_per_meal, x2014_cost_per_meal, x2015_cost_per_meal, x2016_cost_per_meal, x2017_cost_per_meal),
+         weighted_annual_dollars = na_if(weighted_annual_dollars, "n/a"),
+         weighted_annual_food_budget_shortfall = coalesce(weighted_annual_food_budget_shortfall, as.numeric(weighted_annual_dollars), x2010_weighted_annual_food_budget_shortfall, x2012_weighted_annual_food_budget_shortfall, x2013_weighted_annual_food_budget_shortfall, x2014_weighted_annual_food_budget_shortfall, x2015_weighted_annual_food_budget_shortfall, x2016_weighted_annual_food_budget_shortfall, x2017_weighted_annual_food_budget_shortfall),
+         percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl = coalesce(percent_food_insecure_children_in_hh_w_hh_incomes_below_185_fpl,percent_of_children_in_fi_hh_with_hh_incomes_at_or_below_185_percent_fpl, percent_food_insecure_children_in_hh_w_hh_incomes_below_185_fpl_in_2012, as.numeric(percent_food_insecure_children_in_hh_w_hh_incomes_below_185_fpl_in_2013), percent_food_insecure_children_in_hh_w_hh_incomes_below_185_fpl_in_2014, percent_food_insecure_children_in_hh_w_hh_incomes_below_185_fpl_in_2015, percent_food_insecure_children_in_hh_w_hh_incomes_below_185_fpl_in_2016, percent_food_insecure_children_in_hh_w_hh_incomes_below_185_fpl_in_2017),
+         percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl =
+           coalesce(percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl, percent_of_food_insecure_children_in_hh_w_hh_incomes_above_185_fpl, percent_food_insecure_children_in_hh_w_hh_incomes_above_185_fpl_in_2012, as.numeric(percent_food_insecure_children_in_hh_w_hh_incomes_above_185_fpl_in_2013), percent_food_insecure_children_in_hh_w_hh_incomes_above_185_fpl_in_2014, percent_food_insecure_children_in_hh_w_hh_incomes_above_185_fpl_in_2015, percent_food_insecure_children_in_hh_w_hh_incomes_above_185_fpl_in_2016, percent_food_insecure_children_in_hh_w_hh_incomes_above_185_fpl_in_2017),
+         ) %>%
+  unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
+  mutate(county_state = str_replace(county_state, "bristol_VA", "bristol city_VA"),
+         county_state = str_replace(county_state, "dekalb_IN", "de kalb_IN"),
+         county_state = str_replace(county_state, "dekalb_TN", "de kalb_TN"),
+         county_state = str_replace(county_state, "dewitt_IL", "de witt_IL"),
+         county_state = str_replace(county_state, "dewitt_TX", "de witt_TX"),
+         county_state = str_replace(county_state, "du page_IL", "dupage_IL"),
+         county_state = str_replace(county_state, "juneau city and_AK", "city and of juneau_AK"),
+         county_state = str_replace(county_state, "laporte_IN", "la porte_IN"),
+         county_state = str_replace(county_state, "lasalle_IL", "la salle_IL"),
+         county_state = str_replace(county_state, "lasalle_LA", "la salle_LA"),
+         county_state = str_replace(county_state, "matanuska susitna_AK", "matanuska-susitna_AK"),
+         county_state = str_replace(county_state, "o'brien_IA", "obrien_IA"),
+         county_state = str_replace(county_state, "prince georges_MD", "prince george's_MD"),
+         county_state = str_replace(county_state, "queen annes_MD", "queen anne's_MD"),
+         county_state = str_replace(county_state, "radford_VA", "radford city_VA"),
+         county_state = str_replace(county_state, "saint  ", "saint "),
+         county_state = str_replace(county_state, "saint marys_MD", "saint mary's_MD"),
+         county_state = str_replace(county_state, "sainte genevieve_MO", "ste genevieve_MO"),
+         county_state = str_replace(county_state, "salem_VA", "salem city_VA"),
+         county_state = str_replace(county_state, "sitka city and_AK", "sitka_AK"),
+         county_state = str_replace(county_state, "ste. genevieve_MO", "ste genevieve_MO"),
+         county_state = str_replace(county_state, "valdez cordova_AK", "valdez-cordova_AK"),
+         county_state = str_replace(county_state, " city and_AK", "_AK"),
+         county_state = str_replace(county_state, "yukon koyukuk_AK", "yukon-koyukuk_AK"),
+         county = county_state,
+         county = str_replace(county, "_.*$", ""),
+         ) %>%
+  select(year, state, county, county_state, fi_rate, number_food_insecure_individuals, low_threshold_in_state, low_threshold_type, high_threshold_in_state, high_threshold_type, percent_fi_low_threshold, percent_fi_btwn_thresholds, percent_fi_high_threshold, weighted_annual_food_budget_shortfall, cost_per_meal, child_fi_rate, number_food_insecure_children, percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl, percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl) 
+```
+
+
+Use Docker to go to the Feeding America website and scrape for the names, address/phone number, and website of 200 food banks in America. 
+
+```{r use docker for food bank list}
+shell('docker run -d -p 4445:4444 selenium/standalone-chrome')
+remDr <- remoteDriver(remoteServerAddr = "localhost", port = 4445L, browserName = "chrome")
+remDr$open()
+remDr$navigate("https://www.feedingamerica.org/find-your-local-foodbank")
+
+list_button = remDr$findElement(using = 'css selector',"#find-fb-search-form a")
+list_button$clickElement()
+
+name_list <- remDr$findElements(using = 'css selector', ".name")
+address_phone_list <- remDr$findElements(using = 'css selector', "a+ p")
+website_list <- remDr$findElements(using = 'css selector', ".url a")
+
+food_banks_df = tibble(
+  name = unlist(map(name_list, function(x){x$getElementText()})),
+  address_phone = unlist(map(address_phone_list, function(x){x$getElementText()})),
+  website_list = unlist(map(website_list, function(x){x$getElementText()}))
+)
+
+#write_csv(x = food_banks_df, "food_banks_df.csv")
+
+
+
+remDr$close()
+```
+
+
+Extract phone number and zip code from the address variable and create new columns for these two additional variables.
+
+```{r clean up food banks df}
+
+food_banks_df <- food_banks_df %>%
+  mutate(phone_number = str_extract(address_phone, "[1-9]\\d{2}\\.\\d{3}\\.\\d{4}"),
+         address_phone = str_replace(address_phone, "[1-9]\\d{2}\\.\\d{3}\\.\\d{4}", ""),
+         zip = str_extract(address_phone, "\\s[0-9]\\d{4}$"),
+         zip = str_replace(zip, "\\s", ""),
+         address_phone = str_replace(address_phone, "\\s[0-9]\\d{4}$", ""),
+         state = str_extract(address_phone, "[A-Z]{2}$")
+         )
+```
+
+
+Import location data (zip, county, longitude, and latitude) from government website.  Fix county strings to match the Map the Meal Gap Data.  Create a county_state variable to match the data to the Map the Meal Gap Data.  Save data as a csv.
+
+```{r get county and zipcode info}
+location_data = GET("https://data.healthcare.gov/resource/geocodes-usa-with-counties.json",  query = list("$limit" = 42522)) %>% 
+  content("text") %>%
+  jsonlite::fromJSON() %>%
+  as_tibble() 
+
+location_data = location_data %>%
+  mutate(county = tolower(county)) %>%
+  select(zip, state, latitude, longitude, county) %>%
+  mutate(county = str_replace(county, ",.*", ""),
+         county = str_replace(county, "\\scounty",""),
+         county = str_replace(county, "\\sparish",""),
+         county = str_replace(county, "\\sborough", ""),
+         county = str_replace(county, "\\scensus area", ""),
+         county = str_replace(county, "\\smunicipality of", ""),
+         county = str_replace(county, "doãƒâ±a ana", "doña ana"),
+         county = str_replace(county, "^st\\s|^st\\.", "saint ")
+  ) %>%
+  unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
+  mutate(county_state = str_replace(county_state, "prince of wales-outer ketchikan_AK", "prince of wales-hyder_AK"))
+
+write_csv(x = location_data, "location_data.csv")
+
+```
+
+
+Join the food bank data and location data.
+
+Select one zip code within a county to represent each county and save this data as a new dataframe.  Match this new dataframe to the Map the Meal Gap data (joining by county_state).
+
+Save the two new csv files.
+
+```{r join data}
+food_banks_df = left_join(food_banks_df, location_data, by = "zip") %>%
+  rename(state = state.x) %>%
+  select(-state.y)
+
+random_zip_from_county = location_data %>%
+  group_by(county_state) %>%
+filter(row_number() == 1)
+
+map_the_meal_gap_df = left_join(map_the_meal_gap_df, random_zip_from_county, by = "county_state") %>%
+  rename(state = state.x,
+         county = county.x) %>%
+  select(-state.y, -county.y) %>%
+  drop_na(latitude)
+
+write_csv(x = map_the_meal_gap_df, "map_the_meal_gap_df.csv")
+write_csv(x = food_banks_df, "food_banks_df.csv")
+
+
+#new_DF <- map_the_meal_gap_df_2[is.na(map_the_meal_gap_df_2$latitude),]
+
+
+```
+
+
+
+
+
+
