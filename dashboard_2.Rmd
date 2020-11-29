@@ -37,7 +37,7 @@ scale_fill_discrete = scale_fill_viridis_d
 ### Food Insecurity Rates in Select New York State Counties
 
 
-```{r}
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
 read_csv("map_the_meal_gap_df.csv") %>%
   filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
                              "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
@@ -50,7 +50,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
 
 ### Number of Food Insecure Individuals by New York State County
 
-```{r}
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
 read_csv("map_the_meal_gap_df.csv") %>%
   filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
                              "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
@@ -63,7 +63,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
 
 ### Child Food Insecurity Rates by Select New York State Counties
 
-```{r}
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
 read_csv("map_the_meal_gap_df.csv") %>%
   filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
                              "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
@@ -76,7 +76,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
 
 ### Number of Food Insecure Children by New York State County
 
-```{r}
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
 read_csv("map_the_meal_gap_df.csv") %>%
   filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
                              "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
@@ -89,7 +89,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
 
 ### Food Insecurity Rate by US Region
 
-```{r}
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
 state = c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL",
           "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT",
           "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
@@ -118,7 +118,7 @@ merge(food, x_walk, by = "state") %>%
 
 ### Mean number of food insecure individuals by region
 
-```{r}
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
 merge(food, x_walk, by = "state") %>%
   mutate(region = str_replace(region, "MW", "Midwest"),
          region = str_replace(region, "W", "West"),
@@ -135,7 +135,7 @@ merge(food, x_walk, by = "state") %>%
 
 ### Mean child food insecurity rate by region
 
-```{r}
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
 merge(food, x_walk, by = "state") %>%
   mutate(region = str_replace(region, "MW", "Midwest"),
          region = str_replace(region, "W", "West"),
@@ -152,7 +152,7 @@ merge(food, x_walk, by = "state") %>%
 
 ### Mean number of food insecure children by region
 
-```{r}
+```{r, warning = FALSE, message = FALSE, echo = FALSE}
 merge(food, x_walk, by = "state") %>%
   mutate(region = str_replace(region, "MW", "Midwest"),
          region = str_replace(region, "W", "West"),
