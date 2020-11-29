@@ -31,7 +31,10 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
-Read in acs race data and acs hispanic data. And manipulate respective darace_df = 
+Read in acs race data and acs hispanic data. And manipulate respective data.
+
+```{r}
+race_df = 
   read_csv("ACS_data/ACS_2017_race.csv") %>%
   rename(
     total = "K200201_001E",
@@ -72,6 +75,8 @@ hispanic_df =
     total = as.numeric(total),
     hispanic = as.numeric(hispanic)
   )
+```
+
 
 
   
