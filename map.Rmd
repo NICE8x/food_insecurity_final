@@ -238,11 +238,11 @@ food_banks_df = read_csv("./food_banks_df.csv")
 #)
 
 food_banks_df %>% 
-  mutate(click_label = str_c("Name: ", name, "\nAddress: ", address_phone, " ", zip, "\nPhone Number: ", phone_number, "\nWebsite: ", "website_list", "County and State: ", county_state) 
+  mutate(click_label = str_c("Name: ", name, "<br> Address: ", address_phone, " ", zip, "<br> Phone Number: ", phone_number, "<br> Website: ", website_list, "<br> County and State: ", county_state) 
          ) %>%
   leaflet() %>%
-  addProviderTiles(providers$CartoDB.Positron) %>%
-    addCircleMarkers(~latitude, ~longitude, radius = .1, popup = ~click_label)
+  addTiles() %>%
+    addCircleMarkers(lng = ~longitude, lat = ~latitude, radius = .1, popup = ~click_label)
   
 ```
 
