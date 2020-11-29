@@ -19,10 +19,10 @@ body {
 
 # Link to other pages in this site
 
-[County Maps]\
+[Map the Gap]\
 [See the Gap]\
-[Project Report]\
-[Analysis]
+[NY and More]\
+[Project Report]
 
 # Links in site navigation
 

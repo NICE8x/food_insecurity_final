@@ -3,14 +3,14 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "County Maps"
-      href: map.html
+    - text: "Map the Gap"
+      href: https://tessas.shinyapps.io/countymaps/
     - text: "See the Gap"
-      href: see_the_gap.html
+      href: dashboard_1.html
+    - text: "NY and More"
+      href: dashboard_2.html
     - text: "Project Report"
       href: project_report.html
-    - text: "Analysis"
-      href: analysist.html
     - icon: fa-envelope fa-lg
       href: mailto:<vf2280@cumc.columbia.edu>
     - icon: fa-github fa-lg
