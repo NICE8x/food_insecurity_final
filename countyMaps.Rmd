@@ -9,7 +9,7 @@ runtime: shiny
 
 ---
 
-```{r import libraries}
+```{r import libraries, message = FALSE, warning = FALSE}
 library(tidyverse)
 library(plotly)
 library(rjson)
@@ -79,7 +79,7 @@ mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state") %>%
 
 
 
-```{r plot attempt 3}
+```{r plot attempt 3, message = FALSE, warning = FALSE}
 
 year_choices = mtm_fips_df %>%
 pull(year) %>% 
