@@ -257,20 +257,39 @@ plot_ly() %>%
 ```
 
 
-```{r food bank map}
+
+```{r food bank with shiny attempt}
 food_banks_df = read_csv("./food_banks_df.csv")
 
-#pal <- colorNumeric(
- # palette = "viridis",
-#  domain = food_banks_df$name
-#)
+  selectInput("state_2",
+  h3("State"),
+  choices = list("USA", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
+"KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY")
+)
 
-food_banks_df %>% 
+renderLeaflet({
+  if(input[["state_2"]] != "USA"){
+food_banks_df %>%
+  dplyr:: filter(state == input[["state_2"]]) %>%   
   mutate(click_label = str_c("Name: ", name, "<br> Address: ", address_phone, " ", zip, "<br> Phone Number: ", phone_number, "<br> Website: ", website_list, "<br> County and State: ", county_state) 
          ) %>%
   leaflet() %>%
   addTiles() %>%
-    addCircleMarkers(lng = ~longitude, lat = ~latitude, radius = .1, popup = ~click_label)
+    addMarkers(lng = ~longitude, lat = ~latitude, popup = ~click_label)
   
+  }
+  
+  else{
+    food_banks_df %>%
+  mutate(click_label = str_c("Name: ", name, "<br> Address: ", address_phone, " ", zip, "<br> Phone Number: ", phone_number, "<br> Website: ", website_list, "<br> County and State: ", county_state) 
+         ) %>%
+  leaflet() %>%
+  addTiles() %>%
+    addCircleMarkers(lng = ~longitude, lat = ~latitude, radius = 0.1, popup = ~click_label)
+  }
+}
+)
 ```
+
+
 
