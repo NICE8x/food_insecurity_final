@@ -2,7 +2,10 @@
 title: "Project Report"
 author: "Caroline Andy"
 date: "11/25/2020"
-output: html_document
+output:
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 ## Food insecurity by selected NY state counties
