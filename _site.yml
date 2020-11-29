@@ -4,7 +4,7 @@ navbar:
   title: "Home"
   right:
     - text: "Map the Gap"
-      href: countyMaps.html
+      href: https://tessas.shinyapps.io/countymaps/
     - text: "See the Gap"
       href: dashboard_1.html
     - text: "NY and More"
