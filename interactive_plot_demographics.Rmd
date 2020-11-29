@@ -346,7 +346,8 @@ shinyApp(options = list(height = 1000),
            
          }
 )
-=======
+```
+
 ```{r plot attempt 2017 updated}
 
 year_choices = mtm_fips_df %>%
@@ -399,7 +400,7 @@ plot_ly() %>%
     geo = g
 )
 })
->>>>>>> e69a6cdbe7debcafe92f21a69bc66abe57f1fe2f
+
 ```
 
 
