@@ -181,7 +181,8 @@ plot_ly() %>%
     type="choropleth",
     geojson=counties,
     locations=~(fips),
-    z=~(eval(as.name(input[["food insecurity metric"]]))),
+    z=~(eval(as.name(input[["food insecurity metric"]]))), 
+    text = ~county_state,
     colorscale="Viridis",
     zmin=0,
     zmax=case_when(
