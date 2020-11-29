@@ -31,10 +31,7 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
-Read in acs race data and acs hispanic data. And manipulate respective data to make scatter plots.
-
-```{r}
-race_df = 
+Read in acs race data and acs hispanic data. And manipulate respective darace_df = 
   read_csv("ACS_data/ACS_2017_race.csv") %>%
   rename(
     total = "K200201_001E",
@@ -78,7 +75,7 @@ hispanic_df =
 
 
   
-```
+
 
 Percent function, and percents of each race by county.
 
