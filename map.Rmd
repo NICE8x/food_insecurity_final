@@ -15,6 +15,7 @@ library(rvest)
 library(httr)
 library(usdata)
 library(shiny)
+library(leaflet)
 ```
 
 
@@ -231,6 +232,17 @@ plot_ly() %>%
 ```{r food bank map}
 food_banks_df = read_csv("./food_banks_df.csv")
 
-food_banks_df %>%
+#pal <- colorNumeric(
+ # palette = "viridis",
+#  domain = food_banks_df$name
+#)
+
+food_banks_df %>% 
+  mutate(click_label = str_c("Name: ", name, "\nAddress: ", address_phone, " ", zip, "\nPhone Number: ", phone_number, "\nWebsite: ", "website_list", "County and State: ", county_state) 
+         ) %>%
+  leaflet() %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+    addCircleMarkers(~latitude, ~longitude, radius = .1, popup = ~click_label)
+  
 ```
 
