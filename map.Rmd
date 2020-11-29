@@ -4,7 +4,9 @@ output:
   html_document:
     toc: false
     toc_float: false
+    code_folding: hide
 runtime: shiny
+
 ---
 
 ```{r import libraries}
@@ -17,11 +19,12 @@ library(usdata)
 library(shiny)
 library(leaflet)
 library(stringr)
+library(rsconnect)
 ```
 
 
 
-```{r fips data}
+```{r fips data, message = FALSE, warning = FALSE}
 fips_df = readxl::read_xls("./fips_data/US_FIPS_Codes.xls", skip = 1) %>%
   janitor::clean_names() %>%
   rename(county = county_name) %>%
@@ -258,7 +261,7 @@ plot_ly() %>%
 
 
 
-```{r food bank with shiny attempt}
+```{r food bank with shiny attempt, message = FALSE, warning = FALSE}
 food_banks_df = read_csv("./food_banks_df.csv") %>%
   mutate(website_list = paste0("<a href='",website_list,"'>",website_list,"</a>"))
 
