@@ -78,10 +78,6 @@ hispanic_df =
 ```
 
 
-
-  
-
-
 Percent function, and percents of each race by county.
 
 ```{r}
