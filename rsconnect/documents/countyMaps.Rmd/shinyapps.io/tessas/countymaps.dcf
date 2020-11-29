@@ -5,6 +5,6 @@ account: tessas
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3320211
-bundleId: 3920082
+bundleId: 3920094
 url: https://tessas.shinyapps.io/countymaps/
-when: 1606682921.57688
+when: 1606683111.5249
