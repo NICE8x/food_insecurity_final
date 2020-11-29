@@ -259,7 +259,8 @@ plot_ly() %>%
 
 
 ```{r food bank with shiny attempt}
-food_banks_df = read_csv("./food_banks_df.csv")
+food_banks_df = read_csv("./food_banks_df.csv") %>%
+  mutate(website_list = paste0("<a href='",website_list,"'>",website_list,"</a>"))
 
 
 
