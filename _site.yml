@@ -4,7 +4,7 @@ navbar:
   title: "Home"
   right:
     - text: "Map the Gap"
-      href: map.html
+      href: countyMaps.html
     - text: "See the Gap"
       href: dashboard_1.html
     - text: "Project Report"

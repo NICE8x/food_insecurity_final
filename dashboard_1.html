@@ -1,255 +1,855 @@
 <!DOCTYPE html>
-
-<html>
-
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-<meta charset="utf-8" />
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-
 <meta name="author" content="Vasili Fokaidis" />
+
 
 
 <title>See the Gap</title>
 
+<meta property="og:title" content="See the Gap" />
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+
+<link rel="icon" href="data:image/x-icon;" type="image/x-icon">
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script type="text/javascript">
+window.FlexDashboardComponents = [];
+</script>
+
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-
-<style type="text/css">code{white-space: pre;}</style>
+<script src="site_libs/stickytableheaders-0.1.19/jquery.stickytableheaders.min.js"></script>
 <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
 
+/*
+ Dashboard CSS from Keen IO Dashboards
+ (https://github.com/keen/dashboards)
+*/
 
-
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-</style>
-
-
-<style type="text/css">
-/* padding for bootstrap navbar */
 body {
-  padding-top: 51px;
-  padding-bottom: 40px;
+  background: #f2f2f2;
+  padding: 60px 0 0 8px; /* padding-top overridden by theme */
 }
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
+
+body hr {
+  border-color: #d7d7d7;
+  margin: 10px 0;
 }
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
+
+.navbar-inverse .navbar-nav > li > a,
+.navbar .navbar-brand {
+  text-decoration: none;
 }
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
+
+.navbar-logo {
+  margin-top: 1px;
 }
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
+
+.navbar-logo img {
+  margin-right: 12px;
 }
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
+
+.navbar-author {
   margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
+  font-size: 15px;
 }
-</style>
 
-<script>
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
+.navbar .dropdown-menu .fa {
+  min-width: 20px;
+}
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
+.navbar .dropdown-menu {
+  min-width: 150px;
   max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  overflow: auto;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+.chart-wrapper,
+.nav-tabs-custom,
+.sbframe-commentary
+{
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  margin-right: 8px;
 }
 
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
+.chart-title {
+  border-bottom: 1px solid #d7d7d7;
+  color: #666;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 7px 10px 4px;
 }
 
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
+.chart-wrapper .chart-title:empty {
   display: none;
 }
+
+.chart-wrapper .chart-stage {
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.chart-wrapper .chart-notes {
+  background: #fbfbfb;
+  border-top: 1px solid #e2e2e2;
+  color: #808080;
+  font-size: 12px;
+  padding: 8px 10px 5px;
+}
+
+/*
+ CSS for handling flexbox layout
+*/
+
+#dashboard-container {
+  visibility: hidden;
+}
+
+.tab-content>.dashboard-page-wrapper.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard-page-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard-row-orientation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.dashboard-row-flex {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.dashboard-column-orientation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.dashboard-column {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chart-wrapper-flex {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chart-stage-flex {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.chart-shim {
+  position: absolute;
+  left: 8px; top: 8px; right: 8px; bottom: 8px;
+}
+
+.no-padding .chart-shim {
+  left: 0; top: 0; right: 0; bottom: 0;
+}
+
+.flowing-content-shim {
+  overflow: auto;
+  left: 0; top: 0; right: 0; bottom: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.flowing-content-container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.chart-stage .table-bordered {
+  border: none;
+}
+
+.chart-stage .table-bordered > tbody > tr > th,
+.chart-stage .table-bordered > tfoot > tr > th,
+.chart-stage .table-bordered > tbody > tr > td,
+.chart-stage .table-bordered > tfoot > tr > td {
+  border: none;
+}
+
+.chart-stage .table-bordered > tbody > tr > td {
+  border-top: 1px solid #dddddd;
+}
+
+.chart-stage .table-bordered > thead > tr > th {
+  border: none;
+  border-bottom: 2px solid #dddddd;
+}
+
+.bootstrap-table table>thead {
+  background-color: #fff;
+}
+
+.bootstrap-table table.data,
+.bootstrap-table table.shiny-table {
+  width: inherit !important;
+}
+
+.bootstrap-table table.data>tbody>tr>th,
+.bootstrap-table table.shiny-table>tbody>tr>th {
+  border-top: none;
+  border-bottom: 2px solid #dddddd;
+  padding: 5px;
+}
+
+.bootstrap-table .data td[align=right] {
+  font-family: inherit;
+}
+
+.chart-wrapper form {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.shiny-input-container label {
+  font-weight: normal;
+}
+
+.chart-stage .html-widget {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.chart-stage .html-widget-static-bound {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.chart-stage .shiny-bound-output {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Omit display of empty paragraphs */
+
+.chart-shim>p:empty {
+  display: none;
+}
+
+.chart-stage>p:empty {
+  display: none;
+}
+
+/* Omit display of special knitr options div*/
+
+.chart-stage .knitr-options {
+  display: none;
+}
+
+/* Automatically resizing images */
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.image-container img {
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* Value box */
+
+.value-box {
+  border-radius: 2px;
+  position: relative;
+  display: block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.value-box > .inner {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.value-box .value {
+  font-size: 38px;
+  font-weight: bold;
+  margin: 0 0 3px 0;
+  white-space: nowrap;
+  padding: 0;
+}
+
+.value-box .caption {
+  font-size: 15px;
+}
+.value-box .caption > small {
+  display: block;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.value-box .icon i {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 80px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.linked-value:hover {
+  cursor: pointer;
+}
+
+.value-box.linked-value:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* STORYBOARD */
+
+.storyboard-nav button {
+  background: transparent;
+  border: 0;
+  opacity: .3;
+  outline: none;
+  padding: 0;
+}
+
+.storyboard-nav button:hover,
+.storyboard-nav button:hover {
+  opacity: .5;
+}
+
+.storyboard-nav button:disabled,
+.storyboard-nav button:disabled {
+  opacity: .1;
+}
+
+.storyboard-nav .sbnext,
+.storyboard-nav .sbprev {
+  float: left;
+  width: 2%;
+  height: 120px;
+  font-size: 50px;
+}
+
+.storyboard-nav .sbprev {
+  text-align: left;
+  width: 2%;
+}
+
+.storyboard-nav .sbnext {
+  float: right;
+  text-align: right;
+  margin-right: 8px;
+}
+
+.storyboard-nav .sbframelist {
+  margin: 0 auto;
+  width: 94%;
+  height: 120px;
+  overflow: hidden;
+  text-shadow: none;
+  margin-bottom: 8px;
+}
+
+.storyboard-nav .sbframelist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.storyboard-nav .sbframelist ul li {
+  float: left;
+  width: 270px;
+  height: 100%;
+  padding: 10px 10px 10px 10px;
+  margin-right: 8px;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  color: #3a3c47;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.storyboard-nav .sbframelist ul li:last-child {
+  margin-right: 0px;
+}
+
+.storyboard-nav .sbframelist ul li.active {
+  color: #fff;
+  background: #B8B8B8;
+}
+
+.sbframe-commentary {
+  width: 300px;
+  background: #fbfbfb;
+  font-size: 14px;
+}
+
+.sbframe-commentary ul {
+  padding-left: 22px;
+}
+
+.sbframe.active {
+  display: flex;
+}
+
+.sbframe:not(.active) {
+  display: none;
+}
+
+/* NAV TABS */
+
+.nav-tabs-custom > .nav-tabs {
+  margin: 0;
+  border-bottom: 1px solid #d7d7d7;
+  color: #666;
+  font-size: 14px;
+  font-weight: 300;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.nav-tabs-custom > .nav-tabs > li {
+  border-top: 3px solid transparent;
+  margin-bottom: -1px;
+  margin-right: 5px;
+}
+.nav-tabs-custom > .nav-tabs > li > a,
+.nav-tabs-custom > .nav-tabs > li > a:active {
+  color: #666;
+  font-weight: 300;
+  font-size: 14px;
+  border-radius: 0;
+  padding: 3px 10px 5px;
+  text-transform: none;
+}
+
+.nav-tabs-custom > .nav-tabs > li:not(.active) > a {
+  border-bottom-color: transparent;
+}
+
+.nav-tabs-custom > .nav-tabs > li > a.text-muted {
+  color: #999;
+}
+.nav-tabs-custom > .nav-tabs > li > a,
+.nav-tabs-custom > .nav-tabs > li > a:hover {
+  background: transparent;
+  margin: 0;
+}
+.nav-tabs-custom > .nav-tabs > li > a:hover {
+  color: #999;
+}
+.nav-tabs-custom > .nav-tabs > li:not(.active) > a:hover,
+.nav-tabs-custom > .nav-tabs > li:not(.active) > a:focus,
+.nav-tabs-custom > .nav-tabs > li:not(.active) > a:active {
+  border-color: transparent;
+}
+.nav-tabs-custom > .nav-tabs > li.active {
+  border-top-color: #3c8dbc;
+}
+.nav-tabs-custom > .nav-tabs > li.active > a,
+.nav-tabs-custom > .nav-tabs > li.active:hover > a {
+  background-color: #fff;
+  color: #666;
+}
+.nav-tabs-custom > .nav-tabs > li.active > a {
+  border-top-color: transparent;
+  border-left-color: #d7d7d7;
+  border-right-color: #d7d7d7;
+}
+.nav-tabs-custom > .nav-tabs > li:first-of-type {
+  margin-left: 0;
+}
+.nav-tabs-custom > .nav-tabs > li:first-of-type.active > a {
+  border-left-color: transparent;
+}
+.nav-tabs-custom > .nav-tabs.pull-right {
+  float: none !important;
+}
+.nav-tabs-custom > .nav-tabs.pull-right > li {
+  float: right;
+}
+.nav-tabs-custom > .nav-tabs.pull-right > li:first-of-type {
+  margin-right: 0;
+}
+.nav-tabs-custom > .nav-tabs.pull-right > li:first-of-type > a {
+  border-left-width: 1px;
+}
+.nav-tabs-custom > .nav-tabs.pull-right > li:first-of-type.active > a {
+  border-left-color: #d7d7d7;
+  border-right-color: transparent;
+}
+.nav-tabs-custom > .nav-tabs > li.header {
+  line-height: 35px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: #666;
+}
+.nav-tabs-custom > .nav-tabs > li.header > .fa,
+.nav-tabs-custom > .nav-tabs > li.header > .glyphicon,
+.nav-tabs-custom > .nav-tabs > li.header > .ion {
+  margin-right: 5px;
+}
+.nav-tabs-custom > .tab-content {
+  background: #fff;
+  padding: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-tabs-custom > .tab-content > .chart-wrapper {
+  background: #fff;
+  border: none;
+  margin: 0;
+}
+
+
+.nav-tabs-custom > .tab-content > .active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-tabs-custom .dropdown.open > a:active,
+.nav-tabs-custom .dropdown.open > a:focus {
+  background: transparent;
+  color: #999;
+}
+
+
+@media (max-width: 767px) {
+  .value-box {
+    text-align: center;
+    margin-right: 8px;
+  }
+  .value-box .icon {
+    display: none;
+  }
+}
+
+/* Fixed position sidebar */
+
+.section.sidebar {
+  position: fixed;
+  top: 51px; /* overridden by theme */
+  left: 0;
+  bottom: 0;
+  border-right: 1px solid #e2e2e2;
+  background-color: white; /* overridden by theme */
+  padding-left: 10px;
+  padding-right: 10px;
+  visibility: hidden;
+  overflow: auto;
+}
+
+.section.sidebar form p:first-child {
+  margin-top: 10px;
+}
+
+/* Embedded source code */
+
+#flexdashboard-source-code {
+  display: none;
+}
+
+.featherlight-content #flexdashboard-source-code {
+  display: inline-block;
+}
+
+.featherlight-content {
+  width: 80%;
+  max-width: 800px;
+  padding: 0 !important;
+  border-bottom: none !important;
+}
+
+.featherlight:last-of-type {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.featherlight-inner {
+  width: 100%;
+}
+
+.featherlight-content pre {
+  margin: 0;
+  border: 0;
+  background: #fff;
+  font-size: 12px;
+}
+
+.unselectable {
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#flexdashboard-source-code code {
+  -ms-user-select: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -o-user-select: text;
+  user-select: text;
+}
+
+/* DataTables Tweaks */
+
+.dataTables_filter input[type="search"] {
+  -webkit-appearance: searchfield;
+  outline: none;
+}
+
+.dataTables_wrapper.no-footer
+.dataTables_info {
+  padding-top: 0;
+}
+
+
+table.dataTable thead th {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* Mobile phone only CSS */
+
+.desktop-layout div.section.mobile {
+  display: none;
+}
+
+.mobile-layout div.section.no-mobile {
+  display: none;
+}
+
+.mobile-figure {
+  display: none;
+}
+
+
+
+body {
+  padding-top: 60px;
+}
+
+.section.sidebar {
+  top: 51px;
+  background-color: rgba(39, 128, 227, 0.1);
+}
+
+.value-box {
+  color: #f9f9f9;
+}
+
+.bg-primary {
+  background-color: rgba(39, 128, 227, 0.7);
+}
+
+.storyboard-nav .sbframelist ul li.active {
+  background-color: rgba(39, 128, 227, 0.7);
+}
+
+.nav-tabs-custom > .nav-tabs > li.active {
+  border-top-color: rgba(39, 128, 227, 0.7);
+}
+
+.bg-info {
+  background-color: rgba(153, 84, 187, 0.7);
+}
+
+.bg-warning {
+  background-color: rgba(255, 117, 24, 0.7);
+}
+
+.bg-danger {
+  background-color: rgba(255, 0, 57, 0.7);
+}
+
+.bg-success {
+  background-color: rgba(63, 182, 24, 0.7);
+}
+
+.chart-title {
+  font-weight: 500;
+}
+
+.nav-tabs-custom > .nav-tabs > li > a,
+.nav-tabs-custom > .nav-tabs > li > a:active {
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 768px) {
+html, body {
+  height: 100%;
+}
+
+#dashboard-container {
+  height: 100%;
+}
+}
 </style>
-
-<!-- code folding -->
-
 
 
 
@@ -257,449 +857,2130 @@ $(document).ready(function () {
 
 <body>
 
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+<div class="navbar-header">
 
-<div class="container-fluid main-container">
+<button id="navbar-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
 
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Home</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="map.html">County Maps</a>
-</li>
-<li>
-  <a href="dashboard_1.html">See the Gap</a>
-</li>
-<li>
-  <a href="project_report.html">Project Report</a>
-</li>
-<li>
-  <a href="analysist.html">Analysis</a>
-</li>
-<li>
-  <a href="mailto:&lt;vf2280@cumc.columbia.edu&gt;">
-    <span class="fa fa-envelope fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="http://github.com/vf2280/">
-    <span class="fa fa-github fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://www.feedingamerica.org/">
-    <span class="fa fa-globe-americas"></span>
-     
-  </a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div class="fluid-row" id="header">
-
-
-
-<h1 class="title toc-ignore">See the Gap</h1>
-<h4 class="author">Vasili Fokaidis</h4>
+<span class="navbar-logo pull-left">
+  
+</span>
+<span class="navbar-brand">
+  See the Gap
+  <span class="navbar-author">
+    Vasili Fokaidis
+    </span>
+</span>
 
 </div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-left">
+</ul>
+<ul class="nav navbar-nav navbar-right">
+</ul>
+</div><!--/.nav-collapse-->
+</div><!--/.container-->
+</div><!--/.navbar-->
+
+<script type="text/javascript">
 
 
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ─────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
-<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
-## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
-## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
-## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>library(gganimate)
-library(flexdashboard)
+var FlexDashboard = (function () {
 
-knitr::opts_chunk$set(
-    echo = TRUE,
-    warning = FALSE,
-    fig.width = 8, 
-  fig.height = 6,
-  out.width = &quot;90%&quot;
-)
+  // initialize options
+  var _options = {};
 
-theme_set(theme_minimal() + theme(legend.position = &quot;bottom&quot;))
+  var FlexDashboard = function() {
 
-options(
-  ggplot2.continuous.colour = &quot;viridis&quot;,
-  ggplot2.continuous.fill = &quot;viridis&quot;
-)
+    // default options
+    _options = $.extend(_options, {
+      theme: "cosmo",
+      fillPage: false,
+      orientation: 'columns',
+      storyboard: false,
+      defaultFigWidth: 576,
+      defaultFigHeight: 461,
+      defaultFigWidthMobile: 360,
+      defaultFigHeightMobile: 461,
+      isMobile: false,
+      isPortrait: false,
+      resize_reload: true
+    });
+  };
 
-scale_colour_discrete = scale_colour_viridis_d
-scale_fill_discrete = scale_fill_viridis_d</code></pre>
+  function init(options) {
+
+    // extend default options
+    $.extend(true, _options, options);
+
+    // add ids to sections that don't have them (pandoc won't assign ids
+    // to e.g. sections with titles consisting of only chinese characters)
+    var nextId = 1;
+    $('.level1:not([id]),.level2:not([id]),.level3:not([id])').each(function() {
+      $(this).attr('id', 'dashboard-' + nextId++);
+    });
+
+    // find navbar items
+    var navbarItems = $('#flexdashboard-navbar');
+    if (navbarItems.length)
+      navbarItems = JSON.parse(navbarItems.html());
+    addNavbarItems(navbarItems);
+
+    // find the main dashboard container
+    var dashboardContainer = $('#dashboard-container');
+
+    // resolve mobile classes
+    resolveMobileClasses(dashboardContainer);
+
+    // one time global initialization for components
+    componentsInit(dashboardContainer);
+
+    // look for a global sidebar
+    var globalSidebar = dashboardContainer.find(".section.level1.sidebar");
+    if (globalSidebar.length > 0) {
+
+      // global layout for fullscreen displays
+      if (!isMobilePhone()) {
+
+         // hoist it up to the top level
+         globalSidebar.insertBefore(dashboardContainer);
+
+         // lay it out (set width/positions)
+         layoutSidebar(globalSidebar, dashboardContainer);
+
+      // tuck sidebar into first page for mobile phones
+      } else {
+
+        // convert it into a level3 section
+        globalSidebar.removeClass('sidebar');
+        globalSidebar.removeClass('level1');
+        globalSidebar.addClass('level3');
+        var h1 = globalSidebar.children('h1');
+        var h3 = $('<h3></h3>');
+        h3.append(h1.contents());
+        h3.insertBefore(h1);
+        h1.detach();
+
+        // move it into the first page
+        var page = dashboardContainer.find('.section.level1').first();
+        if (page.length > 0)
+          page.prepend(globalSidebar);
+      }
+    }
+
+    // look for pages to layout
+    var pages = $('div.section.level1');
+    if (pages.length > 0) {
+
+        // find the navbar and collapse on clicked
+        var navbar = $('#navbar');
+        navbar.on("click", "a[data-toggle!=dropdown]", null, function () {
+           navbar.collapse('hide');
+        });
+
+        // envelop the dashboard container in a tab content div
+        dashboardContainer.wrapInner('<div class="tab-content"></div>');
+
+        pages.each(function(index) {
+
+          // lay it out
+          layoutDashboardPage($(this));
+
+          // add it to the navbar
+          addToNavbar($(this), index === 0);
+
+        });
+
+    } else {
+
+      // remove the navbar and navbar button if we don't
+      // have any navbuttons
+      if (navbarItems.length === 0) {
+        $('#navbar').remove();
+        $('#navbar-button').remove();
+      }
+
+      // add the storyboard class if requested
+      if (_options.storyboard)
+        dashboardContainer.addClass('storyboard');
+
+      // layout the entire page
+      layoutDashboardPage(dashboardContainer);
+    }
+
+    // if we are in shiny we need to trigger a window resize event to
+    // force correct layout of shiny-bound-output elements
+    if (isShinyDoc())
+      $(window).trigger('resize');
+
+    // make main components visible
+    $('.section.sidebar').css('visibility', 'visible');
+    dashboardContainer.css('visibility', 'visible');
+
+    // handle location hash
+    handleLocationHash();
+
+    // intialize prism highlighting
+    initPrismHighlighting();
+
+    // record mobile and orientation state then register a handler
+    // to refresh if resize_reload is set to true and it changes
+    _options.isMobile = isMobilePhone();
+    _options.isPortrait = isPortrait();
+    if (_options.resize_reload) {
+      $(window).on('resize', function() {
+        if (_options.isMobile !== isMobilePhone() ||
+            _options.isPortrait !== isPortrait()) {
+          window.location.reload();
+        }
+      });
+    } else {
+      // if in desktop mode and resizing to mobile, make sure the heights are 100%
+      // This enforces what `fillpage.css` does for "wider" pages.
+      // Since we are not reloading once the page becomes small, we need to force the height to 100%
+      // This is a new situation introduced when `_options.resize_reload` is `false`
+      if (! _options.isMobile) {
+        // only add if `fillpage.css` was added in the first place
+        if (_options.fillPage) {
+          // fillpage.css
+          $("html,body,#dashboard").css("height", "100%");
+        }
+      }
+    }
+    // trigger layoutcomplete event
+    dashboardContainer.trigger('flexdashboard:layoutcomplete');
+  }
+
+  function resolveMobileClasses(dashboardContainer) {
+     // add top level layout class
+    dashboardContainer.addClass(isMobilePhone() ? 'mobile-layout' :
+                                                  'desktop-layout');
+
+    // look for .mobile sections and add .no-mobile to their peers
+    var mobileSections = $('.section.mobile');
+    mobileSections.each(function() {
+       var id = $(this).attr('id');
+       var nomobileId = id.replace(/-\d+$/, '');
+       $('#' + nomobileId).addClass('no-mobile');
+    });
+  }
+
+  function addNavbarItems(navbarItems) {
+
+    var navbarLeft = $('ul.navbar-left');
+    var navbarRight = $('ul.navbar-right');
+
+    for (var i = 0; i<navbarItems.length; i++) {
+
+      // get the item
+      var item = navbarItems[i];
+
+      // determine the container
+      var container = null;
+      if (item.align === "left")
+        container = navbarLeft;
+      else
+        container = navbarRight;
+
+      // navbar menu if we have multiple items
+      if (item.items) {
+        var menu = navbarMenu(null, item.icon, item.title, container);
+        for (var j = 0; j<item.items.length; j++) {
+          var subItem = item.items[j];
+          var li = $('<li></li>');
+          li.append(navbarLink(subItem.icon, subItem.title, subItem.href, subItem.target));
+          menu.append(li);
+        }
+      } else {
+        var li = $('<li></li>');
+        li.append(navbarLink(item.icon, item.title, item.href, item.target));
+        container.append(li);
+      }
+    }
+  }
+
+  // create or get a reference to an existing dropdown menu
+  function navbarMenu(id, icon, title, container) {
+    var existingMenu = [];
+    if (id)
+      existingMenu = container.children('#' + id);
+    if (existingMenu.length > 0) {
+      return existingMenu.children('ul');
+    } else {
+      var li = $('<li></li>');
+      if (id)
+        li.attr('id', id);
+      li.addClass('dropdown');
+      // auto add "Share" title on mobile if necessary
+      if (!title && icon && (icon === "fa-share-alt") && isMobilePhone())
+        title = "Share";
+      if (title) {
+        title = title + ' <span class="caret"></span>';
+      }
+      var a = navbarLink(icon, title, "#");
+      a.addClass('dropdown-toggle');
+      a.attr('data-toggle', 'dropdown');
+      a.attr('role', 'button');
+      a.attr('aria-expanded', 'false');
+      li.append(a);
+      var ul = $('<ul class="dropdown-menu"></ul>');
+      ul.attr('role', 'menu');
+      li.append(ul);
+      container.append(li);
+      return ul;
+    }
+  }
+
+  function addToNavbar(page, active) {
+
+    // capture the id and data-icon attribute (if any)
+    var id = page.attr('id');
+    var icon = page.attr('data-icon');
+    var navmenu = page.attr('data-navmenu');
+
+    // get hidden state (transfer this to navbar)
+    var hidden = page.hasClass('hidden');
+    page.removeClass('hidden');
+
+    // sanitize the id for use with bootstrap tabs
+    id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+    page.attr('id', id);
+
+    // get the wrapper
+    var wrapper = page.closest('.dashboard-page-wrapper');
+
+    // move the id to the wrapper
+    page.removeAttr('id');
+    wrapper.attr('id', id);
+
+    // add the tab-pane class to the wrapper
+    wrapper.addClass('tab-pane');
+    if (active)
+      wrapper.addClass('active');
+
+    // get a reference to the h1, discover its inner contens, then detach it
+    var h1 = wrapper.find('h1').first();
+    var title = h1.contents();
+    h1.detach();
+
+    // create a navbar item
+    var li = $('<li></li>');
+    var a = navbarLink(icon, title, '#' + id);
+    a.attr('data-toggle', 'tab');
+    li.append(a);
+
+    // add it to the navbar (or navbar menu if specified)
+    var container = $('ul.navbar-left');
+    if (navmenu) {
+      var menuId = navmenu.replace(/\s+/g, '');
+      var menu = navbarMenu(menuId, null, navmenu, container);
+      menu.append(li);
+    } else {
+      container.append(li);
+    }
+
+    // hide it if requested
+    if (hidden)
+      li.addClass('hidden');
+  }
+
+  function navbarLink(icon, title, href, target) {
+
+    var a = $('<a></a>');
+    if (icon) {
+
+      // get the name of the icon set and icon
+      var dashPos = icon.indexOf("-");
+      var iconSet = null;
+      var iconSplit = icon.split(" ");
+      if (iconSplit.length > 1) {
+        iconSet = iconSplit[0];
+        icon = iconSplit.slice(1).join(" ");
+      } else {
+        iconSet = icon.substring(0, dashPos);
+      }
+      var iconName = icon.substring(dashPos + 1);
+
+      // create the icon
+      var iconElement = $('<span class="' + iconSet + ' ' + icon + '"></span>');
+      if (title)
+        iconElement.css('margin-right', '7px');
+      a.append(iconElement);
+      // if href is null see if we can auto-generate based on icon (e.g. social)
+      if (!href)
+        maybeGenerateLinkFromIcon(iconName, a);
+    }
+    if (title)
+      a.append(title);
+
+    // add the href.
+    if (href) {
+      if (href === "source_embed") {
+        a.attr('href', '#');
+        a.attr('data-featherlight', "#flexdashboard-source-code");
+        a.featherlight({
+            beforeOpen: function(event){
+              $('body').addClass('unselectable');
+            },
+            afterClose: function(event){
+              $('body').removeClass('unselectable');
+            }
+        });
+      } else {
+        a.attr('href', href);
+      }
+    }
+
+    // add the arget
+    if (target)
+      a.attr('target', target);
+
+    return a;
+  }
+
+  // auto generate a link from an icon name (e.g. twitter) when possible
+  function maybeGenerateLinkFromIcon(iconName, a) {
+
+     var serviceLinks = {
+      "twitter": "https://twitter.com/share?text=" + encodeURIComponent(document.title) + "&url="+encodeURIComponent(location.href),
+      "facebook": "https://www.facebook.com/sharer/sharer.php?s=100&p[url]="+encodeURIComponent(location.href),
+      "google-plus": "https://plus.google.com/share?url="+encodeURIComponent(location.href),
+      "linkedin": "https://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title),
+      "pinterest": "https://pinterest.com/pin/create/link/?url="+encodeURIComponent(location.href) + "&description=" + encodeURIComponent(document.title)
+    };
+
+    var makeSocialLink = function(a, href) {
+      a.attr('href', '#');
+      a.on('click', function(e) {
+        e.preventDefault();
+        window.open(href);
+      });
+    };
+
+    $.each(serviceLinks, function(key, value) {
+      if (iconName.indexOf(key) !== -1)
+        makeSocialLink(a, value);
+    });
+  }
+
+  // layout a dashboard page
+  function layoutDashboardPage(page) {
+
+    // use a page wrapper so that free form content above the
+    // dashboard appears at the top rather than the side (as it
+    // would without the wrapper in a column orientation)
+    var wrapper = $('<div class="dashboard-page-wrapper"></div>');
+    page.wrap(wrapper);
+
+    // if there are no level2 or level3 headers synthesize a level3
+    // header to contain the (e.g. frame it, scroll container, etc.)
+    var headers = page.find('h2,h3');
+    if (headers.length === 0)
+      page.wrapInner('<div class="section level3"></div>');
+
+    // hoist up any content before level 2 or level 3 headers
+    var children = page.children();
+    children.each(function(index) {
+      if ($(this).hasClass('level2') || $(this).hasClass('level3'))
+        return false;
+      $(this).insertBefore(page);
+    });
+
+    // determine orientation and fillPage behavior for distinct media
+    var orientation, fillPage, storyboard;
+
+    // media: mobile phone
+    if (isMobilePhone()) {
+
+      // if there is a sidebar we need to ensure it's content
+      // is properly framed as an h3
+      var sidebar = page.find('.section.sidebar');
+      sidebar.removeClass('sidebar');
+      sidebar.wrapInner('<div class="section level3"></div>');
+      var h2 = sidebar.find('h2');
+      var h3 = $('<h3></h3>');
+      h3.append(h2.contents());
+      h3.insertBefore(h2);
+      h2.detach();
+
+      // wipeout h2 elements then enclose them in a single h2
+      var level2 = page.find('div.section.level2');
+      level2.each(function() {
+        level2.children('h2').remove();
+        level2.children().unwrap();
+      });
+      page.wrapInner('<div class="section level2"></div>');
+
+      // substitute mobile images
+      if (isPortrait()) {
+        var mobileFigures = $('img.mobile-figure');
+        mobileFigures.each(function() {
+          // get the src (might be base64 encoded)
+          var src = $(this).attr('src');
+
+          // find it's peer
+          var id = $(this).attr('data-mobile-figure-id');
+          var img = $('img[data-figure-id=' + id + "]");
+          img.attr('src', src)
+             .attr('width', _options.defaultFigWidthMobile)
+             .attr('height', _options.defaultFigHeightMobile);
+        });
+      }
+
+      // hoist storyboard commentary into it's own section
+      if (page.hasClass('storyboard')) {
+        var commentaryHR = page.find('div.section.level3 hr');
+        commentaryHR.each(function() {
+          var commentary = $(this).nextAll().detach();
+          var commentarySection = $('<div class="section level3"></div>');
+          commentarySection.append(commentary);
+          commentarySection.insertAfter($(this).closest('div.section.level3'));
+          $(this).remove();
+        });
+      }
+
+      // force a non full screen layout by columns
+      orientation = _options.orientation = 'columns';
+      fillPage = _options.fillPage = false;
+      storyboard = _options.storyboard = false;
+
+    // media: desktop
+    } else {
+
+      // determine orientation
+      orientation = page.attr('data-orientation');
+      if (orientation !== 'rows' && orientation != 'columns')
+        orientation = _options.orientation;
+
+      // determine storyboard mode
+      storyboard = page.hasClass('storyboard');
+
+      // fillPage based on options (force for storyboard)
+      fillPage = _options.fillPage || storyboard;
+
+      // handle sidebar
+      var sidebar = page.find('.section.level2.sidebar');
+      if (sidebar.length > 0)
+        layoutSidebar(sidebar, page);
+    }
+
+    // give it and it's parent divs height: 100% if we are in fillPage mode
+    if (fillPage) {
+      page.addClass('vertical-layout-fill');
+      page.css('height', '100%');
+      page.parents('div').css('height', '100%');
+    } else {
+      page.addClass('vertical-layout-scroll');
+    }
+
+    // perform the layout
+    if (storyboard)
+      layoutPageAsStoryboard(page);
+    else if (orientation === 'rows')
+      layoutPageByRows(page, fillPage);
+    else if (orientation === 'columns')
+      layoutPageByColumns(page, fillPage);
+  }
+
+  function layoutSidebar(sidebar, content) {
+
+    // get it out of the header hierarchy
+    sidebar = sidebar.first();
+    if (sidebar.hasClass('level1')) {
+      sidebar.removeClass('level1');
+      sidebar.children('h1').remove();
+    } else if (sidebar.hasClass('level2')) {
+      sidebar.removeClass('level2');
+      sidebar.children('h2').remove();
+    }
+
+    // determine width
+    var sidebarWidth = isTablet() ? 220 : 250;
+    var dataWidth = parseInt(sidebar.attr('data-width'));
+    if (dataWidth)
+      sidebarWidth = dataWidth;
+
+    // set the width and shift the page right to accomodate the sidebar
+    sidebar.css('width', sidebarWidth + 'px');
+    content.css('padding-left', sidebarWidth + 'px');
+
+    // wrap it's contents in a form
+    sidebar.wrapInner($('<form></form>'));
+  }
+
+  function layoutPageAsStoryboard(page) {
+
+    // create storyboard navigation
+    var nav = $('<div class="storyboard-nav"></div>');
+
+    // add navigation buttons
+    var prev = $('<button class="sbprev"><i class="fa fa-angle-left"></i></button>');
+    nav.append(prev);
+    var next= $('<button class="sbnext"><i class="fa fa-angle-right"></i></button>');
+    nav.append(next);
+
+    // add navigation frame
+    var frameList = $('<div class="sbframelist"></div>');
+    nav.append(frameList);
+    var ul = $('<ul></ul>');
+    frameList.append(ul);
+
+     // find all the level3 sections (those are the storyboard frames)
+    var frames = page.find('div.section.level3');
+    frames.each(function() {
+
+      // mark it
+      $(this).addClass('sbframe');
+
+      // divide it into chart content and (optional) commentary
+      $(this).addClass('dashboard-column-orientation');
+
+      // stuff the chart into it's own div w/ flex
+      $(this).wrapInner('<div class="sbframe-component"></div>');
+      setFlex($(this), 1);
+      var frame = $(this).children('.sbframe-component');
+
+      // extract the title from the h3
+      var li = $('<li></li>');
+      var h3 = frame.children('h3');
+      li.append(h3.contents());
+      h3.detach();
+      ul.append(li);
+
+      // extract commentary
+      var hr = frame.children('hr');
+      if (hr.length) {
+        var commentary = hr.nextAll().detach();
+        hr.remove();
+        var commentaryFrame = $('<div class="sbframe-commentary"></div>');
+        commentaryFrame.addClass('flowing-content-shim');
+        commentaryFrame.addClass('flowing-content-container');
+        commentaryFrame.append(commentary);
+        $(this).append(commentaryFrame);
+
+        // look for a data-commentary-width attribute
+        var commentaryWidth = $(this).attr('data-commentary-width');
+        if (commentaryWidth)
+          commentaryFrame.css('width', commentaryWidth + 'px');
+      }
+
+      // layout the chart (force flex)
+      var result = layoutChart(frame, true);
+
+      // ice the notes if there are none
+      if (!result.notes)
+        frame.find('.chart-notes').remove();
+
+      // set flex on chart
+      setFlex(frame, 1);
+    });
+
+    // create a div to hold all the frames
+    var frameContent = $('<div class="sbframe-content"></div>');
+    frameContent.addClass('dashboard-row-orientation');
+    frameContent.append(frames.detach());
+
+    // row orientation to stack nav and frame content
+    page.addClass('dashboard-row-orientation');
+    page.append(nav);
+    page.append(frameContent);
+    setFlex(frameContent, 1);
+
+    // initialize sly
+    var sly = new Sly(frameList, {
+    		horizontal: true,
+    		itemNav: 'basic',
+    		smart: true,
+    		activateOn: 'click',
+    		startAt: 0,
+    		scrollBy: 1,
+    		activatePageOn: 'click',
+    		speed: 200,
+    		moveBy: 600,
+    		dragHandle: true,
+    		dynamicHandle: true,
+    		clickBar: true,
+    		keyboardNavBy: 'items',
+    		next: next,
+    		prev: prev
+    	}).init();
+
+    // make first frame active
+    frames.removeClass('active');
+    frames.first().addClass('active');
+
+    // subscribe to frame changed events
+    sly.on('active', function (eventName, itemIndex) {
+      frames.removeClass('active');
+      frames.eq(itemIndex).addClass('active')
+                          .trigger('shown');
+    });
+  }
+
+  function layoutPageByRows(page, fillPage) {
+
+    // row orientation
+    page.addClass('dashboard-row-orientation');
+
+    // find all the level2 sections (those are the rows)
+    var rows = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (rows.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      rows = page.find('div.section.level2');
+    }
+
+    rows.each(function () {
+
+      // flags
+      var haveNotes = false;
+      var haveFlexHeight = true;
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // give it row layout semantics if it's not a tabset
+      if (!isTabset)
+        $(this).addClass('dashboard-row');
+
+      // find all of the level 3 subheads
+      var columns = $(this).find('div.section.level3');
+
+      // determine figureSizes sizes
+      var figureSizes = chartFigureSizes(columns);
+
+      // fixup the columns
+      columns.each(function(index) {
+
+        // layout the chart (force flex if we are in a tabset)
+        var result = layoutChart($(this), isTabset);
+
+        // update flexHeight state
+        if (!result.flex)
+          haveFlexHeight = false;
+
+        // update state
+        if (result.notes)
+          haveNotes = true;
+
+        // set the column flex based on the figure width
+        // (value boxes will just get the default figure width)
+        var chartWidth = figureSizes[index].width;
+        setFlex($(this), chartWidth + ' ' + chartWidth + ' 0px');
+
+      });
+
+      // remove empty chart note divs
+      if (isTabset)
+        $(this).find('.chart-notes').filter(function() {
+            return $(this).html() === "&nbsp;";
+        }).remove();
+      if (!haveNotes)
+        $(this).find('.chart-notes').remove();
+
+       // make it a flexbox row
+      if (haveFlexHeight)
+        $(this).addClass('dashboard-row-flex');
+
+      // now we can set the height on all the wrappers (based on maximum
+      // figure height + room for title and notes, or data-height on the
+      // container if specified). However, don't do this if there is
+      // no flex on any of the constituent columns
+      var flexHeight = null;
+      var dataHeight = parseInt($(this).attr('data-height'));
+      if (dataHeight)
+        flexHeight = adjustedHeight(dataHeight, columns.first());
+      else if (haveFlexHeight)
+        flexHeight = maxChartHeight(figureSizes, columns);
+      if (flexHeight) {
+        if (fillPage)
+          setFlex($(this), flexHeight + ' ' + flexHeight + ' 0px');
+        else {
+          $(this).css('height', flexHeight + 'px');
+          setFlex($(this), '0 0 ' + flexHeight + 'px');
+        }
+      }
+
+    });
+  }
+
+  function layoutPageByColumns(page, fillPage) {
+
+    // column orientation
+    page.addClass('dashboard-column-orientation');
+
+    // find all the level2 sections (those are the columns)
+    var columns = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (columns.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      columns = page.find('div.section.level2');
+    }
+
+    // layout each column
+    columns.each(function (index) {
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // make it a flexbox column
+      $(this).addClass('dashboard-column');
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // find all the h3 elements
+      var rows = $(this).find('div.section.level3');
+
+      // get the figure sizes for the rows
+      var figureSizes = chartFigureSizes(rows);
+
+      // column flex is the max row width (or data-width if specified)
+      var flexWidth;
+      var dataWidth = parseInt($(this).attr('data-width'));
+      if (dataWidth)
+        flexWidth = dataWidth;
+      else
+        flexWidth = maxChartWidth(figureSizes);
+      setFlex($(this), flexWidth + ' ' + flexWidth + ' 0px');
+
+      // layout each chart
+      rows.each(function(index) {
+
+        // perform the layout
+        var result = layoutChart($(this), false);
+
+        // ice the notes if there are none
+        if (!result.notes)
+          $(this).find('.chart-notes').remove();
+
+        // set flex height based on figHeight, then adjust
+        if (result.flex) {
+          var chartHeight = figureSizes[index].height;
+          chartHeight = adjustedHeight(chartHeight, $(this));
+          if (fillPage)
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' 0px');
+          else {
+            $(this).css('height', chartHeight + 'px');
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' ' + chartHeight + 'px');
+          }
+        }
+      });
+    });
+  }
+
+  function chartFigureSizes(charts) {
+
+    // sizes
+    var figureSizes = new Array(charts.length);
+
+    // check each chart
+    charts.each(function(index) {
+
+      // start with default
+      figureSizes[index] = {
+        width: _options.defaultFigWidth,
+        height: _options.defaultFigHeight
+      };
+
+      // look for data-height or data-width then knit options
+      var dataWidth = parseInt($(this).attr('data-width'));
+      var dataHeight = parseInt($(this).attr('data-height'));
+      var knitrOptions = $(this).find('.knitr-options:first');
+      var knitrWidth, knitrHeight;
+      if (knitrOptions) {
+        knitrWidth = parseInt(knitrOptions.attr('data-fig-width'));
+        knitrHeight =  parseInt(knitrOptions.attr('data-fig-height'));
+      }
+
+      // width
+      if (dataWidth)
+        figureSizes[index].width = dataWidth;
+      else if (knitrWidth)
+        figureSizes[index].width = knitrWidth;
+
+      // height
+      if (dataHeight)
+        figureSizes[index].height = dataHeight;
+      else if (knitrHeight)
+        figureSizes[index].height = knitrHeight;
+    });
+
+    // return sizes
+    return figureSizes;
+  }
+
+  function maxChartHeight(figureSizes, charts) {
+
+    // first compute the maximum height
+    var maxHeight = _options.defaultFigHeight;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].height > maxHeight)
+        maxHeight = figureSizes[i].height;
+
+    // now add offests for chart title and chart notes
+    if (charts.length)
+      maxHeight = adjustedHeight(maxHeight, charts.first());
+
+    return maxHeight;
+  }
+
+  function adjustedHeight(height, chart) {
+    if (chart.length > 0) {
+      var chartTitle = chart.find('.chart-title');
+      if (chartTitle.length)
+        height += chartTitle.first().outerHeight();
+      var chartNotes = chart.find('.chart-notes');
+      if (chartNotes.length)
+        height += chartNotes.first().outerHeight();
+    }
+    return height;
+  }
+
+  function maxChartWidth(figureSizes) {
+    var maxWidth = _options.defaultFigWidth;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].width > maxWidth)
+        maxWidth = figureSizes[i].width;
+    return maxWidth;
+  }
+
+  // layout a chart
+  function layoutChart(chart, forceFlex) {
+
+    // state to return
+    var result = {
+      notes: false,
+      flex: false
+    };
+
+    // extract the title
+    var title = extractTitle(chart);
+
+    // find components that apply to this container
+    var components = componentsFind(chart);
+
+    // if it's a custom component then call it and return
+    var customComponents = componentsCustom(components);
+    if (customComponents.length) {
+      componentsLayout(customComponents, title, chart);
+      result.notes = false;
+      result.flex = forceFlex || componentsFlex(customComponents);
+      return result;
+    }
+
+    // put all the content in a chart wrapper div
+    chart.addClass('chart-wrapper');
+    chart.wrapInner('<div class="chart-stage"></div>');
+    var chartContent = chart.children('.chart-stage');
+
+    // flex the content if appropriate
+    result.flex = forceFlex || componentsFlex(components);
+    if (result.flex) {
+      // add flex classes
+      chart.addClass('chart-wrapper-flex');
+      chartContent.addClass('chart-stage-flex');
+
+      // additional shim to break out of flexbox sizing
+      chartContent.wrapInner('<div class="chart-shim"></div>');
+      chartContent = chartContent.children('.chart-shim');
+    }
+
+    // set custom data-padding attribute
+    var pad = chart.attr('data-padding');
+    if (pad) {
+      if (pad === "0")
+        chart.addClass('no-padding');
+      else {
+        pad = pad + 'px';
+        chartContent.css('left', pad)
+                    .css('top', pad)
+                    .css('right', pad)
+                    .css('bottom', pad)
+      }
+    }
+
+    // call compoents
+    componentsLayout(components, title, chartContent);
+
+    // also activate components on shiny output
+    findShinyOutput(chartContent).on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+
+          // see if we opted out of flex based on our output (for shiny
+          // we can't tell what type of output we have until after the
+          // value is bound)
+          var components = componentsFind(element);
+          var flex = forceFlex || componentsFlex(components);
+          if (!flex) {
+            chart.css('height', "");
+            setFlex(chart, "");
+            chart.removeClass('chart-wrapper-flex');
+            chartContent.removeClass('chart-stage-flex');
+            chartContent.children().unwrap();
+          }
+
+          // perform layout
+          componentsLayout(components, title, element.parent());
+        }, 10);
+      });
+
+    // add the title
+    var chartTitle = $('<div class="chart-title"></div>');
+    chartTitle.append(title);
+    chart.prepend(chartTitle);
+
+    // add the notes section
+    var chartNotes = $('<div class="chart-notes"></div>');
+    chartNotes.html('&nbsp;');
+    chart.append(chartNotes);
+
+    // attempt to extract notes if we have a component
+    if (components.length)
+      result.notes = extractChartNotes(chartContent, chartNotes);
+
+    // return result
+    return result;
+  }
+
+  // build a tabset from a section div with the .tabset class
+  function layoutTabset(tabset) {
+
+    // check for fade option
+    var fade = tabset.hasClass("tabset-fade");
+    var navClass = "nav-tabs";
+
+    // determine the heading level of the tabset and tabs
+    var match = tabset.attr('class').match(/level(\d) /);
+    if (match === null)
+      return;
+    var tabsetLevel = Number(match[1]);
+    var tabLevel = tabsetLevel + 1;
+
+    // find all subheadings immediately below
+    var tabs = tabset.find("div.section.level" + tabLevel);
+    if (!tabs.length)
+      return;
+
+    // create tablist and tab-content elements
+    var tabList = $('<ul class="nav ' + navClass + '" role="tablist"></ul>');
+    $(tabs[0]).before(tabList);
+    var tabContent = $('<div class="tab-content"></div>');
+    $(tabs[0]).before(tabContent);
+
+    // build the tabset
+    tabs.each(function(i) {
+
+      // get the tab div
+      var tab = $(tabs[i]);
+
+      // get the id then sanitize it for use with bootstrap tabs
+      var id = tab.attr('id');
+
+      // sanitize the id for use with bootstrap tabs
+      id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+      tab.attr('id', id);
+
+      // get the heading element within it and grab it's text
+      var heading = tab.find('h' + tabLevel + ':first');
+      var headingDom = heading.contents();
+
+      // build and append the tab list item
+      var a = $('<a role="tab" data-toggle="tab"></a>');
+      a.append(headingDom);
+      a.attr('href', '#' + id);
+      a.attr('aria-controls', id);
+      var li = $('<li role="presentation"></li>');
+      li.append(a);
+      if (i === 0)
+        li.attr('class', 'active');
+      tabList.append(li);
+
+      // set it's attributes
+      tab.attr('role', 'tabpanel');
+      tab.addClass('tab-pane');
+      tab.addClass('tabbed-pane');
+      tab.addClass('no-title');
+      if (fade)
+        tab.addClass('fade');
+      if (i === 0) {
+        tab.addClass('active');
+        if (fade)
+          tab.addClass('in');
+      }
+
+      // move it into the tab content div
+      tab.detach().appendTo(tabContent);
+    });
+
+    // add nav-tabs-custom
+    tabset.addClass('nav-tabs-custom');
+
+    // internal layout is dashboard-column with tab-content flexing
+    tabset.addClass('dashboard-column');
+    setFlex(tabContent, 1);
+  }
+
+  // one time global initialization for components
+  function componentsInit(dashboardContainer) {
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.init)
+        component.init(dashboardContainer);
+    }
+  }
+
+  // find components that apply within a container
+  function componentsFind(container) {
+
+    // look for components
+    var components = [];
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.find(container).length)
+        components.push(component);
+    }
+
+    // if there were none then use a special flowing content component
+    // that just adds a scrollbar in fillPage mode
+    if (components.length == 0) {
+      components.push({
+        find: function(container) {
+          return container;
+        },
+
+        flex: function(fillPage) {
+          return fillPage;
+        },
+
+        layout: function(title, container, element, fillPage) {
+          if (fillPage) {
+            container.addClass('flowing-content-shim');
+            container.addClass('flowing-content-container');
+          }
+        }
+      });
+    }
+
+    return components;
+  }
+
+  // if there is a custom component then pick it out
+  function componentsCustom(components) {
+    var customComponent = [];
+    for (var i=0; i<components.length; i++)
+      if (components[i].type === "custom") {
+        customComponent.push(components[i]);
+        break;
+      }
+    return customComponent;
+  }
+
+  // query all components for flex
+  function componentsFlex(components) {
+
+    // no components at all means no flex
+    if (components.length === 0)
+      return false;
+
+    // otherwise query components (assume true unless we see false)
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++)
+      if (components[i].flex && !components[i].flex(_options.fillPage))
+        return false;
+    return true;
+  }
+
+  // layout all components
+  function componentsLayout(components, title, container) {
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++) {
+      var element = components[i].find(container);
+      if (components[i].layout) {
+        // call layout (don't call other components if it returns false)
+        var result = components[i].layout(title, container, element, _options.fillPage);
+        if (result === false)
+          return;
+      }
+    }
+  }
+
+  // get a reference to the h3, discover it's inner html, and remove it
+  function extractTitle(container) {
+    var h3 = container.children('h3').first();
+    var title = '';
+    if (!container.hasClass('no-title'))
+      title = h3.contents();
+    h3.detach();
+    return title;
+  }
+
+  // extract chart notes
+  function extractChartNotes(chartContent, chartNotes) {
+    // look for a terminating blockquote or image caption
+    var blockquote = chartContent.children('blockquote:last-child');
+    var caption = chartContent.children('div.image-container')
+                              .children('p.caption');
+    if (blockquote.length) {
+      chartNotes.empty().append(blockquote.children('p:first-child').contents());
+      blockquote.remove();
+      return true;
+    } else if (caption.length) {
+      chartNotes.empty().append(caption.contents());
+      caption.remove();
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function findShinyOutput(chartContent) {
+    return chartContent.find('.shiny-text-output, .shiny-html-output');
+  }
+
+  // safely detect rendering on a mobile phone
+  function isMobilePhone() {
+    try
+    {
+      return ! window.matchMedia("only screen and (min-width: 768px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  function isFillPage() {
+    return _options.fillPage;
+  }
+
+  // detect portrait mode
+  function isPortrait() {
+    return ($(window).width() < $(window).height());
+  }
+
+  // safely detect rendering on a tablet
+  function isTablet() {
+    try
+    {
+      return window.matchMedia("only screen and (min-width: 769px) and (max-width: 992px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  // test whether this is a shiny doc
+  function isShinyDoc() {
+    return (typeof(window.Shiny) !== "undefined" && !!window.Shiny.outputBindings);
+  }
+
+  // set flex using vendor specific prefixes
+  function setFlex(el, flex) {
+    el.css('-webkit-box-flex', flex)
+      .css('-webkit-flex', flex)
+      .css('-ms-flex', flex)
+      .css('flex', flex);
+  }
+
+  // support bookmarking of pages
+  function handleLocationHash() {
+
+    // restore tab/page from bookmark
+    var hash = window.decodeURIComponent(window.location.hash);
+    if (hash.length > 0)
+      $('ul.nav a[href="' + hash + '"]').tab('show');
+    FlexDashboardUtils.manageActiveNavbarMenu();
+
+    // navigate to a tab when the history changes
+    window.addEventListener("popstate", function(e) {
+      var hash = window.decodeURIComponent(window.location.hash);
+      var activeTab = $('ul.nav a[href="' + hash + '"]');
+      if (activeTab.length) {
+        activeTab.tab('show');
+      } else {
+        $('ul.nav a:first').tab('show');
+      }
+      FlexDashboardUtils.manageActiveNavbarMenu();
+    });
+
+    // add a hash to the URL when the user clicks on a tab/page
+    $('.navbar-nav a[data-toggle="tab"]').on('click', function(e) {
+      var baseUrl = FlexDashboardUtils.urlWithoutHash(window.location.href);
+      var hash = FlexDashboardUtils.urlHash($(this).attr('href'));
+      var href = baseUrl + hash;
+      FlexDashboardUtils.setLocation(href);
+    });
+
+    // handle clicks of other links that should activate pages
+    var navPages = $('ul.navbar-nav li a[data-toggle=tab]');
+    navPages.each(function() {
+      var href =  $(this).attr('href');
+      var links = $('a[href="' + href + '"][data-toggle!=tab]');
+      links.each(function() {
+        $(this).on('click', function(e) {
+          window.FlexDashboardUtils.showPage(href);
+        });
+      });
+    });
+  }
+
+  // tweak Prism highlighting
+  function initPrismHighlighting() {
+
+    if (window.Prism) {
+      Prism.languages.insertBefore('r', 'comment', {
+        'heading': [
+          {
+            // title 1
+        	  // =======
+
+        	  // title 2
+        	  // -------
+        	  pattern: /\w+.*(?:\r?\n|\r)(?:====+|----+)/,
+            alias: 'operator'
+          },
+          {
+            // ### title 3
+            pattern: /(^\s*)###[^#].+/m,
+            lookbehind: true,
+            alias: 'operator'
+          }
+        ]
+      });
+
+      // prism highlight
+      Prism.highlightAll();
+    }
+  }
+
+
+  // get theme color
+  var themeColors = {
+    bootstrap: {
+      primary: "rgba(51, 122, 183, 0.4)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    cerulean: {
+      primary: "rgb(47, 164, 231)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    journal: {
+      primary: "rgba(235, 104, 100, 0.70)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    flatly: {
+      primary: "rgba(44, 62, 80, 0.70)",
+      info: "rgba(52, 152, 219, 0.70)",
+      success: "rgba(24, 188, 156, 0.70)",
+      warning: "rgba(243, 156, 18, 0.70)",
+      danger: "rgba(231, 76, 60, 0.70)"
+    },
+    readable: {
+      primary: "rgba(69, 130, 236, 0.4)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    spacelab: {
+      primary: "rgba(68, 110, 155, 0.25)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    united: {
+      primary: "rgba(221, 72, 20, 0.30)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    cosmo: {
+      primary: "rgba(39, 128, 227, 0.7)",
+      info: "rgba(153, 84, 187, 0.7)",
+      success: "rgba(63, 182, 24, 0.7)",
+      warning: "rgba(255, 117, 24, 0.7)",
+      danger: "rgba(255, 0, 57, 0.7)"
+    },
+    lumen: {
+      primary: "rgba(21, 140, 186, 0.70)",
+      info: "rgba(117, 202, 235, 0.90)",
+      success: "rgba(40, 182, 44, 0.70)",
+      warning: "rgba(255, 133, 27, 0.70)",
+      danger: "rgba(255, 65, 54, 0.70)"
+    },
+    paper: {
+      primary: "rgba(33, 150, 243, 0.35)",
+      info: "rgb(225, 190, 231)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(255, 224, 178)",
+      danger: "rgb(249, 189, 187)"
+    },
+    sandstone: {
+      primary: "rgba(50, 93, 136, 0.3)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    simplex: {
+      primary: "rgba(217, 35, 15, 0.25)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    yeti: {
+      primary: "rgba(0, 140, 186, 0.298039)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    }
+  }
+  function themeColor(color) {
+    return themeColors[_options.theme][color];
+  }
+
+  FlexDashboard.prototype = {
+    constructor: FlexDashboard,
+    init: init,
+    isMobilePhone: isMobilePhone,
+    isFillPage: isFillPage,
+    themeColor: themeColor
+  };
+
+  return FlexDashboard;
+
+})();
+
+// utils
+window.FlexDashboardUtils = {
+  resizableImage: function(img) {
+    var src = img.attr('src');
+    var url = 'url("' + src + '")';
+    img.parent().css('background', url)
+                .css('background-size', 'contain')
+                .css('background-repeat', 'no-repeat')
+                .css('background-position', 'center')
+                .addClass('image-container');
+  },
+  setLocation: function(href) {
+    if (history && history.pushState) {
+      history.pushState(null, null, href);
+    } else {
+      window.location.replace(href);
+    }
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 10);
+    this.manageActiveNavbarMenu();
+  },
+  showPage: function(href) {
+    $('ul.navbar-nav li a[href="' + href + '"]').tab('show');
+    var baseUrl = this.urlWithoutHash(window.location.href);
+    var loc = baseUrl + href;
+    this.setLocation(loc);
+  },
+  showLinkedValue: function(href) {
+    // check for a page link
+    if ($('ul.navbar-nav li a[data-toggle=tab][href="' + href + '"]').length > 0)
+      this.showPage(href);
+    else
+      window.open(href);
+  },
+  urlWithoutHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(0, hashLoc);
+    else
+      return url;
+  },
+  urlHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(hashLoc);
+    else
+      return "";
+  },
+  manageActiveNavbarMenu: function () {
+    // remove active from anyone currently active
+    $('.navbar ul.nav').find('li').removeClass('active');
+    // find the active tab
+    var activeTab = $('.dashboard-page-wrapper.tab-pane.active');
+    if (activeTab.length > 0) {
+      var tabId = activeTab.attr('id');
+      if (tabId)
+        $(".navbar ul.nav a[href='#" + tabId + "']").parents('li').addClass('active');
+    }
+  }
+};
+
+window.FlexDashboard = new FlexDashboard();
+
+// empty content
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    if (container.find('p').length == 0)
+      return container;
+    else
+      return $();
+  }
+})
+
+// plot image
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('p')
+                    .children('img:only-child');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// plot image (figure style)
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.figure').children('img');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// htmlwidget
+window.FlexDashboardComponents.push({
+
+  init: function(dashboardContainer) {
+    // trigger "shown" after initial layout to force static htmlwidgets
+    // in runtime: shiny to be resized after the dom has been transformed
+    dashboardContainer.on('flexdashboard:layoutcomplete', function(event) {
+      setTimeout(function() {
+        dashboardContainer.trigger('shown');
+      }, 200);
+    });
+  },
+
+  find: function(container) {
+    return container.children('div[id^="htmlwidget-"],div.html-widget');
+  }
+});
+
+// gauge
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.html-widget.gauge');
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+
+  }
+
+});
+
+// shiny output
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    return container.children('div[class^="shiny-"]');
+  }
+});
+
+// datatables
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    return container.find('.datatables');
+  },
+  flex: function(fillPage) {
+    return fillPage;
+  }
+});
+
+// bootstrap table
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    var bsTable = container.find('table.table');
+    if (bsTable.length !== 0)
+      return bsTable;
+    else
+      return container.find('tr.header').parent('thead').parent('table');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var bsTable = element;
+
+    // fixup xtable generated tables with a proper thead
+    var headerRow = bsTable.find('tbody > tr:first-child > th').parent();
+    if (headerRow.length > 0) {
+      var thead = $('<thead></thead>');
+      bsTable.prepend(thead);
+      headerRow.detach().appendTo(thead);
+    }
+
+    // improve appearance
+    container.addClass('bootstrap-table');
+
+    // for fill page provide scrolling w/ sticky headers
+    if (fillPage) {
+      // force scrollbar on overflow
+      container.addClass('flowing-content-shim');
+
+      // stable table headers when scrolling
+      bsTable.stickyTableHeaders({
+        scrollableArea: container
+      });
+    }
+  }
+});
+
+// embedded shiny app
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('iframe.shiny-frame');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage) {
+      element.attr('height', '100%');
+    } else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (!height)
+        height = element.attr('height');
+      if (!height)
+        element.attr('height', 500);
+    }
+  }
+});
+
+// shiny fillRow or fillCol
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('.flexfill-container');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage)
+      element.css('height', '100%');
+    else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (height === "100%" || height === "auto" || height === "initial" ||
+          height === "inherit" || !height) {
+        element.css('height', 500);
+      }
+    }
+  }
+});
+
+// valueBox
+window.FlexDashboardComponents.push({
+
+  type: "custom",
+
+  find: function(container) {
+    if (container.find('span.value-output, .shiny-valuebox-output').length)
+      return container;
+    else
+      return $();
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var chartTitle = title;
+    var valueBox = element;
+
+    // add value-box class to container
+    container.addClass('value-box');
+
+    // value paragraph
+    var value = $('<p class="value"></p>');
+
+    // if we have shiny-text-output then just move it in
+    var valueOutputSpan = [];
+    var shinyOutput = valueBox.find('.shiny-valuebox-output').detach();
+    if (shinyOutput.length) {
+      valueBox.children().remove();
+      shinyOutput.html("&mdash;");
+      value.append(shinyOutput);
+    } else {
+      // extract the value (remove leading vector index)
+      var chartValue = valueBox.text().trim();
+      chartValue = chartValue.replace("[1] ", "");
+      valueOutputSpan = valueBox.find('span.value-output').detach();
+      valueBox.children().remove();
+      value.text(chartValue);
+    }
+
+    // caption
+    var caption = $('<p class="caption"></p>');
+    caption.append(chartTitle);
+
+    // build inner div for value box and add it
+    var inner = $('<div class="inner"></div>');
+    inner.append(value);
+    inner.append(caption);
+    valueBox.append(inner);
+
+    // add icon if specified
+    var icon = $('<div class="icon"><i></i></div>');
+    valueBox.append(icon);
+    function setIcon(chartIcon) {
+      var iconLib = "";
+      var iconSplit = chartIcon.split(" ");
+      if (iconSplit.length > 1) {
+        iconLib = iconSplit[0];
+        chartIcon = iconSplit.slice(1).join(" ");
+      } else {
+        var components = chartIcon.split("-");
+        if (components.length > 1)
+          iconLib = components[0];
+      }
+      icon.children('i').attr('class', iconLib + ' ' + chartIcon);
+    }
+    var chartIcon = valueBox.attr('data-icon');
+    if (chartIcon)
+      setIcon(chartIcon);
+
+    // set color based on data-background if necessary
+    var dataBackground = valueBox.attr('data-background');
+    if (dataBackground)
+      valueBox.css('background-color', bgColor);
+    else {
+      // default to bg-primary if no other background is specified
+      if (!valueBox.hasClass('bg-primary') &&
+          !valueBox.hasClass('bg-info') &&
+          !valueBox.hasClass('bg-warning') &&
+          !valueBox.hasClass('bg-success') &&
+          !valueBox.hasClass('bg-danger')) {
+        valueBox.addClass('bg-primary');
+      }
+    }
+
+    // handle data attributes in valueOutputSpan
+    function handleValueOutput(valueOutput) {
+
+      // caption
+      var dataCaption = valueOutput.attr('data-caption');
+      if (dataCaption)
+        caption.html(dataCaption);
+
+      // icon
+      var dataIcon = valueOutput.attr('data-icon');
+      if (dataIcon)
+        setIcon(dataIcon);
+
+      // color
+      var dataColor = valueOutput.attr('data-color');
+      if (dataColor) {
+        if (dataColor.indexOf('bg-') === 0) {
+          valueBox.css('background-color', '');
+          if (!valueBox.hasClass(dataColor)) {
+             valueBox.removeClass('bg-primary bg-info bg-warning bg-danger bg-success');
+             valueBox.addClass(dataColor);
+          }
+        } else {
+          valueBox.removeClass('bg-primary bg-info bg-warning bg-danger bg-success');
+          valueBox.css('background-color', dataColor);
+        }
+      }
+
+      // url
+      var dataHref = valueOutput.attr('data-href');
+      if (dataHref) {
+        valueBox.addClass('linked-value');
+        valueBox.off('click.value-box');
+        valueBox.on('click.value-box', function(e) {
+          window.FlexDashboardUtils.showLinkedValue(dataHref);
+        });
+      }
+    }
+
+    // check for a valueOutputSpan
+    if (valueOutputSpan.length > 0) {
+      handleValueOutput(valueOutputSpan);
+    }
+
+    // if we have a shinyOutput then bind a listener to handle
+    // new valueOutputSpan values
+    shinyOutput.on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+          var valueOutputSpan = element.find('span.value-output');
+          if (valueOutputSpan.length > 0)
+            handleValueOutput(valueOutputSpan);
+        }, 10);
+      }
+    );
+  }
+});
+</script>
+
+<div id="dashboard-container">
+
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
 <p>Read in acs race data and acs hispanic data. And manipulate respective data to make scatter plots.</p>
-<pre class="r"><code>race_df = 
-  read_csv(&quot;ACS_data/ACS_2017_race.csv&quot;) %&gt;%
-  rename(
-    total = &quot;K200201_001E&quot;,
-    white = &quot;K200201_002E&quot;,
-    black = &quot;K200201_003E&quot;,
-    am_ind_al_nat = &quot;K200201_004E&quot;,
-    asian = &quot;K200201_005E&quot;,
-    nat_ha_pac_isl = &quot;K200201_006E&quot;,
-    other = &quot;K200201_007E&quot;,
-    two_or_more = &quot;K200201_008E&quot;,
-    county_state = &quot;NAME&quot;
-  ) %&gt;%
-  janitor::clean_names() %&gt;%
-  select(geo_id, county_state, total, white, black, am_ind_al_nat, asian, nat_ha_pac_isl, other, two_or_more) %&gt;%
-  slice(-1) %&gt;%
-  mutate(
-    total = as.numeric(total),
-    white = as.numeric(white),
-    black = as.numeric(black),
-    am_ind_al_nat = as.numeric(am_ind_al_nat),
-    asian = as.numeric(asian),
-    nat_ha_pac_isl = as.numeric(nat_ha_pac_isl), 
-    other = as.numeric(other),
-    two_or_more = as.numeric(two_or_more)
-  )</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   GEO_ID = col_character(),
-##   NAME = col_character(),
-##   K200201_001E = col_character(),
-##   K200201_001M = col_character(),
-##   K200201_002E = col_character(),
-##   K200201_002M = col_character(),
-##   K200201_003E = col_character(),
-##   K200201_003M = col_character(),
-##   K200201_004E = col_character(),
-##   K200201_004M = col_character(),
-##   K200201_005E = col_character(),
-##   K200201_005M = col_character(),
-##   K200201_006E = col_character(),
-##   K200201_006M = col_character(),
-##   K200201_007E = col_character(),
-##   K200201_007M = col_character(),
-##   K200201_008E = col_character(),
-##   K200201_008M = col_character()
-## )</code></pre>
-<pre class="r"><code>hispanic_df = 
-  read_csv(&quot;ACS_data/ACS_2017_hispanic.csv&quot;) %&gt;%
-   rename(
-    total = &quot;K200301_001E&quot;,
-    hispanic = &quot;K200301_003E&quot;,
-    county_state = &quot;NAME&quot;
-  ) %&gt;%
-  janitor::clean_names() %&gt;%
-  select(geo_id, county_state, total, hispanic) %&gt;%
-  slice(-1) %&gt;%
-  mutate(
-    total = as.numeric(total),
-    hispanic = as.numeric(hispanic)
-  )</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   GEO_ID = col_character(),
-##   NAME = col_character(),
-##   K200301_001E = col_character(),
-##   K200301_001M = col_character(),
-##   K200301_002E = col_character(),
-##   K200301_002M = col_character(),
-##   K200301_003E = col_character(),
-##   K200301_003M = col_character()
-## )</code></pre>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>race_df =<span class="st"> </span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;ACS_data/ACS_2017_race.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="st">  </span><span class="kw">rename</span>(</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="dt">total =</span> <span class="st">&quot;K200201_001E&quot;</span>,</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="dt">white =</span> <span class="st">&quot;K200201_002E&quot;</span>,</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="dt">black =</span> <span class="st">&quot;K200201_003E&quot;</span>,</span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="dt">am_ind_al_nat =</span> <span class="st">&quot;K200201_004E&quot;</span>,</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="dt">asian =</span> <span class="st">&quot;K200201_005E&quot;</span>,</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="dt">nat_ha_pac_isl =</span> <span class="st">&quot;K200201_006E&quot;</span>,</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="dt">other =</span> <span class="st">&quot;K200201_007E&quot;</span>,</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="dt">two_or_more =</span> <span class="st">&quot;K200201_008E&quot;</span>,</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="dt">county_state =</span> <span class="st">&quot;NAME&quot;</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="st">  </span>janitor<span class="op">::</span><span class="kw">clean_names</span>() <span class="op">%&gt;%</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="st">  </span><span class="kw">select</span>(geo_id, county_state, total, white, black, am_ind_al_nat, asian, nat_ha_pac_isl, other, two_or_more) <span class="op">%&gt;%</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="st">  </span><span class="kw">slice</span>(<span class="op">-</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb1-18"><a href="#cb1-18"></a>    <span class="dt">total =</span> <span class="kw">as.numeric</span>(total),</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    <span class="dt">white =</span> <span class="kw">as.numeric</span>(white),</span>
+<span id="cb1-20"><a href="#cb1-20"></a>    <span class="dt">black =</span> <span class="kw">as.numeric</span>(black),</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    <span class="dt">am_ind_al_nat =</span> <span class="kw">as.numeric</span>(am_ind_al_nat),</span>
+<span id="cb1-22"><a href="#cb1-22"></a>    <span class="dt">asian =</span> <span class="kw">as.numeric</span>(asian),</span>
+<span id="cb1-23"><a href="#cb1-23"></a>    <span class="dt">nat_ha_pac_isl =</span> <span class="kw">as.numeric</span>(nat_ha_pac_isl), </span>
+<span id="cb1-24"><a href="#cb1-24"></a>    <span class="dt">other =</span> <span class="kw">as.numeric</span>(other),</span>
+<span id="cb1-25"><a href="#cb1-25"></a>    <span class="dt">two_or_more =</span> <span class="kw">as.numeric</span>(two_or_more)</span>
+<span id="cb1-26"><a href="#cb1-26"></a>  )</span>
+<span id="cb1-27"><a href="#cb1-27"></a></span>
+<span id="cb1-28"><a href="#cb1-28"></a>hispanic_df =<span class="st"> </span></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;ACS_data/ACS_2017_hispanic.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="st">   </span><span class="kw">rename</span>(</span>
+<span id="cb1-31"><a href="#cb1-31"></a>    <span class="dt">total =</span> <span class="st">&quot;K200301_001E&quot;</span>,</span>
+<span id="cb1-32"><a href="#cb1-32"></a>    <span class="dt">hispanic =</span> <span class="st">&quot;K200301_003E&quot;</span>,</span>
+<span id="cb1-33"><a href="#cb1-33"></a>    <span class="dt">county_state =</span> <span class="st">&quot;NAME&quot;</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="st">  </span>janitor<span class="op">::</span><span class="kw">clean_names</span>() <span class="op">%&gt;%</span></span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="st">  </span><span class="kw">select</span>(geo_id, county_state, total, hispanic) <span class="op">%&gt;%</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="st">  </span><span class="kw">slice</span>(<span class="op">-</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb1-39"><a href="#cb1-39"></a>    <span class="dt">total =</span> <span class="kw">as.numeric</span>(total),</span>
+<span id="cb1-40"><a href="#cb1-40"></a>    <span class="dt">hispanic =</span> <span class="kw">as.numeric</span>(hispanic)</span>
+<span id="cb1-41"><a href="#cb1-41"></a>  )</span></code></pre></div>
 <p>Percent function, and percents of each race by county.</p>
-<pre class="r"><code>per_f = function(x) {
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-  x/race_df$total * 100
-  
-}
-
-per_f_h = function(y) {
-  
-  y/hispanic_df$total * 100
-  
-}
-
-race_df = 
-  race_df %&gt;%
-  mutate(
-    white = per_f(white),
-    black = per_f(black),
-    am_ind_al_nat = per_f(am_ind_al_nat),
-    asian = per_f(asian),
-    nat_ha_pac_isl = per_f(nat_ha_pac_isl),
-    other = per_f(other),
-    two_or_more = per_f(two_or_more)
-  )
-
-hispanic_df = 
-  hispanic_df %&gt;%
-  mutate(
-    hispanic = per_f_h(hispanic)
-  ) %&gt;%
-  select(geo_id, hispanic)
-
-race_hisp_df =
-  inner_join(x = race_df, y = hispanic_df, by = &quot;geo_id&quot;, all = TRUE)</code></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>per_f =<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  x<span class="op">/</span>race_df<span class="op">$</span>total <span class="op">*</span><span class="st"> </span><span class="dv">100</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  </span>
+<span id="cb2-5"><a href="#cb2-5"></a>}</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a>per_f_h =<span class="st"> </span><span class="cf">function</span>(y) {</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  </span>
+<span id="cb2-9"><a href="#cb2-9"></a>  y<span class="op">/</span>hispanic_df<span class="op">$</span>total <span class="op">*</span><span class="st"> </span><span class="dv">100</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>  </span>
+<span id="cb2-11"><a href="#cb2-11"></a>}</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a>race_df =<span class="st"> </span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="st">  </span>race_df <span class="op">%&gt;%</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb2-16"><a href="#cb2-16"></a>    <span class="dt">white =</span> <span class="kw">per_f</span>(white),</span>
+<span id="cb2-17"><a href="#cb2-17"></a>    <span class="dt">black =</span> <span class="kw">per_f</span>(black),</span>
+<span id="cb2-18"><a href="#cb2-18"></a>    <span class="dt">am_ind_al_nat =</span> <span class="kw">per_f</span>(am_ind_al_nat),</span>
+<span id="cb2-19"><a href="#cb2-19"></a>    <span class="dt">asian =</span> <span class="kw">per_f</span>(asian),</span>
+<span id="cb2-20"><a href="#cb2-20"></a>    <span class="dt">nat_ha_pac_isl =</span> <span class="kw">per_f</span>(nat_ha_pac_isl),</span>
+<span id="cb2-21"><a href="#cb2-21"></a>    <span class="dt">other =</span> <span class="kw">per_f</span>(other),</span>
+<span id="cb2-22"><a href="#cb2-22"></a>    <span class="dt">two_or_more =</span> <span class="kw">per_f</span>(two_or_more)</span>
+<span id="cb2-23"><a href="#cb2-23"></a>  )</span>
+<span id="cb2-24"><a href="#cb2-24"></a></span>
+<span id="cb2-25"><a href="#cb2-25"></a>hispanic_df =<span class="st"> </span></span>
+<span id="cb2-26"><a href="#cb2-26"></a><span class="st">  </span>hispanic_df <span class="op">%&gt;%</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb2-28"><a href="#cb2-28"></a>    <span class="dt">hispanic =</span> <span class="kw">per_f_h</span>(hispanic)</span>
+<span id="cb2-29"><a href="#cb2-29"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a><span class="st">  </span><span class="kw">select</span>(geo_id, hispanic)</span>
+<span id="cb2-31"><a href="#cb2-31"></a></span>
+<span id="cb2-32"><a href="#cb2-32"></a>race_hisp_df =</span>
+<span id="cb2-33"><a href="#cb2-33"></a><span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">x =</span> race_df, <span class="dt">y =</span> hispanic_df, <span class="dt">by =</span> <span class="st">&quot;geo_id&quot;</span>, <span class="dt">all =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <p>Read in 2017 mtm data, and merge with acs race data.</p>
-<pre class="r"><code>mtm_2017 = 
-  read_csv(&quot;mtm_acs_2017_df.csv&quot;) %&gt;%
-  rename(
-    geo_id = id
-  )</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   .default = col_double(),
-##   state = col_character(),
-##   county = col_character(),
-##   county_state = col_character(),
-##   low_threshold_type = col_character(),
-##   high_threshold_type = col_character(),
-##   zip = col_character(),
-##   id = col_character(),
-##   estimate_total_hispanic_data = col_character(),
-##   estimate_total_not_hispanic_or_latino = col_character(),
-##   estimate_total_hispanic_or_latino = col_character(),
-##   estimate_total_immigration_data = col_character(),
-##   estimate_total_u_s_citizen = col_character(),
-##   estimate_total_not_a_u_s_citizen = col_character(),
-##   estimate_total_race_data = col_character(),
-##   estimate_total_white_alone = col_character(),
-##   estimate_total_black_or_african_american_alone = col_character(),
-##   estimate_total_american_indian_and_alaska_native_alone = col_character(),
-##   estimate_total_asian_alone = col_character(),
-##   estimate_total_native_hawaiian_and_other_pacific_islander_alone = col_character(),
-##   estimate_total_some_other_race_alone = col_character()
-##   # ... with 1 more columns
-## )</code></pre>
-<pre><code>## See spec(...) for full column specifications.</code></pre>
-<pre class="r"><code>mtm_2017_acs_2017_race_df = 
-  inner_join(x = race_hisp_df, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-write_csv(x = mtm_2017_acs_2017_race_df, &quot;mtm_2017_acs_2017_race_df.csv&quot;)</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>mtm_<span class="dv">2017</span> =<span class="st"> </span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;mtm_acs_2017_df.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="st">  </span><span class="kw">rename</span>(</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    <span class="dt">geo_id =</span> id</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  )</span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a>mtm_<span class="dv">2017</span>_acs_<span class="dv">2017</span>_race_df =<span class="st"> </span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">x =</span> race_hisp_df, <span class="dt">y =</span> mtm_<span class="dv">2017</span>, <span class="dt">by =</span> <span class="st">&quot;geo_id&quot;</span>, <span class="dt">all =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb3-9"><a href="#cb3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="kw">write_csv</span>(<span class="dt">x =</span> mtm_<span class="dv">2017</span>_acs_<span class="dv">2017</span>_race_df, <span class="st">&quot;mtm_2017_acs_2017_race_df.csv&quot;</span>)</span></code></pre></div>
 <p>Making transitioning graph for food insecurity by percent of race in each county across the U.S.</p>
 <div id="row" class="section level2">
 <h2>Row</h2>
 <div id="chart-a" class="section level3">
 <h3>Chart A</h3>
-<pre class="r"><code>race_per_plot =
-  
-mtm_2017_acs_2017_race_df %&gt;%
-  pivot_longer(
-    white:hispanic,
-    names_to = &quot;race&quot;,
-    values_to = &quot;percents&quot;
-  ) %&gt;%
-  mutate(
-    race = str_replace(race, &quot;white&quot;, &quot;White&quot;),
-    race = str_replace(race, &quot;black&quot;, &quot;Black&quot;),
-    race = str_replace(race, &quot;am_ind_al_nat&quot;, &quot;American Indian and Alaska Native&quot;),
-    race = str_replace(race, &quot;asian&quot;, &quot;Asian&quot;),
-    race = str_replace(race, &quot;nat_ha_pac_isl&quot;, &quot;Native Hawaiian and Other Pacific Islander&quot;),
-    race = str_replace(race, &quot;other&quot;, &quot;Other Race&quot;),
-    race = str_replace(race, &quot;two_or_more&quot;, &quot;Two or More Races&quot;),
-    race = str_replace(race, &quot;hispanic&quot;, &quot;Hispanic&quot;)
-    ) %&gt;%
-  select(geo_id, total, race, percents, fi_rate) %&gt;%
-  drop_na() %&gt;%
-  ggplot(aes(x = fi_rate, y = percents, size = total, color = race)) + 
-  geom_point(show.legend = FALSE, alpha = 0.8) +
-  labs(
-    title = &#39;{closest_state}&#39;,
-    x = &quot;Food Insecurity Rate&quot;,
-    y = &quot;% Race Within Each County&quot;
-  ) +
-  theme_bw() +
-  transition_states(race, transition_length = 1, state_length = 3, wrap = TRUE) + 
-  enter_fade() + 
-  exit_fade() +
-  ease_aes(&#39;cubic-in-out&#39;)
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-animate(race_per_plot, fps = 5, height = 500, width = 1000)</code></pre>
-<p><img src="dashboard_1_files/figure-html/unnamed-chunk-5-1.gif" width="90%" /></p>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>race_per_plot =</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="st">  </span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>mtm_<span class="dv">2017</span>_acs_<span class="dv">2017</span>_race_df <span class="op">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="st">  </span><span class="kw">pivot_longer</span>(</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    white<span class="op">:</span>hispanic,</span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="dt">names_to =</span> <span class="st">&quot;race&quot;</span>,</span>
+<span id="cb4-7"><a href="#cb4-7"></a>    <span class="dt">values_to =</span> <span class="st">&quot;percents&quot;</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb4-10"><a href="#cb4-10"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;white&quot;</span>, <span class="st">&quot;White&quot;</span>),</span>
+<span id="cb4-11"><a href="#cb4-11"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;black&quot;</span>, <span class="st">&quot;Black&quot;</span>),</span>
+<span id="cb4-12"><a href="#cb4-12"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;am_ind_al_nat&quot;</span>, <span class="st">&quot;American Indian and Alaska Native&quot;</span>),</span>
+<span id="cb4-13"><a href="#cb4-13"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;asian&quot;</span>, <span class="st">&quot;Asian&quot;</span>),</span>
+<span id="cb4-14"><a href="#cb4-14"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;nat_ha_pac_isl&quot;</span>, <span class="st">&quot;Native Hawaiian and Other Pacific Islander&quot;</span>),</span>
+<span id="cb4-15"><a href="#cb4-15"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;other&quot;</span>, <span class="st">&quot;Other Race&quot;</span>),</span>
+<span id="cb4-16"><a href="#cb4-16"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;two_or_more&quot;</span>, <span class="st">&quot;Two or More Races&quot;</span>),</span>
+<span id="cb4-17"><a href="#cb4-17"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;hispanic&quot;</span>, <span class="st">&quot;Hispanic&quot;</span>)</span>
+<span id="cb4-18"><a href="#cb4-18"></a>    ) <span class="op">%&gt;%</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, race, percents, fi_rate) <span class="op">%&gt;%</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="st">  </span><span class="kw">drop_na</span>() <span class="op">%&gt;%</span></span>
+<span id="cb4-21"><a href="#cb4-21"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> fi_rate, <span class="dt">y =</span> percents, <span class="dt">size =</span> total, <span class="dt">color =</span> race)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb4-22"><a href="#cb4-22"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.8</span>) <span class="op">+</span></span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb4-24"><a href="#cb4-24"></a>    <span class="dt">title =</span> <span class="st">&#39;{closest_state}&#39;</span>,</span>
+<span id="cb4-25"><a href="#cb4-25"></a>    <span class="dt">x =</span> <span class="st">&quot;Food Insecurity Rate&quot;</span>,</span>
+<span id="cb4-26"><a href="#cb4-26"></a>    <span class="dt">y =</span> <span class="st">&quot;% Race Within Each County&quot;</span></span>
+<span id="cb4-27"><a href="#cb4-27"></a>  ) <span class="op">+</span></span>
+<span id="cb4-28"><a href="#cb4-28"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb4-29"><a href="#cb4-29"></a><span class="st">  </span><span class="kw">transition_states</span>(race, <span class="dt">transition_length =</span> <span class="dv">1</span>, <span class="dt">state_length =</span> <span class="dv">3</span>, <span class="dt">wrap =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb4-30"><a href="#cb4-30"></a><span class="st">  </span><span class="kw">enter_fade</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb4-31"><a href="#cb4-31"></a><span class="st">  </span><span class="kw">exit_fade</span>() <span class="op">+</span></span>
+<span id="cb4-32"><a href="#cb4-32"></a><span class="st">  </span><span class="kw">ease_aes</span>(<span class="st">&#39;cubic-in-out&#39;</span>)</span>
+<span id="cb4-33"><a href="#cb4-33"></a></span>
+<span id="cb4-34"><a href="#cb4-34"></a><span class="kw">animate</span>(race_per_plot, <span class="dt">fps =</span> <span class="dv">5</span>, <span class="dt">height =</span> <span class="dv">500</span>, <span class="dt">width =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<p><img src="dashboard_1_files/figure-html/unnamed-chunk-5-1.gif" width="90%" data-figure-id=fig1 /></p>
 <p>Read in education attainment acs data.</p>
-<pre class="r"><code>edu_att = 
-  read_csv(&quot;ACS_data/ACS_2017_edu.csv&quot;) %&gt;%
-   rename(
-    total = &quot;K201501_001E&quot;,
-    less_9th = &quot;K201501_002E&quot;,
-    nineth_to_12th = &quot;K201501_003E&quot;,
-    hs_grad = &quot;K201501_004E&quot;,
-    some_coll = &quot;K201501_005E&quot;,
-    assoc_deg = &quot;K201501_006E&quot;,
-    bach_deg = &quot;K201501_007E&quot;,
-    grad_or_prof = &quot;K201501_008E&quot;,
-    county_state = &quot;NAME&quot;
-  ) %&gt;%
-  janitor::clean_names() %&gt;%
-  select(geo_id, total, less_9th, nineth_to_12th, hs_grad, some_coll, assoc_deg, bach_deg, grad_or_prof) %&gt;%
-  slice(-1) %&gt;%
-  mutate(
-    total = as.numeric(total),
-    less_9th = as.numeric(less_9th),
-    nineth_to_12th = as.numeric(nineth_to_12th),
-    hs_grad = as.numeric(hs_grad),
-    some_coll = as.numeric(some_coll),
-    assoc_deg = as.numeric(assoc_deg),
-    bach_deg = as.numeric(bach_deg),
-    grad_or_prof = as.numeric(grad_or_prof))</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   GEO_ID = col_character(),
-##   NAME = col_character(),
-##   K201501_001E = col_character(),
-##   K201501_001M = col_character(),
-##   K201501_002E = col_character(),
-##   K201501_002M = col_character(),
-##   K201501_003E = col_character(),
-##   K201501_003M = col_character(),
-##   K201501_004E = col_character(),
-##   K201501_004M = col_character(),
-##   K201501_005E = col_character(),
-##   K201501_005M = col_character(),
-##   K201501_006E = col_character(),
-##   K201501_006M = col_character(),
-##   K201501_007E = col_character(),
-##   K201501_007M = col_character(),
-##   K201501_008E = col_character(),
-##   K201501_008M = col_character()
-## )</code></pre>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>edu_att =<span class="st"> </span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;ACS_data/ACS_2017_edu.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="st">   </span><span class="kw">rename</span>(</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    <span class="dt">total =</span> <span class="st">&quot;K201501_001E&quot;</span>,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    <span class="dt">less_9th =</span> <span class="st">&quot;K201501_002E&quot;</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>    <span class="dt">nineth_to_12th =</span> <span class="st">&quot;K201501_003E&quot;</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    <span class="dt">hs_grad =</span> <span class="st">&quot;K201501_004E&quot;</span>,</span>
+<span id="cb5-8"><a href="#cb5-8"></a>    <span class="dt">some_coll =</span> <span class="st">&quot;K201501_005E&quot;</span>,</span>
+<span id="cb5-9"><a href="#cb5-9"></a>    <span class="dt">assoc_deg =</span> <span class="st">&quot;K201501_006E&quot;</span>,</span>
+<span id="cb5-10"><a href="#cb5-10"></a>    <span class="dt">bach_deg =</span> <span class="st">&quot;K201501_007E&quot;</span>,</span>
+<span id="cb5-11"><a href="#cb5-11"></a>    <span class="dt">grad_or_prof =</span> <span class="st">&quot;K201501_008E&quot;</span>,</span>
+<span id="cb5-12"><a href="#cb5-12"></a>    <span class="dt">county_state =</span> <span class="st">&quot;NAME&quot;</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="st">  </span>janitor<span class="op">::</span><span class="kw">clean_names</span>() <span class="op">%&gt;%</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, less_9th, nineth_to_12th, hs_grad, some_coll, assoc_deg, bach_deg, grad_or_prof) <span class="op">%&gt;%</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="st">  </span><span class="kw">slice</span>(<span class="op">-</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb5-18"><a href="#cb5-18"></a>    <span class="dt">total =</span> <span class="kw">as.numeric</span>(total),</span>
+<span id="cb5-19"><a href="#cb5-19"></a>    <span class="dt">less_9th =</span> <span class="kw">as.numeric</span>(less_9th),</span>
+<span id="cb5-20"><a href="#cb5-20"></a>    <span class="dt">nineth_to_12th =</span> <span class="kw">as.numeric</span>(nineth_to_12th),</span>
+<span id="cb5-21"><a href="#cb5-21"></a>    <span class="dt">hs_grad =</span> <span class="kw">as.numeric</span>(hs_grad),</span>
+<span id="cb5-22"><a href="#cb5-22"></a>    <span class="dt">some_coll =</span> <span class="kw">as.numeric</span>(some_coll),</span>
+<span id="cb5-23"><a href="#cb5-23"></a>    <span class="dt">assoc_deg =</span> <span class="kw">as.numeric</span>(assoc_deg),</span>
+<span id="cb5-24"><a href="#cb5-24"></a>    <span class="dt">bach_deg =</span> <span class="kw">as.numeric</span>(bach_deg),</span>
+<span id="cb5-25"><a href="#cb5-25"></a>    <span class="dt">grad_or_prof =</span> <span class="kw">as.numeric</span>(grad_or_prof))</span></code></pre></div>
 <p>Percent function, and percents for education attainment % by county.</p>
-<pre class="r"><code>per_f_edu = function(x) {
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-  x/edu_att$total * 100
-  
-}
-
-edu_att = 
-  edu_att %&gt;%
-  mutate(
-    less_9th = per_f_edu(less_9th),
-    nineth_to_12th = per_f_edu(nineth_to_12th),
-    hs_grad = per_f_edu(hs_grad),
-    some_coll = per_f_edu(some_coll),
-    assoc_deg = per_f_edu(assoc_deg),
-    bach_deg = per_f_edu(bach_deg),
-    grad_or_prof = per_f_edu(grad_or_prof)
-  )</code></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>per_f_edu =<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a>  x<span class="op">/</span>edu_att<span class="op">$</span>total <span class="op">*</span><span class="st"> </span><span class="dv">100</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>  </span>
+<span id="cb6-5"><a href="#cb6-5"></a>}</span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a>edu_att =<span class="st"> </span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="st">  </span>edu_att <span class="op">%&gt;%</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb6-10"><a href="#cb6-10"></a>    <span class="dt">less_9th =</span> <span class="kw">per_f_edu</span>(less_9th),</span>
+<span id="cb6-11"><a href="#cb6-11"></a>    <span class="dt">nineth_to_12th =</span> <span class="kw">per_f_edu</span>(nineth_to_12th),</span>
+<span id="cb6-12"><a href="#cb6-12"></a>    <span class="dt">hs_grad =</span> <span class="kw">per_f_edu</span>(hs_grad),</span>
+<span id="cb6-13"><a href="#cb6-13"></a>    <span class="dt">some_coll =</span> <span class="kw">per_f_edu</span>(some_coll),</span>
+<span id="cb6-14"><a href="#cb6-14"></a>    <span class="dt">assoc_deg =</span> <span class="kw">per_f_edu</span>(assoc_deg),</span>
+<span id="cb6-15"><a href="#cb6-15"></a>    <span class="dt">bach_deg =</span> <span class="kw">per_f_edu</span>(bach_deg),</span>
+<span id="cb6-16"><a href="#cb6-16"></a>    <span class="dt">grad_or_prof =</span> <span class="kw">per_f_edu</span>(grad_or_prof)</span>
+<span id="cb6-17"><a href="#cb6-17"></a>  )</span></code></pre></div>
 <p>Merge with acs education data.</p>
-<pre class="r"><code>mtm_2017_edu_2017_att_df =
-  inner_join(x = edu_att, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-write_csv(x = mtm_2017_edu_2017_att_df, &quot;mtm_2017_edu_2017_att_df.csv&quot;)</code></pre>
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>mtm_<span class="dv">2017</span>_edu_<span class="dv">2017</span>_att_df =</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">x =</span> edu_att, <span class="dt">y =</span> mtm_<span class="dv">2017</span>, <span class="dt">by =</span> <span class="st">&quot;geo_id&quot;</span>, <span class="dt">all =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="kw">write_csv</span>(<span class="dt">x =</span> mtm_<span class="dv">2017</span>_edu_<span class="dv">2017</span>_att_df, <span class="st">&quot;mtm_2017_edu_2017_att_df.csv&quot;</span>)</span></code></pre></div>
 <p>Making transitioning graph for food insecurity by percent of education attainment category in each county across the U.S.</p>
 </div>
 <div id="chart-b" class="section level3">
 <h3>Chart B</h3>
-<pre class="r"><code>edu_per_plot =
-  
-mtm_2017_edu_2017_att_df %&gt;%
-  pivot_longer(
-    less_9th:grad_or_prof,
-    names_to = &quot;edu_att&quot;,
-    values_to = &quot;percents&quot;
-  ) %&gt;%
-  mutate(
-    edu_att = str_replace(edu_att, &quot;less_9th&quot;, &quot;Less Than 9th Grade&quot;),
-    edu_att = str_replace(edu_att, &quot;nineth_to_12th&quot;, &quot;9th to 12th Grade&quot;),
-    edu_att = str_replace(edu_att, &quot;hs_grad&quot;, &quot;High School Graduate&quot;),
-    edu_att = str_replace(edu_att, &quot;some_coll&quot;, &quot;Some College&quot;),
-    edu_att = str_replace(edu_att, &quot;assoc_deg&quot;, &quot;Associate&#39;s Degree&quot;),
-    edu_att = str_replace(edu_att, &quot;bach_deg&quot;, &quot;Bachelor&#39;s Degree&quot;),
-    edu_att = str_replace(edu_att, &quot;grad_or_prof&quot;, &quot;Graduate or Professional Degree&quot;)
-    ) %&gt;%
-  select(geo_id, total, edu_att, percents, fi_rate) %&gt;%
-  drop_na() %&gt;%
-  ggplot(aes(x = fi_rate, y = percents, size = total, color = edu_att)) + 
-  geom_point(show.legend = FALSE, alpha = 0.8) +
-  labs(
-    title = &#39;{closest_state}&#39;,
-    x = &quot;Food Insecurity Rate&quot;,
-    y = &quot;% Education Attainment Within Each County&quot;
-  ) +
-  theme_bw() +
-  transition_states(edu_att, transition_length = 1, state_length = 3, wrap = TRUE) + 
-  enter_fade() + 
-  exit_fade() +
-  ease_aes(&#39;cubic-in-out&#39;)
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-animate(edu_per_plot, fps = 5, height = 500, width = 1000)</code></pre>
-<p><img src="dashboard_1_files/figure-html/unnamed-chunk-9-1.gif" width="90%" /></p>
+</div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>edu_per_plot =</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="st">  </span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>mtm_<span class="dv">2017</span>_edu_<span class="dv">2017</span>_att_df <span class="op">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="st">  </span><span class="kw">pivot_longer</span>(</span>
+<span id="cb8-5"><a href="#cb8-5"></a>    less_9th<span class="op">:</span>grad_or_prof,</span>
+<span id="cb8-6"><a href="#cb8-6"></a>    <span class="dt">names_to =</span> <span class="st">&quot;edu_att&quot;</span>,</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    <span class="dt">values_to =</span> <span class="st">&quot;percents&quot;</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb8-10"><a href="#cb8-10"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;less_9th&quot;</span>, <span class="st">&quot;Less Than 9th Grade&quot;</span>),</span>
+<span id="cb8-11"><a href="#cb8-11"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;nineth_to_12th&quot;</span>, <span class="st">&quot;9th to 12th Grade&quot;</span>),</span>
+<span id="cb8-12"><a href="#cb8-12"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;hs_grad&quot;</span>, <span class="st">&quot;High School Graduate&quot;</span>),</span>
+<span id="cb8-13"><a href="#cb8-13"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;some_coll&quot;</span>, <span class="st">&quot;Some College&quot;</span>),</span>
+<span id="cb8-14"><a href="#cb8-14"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;assoc_deg&quot;</span>, <span class="st">&quot;Associate&#39;s Degree&quot;</span>),</span>
+<span id="cb8-15"><a href="#cb8-15"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;bach_deg&quot;</span>, <span class="st">&quot;Bachelor&#39;s Degree&quot;</span>),</span>
+<span id="cb8-16"><a href="#cb8-16"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;grad_or_prof&quot;</span>, <span class="st">&quot;Graduate or Professional Degree&quot;</span>)</span>
+<span id="cb8-17"><a href="#cb8-17"></a>    ) <span class="op">%&gt;%</span></span>
+<span id="cb8-18"><a href="#cb8-18"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, edu_att, percents, fi_rate) <span class="op">%&gt;%</span></span>
+<span id="cb8-19"><a href="#cb8-19"></a><span class="st">  </span><span class="kw">drop_na</span>() <span class="op">%&gt;%</span></span>
+<span id="cb8-20"><a href="#cb8-20"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> fi_rate, <span class="dt">y =</span> percents, <span class="dt">size =</span> total, <span class="dt">color =</span> edu_att)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb8-21"><a href="#cb8-21"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.8</span>) <span class="op">+</span></span>
+<span id="cb8-22"><a href="#cb8-22"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb8-23"><a href="#cb8-23"></a>    <span class="dt">title =</span> <span class="st">&#39;{closest_state}&#39;</span>,</span>
+<span id="cb8-24"><a href="#cb8-24"></a>    <span class="dt">x =</span> <span class="st">&quot;Food Insecurity Rate&quot;</span>,</span>
+<span id="cb8-25"><a href="#cb8-25"></a>    <span class="dt">y =</span> <span class="st">&quot;% Education Attainment Within Each County&quot;</span></span>
+<span id="cb8-26"><a href="#cb8-26"></a>  ) <span class="op">+</span></span>
+<span id="cb8-27"><a href="#cb8-27"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb8-28"><a href="#cb8-28"></a><span class="st">  </span><span class="kw">transition_states</span>(edu_att, <span class="dt">transition_length =</span> <span class="dv">1</span>, <span class="dt">state_length =</span> <span class="dv">3</span>, <span class="dt">wrap =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb8-29"><a href="#cb8-29"></a><span class="st">  </span><span class="kw">enter_fade</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb8-30"><a href="#cb8-30"></a><span class="st">  </span><span class="kw">exit_fade</span>() <span class="op">+</span></span>
+<span id="cb8-31"><a href="#cb8-31"></a><span class="st">  </span><span class="kw">ease_aes</span>(<span class="st">&#39;cubic-in-out&#39;</span>)</span>
+<span id="cb8-32"><a href="#cb8-32"></a></span>
+<span id="cb8-33"><a href="#cb8-33"></a><span class="kw">animate</span>(edu_per_plot, <span class="dt">fps =</span> <span class="dv">5</span>, <span class="dt">height =</span> <span class="dv">500</span>, <span class="dt">width =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<p><img src="dashboard_1_files/figure-html/unnamed-chunk-9-1.gif" width="90%" data-figure-id=fig1 /></p>
 <p>Read in insurance acs data.</p>
-<pre class="r"><code>ins_status = 
-  read_csv(&quot;ACS_data/ACS_2017_ins_status.csv&quot;) %&gt;%
-   rename(
-    total = &quot;K202701_001E&quot;,
-    tot_under_19 = &quot;K202701_002E&quot;,
-    y_under_19 = &quot;K202701_003E&quot;,
-    n_under_19 = &quot;K202701_004E&quot;,
-    tot_19_64 = &quot;K202701_005E&quot;,
-    y_19_64 = &quot;K202701_006E&quot;,
-    n_19_64 = &quot;K202701_007E&quot;,
-    tot_65_over = &quot;K202701_008E&quot;,
-    y_65_over = &quot;K202701_009E&quot;,
-    n_65_over = &quot;K202701_010E&quot;
-  ) %&gt;%
-  janitor::clean_names() %&gt;%
-  select(geo_id, total, tot_under_19, y_under_19, n_under_19, tot_19_64, y_19_64, n_19_64, tot_65_over, y_65_over, n_65_over) %&gt;%
-  slice(-1) %&gt;%
-  mutate(
-    total = as.numeric(total),
-    tot_under_19 = as.numeric(tot_under_19),
-    y_under_19 = as.numeric(y_under_19),
-    n_under_19 = as.numeric(n_under_19),
-    tot_19_64 = as.numeric(tot_19_64),
-    y_19_64 = as.numeric(y_19_64),
-    n_19_64 = as.numeric(n_19_64),
-    tot_65_over = as.numeric(tot_65_over),
-    y_65_over = as.numeric(y_65_over),
-    n_65_over = as.numeric(n_65_over)
-    )</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   .default = col_character()
-## )</code></pre>
-<pre><code>## See spec(...) for full column specifications.</code></pre>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>ins_status =<span class="st"> </span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;ACS_data/ACS_2017_ins_status.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="st">   </span><span class="kw">rename</span>(</span>
+<span id="cb9-4"><a href="#cb9-4"></a>    <span class="dt">total =</span> <span class="st">&quot;K202701_001E&quot;</span>,</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    <span class="dt">tot_under_19 =</span> <span class="st">&quot;K202701_002E&quot;</span>,</span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="dt">y_under_19 =</span> <span class="st">&quot;K202701_003E&quot;</span>,</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="dt">n_under_19 =</span> <span class="st">&quot;K202701_004E&quot;</span>,</span>
+<span id="cb9-8"><a href="#cb9-8"></a>    <span class="dt">tot_19_64 =</span> <span class="st">&quot;K202701_005E&quot;</span>,</span>
+<span id="cb9-9"><a href="#cb9-9"></a>    <span class="dt">y_19_64 =</span> <span class="st">&quot;K202701_006E&quot;</span>,</span>
+<span id="cb9-10"><a href="#cb9-10"></a>    <span class="dt">n_19_64 =</span> <span class="st">&quot;K202701_007E&quot;</span>,</span>
+<span id="cb9-11"><a href="#cb9-11"></a>    <span class="dt">tot_65_over =</span> <span class="st">&quot;K202701_008E&quot;</span>,</span>
+<span id="cb9-12"><a href="#cb9-12"></a>    <span class="dt">y_65_over =</span> <span class="st">&quot;K202701_009E&quot;</span>,</span>
+<span id="cb9-13"><a href="#cb9-13"></a>    <span class="dt">n_65_over =</span> <span class="st">&quot;K202701_010E&quot;</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a><span class="st">  </span>janitor<span class="op">::</span><span class="kw">clean_names</span>() <span class="op">%&gt;%</span></span>
+<span id="cb9-16"><a href="#cb9-16"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, tot_under_<span class="dv">19</span>, y_under_<span class="dv">19</span>, n_under_<span class="dv">19</span>, tot_<span class="dv">19</span>_<span class="dv">64</span>, y_<span class="dv">19</span>_<span class="dv">64</span>, n_<span class="dv">19</span>_<span class="dv">64</span>, tot_<span class="dv">65</span>_over, y_<span class="dv">65</span>_over, n_<span class="dv">65</span>_over) <span class="op">%&gt;%</span></span>
+<span id="cb9-17"><a href="#cb9-17"></a><span class="st">  </span><span class="kw">slice</span>(<span class="op">-</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb9-18"><a href="#cb9-18"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb9-19"><a href="#cb9-19"></a>    <span class="dt">total =</span> <span class="kw">as.numeric</span>(total),</span>
+<span id="cb9-20"><a href="#cb9-20"></a>    <span class="dt">tot_under_19 =</span> <span class="kw">as.numeric</span>(tot_under_<span class="dv">19</span>),</span>
+<span id="cb9-21"><a href="#cb9-21"></a>    <span class="dt">y_under_19 =</span> <span class="kw">as.numeric</span>(y_under_<span class="dv">19</span>),</span>
+<span id="cb9-22"><a href="#cb9-22"></a>    <span class="dt">n_under_19 =</span> <span class="kw">as.numeric</span>(n_under_<span class="dv">19</span>),</span>
+<span id="cb9-23"><a href="#cb9-23"></a>    <span class="dt">tot_19_64 =</span> <span class="kw">as.numeric</span>(tot_<span class="dv">19</span>_<span class="dv">64</span>),</span>
+<span id="cb9-24"><a href="#cb9-24"></a>    <span class="dt">y_19_64 =</span> <span class="kw">as.numeric</span>(y_<span class="dv">19</span>_<span class="dv">64</span>),</span>
+<span id="cb9-25"><a href="#cb9-25"></a>    <span class="dt">n_19_64 =</span> <span class="kw">as.numeric</span>(n_<span class="dv">19</span>_<span class="dv">64</span>),</span>
+<span id="cb9-26"><a href="#cb9-26"></a>    <span class="dt">tot_65_over =</span> <span class="kw">as.numeric</span>(tot_<span class="dv">65</span>_over),</span>
+<span id="cb9-27"><a href="#cb9-27"></a>    <span class="dt">y_65_over =</span> <span class="kw">as.numeric</span>(y_<span class="dv">65</span>_over),</span>
+<span id="cb9-28"><a href="#cb9-28"></a>    <span class="dt">n_65_over =</span> <span class="kw">as.numeric</span>(n_<span class="dv">65</span>_over)</span>
+<span id="cb9-29"><a href="#cb9-29"></a>    )</span></code></pre></div>
 <p>Percent function, and percents for insurance status % by county.</p>
-<pre class="r"><code>per_f_ins = function(x, y) {
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-  x/y * 100
-  
-}
-
-ins_status = 
-  ins_status %&gt;%
-  mutate(
-    y_under_19 = per_f_ins(y_under_19, tot_under_19),
-    n_under_19 = per_f_ins(n_under_19, tot_under_19),
-    y_19_64 = per_f_ins(y_19_64, tot_19_64),
-    n_19_64 = per_f_ins(n_19_64, tot_19_64),
-    y_65_over = per_f_ins(y_65_over, tot_65_over),
-    n_65_over = per_f_ins(n_65_over, tot_65_over)
-  )</code></pre>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>per_f_ins =<span class="st"> </span><span class="cf">function</span>(x, y) {</span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  x<span class="op">/</span>y <span class="op">*</span><span class="st"> </span><span class="dv">100</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  </span>
+<span id="cb10-5"><a href="#cb10-5"></a>}</span>
+<span id="cb10-6"><a href="#cb10-6"></a></span>
+<span id="cb10-7"><a href="#cb10-7"></a>ins_status =<span class="st"> </span></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="st">  </span>ins_status <span class="op">%&gt;%</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb10-10"><a href="#cb10-10"></a>    <span class="dt">y_under_19 =</span> <span class="kw">per_f_ins</span>(y_under_<span class="dv">19</span>, tot_under_<span class="dv">19</span>),</span>
+<span id="cb10-11"><a href="#cb10-11"></a>    <span class="dt">n_under_19 =</span> <span class="kw">per_f_ins</span>(n_under_<span class="dv">19</span>, tot_under_<span class="dv">19</span>),</span>
+<span id="cb10-12"><a href="#cb10-12"></a>    <span class="dt">y_19_64 =</span> <span class="kw">per_f_ins</span>(y_<span class="dv">19</span>_<span class="dv">64</span>, tot_<span class="dv">19</span>_<span class="dv">64</span>),</span>
+<span id="cb10-13"><a href="#cb10-13"></a>    <span class="dt">n_19_64 =</span> <span class="kw">per_f_ins</span>(n_<span class="dv">19</span>_<span class="dv">64</span>, tot_<span class="dv">19</span>_<span class="dv">64</span>),</span>
+<span id="cb10-14"><a href="#cb10-14"></a>    <span class="dt">y_65_over =</span> <span class="kw">per_f_ins</span>(y_<span class="dv">65</span>_over, tot_<span class="dv">65</span>_over),</span>
+<span id="cb10-15"><a href="#cb10-15"></a>    <span class="dt">n_65_over =</span> <span class="kw">per_f_ins</span>(n_<span class="dv">65</span>_over, tot_<span class="dv">65</span>_over)</span>
+<span id="cb10-16"><a href="#cb10-16"></a>  )</span></code></pre></div>
 <p>Merge with acs insurance data.</p>
-<pre class="r"><code>mtm_2017_ins_2017_status_df =
-  inner_join(x = ins_status, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-write_csv(x = mtm_2017_ins_2017_status_df, &quot;mtm_2017_ins_2017_status_df.csv&quot;)</code></pre>
+</div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>mtm_<span class="dv">2017</span>_ins_<span class="dv">2017</span>_status_df =</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">x =</span> ins_status, <span class="dt">y =</span> mtm_<span class="dv">2017</span>, <span class="dt">by =</span> <span class="st">&quot;geo_id&quot;</span>, <span class="dt">all =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb11-3"><a href="#cb11-3"></a></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="kw">write_csv</span>(<span class="dt">x =</span> mtm_<span class="dv">2017</span>_ins_<span class="dv">2017</span>_status_df, <span class="st">&quot;mtm_2017_ins_2017_status_df.csv&quot;</span>)</span></code></pre></div>
 <p>Making transitioning graph for food insecurity by percent of insurance status category in each county across the U.S.</p>
 </div>
 </div>
@@ -707,194 +2988,177 @@ write_csv(x = mtm_2017_ins_2017_status_df, &quot;mtm_2017_ins_2017_status_df.csv
 <h2>Row</h2>
 <div id="chart-c" class="section level3">
 <h3>Chart C</h3>
-<pre class="r"><code>ins_status_plot =
-  
-mtm_2017_ins_2017_status_df %&gt;%
-  select(-tot_19_64, -tot_under_19, - tot_65_over) %&gt;%
-  pivot_longer(
-    y_under_19:n_65_over,
-    names_to = &quot;ins_status&quot;,
-    values_to = &quot;percents&quot;
-  ) %&gt;%
-  mutate(
-    ins_status = str_replace(ins_status, &quot;y_under_19&quot;, &quot;Under Age 19 With Insurance&quot;),
-    ins_status = str_replace(ins_status, &quot;n_under_19&quot;, &quot;Under Age 19 Without Insurance&quot;),
-    ins_status = str_replace(ins_status, &quot;y_19_64&quot;, &quot;Ages 19 to 64 With Insurance&quot;),
-    ins_status = str_replace(ins_status, &quot;n_19_64&quot;, &quot;Ages 19 to 64 Without Insurance&quot;),
-    ins_status = str_replace(ins_status, &quot;y_65_over&quot;, &quot;Over Age 65 With Insurance&quot;),
-    ins_status = str_replace(ins_status, &quot;n_65_over&quot;, &quot;Over Age 65 Without Insurance&quot;),
-    ) %&gt;%
-  select(geo_id, total, ins_status, percents, fi_rate) %&gt;%
-  drop_na() %&gt;%
-  ggplot(aes(x = fi_rate, y = percents, size = total, color = ins_status)) + 
-  geom_point(show.legend = FALSE, alpha = 0.8) +
-  labs(
-    title = &#39;{closest_state}&#39;,
-    x = &quot;Food Insecurity Rate&quot;,
-    y = &quot;% of Individuals&quot;
-  ) +
-  theme_bw() +
-  transition_states(ins_status, transition_length = 1, state_length = 3, wrap = TRUE) + 
-  enter_fade() + 
-  exit_fade() +
-  ease_aes(&#39;cubic-in-out&#39;)
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-animate(ins_status_plot, fps = 5, height = 500, width = 1000)</code></pre>
-<p><img src="dashboard_1_files/figure-html/unnamed-chunk-13-1.gif" width="90%" /></p>
+</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>ins_status_plot =</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="st">  </span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>mtm_<span class="dv">2017</span>_ins_<span class="dv">2017</span>_status_df <span class="op">%&gt;%</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>tot_<span class="dv">19</span>_<span class="dv">64</span>, <span class="op">-</span>tot_under_<span class="dv">19</span>, <span class="op">-</span><span class="st"> </span>tot_<span class="dv">65</span>_over) <span class="op">%&gt;%</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="st">  </span><span class="kw">pivot_longer</span>(</span>
+<span id="cb12-6"><a href="#cb12-6"></a>    y_under_<span class="dv">19</span><span class="op">:</span>n_<span class="dv">65</span>_over,</span>
+<span id="cb12-7"><a href="#cb12-7"></a>    <span class="dt">names_to =</span> <span class="st">&quot;ins_status&quot;</span>,</span>
+<span id="cb12-8"><a href="#cb12-8"></a>    <span class="dt">values_to =</span> <span class="st">&quot;percents&quot;</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb12-11"><a href="#cb12-11"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;y_under_19&quot;</span>, <span class="st">&quot;Under Age 19 With Insurance&quot;</span>),</span>
+<span id="cb12-12"><a href="#cb12-12"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;n_under_19&quot;</span>, <span class="st">&quot;Under Age 19 Without Insurance&quot;</span>),</span>
+<span id="cb12-13"><a href="#cb12-13"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;y_19_64&quot;</span>, <span class="st">&quot;Ages 19 to 64 With Insurance&quot;</span>),</span>
+<span id="cb12-14"><a href="#cb12-14"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;n_19_64&quot;</span>, <span class="st">&quot;Ages 19 to 64 Without Insurance&quot;</span>),</span>
+<span id="cb12-15"><a href="#cb12-15"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;y_65_over&quot;</span>, <span class="st">&quot;Over Age 65 With Insurance&quot;</span>),</span>
+<span id="cb12-16"><a href="#cb12-16"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;n_65_over&quot;</span>, <span class="st">&quot;Over Age 65 Without Insurance&quot;</span>),</span>
+<span id="cb12-17"><a href="#cb12-17"></a>    ) <span class="op">%&gt;%</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, ins_status, percents, fi_rate) <span class="op">%&gt;%</span></span>
+<span id="cb12-19"><a href="#cb12-19"></a><span class="st">  </span><span class="kw">drop_na</span>() <span class="op">%&gt;%</span></span>
+<span id="cb12-20"><a href="#cb12-20"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> fi_rate, <span class="dt">y =</span> percents, <span class="dt">size =</span> total, <span class="dt">color =</span> ins_status)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb12-21"><a href="#cb12-21"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.8</span>) <span class="op">+</span></span>
+<span id="cb12-22"><a href="#cb12-22"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb12-23"><a href="#cb12-23"></a>    <span class="dt">title =</span> <span class="st">&#39;{closest_state}&#39;</span>,</span>
+<span id="cb12-24"><a href="#cb12-24"></a>    <span class="dt">x =</span> <span class="st">&quot;Food Insecurity Rate&quot;</span>,</span>
+<span id="cb12-25"><a href="#cb12-25"></a>    <span class="dt">y =</span> <span class="st">&quot;% of Individuals&quot;</span></span>
+<span id="cb12-26"><a href="#cb12-26"></a>  ) <span class="op">+</span></span>
+<span id="cb12-27"><a href="#cb12-27"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb12-28"><a href="#cb12-28"></a><span class="st">  </span><span class="kw">transition_states</span>(ins_status, <span class="dt">transition_length =</span> <span class="dv">1</span>, <span class="dt">state_length =</span> <span class="dv">3</span>, <span class="dt">wrap =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb12-29"><a href="#cb12-29"></a><span class="st">  </span><span class="kw">enter_fade</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb12-30"><a href="#cb12-30"></a><span class="st">  </span><span class="kw">exit_fade</span>() <span class="op">+</span></span>
+<span id="cb12-31"><a href="#cb12-31"></a><span class="st">  </span><span class="kw">ease_aes</span>(<span class="st">&#39;cubic-in-out&#39;</span>)</span>
+<span id="cb12-32"><a href="#cb12-32"></a></span>
+<span id="cb12-33"><a href="#cb12-33"></a><span class="kw">animate</span>(ins_status_plot, <span class="dt">fps =</span> <span class="dv">5</span>, <span class="dt">height =</span> <span class="dv">500</span>, <span class="dt">width =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<p><img src="dashboard_1_files/figure-html/unnamed-chunk-13-1.gif" width="90%" data-figure-id=fig1 /></p>
 <p>Read in income acs data.</p>
-<pre class="r"><code>income_brac = 
-  read_csv(&quot;ACS_data/ACS_2017_income.csv&quot;) %&gt;%
-   rename(
-    total = &quot;K201901_001E&quot;,
-    less_20 = &quot;K201901_002E&quot;,
-    twenty_39 = &quot;K201901_003E&quot;,
-    forty_59 = &quot;K201901_004E&quot;,
-    sixty_99 = &quot;K201901_005E&quot;,
-    hun_149 = &quot;K201901_006E&quot;,
-    hunfifty_199 = &quot;K201901_007E&quot;,
-    twohun_more = &quot;K201901_008E&quot;
-  ) %&gt;%
-  janitor::clean_names() %&gt;%
-  select(geo_id, total, less_20, twenty_39, forty_59, sixty_99, hun_149, hunfifty_199, twohun_more) %&gt;%
-  slice(-1) %&gt;%
-  mutate(
-    total = as.numeric(total),
-    less_20 = as.numeric(less_20),
-    twenty_39 = as.numeric(twenty_39),
-    forty_59 = as.numeric(forty_59),
-    sixty_99 = as.numeric(sixty_99),
-    hun_149 = as.numeric(hun_149),
-    hunfifty_199 = as.numeric(hunfifty_199),
-    twohun_more = as.numeric(twohun_more)
-    )</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   GEO_ID = col_character(),
-##   NAME = col_character(),
-##   K201901_001E = col_character(),
-##   K201901_001M = col_character(),
-##   K201901_002E = col_character(),
-##   K201901_002M = col_character(),
-##   K201901_003E = col_character(),
-##   K201901_003M = col_character(),
-##   K201901_004E = col_character(),
-##   K201901_004M = col_character(),
-##   K201901_005E = col_character(),
-##   K201901_005M = col_character(),
-##   K201901_006E = col_character(),
-##   K201901_006M = col_character(),
-##   K201901_007E = col_character(),
-##   K201901_007M = col_character(),
-##   K201901_008E = col_character(),
-##   K201901_008M = col_character()
-## )</code></pre>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>income_brac =<span class="st"> </span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;ACS_data/ACS_2017_income.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="st">   </span><span class="kw">rename</span>(</span>
+<span id="cb13-4"><a href="#cb13-4"></a>    <span class="dt">total =</span> <span class="st">&quot;K201901_001E&quot;</span>,</span>
+<span id="cb13-5"><a href="#cb13-5"></a>    <span class="dt">less_20 =</span> <span class="st">&quot;K201901_002E&quot;</span>,</span>
+<span id="cb13-6"><a href="#cb13-6"></a>    <span class="dt">twenty_39 =</span> <span class="st">&quot;K201901_003E&quot;</span>,</span>
+<span id="cb13-7"><a href="#cb13-7"></a>    <span class="dt">forty_59 =</span> <span class="st">&quot;K201901_004E&quot;</span>,</span>
+<span id="cb13-8"><a href="#cb13-8"></a>    <span class="dt">sixty_99 =</span> <span class="st">&quot;K201901_005E&quot;</span>,</span>
+<span id="cb13-9"><a href="#cb13-9"></a>    <span class="dt">hun_149 =</span> <span class="st">&quot;K201901_006E&quot;</span>,</span>
+<span id="cb13-10"><a href="#cb13-10"></a>    <span class="dt">hunfifty_199 =</span> <span class="st">&quot;K201901_007E&quot;</span>,</span>
+<span id="cb13-11"><a href="#cb13-11"></a>    <span class="dt">twohun_more =</span> <span class="st">&quot;K201901_008E&quot;</span></span>
+<span id="cb13-12"><a href="#cb13-12"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a><span class="st">  </span>janitor<span class="op">::</span><span class="kw">clean_names</span>() <span class="op">%&gt;%</span></span>
+<span id="cb13-14"><a href="#cb13-14"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, less_<span class="dv">20</span>, twenty_<span class="dv">39</span>, forty_<span class="dv">59</span>, sixty_<span class="dv">99</span>, hun_<span class="dv">149</span>, hunfifty_<span class="dv">199</span>, twohun_more) <span class="op">%&gt;%</span></span>
+<span id="cb13-15"><a href="#cb13-15"></a><span class="st">  </span><span class="kw">slice</span>(<span class="op">-</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb13-16"><a href="#cb13-16"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb13-17"><a href="#cb13-17"></a>    <span class="dt">total =</span> <span class="kw">as.numeric</span>(total),</span>
+<span id="cb13-18"><a href="#cb13-18"></a>    <span class="dt">less_20 =</span> <span class="kw">as.numeric</span>(less_<span class="dv">20</span>),</span>
+<span id="cb13-19"><a href="#cb13-19"></a>    <span class="dt">twenty_39 =</span> <span class="kw">as.numeric</span>(twenty_<span class="dv">39</span>),</span>
+<span id="cb13-20"><a href="#cb13-20"></a>    <span class="dt">forty_59 =</span> <span class="kw">as.numeric</span>(forty_<span class="dv">59</span>),</span>
+<span id="cb13-21"><a href="#cb13-21"></a>    <span class="dt">sixty_99 =</span> <span class="kw">as.numeric</span>(sixty_<span class="dv">99</span>),</span>
+<span id="cb13-22"><a href="#cb13-22"></a>    <span class="dt">hun_149 =</span> <span class="kw">as.numeric</span>(hun_<span class="dv">149</span>),</span>
+<span id="cb13-23"><a href="#cb13-23"></a>    <span class="dt">hunfifty_199 =</span> <span class="kw">as.numeric</span>(hunfifty_<span class="dv">199</span>),</span>
+<span id="cb13-24"><a href="#cb13-24"></a>    <span class="dt">twohun_more =</span> <span class="kw">as.numeric</span>(twohun_more)</span>
+<span id="cb13-25"><a href="#cb13-25"></a>    )</span></code></pre></div>
 <p>Percent function, and percents for income bracket % by county.</p>
-<pre class="r"><code>per_f_inco = function(x) {
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-  x/income_brac$total * 100
-  
-}
-
-income_brac = 
-  income_brac %&gt;%
-  mutate(
-    less_20 = per_f_inco(less_20),
-    twenty_39 = per_f_inco(twenty_39),
-    forty_59 = per_f_inco(forty_59),
-    sixty_99 = per_f_inco(sixty_99),
-    hun_149 = per_f_inco(hun_149),
-    hunfifty_199 = per_f_inco(hunfifty_199),
-    twohun_more = per_f_inco(twohun_more)
-  )</code></pre>
+</div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>per_f_inco =<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  x<span class="op">/</span>income_brac<span class="op">$</span>total <span class="op">*</span><span class="st"> </span><span class="dv">100</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>  </span>
+<span id="cb14-5"><a href="#cb14-5"></a>}</span>
+<span id="cb14-6"><a href="#cb14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7"></a>income_brac =<span class="st"> </span></span>
+<span id="cb14-8"><a href="#cb14-8"></a><span class="st">  </span>income_brac <span class="op">%&gt;%</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb14-10"><a href="#cb14-10"></a>    <span class="dt">less_20 =</span> <span class="kw">per_f_inco</span>(less_<span class="dv">20</span>),</span>
+<span id="cb14-11"><a href="#cb14-11"></a>    <span class="dt">twenty_39 =</span> <span class="kw">per_f_inco</span>(twenty_<span class="dv">39</span>),</span>
+<span id="cb14-12"><a href="#cb14-12"></a>    <span class="dt">forty_59 =</span> <span class="kw">per_f_inco</span>(forty_<span class="dv">59</span>),</span>
+<span id="cb14-13"><a href="#cb14-13"></a>    <span class="dt">sixty_99 =</span> <span class="kw">per_f_inco</span>(sixty_<span class="dv">99</span>),</span>
+<span id="cb14-14"><a href="#cb14-14"></a>    <span class="dt">hun_149 =</span> <span class="kw">per_f_inco</span>(hun_<span class="dv">149</span>),</span>
+<span id="cb14-15"><a href="#cb14-15"></a>    <span class="dt">hunfifty_199 =</span> <span class="kw">per_f_inco</span>(hunfifty_<span class="dv">199</span>),</span>
+<span id="cb14-16"><a href="#cb14-16"></a>    <span class="dt">twohun_more =</span> <span class="kw">per_f_inco</span>(twohun_more)</span>
+<span id="cb14-17"><a href="#cb14-17"></a>  )</span></code></pre></div>
 <p>Merge with acs income data.</p>
-<pre class="r"><code>mtm_2017_income_2017_brac_df =
-  inner_join(x = income_brac, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-write_csv(x = mtm_2017_income_2017_brac_df, &quot;mtm_2017_income_2017_brac_df.csv&quot;)</code></pre>
+</div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>mtm_<span class="dv">2017</span>_income_<span class="dv">2017</span>_brac_df =</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">x =</span> income_brac, <span class="dt">y =</span> mtm_<span class="dv">2017</span>, <span class="dt">by =</span> <span class="st">&quot;geo_id&quot;</span>, <span class="dt">all =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb15-3"><a href="#cb15-3"></a></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="kw">write_csv</span>(<span class="dt">x =</span> mtm_<span class="dv">2017</span>_income_<span class="dv">2017</span>_brac_df, <span class="st">&quot;mtm_2017_income_2017_brac_df.csv&quot;</span>)</span></code></pre></div>
 <p>Making transitioning graph for food insecurity by percent of income bracket in each county across the U.S.</p>
 </div>
 <div id="chart-d" class="section level3">
 <h3>Chart D</h3>
-<pre class="r"><code>income_brac_plot =
-  
-mtm_2017_income_2017_brac_df %&gt;%
-  pivot_longer(
-    less_20:twohun_more,
-    names_to = &quot;income_brac&quot;,
-    values_to = &quot;percents&quot;
-  ) %&gt;%
-  mutate(
-    income_brac = str_replace(income_brac, &quot;less_20&quot;, &quot;Less Than $20,000&quot;),
-    income_brac = str_replace(income_brac, &quot;twenty_39&quot;, &quot;Between $20,000 and $39,999&quot;),
-    income_brac = str_replace(income_brac, &quot;forty_59&quot;, &quot;Between $40,000 and $59,999&quot;),
-    income_brac = str_replace(income_brac, &quot;sixty_99&quot;, &quot;Between $60,000 and $99,999&quot;),
-    income_brac = str_replace(income_brac, &quot;hun_149&quot;, &quot;Between $100,000 and $149,999&quot;),
-    income_brac = str_replace(income_brac, &quot;hunfifty_199&quot;, &quot;Between $150,000 and $199,999&quot;),
-    income_brac = str_replace(income_brac, &quot;twohun_more&quot;, &quot;$200,000 or More&quot;)
-    ) %&gt;%
-  select(geo_id, total, income_brac, percents, fi_rate) %&gt;%
-  drop_na() %&gt;%
-  ggplot(aes(x = fi_rate, y = percents, size = total, color = income_brac)) + 
-  geom_point(show.legend = FALSE, alpha = 0.8) +
-  labs(
-    title = &#39;{closest_state}&#39;,
-    x = &quot;Food Insecurity Rate&quot;,
-    y = &quot;% of Individuals in Each Income Bracket&quot;
-  ) +
-  theme_bw() +
-  transition_states(income_brac, transition_length = 1, state_length = 3, wrap = TRUE) + 
-  enter_fade() + 
-  exit_fade() +
-  ease_aes(&#39;cubic-in-out&#39;)
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
-animate(income_brac_plot, fps = 5, height = 500, width = 1000)</code></pre>
-<p><img src="dashboard_1_files/figure-html/unnamed-chunk-17-1.gif" width="90%" /></p>
+</div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>income_brac_plot =</span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="st">  </span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>mtm_<span class="dv">2017</span>_income_<span class="dv">2017</span>_brac_df <span class="op">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="st">  </span><span class="kw">pivot_longer</span>(</span>
+<span id="cb16-5"><a href="#cb16-5"></a>    less_<span class="dv">20</span><span class="op">:</span>twohun_more,</span>
+<span id="cb16-6"><a href="#cb16-6"></a>    <span class="dt">names_to =</span> <span class="st">&quot;income_brac&quot;</span>,</span>
+<span id="cb16-7"><a href="#cb16-7"></a>    <span class="dt">values_to =</span> <span class="st">&quot;percents&quot;</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb16-9"><a href="#cb16-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb16-10"><a href="#cb16-10"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;less_20&quot;</span>, <span class="st">&quot;Less Than $20,000&quot;</span>),</span>
+<span id="cb16-11"><a href="#cb16-11"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;twenty_39&quot;</span>, <span class="st">&quot;Between $20,000 and $39,999&quot;</span>),</span>
+<span id="cb16-12"><a href="#cb16-12"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;forty_59&quot;</span>, <span class="st">&quot;Between $40,000 and $59,999&quot;</span>),</span>
+<span id="cb16-13"><a href="#cb16-13"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;sixty_99&quot;</span>, <span class="st">&quot;Between $60,000 and $99,999&quot;</span>),</span>
+<span id="cb16-14"><a href="#cb16-14"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;hun_149&quot;</span>, <span class="st">&quot;Between $100,000 and $149,999&quot;</span>),</span>
+<span id="cb16-15"><a href="#cb16-15"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;hunfifty_199&quot;</span>, <span class="st">&quot;Between $150,000 and $199,999&quot;</span>),</span>
+<span id="cb16-16"><a href="#cb16-16"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;twohun_more&quot;</span>, <span class="st">&quot;$200,000 or More&quot;</span>)</span>
+<span id="cb16-17"><a href="#cb16-17"></a>    ) <span class="op">%&gt;%</span></span>
+<span id="cb16-18"><a href="#cb16-18"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, income_brac, percents, fi_rate) <span class="op">%&gt;%</span></span>
+<span id="cb16-19"><a href="#cb16-19"></a><span class="st">  </span><span class="kw">drop_na</span>() <span class="op">%&gt;%</span></span>
+<span id="cb16-20"><a href="#cb16-20"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> fi_rate, <span class="dt">y =</span> percents, <span class="dt">size =</span> total, <span class="dt">color =</span> income_brac)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb16-21"><a href="#cb16-21"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.8</span>) <span class="op">+</span></span>
+<span id="cb16-22"><a href="#cb16-22"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb16-23"><a href="#cb16-23"></a>    <span class="dt">title =</span> <span class="st">&#39;{closest_state}&#39;</span>,</span>
+<span id="cb16-24"><a href="#cb16-24"></a>    <span class="dt">x =</span> <span class="st">&quot;Food Insecurity Rate&quot;</span>,</span>
+<span id="cb16-25"><a href="#cb16-25"></a>    <span class="dt">y =</span> <span class="st">&quot;% of Individuals in Each Income Bracket&quot;</span></span>
+<span id="cb16-26"><a href="#cb16-26"></a>  ) <span class="op">+</span></span>
+<span id="cb16-27"><a href="#cb16-27"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb16-28"><a href="#cb16-28"></a><span class="st">  </span><span class="kw">transition_states</span>(income_brac, <span class="dt">transition_length =</span> <span class="dv">1</span>, <span class="dt">state_length =</span> <span class="dv">3</span>, <span class="dt">wrap =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb16-29"><a href="#cb16-29"></a><span class="st">  </span><span class="kw">enter_fade</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb16-30"><a href="#cb16-30"></a><span class="st">  </span><span class="kw">exit_fade</span>() <span class="op">+</span></span>
+<span id="cb16-31"><a href="#cb16-31"></a><span class="st">  </span><span class="kw">ease_aes</span>(<span class="st">&#39;cubic-in-out&#39;</span>)</span>
+<span id="cb16-32"><a href="#cb16-32"></a></span>
+<span id="cb16-33"><a href="#cb16-33"></a><span class="kw">animate</span>(income_brac_plot, <span class="dt">fps =</span> <span class="dv">5</span>, <span class="dt">height =</span> <span class="dv">500</span>, <span class="dt">width =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<p><img src="dashboard_1_files/figure-html/unnamed-chunk-17-1.gif" width="90%" data-figure-id=fig1 /></p>
 </div>
 </div>
-
-
-
 
 </div>
 
 <script>
 
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
 $(document).ready(function () {
-  bootstrapStylePandocTables();
+
+  // add bootstrap table styles to pandoc tables
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+
+  // initialize mathjax
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
 });
-
-
 </script>
 
-<!-- tabsets -->
-
-<script>
+<script type="text/javascript">
 $(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+  FlexDashboard.init({
+    theme: "cosmo",
+    fillPage: true,
+    orientation: "rows",
+    storyboard: false,
+    defaultFigWidth: 576,
+    defaultFigHeight: 460,
+    defaultFigWidthMobile: 360,
+    defaultFigHeightMobile: 460,
+    resize_reload: true
   });
 });
-</script>
-
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
 </script>
 
 </body>
