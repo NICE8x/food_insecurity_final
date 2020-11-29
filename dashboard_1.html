@@ -1,258 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-
-<html>
-
-<head>
-
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-
-<meta name="author" content="Vasili Fokaidis" />
-
-
-<title>See the Gap</title>
-
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
-
-
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-</style>
-
-
-<style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script>
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.parent().addClass('active');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-=======
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
@@ -263,22 +9,84 @@ $(document).ready(function () {
 
 
 
-<title>dashboard_1</title>
+<title>See the Gap</title>
 
-<meta property="og:title" content="dashboard_1" />
+<meta property="og:title" content="See the Gap" />
 
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 
 <link rel="icon" href="data:image/x-icon;" type="image/x-icon">
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <script type="text/javascript">
 window.FlexDashboardComponents = [];
 </script>
 
-<script id="flexdashboard-navbar" type="application/json">
-[{"title":"Source Code","icon":"fa-code","href":"source_embed","align":"right"}]
-</script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -286,12 +94,6 @@ window.FlexDashboardComponents = [];
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/stickytableheaders-0.1.19/jquery.stickytableheaders.min.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-<link href="site_libs/featherlight-1.3.5/featherlight.min.css" rel="stylesheet" />
-<script src="site_libs/featherlight-1.3.5/featherlight.min.js"></script>
-<link href="site_libs/prism-1.4.1/prism.css" rel="stylesheet" />
-<script src="site_libs/prism-1.4.1/prism.js"></script>
 <style type="text/css">
 
 /*
@@ -1049,127 +851,12 @@ html, body {
 }
 </style>
 
->>>>>>> b5a241ee096d415f2d0b31bec1ffafa27759e5ac
 
 
 </head>
 
 <body>
 
-<<<<<<< HEAD
-
-<div class="container-fluid main-container">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Home</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="map.html">County Maps</a>
-</li>
-<li>
-  <a href="dashboard_1.html">See the Gap</a>
-</li>
-<li>
-  <a href="project_report.html">Project Report</a>
-</li>
-<li>
-  <a href="analysist.html">Analysis</a>
-</li>
-<li>
-  <a href="mailto:&lt;vf2280@cumc.columbia.edu&gt;">
-    <span class="fa fa-envelope fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="http://github.com/vf2280/">
-    <span class="fa fa-github fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://www.feedingamerica.org/">
-    <span class="fa fa-globe-americas"></span>
-     
-  </a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div class="fluid-row" id="header">
-
-
-
-<h1 class="title toc-ignore">See the Gap</h1>
-<h4 class="author">Vasili Fokaidis</h4>
-
-</div>
-
-
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ─────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
-<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
-## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
-## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
-## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>library(gganimate)
-library(flexdashboard)
-
-knitr::opts_chunk$set(
-    echo = TRUE,
-    warning = FALSE,
-    fig.width = 8, 
-  fig.height = 6,
-  out.width = &quot;90%&quot;
-)
-
-theme_set(theme_minimal() + theme(legend.position = &quot;bottom&quot;))
-
-options(
-  ggplot2.continuous.colour = &quot;viridis&quot;,
-  ggplot2.continuous.fill = &quot;viridis&quot;
-)
-
-scale_colour_discrete = scale_colour_viridis_d
-scale_fill_discrete = scale_fill_viridis_d</code></pre>
-<p>Read in acs race data and acs hispanic data. And manipulate respective data to make scatter plots.</p>
-<pre class="r"><code>race_df = 
-  read_csv(&quot;ACS_data/ACS_2017_race.csv&quot;) %&gt;%
-  rename(
-    total = &quot;K200201_001E&quot;,
-    white = &quot;K200201_002E&quot;,
-    black = &quot;K200201_003E&quot;,
-    am_ind_al_nat = &quot;K200201_004E&quot;,
-    asian = &quot;K200201_005E&quot;,
-    nat_ha_pac_isl = &quot;K200201_006E&quot;,
-    other = &quot;K200201_007E&quot;,
-    two_or_more = &quot;K200201_008E&quot;,
-    county_state = &quot;NAME&quot;
-  ) %&gt;%
-  janitor::clean_names() %&gt;%
-  select(geo_id, county_state, total, white, black, am_ind_al_nat, asian, nat_ha_pac_isl, other, two_or_more) %&gt;%
-  slice(-1) %&gt;%
-=======
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 <div class="container-fluid">
 <div class="navbar-header">
@@ -1184,7 +871,7 @@ scale_fill_discrete = scale_fill_viridis_d</code></pre>
   
 </span>
 <span class="navbar-brand">
-  dashboard_1
+  See the Gap
   <span class="navbar-author">
     Vasili Fokaidis
     </span>
@@ -2995,17 +2682,449 @@ window.FlexDashboardComponents.push({
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<p>Read in data. And manipulate respective data to make scatter plots.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+<p>Read in acs race data and acs hispanic data. And manipulate respective data to make scatter plots.</p>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
 </div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>race_df =<span class="st"> </span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;ACS_data/ACS_2017_race.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="st">  </span><span class="kw">rename</span>(</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="dt">total =</span> <span class="st">&quot;K200201_001E&quot;</span>,</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="dt">white =</span> <span class="st">&quot;K200201_002E&quot;</span>,</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="dt">black =</span> <span class="st">&quot;K200201_003E&quot;</span>,</span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="dt">am_ind_al_nat =</span> <span class="st">&quot;K200201_004E&quot;</span>,</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="dt">asian =</span> <span class="st">&quot;K200201_005E&quot;</span>,</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="dt">nat_ha_pac_isl =</span> <span class="st">&quot;K200201_006E&quot;</span>,</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="dt">other =</span> <span class="st">&quot;K200201_007E&quot;</span>,</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="dt">two_or_more =</span> <span class="st">&quot;K200201_008E&quot;</span>,</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="dt">county_state =</span> <span class="st">&quot;NAME&quot;</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="st">  </span>janitor<span class="op">::</span><span class="kw">clean_names</span>() <span class="op">%&gt;%</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="st">  </span><span class="kw">select</span>(geo_id, county_state, total, white, black, am_ind_al_nat, asian, nat_ha_pac_isl, other, two_or_more) <span class="op">%&gt;%</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="st">  </span><span class="kw">slice</span>(<span class="op">-</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb1-18"><a href="#cb1-18"></a>    <span class="dt">total =</span> <span class="kw">as.numeric</span>(total),</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    <span class="dt">white =</span> <span class="kw">as.numeric</span>(white),</span>
+<span id="cb1-20"><a href="#cb1-20"></a>    <span class="dt">black =</span> <span class="kw">as.numeric</span>(black),</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    <span class="dt">am_ind_al_nat =</span> <span class="kw">as.numeric</span>(am_ind_al_nat),</span>
+<span id="cb1-22"><a href="#cb1-22"></a>    <span class="dt">asian =</span> <span class="kw">as.numeric</span>(asian),</span>
+<span id="cb1-23"><a href="#cb1-23"></a>    <span class="dt">nat_ha_pac_isl =</span> <span class="kw">as.numeric</span>(nat_ha_pac_isl), </span>
+<span id="cb1-24"><a href="#cb1-24"></a>    <span class="dt">other =</span> <span class="kw">as.numeric</span>(other),</span>
+<span id="cb1-25"><a href="#cb1-25"></a>    <span class="dt">two_or_more =</span> <span class="kw">as.numeric</span>(two_or_more)</span>
+<span id="cb1-26"><a href="#cb1-26"></a>  )</span>
+<span id="cb1-27"><a href="#cb1-27"></a></span>
+<span id="cb1-28"><a href="#cb1-28"></a>hispanic_df =<span class="st"> </span></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;ACS_data/ACS_2017_hispanic.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="st">   </span><span class="kw">rename</span>(</span>
+<span id="cb1-31"><a href="#cb1-31"></a>    <span class="dt">total =</span> <span class="st">&quot;K200301_001E&quot;</span>,</span>
+<span id="cb1-32"><a href="#cb1-32"></a>    <span class="dt">hispanic =</span> <span class="st">&quot;K200301_003E&quot;</span>,</span>
+<span id="cb1-33"><a href="#cb1-33"></a>    <span class="dt">county_state =</span> <span class="st">&quot;NAME&quot;</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="st">  </span>janitor<span class="op">::</span><span class="kw">clean_names</span>() <span class="op">%&gt;%</span></span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="st">  </span><span class="kw">select</span>(geo_id, county_state, total, hispanic) <span class="op">%&gt;%</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="st">  </span><span class="kw">slice</span>(<span class="op">-</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb1-39"><a href="#cb1-39"></a>    <span class="dt">total =</span> <span class="kw">as.numeric</span>(total),</span>
+<span id="cb1-40"><a href="#cb1-40"></a>    <span class="dt">hispanic =</span> <span class="kw">as.numeric</span>(hispanic)</span>
+<span id="cb1-41"><a href="#cb1-41"></a>  )</span></code></pre></div>
 <p>Percent function, and percents of each race by county.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
 </div>
-<p>Read in 2017 mtm data, and merge with acs race data (race_plot).</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>per_f =<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  x<span class="op">/</span>race_df<span class="op">$</span>total <span class="op">*</span><span class="st"> </span><span class="dv">100</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  </span>
+<span id="cb2-5"><a href="#cb2-5"></a>}</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a>per_f_h =<span class="st"> </span><span class="cf">function</span>(y) {</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  </span>
+<span id="cb2-9"><a href="#cb2-9"></a>  y<span class="op">/</span>hispanic_df<span class="op">$</span>total <span class="op">*</span><span class="st"> </span><span class="dv">100</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>  </span>
+<span id="cb2-11"><a href="#cb2-11"></a>}</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a>race_df =<span class="st"> </span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="st">  </span>race_df <span class="op">%&gt;%</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb2-16"><a href="#cb2-16"></a>    <span class="dt">white =</span> <span class="kw">per_f</span>(white),</span>
+<span id="cb2-17"><a href="#cb2-17"></a>    <span class="dt">black =</span> <span class="kw">per_f</span>(black),</span>
+<span id="cb2-18"><a href="#cb2-18"></a>    <span class="dt">am_ind_al_nat =</span> <span class="kw">per_f</span>(am_ind_al_nat),</span>
+<span id="cb2-19"><a href="#cb2-19"></a>    <span class="dt">asian =</span> <span class="kw">per_f</span>(asian),</span>
+<span id="cb2-20"><a href="#cb2-20"></a>    <span class="dt">nat_ha_pac_isl =</span> <span class="kw">per_f</span>(nat_ha_pac_isl),</span>
+<span id="cb2-21"><a href="#cb2-21"></a>    <span class="dt">other =</span> <span class="kw">per_f</span>(other),</span>
+<span id="cb2-22"><a href="#cb2-22"></a>    <span class="dt">two_or_more =</span> <span class="kw">per_f</span>(two_or_more)</span>
+<span id="cb2-23"><a href="#cb2-23"></a>  )</span>
+<span id="cb2-24"><a href="#cb2-24"></a></span>
+<span id="cb2-25"><a href="#cb2-25"></a>hispanic_df =<span class="st"> </span></span>
+<span id="cb2-26"><a href="#cb2-26"></a><span class="st">  </span>hispanic_df <span class="op">%&gt;%</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb2-28"><a href="#cb2-28"></a>    <span class="dt">hispanic =</span> <span class="kw">per_f_h</span>(hispanic)</span>
+<span id="cb2-29"><a href="#cb2-29"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a><span class="st">  </span><span class="kw">select</span>(geo_id, hispanic)</span>
+<span id="cb2-31"><a href="#cb2-31"></a></span>
+<span id="cb2-32"><a href="#cb2-32"></a>race_hisp_df =</span>
+<span id="cb2-33"><a href="#cb2-33"></a><span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">x =</span> race_df, <span class="dt">y =</span> hispanic_df, <span class="dt">by =</span> <span class="st">&quot;geo_id&quot;</span>, <span class="dt">all =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<p>Read in 2017 mtm data, and merge with acs race data.</p>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
 
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>mtm_<span class="dv">2017</span> =<span class="st"> </span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;mtm_acs_2017_df.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="st">  </span><span class="kw">rename</span>(</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    <span class="dt">geo_id =</span> id</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  )</span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a>mtm_<span class="dv">2017</span>_acs_<span class="dv">2017</span>_race_df =<span class="st"> </span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">x =</span> race_hisp_df, <span class="dt">y =</span> mtm_<span class="dv">2017</span>, <span class="dt">by =</span> <span class="st">&quot;geo_id&quot;</span>, <span class="dt">all =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb3-9"><a href="#cb3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="kw">write_csv</span>(<span class="dt">x =</span> mtm_<span class="dv">2017</span>_acs_<span class="dv">2017</span>_race_df, <span class="st">&quot;mtm_2017_acs_2017_race_df.csv&quot;</span>)</span></code></pre></div>
+<p>Making transitioning graph for food insecurity by percent of race in each county across the U.S.</p>
+<div id="row" class="section level2">
+<h2>Row</h2>
+<div id="chart-a" class="section level3">
+<h3>Chart A</h3>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>race_per_plot =</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="st">  </span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>mtm_<span class="dv">2017</span>_acs_<span class="dv">2017</span>_race_df <span class="op">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="st">  </span><span class="kw">pivot_longer</span>(</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    white<span class="op">:</span>hispanic,</span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="dt">names_to =</span> <span class="st">&quot;race&quot;</span>,</span>
+<span id="cb4-7"><a href="#cb4-7"></a>    <span class="dt">values_to =</span> <span class="st">&quot;percents&quot;</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb4-10"><a href="#cb4-10"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;white&quot;</span>, <span class="st">&quot;White&quot;</span>),</span>
+<span id="cb4-11"><a href="#cb4-11"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;black&quot;</span>, <span class="st">&quot;Black&quot;</span>),</span>
+<span id="cb4-12"><a href="#cb4-12"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;am_ind_al_nat&quot;</span>, <span class="st">&quot;American Indian and Alaska Native&quot;</span>),</span>
+<span id="cb4-13"><a href="#cb4-13"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;asian&quot;</span>, <span class="st">&quot;Asian&quot;</span>),</span>
+<span id="cb4-14"><a href="#cb4-14"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;nat_ha_pac_isl&quot;</span>, <span class="st">&quot;Native Hawaiian and Other Pacific Islander&quot;</span>),</span>
+<span id="cb4-15"><a href="#cb4-15"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;other&quot;</span>, <span class="st">&quot;Other Race&quot;</span>),</span>
+<span id="cb4-16"><a href="#cb4-16"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;two_or_more&quot;</span>, <span class="st">&quot;Two or More Races&quot;</span>),</span>
+<span id="cb4-17"><a href="#cb4-17"></a>    <span class="dt">race =</span> <span class="kw">str_replace</span>(race, <span class="st">&quot;hispanic&quot;</span>, <span class="st">&quot;Hispanic&quot;</span>)</span>
+<span id="cb4-18"><a href="#cb4-18"></a>    ) <span class="op">%&gt;%</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, race, percents, fi_rate) <span class="op">%&gt;%</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="st">  </span><span class="kw">drop_na</span>() <span class="op">%&gt;%</span></span>
+<span id="cb4-21"><a href="#cb4-21"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> fi_rate, <span class="dt">y =</span> percents, <span class="dt">size =</span> total, <span class="dt">color =</span> race)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb4-22"><a href="#cb4-22"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.8</span>) <span class="op">+</span></span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb4-24"><a href="#cb4-24"></a>    <span class="dt">title =</span> <span class="st">&#39;{closest_state}&#39;</span>,</span>
+<span id="cb4-25"><a href="#cb4-25"></a>    <span class="dt">x =</span> <span class="st">&quot;Food Insecurity Rate&quot;</span>,</span>
+<span id="cb4-26"><a href="#cb4-26"></a>    <span class="dt">y =</span> <span class="st">&quot;% Race Within Each County&quot;</span></span>
+<span id="cb4-27"><a href="#cb4-27"></a>  ) <span class="op">+</span></span>
+<span id="cb4-28"><a href="#cb4-28"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb4-29"><a href="#cb4-29"></a><span class="st">  </span><span class="kw">transition_states</span>(race, <span class="dt">transition_length =</span> <span class="dv">1</span>, <span class="dt">state_length =</span> <span class="dv">3</span>, <span class="dt">wrap =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb4-30"><a href="#cb4-30"></a><span class="st">  </span><span class="kw">enter_fade</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb4-31"><a href="#cb4-31"></a><span class="st">  </span><span class="kw">exit_fade</span>() <span class="op">+</span></span>
+<span id="cb4-32"><a href="#cb4-32"></a><span class="st">  </span><span class="kw">ease_aes</span>(<span class="st">&#39;cubic-in-out&#39;</span>)</span>
+<span id="cb4-33"><a href="#cb4-33"></a></span>
+<span id="cb4-34"><a href="#cb4-34"></a><span class="kw">animate</span>(race_per_plot, <span class="dt">fps =</span> <span class="dv">5</span>, <span class="dt">height =</span> <span class="dv">500</span>, <span class="dt">width =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<p><img src="dashboard_1_files/figure-html/unnamed-chunk-5-1.gif" width="90%" data-figure-id=fig1 /></p>
+<p>Read in education attainment acs data.</p>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>edu_att =<span class="st"> </span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;ACS_data/ACS_2017_edu.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="st">   </span><span class="kw">rename</span>(</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    <span class="dt">total =</span> <span class="st">&quot;K201501_001E&quot;</span>,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    <span class="dt">less_9th =</span> <span class="st">&quot;K201501_002E&quot;</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>    <span class="dt">nineth_to_12th =</span> <span class="st">&quot;K201501_003E&quot;</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    <span class="dt">hs_grad =</span> <span class="st">&quot;K201501_004E&quot;</span>,</span>
+<span id="cb5-8"><a href="#cb5-8"></a>    <span class="dt">some_coll =</span> <span class="st">&quot;K201501_005E&quot;</span>,</span>
+<span id="cb5-9"><a href="#cb5-9"></a>    <span class="dt">assoc_deg =</span> <span class="st">&quot;K201501_006E&quot;</span>,</span>
+<span id="cb5-10"><a href="#cb5-10"></a>    <span class="dt">bach_deg =</span> <span class="st">&quot;K201501_007E&quot;</span>,</span>
+<span id="cb5-11"><a href="#cb5-11"></a>    <span class="dt">grad_or_prof =</span> <span class="st">&quot;K201501_008E&quot;</span>,</span>
+<span id="cb5-12"><a href="#cb5-12"></a>    <span class="dt">county_state =</span> <span class="st">&quot;NAME&quot;</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="st">  </span>janitor<span class="op">::</span><span class="kw">clean_names</span>() <span class="op">%&gt;%</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, less_9th, nineth_to_12th, hs_grad, some_coll, assoc_deg, bach_deg, grad_or_prof) <span class="op">%&gt;%</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="st">  </span><span class="kw">slice</span>(<span class="op">-</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb5-18"><a href="#cb5-18"></a>    <span class="dt">total =</span> <span class="kw">as.numeric</span>(total),</span>
+<span id="cb5-19"><a href="#cb5-19"></a>    <span class="dt">less_9th =</span> <span class="kw">as.numeric</span>(less_9th),</span>
+<span id="cb5-20"><a href="#cb5-20"></a>    <span class="dt">nineth_to_12th =</span> <span class="kw">as.numeric</span>(nineth_to_12th),</span>
+<span id="cb5-21"><a href="#cb5-21"></a>    <span class="dt">hs_grad =</span> <span class="kw">as.numeric</span>(hs_grad),</span>
+<span id="cb5-22"><a href="#cb5-22"></a>    <span class="dt">some_coll =</span> <span class="kw">as.numeric</span>(some_coll),</span>
+<span id="cb5-23"><a href="#cb5-23"></a>    <span class="dt">assoc_deg =</span> <span class="kw">as.numeric</span>(assoc_deg),</span>
+<span id="cb5-24"><a href="#cb5-24"></a>    <span class="dt">bach_deg =</span> <span class="kw">as.numeric</span>(bach_deg),</span>
+<span id="cb5-25"><a href="#cb5-25"></a>    <span class="dt">grad_or_prof =</span> <span class="kw">as.numeric</span>(grad_or_prof))</span></code></pre></div>
+<p>Percent function, and percents for education attainment % by county.</p>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>per_f_edu =<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a>  x<span class="op">/</span>edu_att<span class="op">$</span>total <span class="op">*</span><span class="st"> </span><span class="dv">100</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>  </span>
+<span id="cb6-5"><a href="#cb6-5"></a>}</span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a>edu_att =<span class="st"> </span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="st">  </span>edu_att <span class="op">%&gt;%</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb6-10"><a href="#cb6-10"></a>    <span class="dt">less_9th =</span> <span class="kw">per_f_edu</span>(less_9th),</span>
+<span id="cb6-11"><a href="#cb6-11"></a>    <span class="dt">nineth_to_12th =</span> <span class="kw">per_f_edu</span>(nineth_to_12th),</span>
+<span id="cb6-12"><a href="#cb6-12"></a>    <span class="dt">hs_grad =</span> <span class="kw">per_f_edu</span>(hs_grad),</span>
+<span id="cb6-13"><a href="#cb6-13"></a>    <span class="dt">some_coll =</span> <span class="kw">per_f_edu</span>(some_coll),</span>
+<span id="cb6-14"><a href="#cb6-14"></a>    <span class="dt">assoc_deg =</span> <span class="kw">per_f_edu</span>(assoc_deg),</span>
+<span id="cb6-15"><a href="#cb6-15"></a>    <span class="dt">bach_deg =</span> <span class="kw">per_f_edu</span>(bach_deg),</span>
+<span id="cb6-16"><a href="#cb6-16"></a>    <span class="dt">grad_or_prof =</span> <span class="kw">per_f_edu</span>(grad_or_prof)</span>
+<span id="cb6-17"><a href="#cb6-17"></a>  )</span></code></pre></div>
+<p>Merge with acs education data.</p>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>mtm_<span class="dv">2017</span>_edu_<span class="dv">2017</span>_att_df =</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">x =</span> edu_att, <span class="dt">y =</span> mtm_<span class="dv">2017</span>, <span class="dt">by =</span> <span class="st">&quot;geo_id&quot;</span>, <span class="dt">all =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="kw">write_csv</span>(<span class="dt">x =</span> mtm_<span class="dv">2017</span>_edu_<span class="dv">2017</span>_att_df, <span class="st">&quot;mtm_2017_edu_2017_att_df.csv&quot;</span>)</span></code></pre></div>
+<p>Making transitioning graph for food insecurity by percent of education attainment category in each county across the U.S.</p>
+</div>
+<div id="chart-b" class="section level3">
+<h3>Chart B</h3>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>edu_per_plot =</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="st">  </span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>mtm_<span class="dv">2017</span>_edu_<span class="dv">2017</span>_att_df <span class="op">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="st">  </span><span class="kw">pivot_longer</span>(</span>
+<span id="cb8-5"><a href="#cb8-5"></a>    less_9th<span class="op">:</span>grad_or_prof,</span>
+<span id="cb8-6"><a href="#cb8-6"></a>    <span class="dt">names_to =</span> <span class="st">&quot;edu_att&quot;</span>,</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    <span class="dt">values_to =</span> <span class="st">&quot;percents&quot;</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb8-10"><a href="#cb8-10"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;less_9th&quot;</span>, <span class="st">&quot;Less Than 9th Grade&quot;</span>),</span>
+<span id="cb8-11"><a href="#cb8-11"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;nineth_to_12th&quot;</span>, <span class="st">&quot;9th to 12th Grade&quot;</span>),</span>
+<span id="cb8-12"><a href="#cb8-12"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;hs_grad&quot;</span>, <span class="st">&quot;High School Graduate&quot;</span>),</span>
+<span id="cb8-13"><a href="#cb8-13"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;some_coll&quot;</span>, <span class="st">&quot;Some College&quot;</span>),</span>
+<span id="cb8-14"><a href="#cb8-14"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;assoc_deg&quot;</span>, <span class="st">&quot;Associate&#39;s Degree&quot;</span>),</span>
+<span id="cb8-15"><a href="#cb8-15"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;bach_deg&quot;</span>, <span class="st">&quot;Bachelor&#39;s Degree&quot;</span>),</span>
+<span id="cb8-16"><a href="#cb8-16"></a>    <span class="dt">edu_att =</span> <span class="kw">str_replace</span>(edu_att, <span class="st">&quot;grad_or_prof&quot;</span>, <span class="st">&quot;Graduate or Professional Degree&quot;</span>)</span>
+<span id="cb8-17"><a href="#cb8-17"></a>    ) <span class="op">%&gt;%</span></span>
+<span id="cb8-18"><a href="#cb8-18"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, edu_att, percents, fi_rate) <span class="op">%&gt;%</span></span>
+<span id="cb8-19"><a href="#cb8-19"></a><span class="st">  </span><span class="kw">drop_na</span>() <span class="op">%&gt;%</span></span>
+<span id="cb8-20"><a href="#cb8-20"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> fi_rate, <span class="dt">y =</span> percents, <span class="dt">size =</span> total, <span class="dt">color =</span> edu_att)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb8-21"><a href="#cb8-21"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.8</span>) <span class="op">+</span></span>
+<span id="cb8-22"><a href="#cb8-22"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb8-23"><a href="#cb8-23"></a>    <span class="dt">title =</span> <span class="st">&#39;{closest_state}&#39;</span>,</span>
+<span id="cb8-24"><a href="#cb8-24"></a>    <span class="dt">x =</span> <span class="st">&quot;Food Insecurity Rate&quot;</span>,</span>
+<span id="cb8-25"><a href="#cb8-25"></a>    <span class="dt">y =</span> <span class="st">&quot;% Education Attainment Within Each County&quot;</span></span>
+<span id="cb8-26"><a href="#cb8-26"></a>  ) <span class="op">+</span></span>
+<span id="cb8-27"><a href="#cb8-27"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb8-28"><a href="#cb8-28"></a><span class="st">  </span><span class="kw">transition_states</span>(edu_att, <span class="dt">transition_length =</span> <span class="dv">1</span>, <span class="dt">state_length =</span> <span class="dv">3</span>, <span class="dt">wrap =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb8-29"><a href="#cb8-29"></a><span class="st">  </span><span class="kw">enter_fade</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb8-30"><a href="#cb8-30"></a><span class="st">  </span><span class="kw">exit_fade</span>() <span class="op">+</span></span>
+<span id="cb8-31"><a href="#cb8-31"></a><span class="st">  </span><span class="kw">ease_aes</span>(<span class="st">&#39;cubic-in-out&#39;</span>)</span>
+<span id="cb8-32"><a href="#cb8-32"></a></span>
+<span id="cb8-33"><a href="#cb8-33"></a><span class="kw">animate</span>(edu_per_plot, <span class="dt">fps =</span> <span class="dv">5</span>, <span class="dt">height =</span> <span class="dv">500</span>, <span class="dt">width =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<p><img src="dashboard_1_files/figure-html/unnamed-chunk-9-1.gif" width="90%" data-figure-id=fig1 /></p>
+<p>Read in insurance acs data.</p>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>ins_status =<span class="st"> </span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;ACS_data/ACS_2017_ins_status.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="st">   </span><span class="kw">rename</span>(</span>
+<span id="cb9-4"><a href="#cb9-4"></a>    <span class="dt">total =</span> <span class="st">&quot;K202701_001E&quot;</span>,</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    <span class="dt">tot_under_19 =</span> <span class="st">&quot;K202701_002E&quot;</span>,</span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="dt">y_under_19 =</span> <span class="st">&quot;K202701_003E&quot;</span>,</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="dt">n_under_19 =</span> <span class="st">&quot;K202701_004E&quot;</span>,</span>
+<span id="cb9-8"><a href="#cb9-8"></a>    <span class="dt">tot_19_64 =</span> <span class="st">&quot;K202701_005E&quot;</span>,</span>
+<span id="cb9-9"><a href="#cb9-9"></a>    <span class="dt">y_19_64 =</span> <span class="st">&quot;K202701_006E&quot;</span>,</span>
+<span id="cb9-10"><a href="#cb9-10"></a>    <span class="dt">n_19_64 =</span> <span class="st">&quot;K202701_007E&quot;</span>,</span>
+<span id="cb9-11"><a href="#cb9-11"></a>    <span class="dt">tot_65_over =</span> <span class="st">&quot;K202701_008E&quot;</span>,</span>
+<span id="cb9-12"><a href="#cb9-12"></a>    <span class="dt">y_65_over =</span> <span class="st">&quot;K202701_009E&quot;</span>,</span>
+<span id="cb9-13"><a href="#cb9-13"></a>    <span class="dt">n_65_over =</span> <span class="st">&quot;K202701_010E&quot;</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a><span class="st">  </span>janitor<span class="op">::</span><span class="kw">clean_names</span>() <span class="op">%&gt;%</span></span>
+<span id="cb9-16"><a href="#cb9-16"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, tot_under_<span class="dv">19</span>, y_under_<span class="dv">19</span>, n_under_<span class="dv">19</span>, tot_<span class="dv">19</span>_<span class="dv">64</span>, y_<span class="dv">19</span>_<span class="dv">64</span>, n_<span class="dv">19</span>_<span class="dv">64</span>, tot_<span class="dv">65</span>_over, y_<span class="dv">65</span>_over, n_<span class="dv">65</span>_over) <span class="op">%&gt;%</span></span>
+<span id="cb9-17"><a href="#cb9-17"></a><span class="st">  </span><span class="kw">slice</span>(<span class="op">-</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb9-18"><a href="#cb9-18"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb9-19"><a href="#cb9-19"></a>    <span class="dt">total =</span> <span class="kw">as.numeric</span>(total),</span>
+<span id="cb9-20"><a href="#cb9-20"></a>    <span class="dt">tot_under_19 =</span> <span class="kw">as.numeric</span>(tot_under_<span class="dv">19</span>),</span>
+<span id="cb9-21"><a href="#cb9-21"></a>    <span class="dt">y_under_19 =</span> <span class="kw">as.numeric</span>(y_under_<span class="dv">19</span>),</span>
+<span id="cb9-22"><a href="#cb9-22"></a>    <span class="dt">n_under_19 =</span> <span class="kw">as.numeric</span>(n_under_<span class="dv">19</span>),</span>
+<span id="cb9-23"><a href="#cb9-23"></a>    <span class="dt">tot_19_64 =</span> <span class="kw">as.numeric</span>(tot_<span class="dv">19</span>_<span class="dv">64</span>),</span>
+<span id="cb9-24"><a href="#cb9-24"></a>    <span class="dt">y_19_64 =</span> <span class="kw">as.numeric</span>(y_<span class="dv">19</span>_<span class="dv">64</span>),</span>
+<span id="cb9-25"><a href="#cb9-25"></a>    <span class="dt">n_19_64 =</span> <span class="kw">as.numeric</span>(n_<span class="dv">19</span>_<span class="dv">64</span>),</span>
+<span id="cb9-26"><a href="#cb9-26"></a>    <span class="dt">tot_65_over =</span> <span class="kw">as.numeric</span>(tot_<span class="dv">65</span>_over),</span>
+<span id="cb9-27"><a href="#cb9-27"></a>    <span class="dt">y_65_over =</span> <span class="kw">as.numeric</span>(y_<span class="dv">65</span>_over),</span>
+<span id="cb9-28"><a href="#cb9-28"></a>    <span class="dt">n_65_over =</span> <span class="kw">as.numeric</span>(n_<span class="dv">65</span>_over)</span>
+<span id="cb9-29"><a href="#cb9-29"></a>    )</span></code></pre></div>
+<p>Percent function, and percents for insurance status % by county.</p>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>per_f_ins =<span class="st"> </span><span class="cf">function</span>(x, y) {</span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  x<span class="op">/</span>y <span class="op">*</span><span class="st"> </span><span class="dv">100</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  </span>
+<span id="cb10-5"><a href="#cb10-5"></a>}</span>
+<span id="cb10-6"><a href="#cb10-6"></a></span>
+<span id="cb10-7"><a href="#cb10-7"></a>ins_status =<span class="st"> </span></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="st">  </span>ins_status <span class="op">%&gt;%</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb10-10"><a href="#cb10-10"></a>    <span class="dt">y_under_19 =</span> <span class="kw">per_f_ins</span>(y_under_<span class="dv">19</span>, tot_under_<span class="dv">19</span>),</span>
+<span id="cb10-11"><a href="#cb10-11"></a>    <span class="dt">n_under_19 =</span> <span class="kw">per_f_ins</span>(n_under_<span class="dv">19</span>, tot_under_<span class="dv">19</span>),</span>
+<span id="cb10-12"><a href="#cb10-12"></a>    <span class="dt">y_19_64 =</span> <span class="kw">per_f_ins</span>(y_<span class="dv">19</span>_<span class="dv">64</span>, tot_<span class="dv">19</span>_<span class="dv">64</span>),</span>
+<span id="cb10-13"><a href="#cb10-13"></a>    <span class="dt">n_19_64 =</span> <span class="kw">per_f_ins</span>(n_<span class="dv">19</span>_<span class="dv">64</span>, tot_<span class="dv">19</span>_<span class="dv">64</span>),</span>
+<span id="cb10-14"><a href="#cb10-14"></a>    <span class="dt">y_65_over =</span> <span class="kw">per_f_ins</span>(y_<span class="dv">65</span>_over, tot_<span class="dv">65</span>_over),</span>
+<span id="cb10-15"><a href="#cb10-15"></a>    <span class="dt">n_65_over =</span> <span class="kw">per_f_ins</span>(n_<span class="dv">65</span>_over, tot_<span class="dv">65</span>_over)</span>
+<span id="cb10-16"><a href="#cb10-16"></a>  )</span></code></pre></div>
+<p>Merge with acs insurance data.</p>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>mtm_<span class="dv">2017</span>_ins_<span class="dv">2017</span>_status_df =</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">x =</span> ins_status, <span class="dt">y =</span> mtm_<span class="dv">2017</span>, <span class="dt">by =</span> <span class="st">&quot;geo_id&quot;</span>, <span class="dt">all =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb11-3"><a href="#cb11-3"></a></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="kw">write_csv</span>(<span class="dt">x =</span> mtm_<span class="dv">2017</span>_ins_<span class="dv">2017</span>_status_df, <span class="st">&quot;mtm_2017_ins_2017_status_df.csv&quot;</span>)</span></code></pre></div>
+<p>Making transitioning graph for food insecurity by percent of insurance status category in each county across the U.S.</p>
+</div>
+</div>
+<div id="row-1" class="section level2">
+<h2>Row</h2>
+<div id="chart-c" class="section level3">
+<h3>Chart C</h3>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>ins_status_plot =</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="st">  </span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>mtm_<span class="dv">2017</span>_ins_<span class="dv">2017</span>_status_df <span class="op">%&gt;%</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>tot_<span class="dv">19</span>_<span class="dv">64</span>, <span class="op">-</span>tot_under_<span class="dv">19</span>, <span class="op">-</span><span class="st"> </span>tot_<span class="dv">65</span>_over) <span class="op">%&gt;%</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="st">  </span><span class="kw">pivot_longer</span>(</span>
+<span id="cb12-6"><a href="#cb12-6"></a>    y_under_<span class="dv">19</span><span class="op">:</span>n_<span class="dv">65</span>_over,</span>
+<span id="cb12-7"><a href="#cb12-7"></a>    <span class="dt">names_to =</span> <span class="st">&quot;ins_status&quot;</span>,</span>
+<span id="cb12-8"><a href="#cb12-8"></a>    <span class="dt">values_to =</span> <span class="st">&quot;percents&quot;</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb12-11"><a href="#cb12-11"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;y_under_19&quot;</span>, <span class="st">&quot;Under Age 19 With Insurance&quot;</span>),</span>
+<span id="cb12-12"><a href="#cb12-12"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;n_under_19&quot;</span>, <span class="st">&quot;Under Age 19 Without Insurance&quot;</span>),</span>
+<span id="cb12-13"><a href="#cb12-13"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;y_19_64&quot;</span>, <span class="st">&quot;Ages 19 to 64 With Insurance&quot;</span>),</span>
+<span id="cb12-14"><a href="#cb12-14"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;n_19_64&quot;</span>, <span class="st">&quot;Ages 19 to 64 Without Insurance&quot;</span>),</span>
+<span id="cb12-15"><a href="#cb12-15"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;y_65_over&quot;</span>, <span class="st">&quot;Over Age 65 With Insurance&quot;</span>),</span>
+<span id="cb12-16"><a href="#cb12-16"></a>    <span class="dt">ins_status =</span> <span class="kw">str_replace</span>(ins_status, <span class="st">&quot;n_65_over&quot;</span>, <span class="st">&quot;Over Age 65 Without Insurance&quot;</span>),</span>
+<span id="cb12-17"><a href="#cb12-17"></a>    ) <span class="op">%&gt;%</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, ins_status, percents, fi_rate) <span class="op">%&gt;%</span></span>
+<span id="cb12-19"><a href="#cb12-19"></a><span class="st">  </span><span class="kw">drop_na</span>() <span class="op">%&gt;%</span></span>
+<span id="cb12-20"><a href="#cb12-20"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> fi_rate, <span class="dt">y =</span> percents, <span class="dt">size =</span> total, <span class="dt">color =</span> ins_status)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb12-21"><a href="#cb12-21"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.8</span>) <span class="op">+</span></span>
+<span id="cb12-22"><a href="#cb12-22"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb12-23"><a href="#cb12-23"></a>    <span class="dt">title =</span> <span class="st">&#39;{closest_state}&#39;</span>,</span>
+<span id="cb12-24"><a href="#cb12-24"></a>    <span class="dt">x =</span> <span class="st">&quot;Food Insecurity Rate&quot;</span>,</span>
+<span id="cb12-25"><a href="#cb12-25"></a>    <span class="dt">y =</span> <span class="st">&quot;% of Individuals&quot;</span></span>
+<span id="cb12-26"><a href="#cb12-26"></a>  ) <span class="op">+</span></span>
+<span id="cb12-27"><a href="#cb12-27"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb12-28"><a href="#cb12-28"></a><span class="st">  </span><span class="kw">transition_states</span>(ins_status, <span class="dt">transition_length =</span> <span class="dv">1</span>, <span class="dt">state_length =</span> <span class="dv">3</span>, <span class="dt">wrap =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb12-29"><a href="#cb12-29"></a><span class="st">  </span><span class="kw">enter_fade</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb12-30"><a href="#cb12-30"></a><span class="st">  </span><span class="kw">exit_fade</span>() <span class="op">+</span></span>
+<span id="cb12-31"><a href="#cb12-31"></a><span class="st">  </span><span class="kw">ease_aes</span>(<span class="st">&#39;cubic-in-out&#39;</span>)</span>
+<span id="cb12-32"><a href="#cb12-32"></a></span>
+<span id="cb12-33"><a href="#cb12-33"></a><span class="kw">animate</span>(ins_status_plot, <span class="dt">fps =</span> <span class="dv">5</span>, <span class="dt">height =</span> <span class="dv">500</span>, <span class="dt">width =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<p><img src="dashboard_1_files/figure-html/unnamed-chunk-13-1.gif" width="90%" data-figure-id=fig1 /></p>
+<p>Read in income acs data.</p>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>income_brac =<span class="st"> </span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="st">  </span><span class="kw">read_csv</span>(<span class="st">&quot;ACS_data/ACS_2017_income.csv&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="st">   </span><span class="kw">rename</span>(</span>
+<span id="cb13-4"><a href="#cb13-4"></a>    <span class="dt">total =</span> <span class="st">&quot;K201901_001E&quot;</span>,</span>
+<span id="cb13-5"><a href="#cb13-5"></a>    <span class="dt">less_20 =</span> <span class="st">&quot;K201901_002E&quot;</span>,</span>
+<span id="cb13-6"><a href="#cb13-6"></a>    <span class="dt">twenty_39 =</span> <span class="st">&quot;K201901_003E&quot;</span>,</span>
+<span id="cb13-7"><a href="#cb13-7"></a>    <span class="dt">forty_59 =</span> <span class="st">&quot;K201901_004E&quot;</span>,</span>
+<span id="cb13-8"><a href="#cb13-8"></a>    <span class="dt">sixty_99 =</span> <span class="st">&quot;K201901_005E&quot;</span>,</span>
+<span id="cb13-9"><a href="#cb13-9"></a>    <span class="dt">hun_149 =</span> <span class="st">&quot;K201901_006E&quot;</span>,</span>
+<span id="cb13-10"><a href="#cb13-10"></a>    <span class="dt">hunfifty_199 =</span> <span class="st">&quot;K201901_007E&quot;</span>,</span>
+<span id="cb13-11"><a href="#cb13-11"></a>    <span class="dt">twohun_more =</span> <span class="st">&quot;K201901_008E&quot;</span></span>
+<span id="cb13-12"><a href="#cb13-12"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a><span class="st">  </span>janitor<span class="op">::</span><span class="kw">clean_names</span>() <span class="op">%&gt;%</span></span>
+<span id="cb13-14"><a href="#cb13-14"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, less_<span class="dv">20</span>, twenty_<span class="dv">39</span>, forty_<span class="dv">59</span>, sixty_<span class="dv">99</span>, hun_<span class="dv">149</span>, hunfifty_<span class="dv">199</span>, twohun_more) <span class="op">%&gt;%</span></span>
+<span id="cb13-15"><a href="#cb13-15"></a><span class="st">  </span><span class="kw">slice</span>(<span class="op">-</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb13-16"><a href="#cb13-16"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb13-17"><a href="#cb13-17"></a>    <span class="dt">total =</span> <span class="kw">as.numeric</span>(total),</span>
+<span id="cb13-18"><a href="#cb13-18"></a>    <span class="dt">less_20 =</span> <span class="kw">as.numeric</span>(less_<span class="dv">20</span>),</span>
+<span id="cb13-19"><a href="#cb13-19"></a>    <span class="dt">twenty_39 =</span> <span class="kw">as.numeric</span>(twenty_<span class="dv">39</span>),</span>
+<span id="cb13-20"><a href="#cb13-20"></a>    <span class="dt">forty_59 =</span> <span class="kw">as.numeric</span>(forty_<span class="dv">59</span>),</span>
+<span id="cb13-21"><a href="#cb13-21"></a>    <span class="dt">sixty_99 =</span> <span class="kw">as.numeric</span>(sixty_<span class="dv">99</span>),</span>
+<span id="cb13-22"><a href="#cb13-22"></a>    <span class="dt">hun_149 =</span> <span class="kw">as.numeric</span>(hun_<span class="dv">149</span>),</span>
+<span id="cb13-23"><a href="#cb13-23"></a>    <span class="dt">hunfifty_199 =</span> <span class="kw">as.numeric</span>(hunfifty_<span class="dv">199</span>),</span>
+<span id="cb13-24"><a href="#cb13-24"></a>    <span class="dt">twohun_more =</span> <span class="kw">as.numeric</span>(twohun_more)</span>
+<span id="cb13-25"><a href="#cb13-25"></a>    )</span></code></pre></div>
+<p>Percent function, and percents for income bracket % by county.</p>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>per_f_inco =<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  x<span class="op">/</span>income_brac<span class="op">$</span>total <span class="op">*</span><span class="st"> </span><span class="dv">100</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>  </span>
+<span id="cb14-5"><a href="#cb14-5"></a>}</span>
+<span id="cb14-6"><a href="#cb14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7"></a>income_brac =<span class="st"> </span></span>
+<span id="cb14-8"><a href="#cb14-8"></a><span class="st">  </span>income_brac <span class="op">%&gt;%</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb14-10"><a href="#cb14-10"></a>    <span class="dt">less_20 =</span> <span class="kw">per_f_inco</span>(less_<span class="dv">20</span>),</span>
+<span id="cb14-11"><a href="#cb14-11"></a>    <span class="dt">twenty_39 =</span> <span class="kw">per_f_inco</span>(twenty_<span class="dv">39</span>),</span>
+<span id="cb14-12"><a href="#cb14-12"></a>    <span class="dt">forty_59 =</span> <span class="kw">per_f_inco</span>(forty_<span class="dv">59</span>),</span>
+<span id="cb14-13"><a href="#cb14-13"></a>    <span class="dt">sixty_99 =</span> <span class="kw">per_f_inco</span>(sixty_<span class="dv">99</span>),</span>
+<span id="cb14-14"><a href="#cb14-14"></a>    <span class="dt">hun_149 =</span> <span class="kw">per_f_inco</span>(hun_<span class="dv">149</span>),</span>
+<span id="cb14-15"><a href="#cb14-15"></a>    <span class="dt">hunfifty_199 =</span> <span class="kw">per_f_inco</span>(hunfifty_<span class="dv">199</span>),</span>
+<span id="cb14-16"><a href="#cb14-16"></a>    <span class="dt">twohun_more =</span> <span class="kw">per_f_inco</span>(twohun_more)</span>
+<span id="cb14-17"><a href="#cb14-17"></a>  )</span></code></pre></div>
+<p>Merge with acs income data.</p>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>mtm_<span class="dv">2017</span>_income_<span class="dv">2017</span>_brac_df =</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">x =</span> income_brac, <span class="dt">y =</span> mtm_<span class="dv">2017</span>, <span class="dt">by =</span> <span class="st">&quot;geo_id&quot;</span>, <span class="dt">all =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb15-3"><a href="#cb15-3"></a></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="kw">write_csv</span>(<span class="dt">x =</span> mtm_<span class="dv">2017</span>_income_<span class="dv">2017</span>_brac_df, <span class="st">&quot;mtm_2017_income_2017_brac_df.csv&quot;</span>)</span></code></pre></div>
+<p>Making transitioning graph for food insecurity by percent of income bracket in each county across the U.S.</p>
+</div>
+<div id="chart-d" class="section level3">
+<h3>Chart D</h3>
+<div class="knitr-options" data-fig-width="768" data-fig-height="576">
+
+</div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>income_brac_plot =</span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="st">  </span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>mtm_<span class="dv">2017</span>_income_<span class="dv">2017</span>_brac_df <span class="op">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="st">  </span><span class="kw">pivot_longer</span>(</span>
+<span id="cb16-5"><a href="#cb16-5"></a>    less_<span class="dv">20</span><span class="op">:</span>twohun_more,</span>
+<span id="cb16-6"><a href="#cb16-6"></a>    <span class="dt">names_to =</span> <span class="st">&quot;income_brac&quot;</span>,</span>
+<span id="cb16-7"><a href="#cb16-7"></a>    <span class="dt">values_to =</span> <span class="st">&quot;percents&quot;</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a>  ) <span class="op">%&gt;%</span></span>
+<span id="cb16-9"><a href="#cb16-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
+<span id="cb16-10"><a href="#cb16-10"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;less_20&quot;</span>, <span class="st">&quot;Less Than $20,000&quot;</span>),</span>
+<span id="cb16-11"><a href="#cb16-11"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;twenty_39&quot;</span>, <span class="st">&quot;Between $20,000 and $39,999&quot;</span>),</span>
+<span id="cb16-12"><a href="#cb16-12"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;forty_59&quot;</span>, <span class="st">&quot;Between $40,000 and $59,999&quot;</span>),</span>
+<span id="cb16-13"><a href="#cb16-13"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;sixty_99&quot;</span>, <span class="st">&quot;Between $60,000 and $99,999&quot;</span>),</span>
+<span id="cb16-14"><a href="#cb16-14"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;hun_149&quot;</span>, <span class="st">&quot;Between $100,000 and $149,999&quot;</span>),</span>
+<span id="cb16-15"><a href="#cb16-15"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;hunfifty_199&quot;</span>, <span class="st">&quot;Between $150,000 and $199,999&quot;</span>),</span>
+<span id="cb16-16"><a href="#cb16-16"></a>    <span class="dt">income_brac =</span> <span class="kw">str_replace</span>(income_brac, <span class="st">&quot;twohun_more&quot;</span>, <span class="st">&quot;$200,000 or More&quot;</span>)</span>
+<span id="cb16-17"><a href="#cb16-17"></a>    ) <span class="op">%&gt;%</span></span>
+<span id="cb16-18"><a href="#cb16-18"></a><span class="st">  </span><span class="kw">select</span>(geo_id, total, income_brac, percents, fi_rate) <span class="op">%&gt;%</span></span>
+<span id="cb16-19"><a href="#cb16-19"></a><span class="st">  </span><span class="kw">drop_na</span>() <span class="op">%&gt;%</span></span>
+<span id="cb16-20"><a href="#cb16-20"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> fi_rate, <span class="dt">y =</span> percents, <span class="dt">size =</span> total, <span class="dt">color =</span> income_brac)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb16-21"><a href="#cb16-21"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.8</span>) <span class="op">+</span></span>
+<span id="cb16-22"><a href="#cb16-22"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb16-23"><a href="#cb16-23"></a>    <span class="dt">title =</span> <span class="st">&#39;{closest_state}&#39;</span>,</span>
+<span id="cb16-24"><a href="#cb16-24"></a>    <span class="dt">x =</span> <span class="st">&quot;Food Insecurity Rate&quot;</span>,</span>
+<span id="cb16-25"><a href="#cb16-25"></a>    <span class="dt">y =</span> <span class="st">&quot;% of Individuals in Each Income Bracket&quot;</span></span>
+<span id="cb16-26"><a href="#cb16-26"></a>  ) <span class="op">+</span></span>
+<span id="cb16-27"><a href="#cb16-27"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb16-28"><a href="#cb16-28"></a><span class="st">  </span><span class="kw">transition_states</span>(income_brac, <span class="dt">transition_length =</span> <span class="dv">1</span>, <span class="dt">state_length =</span> <span class="dv">3</span>, <span class="dt">wrap =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb16-29"><a href="#cb16-29"></a><span class="st">  </span><span class="kw">enter_fade</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb16-30"><a href="#cb16-30"></a><span class="st">  </span><span class="kw">exit_fade</span>() <span class="op">+</span></span>
+<span id="cb16-31"><a href="#cb16-31"></a><span class="st">  </span><span class="kw">ease_aes</span>(<span class="st">&#39;cubic-in-out&#39;</span>)</span>
+<span id="cb16-32"><a href="#cb16-32"></a></span>
+<span id="cb16-33"><a href="#cb16-33"></a><span class="kw">animate</span>(income_brac_plot, <span class="dt">fps =</span> <span class="dv">5</span>, <span class="dt">height =</span> <span class="dv">500</span>, <span class="dt">width =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<p><img src="dashboard_1_files/figure-html/unnamed-chunk-17-1.gif" width="90%" data-figure-id=fig1 /></p>
+</div>
 </div>
 
 </div>
@@ -3026,678 +3145,21 @@ $(document).ready(function () {
 });
 </script>
 
-<div id="flexdashboard-source-code">
-<pre class="line-numbers"><code class="language-r">---
-title: "dashboard_1"
-author: "Vasili Fokaidis"
-output: 
-  flexdashboard::flex_dashboard:
-    orientation: columns
-    vertical_layout: fill
-    source: embed
----
-
-```{r}
-library(tidyverse)
-```
-
-Read in data. And manipulate respective data to make scatter plots.
-
-```{r}
-race_plot = 
-  read_csv("ACS_data/ACS_2017_race.csv") %>%
-  rename(
-    total = "K200201_001E",
-    white = "K200201_002E",
-    black = "K200201_003E",
-    am_ind_al_nat = "K200201_004E",
-    asian = "K200201_005E",
-    nat_ha_pac_isl = "K200201_006E",
-    other = "K200201_007E",
-    two_or_more = "K200201_008E",
-    county_state = "NAME"
-  ) %>%
-  janitor::clean_names() %>%
-  select(geo_id, county_state, total, white, black, am_ind_al_nat, asian, nat_ha_pac_isl, other, two_or_more) %>%
-  slice(-1) %>%
->>>>>>> b5a241ee096d415f2d0b31bec1ffafa27759e5ac
-  mutate(
-    total = as.numeric(total),
-    white = as.numeric(white),
-    black = as.numeric(black),
-    am_ind_al_nat = as.numeric(am_ind_al_nat),
-    asian = as.numeric(asian),
-    nat_ha_pac_isl = as.numeric(nat_ha_pac_isl), 
-    other = as.numeric(other),
-<<<<<<< HEAD
-    two_or_more = as.numeric(two_or_more)
-  )</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   GEO_ID = col_character(),
-##   NAME = col_character(),
-##   K200201_001E = col_character(),
-##   K200201_001M = col_character(),
-##   K200201_002E = col_character(),
-##   K200201_002M = col_character(),
-##   K200201_003E = col_character(),
-##   K200201_003M = col_character(),
-##   K200201_004E = col_character(),
-##   K200201_004M = col_character(),
-##   K200201_005E = col_character(),
-##   K200201_005M = col_character(),
-##   K200201_006E = col_character(),
-##   K200201_006M = col_character(),
-##   K200201_007E = col_character(),
-##   K200201_007M = col_character(),
-##   K200201_008E = col_character(),
-##   K200201_008M = col_character()
-## )</code></pre>
-<pre class="r"><code>hispanic_df = 
-  read_csv(&quot;ACS_data/ACS_2017_hispanic.csv&quot;) %&gt;%
-   rename(
-    total = &quot;K200301_001E&quot;,
-    hispanic = &quot;K200301_003E&quot;,
-    county_state = &quot;NAME&quot;
-  ) %&gt;%
-  janitor::clean_names() %&gt;%
-  select(geo_id, county_state, total, hispanic) %&gt;%
-  slice(-1) %&gt;%
-  mutate(
-    total = as.numeric(total),
-    hispanic = as.numeric(hispanic)
-  )</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   GEO_ID = col_character(),
-##   NAME = col_character(),
-##   K200301_001E = col_character(),
-##   K200301_001M = col_character(),
-##   K200301_002E = col_character(),
-##   K200301_002M = col_character(),
-##   K200301_003E = col_character(),
-##   K200301_003M = col_character()
-## )</code></pre>
-<p>Percent function, and percents of each race by county.</p>
-<pre class="r"><code>per_f = function(x) {
-
-  x/race_df$total * 100
-  
-}
-
-per_f_h = function(y) {
-  
-  y/hispanic_df$total * 100
-  
-}
-
-race_df = 
-  race_df %&gt;%
-=======
-    two_or_more = as.numeric(two_or_more),
-    county_state = tolower(county_state),
-    county_state = str_replace(county_state, " county, ", "_"),
-    county_state = str_replace(county_state, "alabama", "AL"),
-    county_state = str_replace(county_state, "alaska", "AK"),
-    county_state = str_replace(county_state, "arkansas", "AR"),
-    county_state = str_replace(county_state, "arizona", "AZ"),
-    county_state = str_replace(county_state, "california", "CA"),
-    county_state = str_replace(county_state, "colorado", "CO"),
-    county_state = str_replace(county_state, "connecticut", "CT"),
-    county_state = str_replace(county_state, "delaware", "DE"),
-    county_state = str_replace(county_state, "district of columbia", "DC"),
-    county_state = str_replace(county_state, "florida", "FL"),
-    county_state = str_replace(county_state, "georgia", "GA"),
-    county_state = str_replace(county_state, "hawaii", "HI"),
-    county_state = str_replace(county_state, "idaho", "ID"),
-    county_state = str_replace(county_state, "illinois", "IL"),
-    county_state = str_replace(county_state, "indiana", "IN"),
-    county_state = str_replace(county_state, "iowa", "IA"),
-    county_state = str_replace(county_state, "kansas", "KS"),
-    county_state = str_replace(county_state, "kentucky", "KY"),
-    county_state = str_replace(county_state, "lousiana", "LA"),
-    county_state = str_replace(county_state, "maine", "ME"),
-    county_state = str_replace(county_state, "maryland", "MD"),
-    county_state = str_replace(county_state, "massachusetts", "MA"),
-    county_state = str_replace(county_state, "michigan", "MI"),
-    county_state = str_replace(county_state, "minnesota", "MN"),
-    county_state = str_replace(county_state, "mississippi", "MS"),
-    county_state = str_replace(county_state, "missouri", "MO"),
-    county_state = str_replace(county_state, "montana", "MT"),
-    county_state = str_replace(county_state, "nebraska", "NE"),
-    county_state = str_replace(county_state, "nevada", "NV"),
-    county_state = str_replace(county_state, "new hampshire", "NH"),
-    county_state = str_replace(county_state, "new jersey", "NJ"),
-    county_state = str_replace(county_state, "new mexico", "NM"),
-    county_state = str_replace(county_state, "new york", "NY"),
-    county_state = str_replace(county_state, "north carolina", "NC"),
-    county_state = str_replace(county_state, "north dakota", "ND"),
-    county_state = str_replace(county_state, "ohia", "OH"),
-    county_state = str_replace(county_state, "oklahoma", "OK"),
-    county_state = str_replace(county_state, "oregon", "OR"),
-    county_state = str_replace(county_state, "pennsylvania", "PA"),
-    county_state = str_replace(county_state, "rhode island", "RI"),
-    county_state = str_replace(county_state, "south carolina", "SC"),
-    county_state = str_replace(county_state, "south dakota", "SD"),
-    county_state = str_replace(county_state, "tennessee", "TN"),
-    county_state = str_replace(county_state, "texas", "TX"),
-    county_state = str_replace(county_state, "utah", "UT"),
-    county_state = str_replace(county_state, "vermont", "VT"),
-    county_state = str_replace(county_state, "virginia", "VA"),
-    county_state = str_replace(county_state, "washington", "WA"),
-    county_state = str_replace(county_state, "west virginia", "WV"),
-    county_state = str_replace(county_state, "wisconsin", "WI"),
-    county_state = str_replace(county_state, "wyoming", "WY"),
-    county_state = str_replace(county_state, "puerto rico", "PR")
-  )
-```
-
-Percent function, and percents of each race by county.
-
-```{r}
-per_f = function(x) {
-
-  x/race_plot$total * 100
-  
-}
-
-race_plot = 
-  race_plot %>%
->>>>>>> b5a241ee096d415f2d0b31bec1ffafa27759e5ac
-  mutate(
-    white = per_f(white),
-    black = per_f(black),
-    am_ind_al_nat = per_f(am_ind_al_nat),
-    asian = per_f(asian),
-    nat_ha_pac_isl = per_f(nat_ha_pac_isl),
-    other = per_f(other),
-    two_or_more = per_f(two_or_more)
-  )
-<<<<<<< HEAD
-
-hispanic_df = 
-  hispanic_df %&gt;%
-  mutate(
-    hispanic = per_f_h(hispanic)
-  ) %&gt;%
-  select(geo_id, hispanic)
-
-race_hisp_df =
-  inner_join(x = race_df, y = hispanic_df, by = &quot;geo_id&quot;, all = TRUE)</code></pre>
-<p>Read in 2017 mtm data, and merge with acs race data.</p>
-<pre class="r"><code>mtm_2017 = 
-  read_csv(&quot;mtm_acs_2017_df.csv&quot;) %&gt;%
-  rename(
-    geo_id = id
-  )</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   .default = col_double(),
-##   state = col_character(),
-##   county = col_character(),
-##   county_state = col_character(),
-##   low_threshold_type = col_character(),
-##   high_threshold_type = col_character(),
-##   zip = col_character(),
-##   id = col_character(),
-##   estimate_total_hispanic_data = col_character(),
-##   estimate_total_not_hispanic_or_latino = col_character(),
-##   estimate_total_hispanic_or_latino = col_character(),
-##   estimate_total_immigration_data = col_character(),
-##   estimate_total_u_s_citizen = col_character(),
-##   estimate_total_not_a_u_s_citizen = col_character(),
-##   estimate_total_race_data = col_character(),
-##   estimate_total_white_alone = col_character(),
-##   estimate_total_black_or_african_american_alone = col_character(),
-##   estimate_total_american_indian_and_alaska_native_alone = col_character(),
-##   estimate_total_asian_alone = col_character(),
-##   estimate_total_native_hawaiian_and_other_pacific_islander_alone = col_character(),
-##   estimate_total_some_other_race_alone = col_character()
-##   # ... with 1 more columns
-## )</code></pre>
-<pre><code>## See spec(...) for full column specifications.</code></pre>
-<pre class="r"><code>mtm_2017_acs_2017_race_df = 
-  inner_join(x = race_hisp_df, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
-
-write_csv(x = mtm_2017_acs_2017_race_df, &quot;mtm_2017_acs_2017_race_df.csv&quot;)</code></pre>
-<p>Making transitioning graph for food insecurity by percent of race in each county across the U.S.</p>
-<div id="row" class="section level2">
-<h2>Row</h2>
-<div id="chart-a" class="section level3">
-<h3>Chart A</h3>
-<pre class="r"><code>race_per_plot =
-  
-mtm_2017_acs_2017_race_df %&gt;%
-  pivot_longer(
-    white:hispanic,
-    names_to = &quot;race&quot;,
-    values_to = &quot;percents&quot;
-  ) %&gt;%
-  mutate(
-    race = str_replace(race, &quot;white&quot;, &quot;White&quot;),
-    race = str_replace(race, &quot;black&quot;, &quot;Black&quot;),
-    race = str_replace(race, &quot;am_ind_al_nat&quot;, &quot;American Indian and Alaska Native&quot;),
-    race = str_replace(race, &quot;asian&quot;, &quot;Asian&quot;),
-    race = str_replace(race, &quot;nat_ha_pac_isl&quot;, &quot;Native Hawaiian and Other Pacific Islander&quot;),
-    race = str_replace(race, &quot;other&quot;, &quot;Other Race&quot;),
-    race = str_replace(race, &quot;two_or_more&quot;, &quot;Two or More Races&quot;),
-    race = str_replace(race, &quot;hispanic&quot;, &quot;Hispanic&quot;)
-    ) %&gt;%
-  select(geo_id, total, race, percents, fi_rate) %&gt;%
-  drop_na() %&gt;%
-  ggplot(aes(x = fi_rate, y = percents, size = total, color = race)) + 
-  geom_point(show.legend = FALSE, alpha = 0.8) +
-  labs(
-    title = &#39;{closest_state}&#39;,
-    x = &quot;Food Insecurity Rate&quot;,
-    y = &quot;% Race Within Each County&quot;
-  ) +
-  theme_bw() +
-  transition_states(race, transition_length = 1, state_length = 3, wrap = TRUE) + 
-  enter_fade() + 
-  exit_fade() +
-  ease_aes(&#39;cubic-in-out&#39;)
-
-animate(race_per_plot, fps = 5, height = 500, width = 1000)</code></pre>
-<p><img src="dashboard_1_files/figure-html/unnamed-chunk-5-1.gif" width="90%" /></p>
-<p>Read in education attainment acs data.</p>
-<pre class="r"><code>edu_att = 
-  read_csv(&quot;ACS_data/ACS_2017_edu.csv&quot;) %&gt;%
-   rename(
-    total = &quot;K201501_001E&quot;,
-    less_9th = &quot;K201501_002E&quot;,
-    nineth_to_12th = &quot;K201501_003E&quot;,
-    hs_grad = &quot;K201501_004E&quot;,
-    some_coll = &quot;K201501_005E&quot;,
-    assoc_deg = &quot;K201501_006E&quot;,
-    bach_deg = &quot;K201501_007E&quot;,
-    grad_or_prof = &quot;K201501_008E&quot;,
-    county_state = &quot;NAME&quot;
-  ) %&gt;%
-  janitor::clean_names() %&gt;%
-  select(geo_id, total, less_9th, nineth_to_12th, hs_grad, some_coll, assoc_deg, bach_deg, grad_or_prof) %&gt;%
-  slice(-1) %&gt;%
-  mutate(
-    total = as.numeric(total),
-    less_9th = as.numeric(less_9th),
-    nineth_to_12th = as.numeric(nineth_to_12th),
-    hs_grad = as.numeric(hs_grad),
-    some_coll = as.numeric(some_coll),
-    assoc_deg = as.numeric(assoc_deg),
-    bach_deg = as.numeric(bach_deg),
-    grad_or_prof = as.numeric(grad_or_prof))</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   GEO_ID = col_character(),
-##   NAME = col_character(),
-##   K201501_001E = col_character(),
-##   K201501_001M = col_character(),
-##   K201501_002E = col_character(),
-##   K201501_002M = col_character(),
-##   K201501_003E = col_character(),
-##   K201501_003M = col_character(),
-##   K201501_004E = col_character(),
-##   K201501_004M = col_character(),
-##   K201501_005E = col_character(),
-##   K201501_005M = col_character(),
-##   K201501_006E = col_character(),
-##   K201501_006M = col_character(),
-##   K201501_007E = col_character(),
-##   K201501_007M = col_character(),
-##   K201501_008E = col_character(),
-##   K201501_008M = col_character()
-## )</code></pre>
-<p>Percent function, and percents for education attainment % by county.</p>
-<pre class="r"><code>per_f_edu = function(x) {
-
-  x/edu_att$total * 100
-  
-}
-
-edu_att = 
-  edu_att %&gt;%
-  mutate(
-    less_9th = per_f_edu(less_9th),
-    nineth_to_12th = per_f_edu(nineth_to_12th),
-    hs_grad = per_f_edu(hs_grad),
-    some_coll = per_f_edu(some_coll),
-    assoc_deg = per_f_edu(assoc_deg),
-    bach_deg = per_f_edu(bach_deg),
-    grad_or_prof = per_f_edu(grad_or_prof)
-  )</code></pre>
-<p>Merge with acs education data.</p>
-<pre class="r"><code>mtm_2017_edu_2017_att_df =
-  inner_join(x = edu_att, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
-
-write_csv(x = mtm_2017_edu_2017_att_df, &quot;mtm_2017_edu_2017_att_df.csv&quot;)</code></pre>
-<p>Making transitioning graph for food insecurity by percent of education attainment category in each county across the U.S.</p>
-</div>
-<div id="chart-b" class="section level3">
-<h3>Chart B</h3>
-<pre class="r"><code>edu_per_plot =
-  
-mtm_2017_edu_2017_att_df %&gt;%
-  pivot_longer(
-    less_9th:grad_or_prof,
-    names_to = &quot;edu_att&quot;,
-    values_to = &quot;percents&quot;
-  ) %&gt;%
-  mutate(
-    edu_att = str_replace(edu_att, &quot;less_9th&quot;, &quot;Less Than 9th Grade&quot;),
-    edu_att = str_replace(edu_att, &quot;nineth_to_12th&quot;, &quot;9th to 12th Grade&quot;),
-    edu_att = str_replace(edu_att, &quot;hs_grad&quot;, &quot;High School Graduate&quot;),
-    edu_att = str_replace(edu_att, &quot;some_coll&quot;, &quot;Some College&quot;),
-    edu_att = str_replace(edu_att, &quot;assoc_deg&quot;, &quot;Associate&#39;s Degree&quot;),
-    edu_att = str_replace(edu_att, &quot;bach_deg&quot;, &quot;Bachelor&#39;s Degree&quot;),
-    edu_att = str_replace(edu_att, &quot;grad_or_prof&quot;, &quot;Graduate or Professional Degree&quot;)
-    ) %&gt;%
-  select(geo_id, total, edu_att, percents, fi_rate) %&gt;%
-  drop_na() %&gt;%
-  ggplot(aes(x = fi_rate, y = percents, size = total, color = edu_att)) + 
-  geom_point(show.legend = FALSE, alpha = 0.8) +
-  labs(
-    title = &#39;{closest_state}&#39;,
-    x = &quot;Food Insecurity Rate&quot;,
-    y = &quot;% Education Attainment Within Each County&quot;
-  ) +
-  theme_bw() +
-  transition_states(edu_att, transition_length = 1, state_length = 3, wrap = TRUE) + 
-  enter_fade() + 
-  exit_fade() +
-  ease_aes(&#39;cubic-in-out&#39;)
-
-animate(edu_per_plot, fps = 5, height = 500, width = 1000)</code></pre>
-<p><img src="dashboard_1_files/figure-html/unnamed-chunk-9-1.gif" width="90%" /></p>
-<p>Read in insurance acs data.</p>
-<pre class="r"><code>ins_status = 
-  read_csv(&quot;ACS_data/ACS_2017_ins_status.csv&quot;) %&gt;%
-   rename(
-    total = &quot;K202701_001E&quot;,
-    tot_under_19 = &quot;K202701_002E&quot;,
-    y_under_19 = &quot;K202701_003E&quot;,
-    n_under_19 = &quot;K202701_004E&quot;,
-    tot_19_64 = &quot;K202701_005E&quot;,
-    y_19_64 = &quot;K202701_006E&quot;,
-    n_19_64 = &quot;K202701_007E&quot;,
-    tot_65_over = &quot;K202701_008E&quot;,
-    y_65_over = &quot;K202701_009E&quot;,
-    n_65_over = &quot;K202701_010E&quot;
-  ) %&gt;%
-  janitor::clean_names() %&gt;%
-  select(geo_id, total, tot_under_19, y_under_19, n_under_19, tot_19_64, y_19_64, n_19_64, tot_65_over, y_65_over, n_65_over) %&gt;%
-  slice(-1) %&gt;%
-  mutate(
-    total = as.numeric(total),
-    tot_under_19 = as.numeric(tot_under_19),
-    y_under_19 = as.numeric(y_under_19),
-    n_under_19 = as.numeric(n_under_19),
-    tot_19_64 = as.numeric(tot_19_64),
-    y_19_64 = as.numeric(y_19_64),
-    n_19_64 = as.numeric(n_19_64),
-    tot_65_over = as.numeric(tot_65_over),
-    y_65_over = as.numeric(y_65_over),
-    n_65_over = as.numeric(n_65_over)
-    )</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   .default = col_character()
-## )</code></pre>
-<pre><code>## See spec(...) for full column specifications.</code></pre>
-<p>Percent function, and percents for insurance status % by county.</p>
-<pre class="r"><code>per_f_ins = function(x, y) {
-
-  x/y * 100
-  
-}
-
-ins_status = 
-  ins_status %&gt;%
-  mutate(
-    y_under_19 = per_f_ins(y_under_19, tot_under_19),
-    n_under_19 = per_f_ins(n_under_19, tot_under_19),
-    y_19_64 = per_f_ins(y_19_64, tot_19_64),
-    n_19_64 = per_f_ins(n_19_64, tot_19_64),
-    y_65_over = per_f_ins(y_65_over, tot_65_over),
-    n_65_over = per_f_ins(n_65_over, tot_65_over)
-  )</code></pre>
-<p>Merge with acs insurance data.</p>
-<pre class="r"><code>mtm_2017_ins_2017_status_df =
-  inner_join(x = ins_status, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
-
-write_csv(x = mtm_2017_ins_2017_status_df, &quot;mtm_2017_ins_2017_status_df.csv&quot;)</code></pre>
-<p>Making transitioning graph for food insecurity by percent of insurance status category in each county across the U.S.</p>
-</div>
-</div>
-<div id="row-1" class="section level2">
-<h2>Row</h2>
-<div id="chart-c" class="section level3">
-<h3>Chart C</h3>
-<pre class="r"><code>ins_status_plot =
-  
-mtm_2017_ins_2017_status_df %&gt;%
-  select(-tot_19_64, -tot_under_19, - tot_65_over) %&gt;%
-  pivot_longer(
-    y_under_19:n_65_over,
-    names_to = &quot;ins_status&quot;,
-    values_to = &quot;percents&quot;
-  ) %&gt;%
-  mutate(
-    ins_status = str_replace(ins_status, &quot;y_under_19&quot;, &quot;Under Age 19 With Insurance&quot;),
-    ins_status = str_replace(ins_status, &quot;n_under_19&quot;, &quot;Under Age 19 Without Insurance&quot;),
-    ins_status = str_replace(ins_status, &quot;y_19_64&quot;, &quot;Ages 19 to 64 With Insurance&quot;),
-    ins_status = str_replace(ins_status, &quot;n_19_64&quot;, &quot;Ages 19 to 64 Without Insurance&quot;),
-    ins_status = str_replace(ins_status, &quot;y_65_over&quot;, &quot;Over Age 65 With Insurance&quot;),
-    ins_status = str_replace(ins_status, &quot;n_65_over&quot;, &quot;Over Age 65 Without Insurance&quot;),
-    ) %&gt;%
-  select(geo_id, total, ins_status, percents, fi_rate) %&gt;%
-  drop_na() %&gt;%
-  ggplot(aes(x = fi_rate, y = percents, size = total, color = ins_status)) + 
-  geom_point(show.legend = FALSE, alpha = 0.8) +
-  labs(
-    title = &#39;{closest_state}&#39;,
-    x = &quot;Food Insecurity Rate&quot;,
-    y = &quot;% of Individuals&quot;
-  ) +
-  theme_bw() +
-  transition_states(ins_status, transition_length = 1, state_length = 3, wrap = TRUE) + 
-  enter_fade() + 
-  exit_fade() +
-  ease_aes(&#39;cubic-in-out&#39;)
-
-animate(ins_status_plot, fps = 5, height = 500, width = 1000)</code></pre>
-<p><img src="dashboard_1_files/figure-html/unnamed-chunk-13-1.gif" width="90%" /></p>
-<p>Read in income acs data.</p>
-<pre class="r"><code>income_brac = 
-  read_csv(&quot;ACS_data/ACS_2017_income.csv&quot;) %&gt;%
-   rename(
-    total = &quot;K201901_001E&quot;,
-    less_20 = &quot;K201901_002E&quot;,
-    twenty_39 = &quot;K201901_003E&quot;,
-    forty_59 = &quot;K201901_004E&quot;,
-    sixty_99 = &quot;K201901_005E&quot;,
-    hun_149 = &quot;K201901_006E&quot;,
-    hunfifty_199 = &quot;K201901_007E&quot;,
-    twohun_more = &quot;K201901_008E&quot;
-  ) %&gt;%
-  janitor::clean_names() %&gt;%
-  select(geo_id, total, less_20, twenty_39, forty_59, sixty_99, hun_149, hunfifty_199, twohun_more) %&gt;%
-  slice(-1) %&gt;%
-  mutate(
-    total = as.numeric(total),
-    less_20 = as.numeric(less_20),
-    twenty_39 = as.numeric(twenty_39),
-    forty_59 = as.numeric(forty_59),
-    sixty_99 = as.numeric(sixty_99),
-    hun_149 = as.numeric(hun_149),
-    hunfifty_199 = as.numeric(hunfifty_199),
-    twohun_more = as.numeric(twohun_more)
-    )</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   GEO_ID = col_character(),
-##   NAME = col_character(),
-##   K201901_001E = col_character(),
-##   K201901_001M = col_character(),
-##   K201901_002E = col_character(),
-##   K201901_002M = col_character(),
-##   K201901_003E = col_character(),
-##   K201901_003M = col_character(),
-##   K201901_004E = col_character(),
-##   K201901_004M = col_character(),
-##   K201901_005E = col_character(),
-##   K201901_005M = col_character(),
-##   K201901_006E = col_character(),
-##   K201901_006M = col_character(),
-##   K201901_007E = col_character(),
-##   K201901_007M = col_character(),
-##   K201901_008E = col_character(),
-##   K201901_008M = col_character()
-## )</code></pre>
-<p>Percent function, and percents for income bracket % by county.</p>
-<pre class="r"><code>per_f_inco = function(x) {
-
-  x/income_brac$total * 100
-  
-}
-
-income_brac = 
-  income_brac %&gt;%
-  mutate(
-    less_20 = per_f_inco(less_20),
-    twenty_39 = per_f_inco(twenty_39),
-    forty_59 = per_f_inco(forty_59),
-    sixty_99 = per_f_inco(sixty_99),
-    hun_149 = per_f_inco(hun_149),
-    hunfifty_199 = per_f_inco(hunfifty_199),
-    twohun_more = per_f_inco(twohun_more)
-  )</code></pre>
-<p>Merge with acs income data.</p>
-<pre class="r"><code>mtm_2017_income_2017_brac_df =
-  inner_join(x = income_brac, y = mtm_2017, by = &quot;geo_id&quot;, all = TRUE)
-
-write_csv(x = mtm_2017_income_2017_brac_df, &quot;mtm_2017_income_2017_brac_df.csv&quot;)</code></pre>
-<p>Making transitioning graph for food insecurity by percent of income bracket in each county across the U.S.</p>
-</div>
-<div id="chart-d" class="section level3">
-<h3>Chart D</h3>
-<pre class="r"><code>income_brac_plot =
-  
-mtm_2017_income_2017_brac_df %&gt;%
-  pivot_longer(
-    less_20:twohun_more,
-    names_to = &quot;income_brac&quot;,
-    values_to = &quot;percents&quot;
-  ) %&gt;%
-  mutate(
-    income_brac = str_replace(income_brac, &quot;less_20&quot;, &quot;Less Than $20,000&quot;),
-    income_brac = str_replace(income_brac, &quot;twenty_39&quot;, &quot;Between $20,000 and $39,999&quot;),
-    income_brac = str_replace(income_brac, &quot;forty_59&quot;, &quot;Between $40,000 and $59,999&quot;),
-    income_brac = str_replace(income_brac, &quot;sixty_99&quot;, &quot;Between $60,000 and $99,999&quot;),
-    income_brac = str_replace(income_brac, &quot;hun_149&quot;, &quot;Between $100,000 and $149,999&quot;),
-    income_brac = str_replace(income_brac, &quot;hunfifty_199&quot;, &quot;Between $150,000 and $199,999&quot;),
-    income_brac = str_replace(income_brac, &quot;twohun_more&quot;, &quot;$200,000 or More&quot;)
-    ) %&gt;%
-  select(geo_id, total, income_brac, percents, fi_rate) %&gt;%
-  drop_na() %&gt;%
-  ggplot(aes(x = fi_rate, y = percents, size = total, color = income_brac)) + 
-  geom_point(show.legend = FALSE, alpha = 0.8) +
-  labs(
-    title = &#39;{closest_state}&#39;,
-    x = &quot;Food Insecurity Rate&quot;,
-    y = &quot;% of Individuals in Each Income Bracket&quot;
-  ) +
-  theme_bw() +
-  transition_states(income_brac, transition_length = 1, state_length = 3, wrap = TRUE) + 
-  enter_fade() + 
-  exit_fade() +
-  ease_aes(&#39;cubic-in-out&#39;)
-
-animate(income_brac_plot, fps = 5, height = 500, width = 1000)</code></pre>
-<p><img src="dashboard_1_files/figure-html/unnamed-chunk-17-1.gif" width="90%" /></p>
-<pre class="r"><code>rmarkdown::render(&quot;dashboard_1.html&quot;, output_format = &quot;flexdashboard::flex_dashboard&quot;)</code></pre>
-<pre><code>## /Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS dashboard_1.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output dashboard_1.html --email-obfuscation none --self-contained --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/4.0/Resources/library/flexdashboard/rmarkdown/templates/flex_dashboard/resources/default.html --variable &#39;theme:cosmo&#39; --include-in-header /var/folders/vx/31bytxrj1h7cry7svyrrm7mc0000gn/T//Rtmptc5Vuw/rmarkdown-str8fe067d8e1b8.html --mathjax --variable &#39;mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#39; --lua-filter /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmd/lua/latex-div.lua --include-in-header /var/folders/vx/31bytxrj1h7cry7svyrrm7mc0000gn/T//Rtmptc5Vuw/file8fe04fcb2c4bhtml --highlight-style pygments --include-before-body /var/folders/vx/31bytxrj1h7cry7svyrrm7mc0000gn/T//Rtmptc5Vuw/file8fe023c918da.html --include-after-body /var/folders/vx/31bytxrj1h7cry7svyrrm7mc0000gn/T//Rtmptc5Vuw/file8fe0677ea290.html</code></pre>
-<pre><code>## 
-## Output created: dashboard_1.html</code></pre>
-</div>
-</div>
-
-
-
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-=======
-```
-
-Read in 2017 mtm data, and merge with acs race data (race_plot).
-
-```{r}
-mtm_2017 = 
-  read_csv("mtm_acs_2017_df.csv")
-
-mtm_2017_acs_2017_race_df = 
-  inner_join(x = race_plot, y = mtm_2017, by = "county_state", all = TRUE)
-
-write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
-```
-
-</code></pre>
-</div>
 <script type="text/javascript">
 $(document).ready(function () {
   FlexDashboard.init({
     theme: "cosmo",
     fillPage: true,
-    orientation: "columns",
+    orientation: "rows",
     storyboard: false,
     defaultFigWidth: 576,
     defaultFigHeight: 460,
     defaultFigWidthMobile: 360,
     defaultFigHeightMobile: 460,
     resize_reload: true
->>>>>>> b5a241ee096d415f2d0b31bec1ffafa27759e5ac
   });
 });
 </script>
 
-<<<<<<< HEAD
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
-=======
->>>>>>> b5a241ee096d415f2d0b31bec1ffafa27759e5ac
 </body>
 </html>

@@ -3,14 +3,14 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "County Maps"
-      href: map.html
+    - text: "Map the Gap"
+      href: countyMaps.html
     - text: "See the Gap"
       href: dashboard_1.html
     - text: "Project Report"
       href: project_report.html
     - text: "Analysis"
-      href: analysist.html
+      href: analysis.html
     - icon: fa-envelope fa-lg
       href: mailto:<vf2280@cumc.columbia.edu>
     - icon: fa-github fa-lg
