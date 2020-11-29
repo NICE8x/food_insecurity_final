@@ -6,7 +6,7 @@ output: html_document
 runtime: shiny
 ---
 
-```{r import libraries}
+```{r warning=FALSE}
 library(tidyverse)
 library(plotly)
 library(rjson)
@@ -14,6 +14,9 @@ library(rvest)
 library(httr)
 library(usdata)
 library(shiny)
+library(leaflet)
+library(RColorBrewer)
+library(maptools)
 ```
 
 
@@ -59,7 +62,6 @@ Note the use of the `height` parameter to determine how much vertical space the 
 You can also use the `shinyApp` function to define an application inline rather then in an external directory.
 
 In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
-
 
 
 
@@ -114,8 +116,6 @@ mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state") %>%
 new_DF <- mtm_fips_df[is.na(mtm_fips_df$fips),]
 
 ```
-
-
 
 
 
@@ -227,6 +227,127 @@ fig
 
 Plot for 2017 Updated
 
+<<<<<<< HEAD
+```{r}
+#Specify shinyApp(ui, server)
+shinyApp(options = list(height = 1000), 
+         
+         #Define the user interface element
+         ui = fluidPage(
+           titlePanel("Health Indicators in New York City"),
+           fluidRow(
+             column(8
+                    
+                    #Create element to allow user input. 
+                    , selectInput('category', 'Select Category'
+                                  , choices = unique(Data$Category)
+                    )
+                    #render ui elements within the server function. 
+                    , uiOutput('measures'))
+             
+             , column(4, uiOutput('slider')
+                      
+             )
+           ),
+           
+           fluidRow(column(12, leafletOutput('mymap', height = 550))
+           )
+         )
+         
+         #Define functionality
+         ,server = function(input, output, session){
+           
+           
+           #Read the data into a reactive function. 
+           df1 = reactive ({
+             df = Data
+             df = subset(df, select = c('CityName','StateAbbr', 'GeoLocation', 'Year'
+                                        , 'Measure', 'Data_Value', 'PopulationCount', 'GeographicLevel'
+                                        , 'Short_Question_Text', 'Category', 'DataValueTypeID'))
+             
+             #Removes NA values
+             df = df[!is.na(df$Data_Value),]
+             
+             df = subset(df, Category == input$category)
+             #df = subset(df, GeographicLevel == as.character(input$geoLevel))
+           })
+           
+           #renderUI to dynamically generate ui elements. 
+           output$measures = renderUI({
+             selectInput('measures', 'Select Measure', choices = unique(df1()$Measure))
+           })
+           
+           #Filter the data again based on the measure chosen by the user. 
+           df2 = reactive ({
+             x = df1()
+             x = subset(x, Measure == as.character(input$measures))
+           })
+           
+           #Create a slider to filter the map markers. 
+           output$slider = renderUI ({
+             sliderInput('slider', 'Filter Based on Percentage', min = min(df2()$Data_Value) 
+                         , max = max(df2()$Data_Value)
+                         , value = c(min(df2()$Data_Value), max(df2()$Data_Value)))
+           })
+           
+           #Build the leaflet map
+           output$mymap = renderLeaflet({
+             df = df2()
+             
+             #Filter the data set based on values from the slider input
+             df = subset(df, Data_Value > input$slider[1] & Data_Value < input$slider[2])
+             
+             #Define color pallete
+             Colors = brewer.pal(8,"Set2")
+             
+             #Apply pallete to values from data set
+             binpal = colorBin(Colors, df$Data_Value, 6, pretty = FALSE)
+             
+             #Separate GeoLocation column into latitude and longitude columns. 
+             lat = vector()
+             lng = vector()
+             for (i in 1: nrow(df)){
+               x= unlist(strsplit(df$GeoLocation[i], ",")) 
+               lat[i] = substr(x[1],2,8) 
+               lng[i] = substr(x[2],2,9) 
+               
+             }
+             
+             df$lat = as.numeric(lat)
+             df$lng = as.numeric(lng)
+             
+             #Build leaflet map
+             leaflet() %>%
+               
+               #Adds state borders to the map
+               addTiles(
+                 urlTemplate = "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",
+                 attribution = 'Maps by <a href="http://www.mapbox.com/">Mapbox</a>'
+               ) %>%
+               
+               #Add the markers for each location
+               addCircleMarkers(lat = df$lat
+                                , lng = df$lng
+                                , data = df
+                                , label = paste(df$Data_Value)
+                                , color = ~binpal(Data_Value)
+                                , radius = 5
+                                , fillColor = ~binpal(Data_Value)
+                                , fill = TRUE
+                                , opacity = 0.8
+                                
+               ) %>%
+               addLegend(position = 'bottomleft', pal = binpal, values = df$Data_Value, title = "Percentage"
+               )
+             
+           })
+           
+           
+           
+         }
+)
+```
+
 ```{r plot attempt 2017 updated}
 
 year_choices = mtm_fips_df %>%
@@ -279,12 +400,27 @@ plot_ly() %>%
     geo = g
 )
 })
+
 ```
 
 
 
-
-
+```{r warning=FALSE}
+race_df = 
+  read_csv("ACS_data/ACS_2017_race.csv") %>%
+  rename(
+    total = "K200201_001E",
+    white = "K200201_002E",
+    black = "K200201_003E",
+    am_ind_al_nat = "K200201_004E",
+    asian = "K200201_005E",
+    nat_ha_pac_isl = "K200201_006E",
+    other = "K200201_007E",
+    two_or_more = "K200201_008E",
+    county_state = "NAME"
+  ) %>%
+  janitor::clean_names()
+```
 
 
 
