@@ -31,7 +31,6 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
-Read in acs race data and acs hispanic data. And manipulate respective data.
 
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 race_df = 
@@ -77,9 +76,6 @@ hispanic_df =
   )
 ```
 
-
-Percent function, and percents of each race by county.
-
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 per_f = function(x) {
 
@@ -116,8 +112,6 @@ race_hisp_df =
   inner_join(x = race_df, y = hispanic_df, by = "geo_id", all = TRUE)
 ```
 
-Read in 2017 mtm data, and merge with acs race data.
-
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 mtm_2017 = 
   read_csv("mtm_acs_2017_df.csv") %>%
@@ -131,7 +125,6 @@ mtm_2017_acs_2017_race_df =
 write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
 ```
 
-Making transitioning graph for food insecurity by percent of race in each county across the U.S.
 
 Row
 -----------------------------------------------------------------------
@@ -175,8 +168,6 @@ mtm_2017_acs_2017_race_df %>%
 animate(race_per_plot, fps = 5, height = 500, width = 1000)
 ```
 
-Read in education attainment acs data.
-
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 edu_att = 
   read_csv("ACS_data/ACS_2017_edu.csv") %>%
@@ -205,8 +196,6 @@ edu_att =
     grad_or_prof = as.numeric(grad_or_prof))
 ```
 
-Percent function, and percents for education attainment % by county.
-
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 per_f_edu = function(x) {
 
@@ -228,17 +217,12 @@ edu_att =
 
 ```
 
-Merge with acs education data.
-
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 mtm_2017_edu_2017_att_df =
   inner_join(x = edu_att, y = mtm_2017, by = "geo_id", all = TRUE)
 
 write_csv(x = mtm_2017_edu_2017_att_df, "mtm_2017_edu_2017_att_df.csv")
 ```
-
-Making transitioning graph for food insecurity by percent of education attainment category in each county across the U.S.
-
 
 ### Chart B
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
@@ -277,8 +261,6 @@ mtm_2017_edu_2017_att_df %>%
 animate(edu_per_plot, fps = 5, height = 500, width = 1000)
 ```
 
-Read in insurance acs data.
-
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 ins_status = 
   read_csv("ACS_data/ACS_2017_ins_status.csv") %>%
@@ -311,8 +293,6 @@ ins_status =
     )
 ```
 
-Percent function, and percents for insurance status % by county.
-
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 per_f_ins = function(x, y) {
 
@@ -333,8 +313,6 @@ ins_status =
 
 ```
 
-Merge with acs insurance data.
-
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 mtm_2017_ins_2017_status_df =
   inner_join(x = ins_status, y = mtm_2017, by = "geo_id", all = TRUE)
@@ -342,7 +320,6 @@ mtm_2017_ins_2017_status_df =
 write_csv(x = mtm_2017_ins_2017_status_df, "mtm_2017_ins_2017_status_df.csv")
 ```
 
-Making transitioning graph for food insecurity by percent of insurance status category in each county across the U.S.
 
 Row
 -----------------------------------------------------------------------
@@ -384,8 +361,6 @@ mtm_2017_ins_2017_status_df %>%
 animate(ins_status_plot, fps = 5, height = 500, width = 1000)
 ```
 
-Read in income acs data.
-
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 income_brac = 
   read_csv("ACS_data/ACS_2017_income.csv") %>%
@@ -414,8 +389,6 @@ income_brac =
     )
 ```
 
-Percent function, and percents for income bracket % by county.
-
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 per_f_inco = function(x) {
 
@@ -437,17 +410,12 @@ income_brac =
 
 ```
 
-Merge with acs income data.
-
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 mtm_2017_income_2017_brac_df =
   inner_join(x = income_brac, y = mtm_2017, by = "geo_id", all = TRUE)
 
 write_csv(x = mtm_2017_income_2017_brac_df, "mtm_2017_income_2017_brac_df.csv")
 ```
-
-Making transitioning graph for food insecurity by percent of income bracket in each county across the U.S.
-
 
 ### Chart D
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
