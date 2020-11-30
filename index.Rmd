@@ -12,8 +12,8 @@ output:
 
 <style>
 body {
-    position: absolute;
-    padding-left: 16em;
+    position: relative;
+    padding-left: 7em;
     left: 0px;}
 </style>
 
@@ -21,15 +21,3 @@ body {
 Image from [NPR](https://www.npr.org/2020/09/27/912486921/food-insecurity-in-the-u-s-by-the-numbers)
 
 
-# Link to other pages in this site
-
-[Map the Gap](https://tessas.shinyapps.io/countymaps/)\
-[See the Gap](dashboard_1.html)\
-[NY and More](dashboard_2.html)\
-[Project Report](project_report.html)
-
-# Links in site navigation
-
-[Email](mailto:<vf2280@cumc.columbia.edu>)\
-[Github](https://github.com/NICE8x/food_insecurity_final)\
-[Food Banks Near You](https://www.feedingamerica.org/find-your-local-foodbank)
