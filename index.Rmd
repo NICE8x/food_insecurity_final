@@ -16,6 +16,9 @@ body {
     left: 0px;}
 </style>
 
+![](hero_image_ny.jpg)
+Image from [NPR](https://www.npr.org/2020/09/27/912486921/food-insecurity-in-the-u-s-by-the-numbers)
+
 
 # Link to other pages in this site
 
