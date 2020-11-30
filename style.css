@@ -150,3 +150,7 @@ font-family:    Staatliches;
 a.navbar-brand:hover {
   color: white !important;
 }
+
+.title {
+  font-family: Staatliches;
+}
