@@ -45,6 +45,7 @@ a:hover {
 .title {
   margin-top: 2em !important;
   margin-bottom: 0.75em;
+  padding-left: 5em;
 }
 
 .section h1,
@@ -55,7 +56,10 @@ a:hover {
   padding-top: 3em !important; 
   margin-bottom: 0.75em;
 }
- 
+
+
+
+
 /* -----------HERO IMAGE -----------*/
 
 body {

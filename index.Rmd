@@ -2,7 +2,7 @@
 title: "Food Insecurity in America"
 output:
   html_document:
-    toc: true
+    toc: false
     toc_float: true
     includes:
       in_header: 
@@ -13,10 +13,11 @@ output:
 <style>
 body {
     position: absolute;
+    padding-left: 16em;
     left: 0px;}
 </style>
 
-![](hero_image_ny.jpg)
+![](hero_image_ny.jpg)\
 Image from [NPR](https://www.npr.org/2020/09/27/912486921/food-insecurity-in-the-u-s-by-the-numbers)
 
 
