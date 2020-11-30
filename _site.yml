@@ -1,7 +1,7 @@
 name: "Yay internet!"
 output_dir: "."
 navbar:
-  title: "Home"
+  title: "HOME"
   right:
     - text: "Map the Gap"
       href: https://tessas.shinyapps.io/countymaps/

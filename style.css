@@ -118,18 +118,13 @@ body {
 /*----------------NAVBAR ---------------*/
 .navbar-default {
     background-color: #141c25f2;
+    font-family:    Staatliches;
 }
 
 .navbar-default .navbar-nav>.open>a, 
 .navbar-default .navbar-nav>.active>a, 
 a.dropdown-toggle:hover {
   background-color: #141c25 !important;
-}
-
-.navbar .nav > li > a, .navbar .nav > li > a:first-letter,
-.navbar .nav > li.current-menu-item > a, 
-.navbar .nav > li.current-menu-ancestor > a {
-font-family:    Staatliches;
 }
 
 /* Dropdown menu color */
@@ -149,8 +144,4 @@ font-family:    Staatliches;
 .navbar-default .navbar-nav>li>a:hover, 
 a.navbar-brand:hover {
   color: white !important;
-}
-
-.title {
-  font-family: Staatliches;
 }
