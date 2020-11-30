@@ -2,12 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
  
 
  /*------------- Whole Document---------------- */
 
-body {
+h1, h2 {
     font-family: 'Staatliches';
+    font-size: 25px;
+}
+
+body {
+    font-family: 'Montserrat';
     font-size: 19px;
 }
 
@@ -117,6 +124,12 @@ body {
 .navbar-default .navbar-nav>.active>a, 
 a.dropdown-toggle:hover {
   background-color: #141c25 !important;
+}
+
+.navbar .nav > li > a, .navbar .nav > li > a:first-letter,
+.navbar .nav > li.current-menu-item > a, 
+.navbar .nav > li.current-menu-ancestor > a {
+font-family:    Staatliches;
 }
 
 /* Dropdown menu color */
