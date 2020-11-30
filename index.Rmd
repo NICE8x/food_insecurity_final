@@ -23,12 +23,13 @@ Image from [NPR](https://www.npr.org/2020/09/27/912486921/food-insecurity-in-the
 
 # Link to other pages in this site
 
-[Map the Gap]\
-[See the Gap]\
-[NY and More]\
-[Project Report]
+[Map the Gap](https://tessas.shinyapps.io/countymaps/)\
+[See the Gap](dashboard_1.html)\
+[NY and More](dashboard_2.html)\
+[Project Report](project_report.html)
 
 # Links in site navigation
 
-[Email]
-[Github]
+[Email](mailto:<vf2280@cumc.columbia.edu>)\
+[Github](https://github.com/NICE8x/food_insecurity_final)\
+[Food Banks Near You](https://www.feedingamerica.org/find-your-local-foodbank)
