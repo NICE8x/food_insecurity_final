@@ -16,12 +16,42 @@ Food insecurity rate by county
 
 ```{r}
 library(tidyverse)
+library(ggplot2)
+library(gganimate)
 
+fi_rates = 
 read_csv("map_the_meal_gap_df.csv") %>%
   filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
                              "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
                              "westchester_NY")) %>%
-  mutate(county = fct_reorder(county, desc(fi_rate))) %>%
+  select(county, state, year, fi_rate, child_fi_rate) %>%
+  rename(
+    Food_Insecurity_Rate = "fi_rate",  
+    Child_Food_Insecurity_Rate = "child_fi_rate") %>%
+  pivot_longer(
+    Food_Insecurity_Rate:Child_Food_Insecurity_Rate,
+    names_to = "rate",
+    values_to = "measure"
+  ) %>%
+  mutate(county = fct_reorder(county, desc(measure))) %>%
+  ggplot(aes(x = county, y = measure, color = rate)) + 
+  geom_boxplot(show.legend = FALSE, alpha = 0.8) +
+  labs(
+    title = '{closest_state}',
+    x = "County",
+    y = "Food Insecurity Measure"
+  ) +
+  theme_bw() +
+  transition_states(rate, transition_length = 1, state_length = 2, wrap = TRUE) + 
+  enter_fade() + 
+  exit_fade() +
+  ease_aes('cubic-in-out')
+  
+animate(fi_rates, fps = 5, height = 500, width = 1000)
+  
+```  
+
+
   ggplot(aes(x = county, y = fi_rate)) +
   geom_boxplot() + 
   theme(axis.text.x = element_text(angle = 90)) +
@@ -31,7 +61,6 @@ read_csv("map_the_meal_gap_df.csv") %>%
     y = "Food Insecurity Rate",
     caption = "Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017")
 
-```
 
 Number of food insecure individuals by county
 

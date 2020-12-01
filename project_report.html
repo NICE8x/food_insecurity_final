@@ -348,7 +348,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Home</a>
+      <a class="navbar-brand" href="index.html">HOME</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -406,27 +406,44 @@ div.tocify {
 <p>Counties = New York, Queens, Kings, Bronx, Saint Lawrence</p>
 <p>Food insecurity rate by county</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
-## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
+## ✓ tibble  3.0.4     ✓ dplyr   1.0.2
 ## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ───────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>read_csv(&quot;map_the_meal_gap_df.csv&quot;) %&gt;%
+<pre class="r"><code>library(ggplot2)
+library(gganimate)
+
+fi_rates = 
+read_csv(&quot;map_the_meal_gap_df.csv&quot;) %&gt;%
   filter(county_state %in% c(&quot;saint lawrence_NY&quot;, &quot;albany_NY&quot;, &quot;chautauqua_NY&quot;, 
                              &quot;new york_NY&quot;, &quot;queens_NY&quot;, &quot;kings_NY&quot;, &quot;bronx_NY&quot;,
                              &quot;westchester_NY&quot;)) %&gt;%
-  mutate(county = fct_reorder(county, desc(fi_rate))) %&gt;%
-  ggplot(aes(x = county, y = fi_rate)) +
-  geom_boxplot() + 
-  theme(axis.text.x = element_text(angle = 90)) +
+  select(county, state, year, fi_rate, child_fi_rate) %&gt;%
+  rename(
+    Food_Insecurity_Rate = &quot;fi_rate&quot;,  
+    Child_Food_Insecurity_Rate = &quot;child_fi_rate&quot;) %&gt;%
+  pivot_longer(
+    Food_Insecurity_Rate:Child_Food_Insecurity_Rate,
+    names_to = &quot;rate&quot;,
+    values_to = &quot;measure&quot;
+  ) %&gt;%
+  mutate(county = fct_reorder(county, desc(measure))) %&gt;%
+  ggplot(aes(x = county, y = measure, color = rate)) + 
+  geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
-    title = &quot;Food Insecurity Rates of Select New York State Counties&quot;,
+    title = &#39;{closest_state}&#39;,
     x = &quot;County&quot;,
-    y = &quot;Food Insecurity Rate&quot;,
-    caption = &quot;Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017&quot;)</code></pre>
+    y = &quot;Food Insecurity Measure&quot;
+  ) +
+  theme_bw() +
+  transition_states(rate, transition_length = 1, state_length = 2, wrap = TRUE) + 
+  enter_fade() + 
+  exit_fade() +
+  ease_aes(&#39;cubic-in-out&#39;)</code></pre>
 <pre><code>## Parsed with column specification:
 ## cols(
 ##   .default = col_double(),
@@ -434,11 +451,12 @@ div.tocify {
 ##   county = col_character(),
 ##   county_state = col_character(),
 ##   low_threshold_type = col_character(),
-##   high_threshold_type = col_character(),
-##   zip = col_character()
+##   high_threshold_type = col_character()
 ## )</code></pre>
 <pre><code>## See spec(...) for full column specifications.</code></pre>
-<p><img src="project_report_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>animate(fi_rates, fps = 5, height = 500, width = 1000)</code></pre>
+<p><img src="project_report_files/figure-html/unnamed-chunk-1-1.gif" /><!-- --></p>
+<p>ggplot(aes(x = county, y = fi_rate)) + geom_boxplot() + theme(axis.text.x = element_text(angle = 90)) + labs( title = “Food Insecurity Rates of Select New York State Counties”, x = “County”, y = “Food Insecurity Rate”, caption = “Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017”)</p>
 <p>Number of food insecure individuals by county</p>
 <pre class="r"><code>read_csv(&quot;map_the_meal_gap_df.csv&quot;) %&gt;%
   filter(county_state %in% c(&quot;saint lawrence_NY&quot;, &quot;albany_NY&quot;, &quot;chautauqua_NY&quot;, 
@@ -460,8 +478,7 @@ div.tocify {
 ##   county = col_character(),
 ##   county_state = col_character(),
 ##   low_threshold_type = col_character(),
-##   high_threshold_type = col_character(),
-##   zip = col_character()
+##   high_threshold_type = col_character()
 ## )</code></pre>
 <pre><code>## See spec(...) for full column specifications.</code></pre>
 <p><img src="project_report_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
@@ -486,8 +503,7 @@ div.tocify {
 ##   county = col_character(),
 ##   county_state = col_character(),
 ##   low_threshold_type = col_character(),
-##   high_threshold_type = col_character(),
-##   zip = col_character()
+##   high_threshold_type = col_character()
 ## )</code></pre>
 <pre><code>## See spec(...) for full column specifications.</code></pre>
 <p><img src="project_report_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
@@ -512,8 +528,7 @@ div.tocify {
 ##   county = col_character(),
 ##   county_state = col_character(),
 ##   low_threshold_type = col_character(),
-##   high_threshold_type = col_character(),
-##   zip = col_character()
+##   high_threshold_type = col_character()
 ## )</code></pre>
 <pre><code>## See spec(...) for full column specifications.</code></pre>
 <p><img src="project_report_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
