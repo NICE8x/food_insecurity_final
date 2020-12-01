@@ -42,7 +42,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     y = "Food Insecurity Measure"
   ) +
   theme_bw() +
-  transition_states(rate, transition_length = 1, state_length = 2, wrap = TRUE) + 
+  transition_states(rate, transition_length = 1, state_length = 3, wrap = TRUE) + 
   enter_fade() + 
   exit_fade() +
   ease_aes('cubic-in-out')
@@ -52,15 +52,38 @@ animate(fi_rates, fps = 5, height = 500, width = 1000)
 ```  
 
 
-  ggplot(aes(x = county, y = fi_rate)) +
-  geom_boxplot() + 
-  theme(axis.text.x = element_text(angle = 90)) +
+```{r}
+fi_numbers = 
+read_csv("map_the_meal_gap_df.csv") %>%
+  filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
+                             "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
+                             "westchester_NY")) %>%
+  select(county, state, year, number_food_insecure_individuals, number_food_insecure_children) %>%
+  rename(
+    Number_of_Food_Insecure_Individuals = "number_food_insecure_individuals",  
+    Number_of_Food_Insecure_Children = "number_food_insecure_children") %>%
+  pivot_longer(
+    Number_of_Food_Insecure_Individuals:Number_of_Food_Insecure_Children,
+    names_to = "indicator",
+    values_to = "number"
+  ) %>%
+  mutate(county = fct_reorder(county, desc(number))) %>%
+  ggplot(aes(x = county, y = number, color = indicator)) + 
+  geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
-    title = "Food Insecurity Rates of Select New York State Counties",
+    title = '{closest_state}',
     x = "County",
-    y = "Food Insecurity Rate",
-    caption = "Food insecurity rate data was modeled by Feeding America. Annual estimates were generated for years 2009 to 2017")
-
+    y = "Number of Food Insecure Individuals/Children"
+  ) +
+  theme_bw() +
+  transition_states(indicator, transition_length = 1, state_length = 3, wrap = TRUE) + 
+  enter_fade() + 
+  exit_fade() +
+  ease_aes('cubic-in-out')
+  
+animate(fi_numbers, fps = 5, height = 500, width = 1000)
+  
+```
 
 Number of food insecure individuals by county
 
