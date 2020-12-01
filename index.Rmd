@@ -13,7 +13,7 @@ output:
 <style>
 body {
     position: relative;
-    padding-left: 7em;
+    padding-left: 6em;
     left: 0px;}
 </style>
 
