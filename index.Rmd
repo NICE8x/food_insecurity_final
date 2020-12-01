@@ -26,3 +26,12 @@ Food insecurity is associated with numerous adverse health outcomes, including m
 
 We were collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health to understand the specific regions and/or subpopulations at the greatest risk for food insecurity. This information will help identify targets for future health policy implementation.  
 
+## Datasets
+
+We utilized Feeding America's Map the Meal Gap data to quantify food insecurity on a county level. Map the Meal Gap is an annual study conducted to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. This study was first conducted in 2011; for this project, we use all Map to Meal Gap annual study data, ranging from 2011 through 2017. 
+
+In addition to the Map the Meal Gap data, we also used Census American Community Survey datasets which provide county-level breakdowns of select social determinants of health, including racial and ethnic makeup, percent uninsured, percent foreign born, educational attainment breakdowns, and income category breakdowns. 
+
+## Findings
+
+There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. In examining select New York state counties, 
