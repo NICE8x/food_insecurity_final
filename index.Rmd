@@ -20,4 +20,9 @@ body {
 ![](hero_image_ny.jpg)\
 Image from [NPR](https://www.npr.org/2020/09/27/912486921/food-insecurity-in-the-u-s-by-the-numbers)
 
+Food insecurity, a condition in which households lack access to adequate food because of limited money or other resources, is a leading health and nutrition issue in the United States. In 2017 approximately forty million Americans were food insecure.
+
+Food insecurity is associated with numerous adverse health outcomes, including mental health problems, diabetes, hypertension, asthma and poorer general health. As a result of the COVID-19 pandemic, millions of Americans have lost stable employment; early estimates suggest more than 50 million people, including 17 million children, may be experiencing food insecurity in 2020. 
+
+We were collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health to understand the specific regions and/or subpopulations at the greatest risk for food insecurity. This information will help identify targets for future health policy implementation.  
 
