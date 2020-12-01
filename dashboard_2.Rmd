@@ -44,6 +44,8 @@ read_csv("map_the_meal_gap_df.csv") %>%
                              "westchester_NY")) %>%
   mutate(county = fct_reorder(county, desc(fi_rate))) %>%
   plot_ly(y = ~fi_rate, color = ~county, type = "box", colors = "viridis")
+
+
 ```
 
 -----------------------------------------------------------------------
