@@ -208,4 +208,7 @@ animate(num_fi_region, fps = 10, height = 500, width = 1000)
 read_csv("map_the_meal_gap_df.csv") %>%
   mutate(state = fct_reorder(state, desc(fi_rate))) %>%
   plot_ly(y = ~fi_rate, color = ~state, type = "box", colors = "viridis")
+#add axis labels and rotate x axis state names
 ```
+
+
