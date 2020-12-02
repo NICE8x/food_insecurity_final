@@ -129,7 +129,7 @@ write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
 Row
 -----------------------------------------------------------------------
 
-### Chart A
+### Percent of Each Race Within Each County by Food Insecurity Rate
 
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 race_per_plot =
@@ -157,7 +157,7 @@ mtm_2017_acs_2017_race_df %>%
   labs(
     title = '{closest_state}',
     x = "Food Insecurity Rate",
-    y = "% Race Within Each County"
+    y = "% of Individuals of Each Race"
   ) +
   theme_bw() +
   transition_states(race, transition_length = 1, state_length = 3, wrap = TRUE) + 
@@ -224,7 +224,7 @@ mtm_2017_edu_2017_att_df =
 write_csv(x = mtm_2017_edu_2017_att_df, "mtm_2017_edu_2017_att_df.csv")
 ```
 
-### Chart B
+### Percent of Individuals in Each Education Level of Attainment in Each County by Food Insecurity Rate
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 edu_per_plot =
   
@@ -250,7 +250,7 @@ mtm_2017_edu_2017_att_df %>%
   labs(
     title = '{closest_state}',
     x = "Food Insecurity Rate",
-    y = "% Education Attainment Within Each County"
+    y = "% of Individuals in Each Education Level of Attainment"
   ) +
   theme_bw() +
   transition_states(edu_att, transition_length = 1, state_length = 3, wrap = TRUE) + 
@@ -324,7 +324,7 @@ write_csv(x = mtm_2017_ins_2017_status_df, "mtm_2017_ins_2017_status_df.csv")
 Row
 -----------------------------------------------------------------------
 
-### Chart C
+### Percent of Individuals in Insurance Status Groups in Each County by Food Insecurity Rate
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 ins_status_plot =
   
@@ -350,7 +350,7 @@ mtm_2017_ins_2017_status_df %>%
   labs(
     title = '{closest_state}',
     x = "Food Insecurity Rate",
-    y = "% of Individuals"
+    y = "% of Individuals in Each Insurance Status Group"
   ) +
   theme_bw() +
   transition_states(ins_status, transition_length = 1, state_length = 3, wrap = TRUE) + 
@@ -417,7 +417,7 @@ mtm_2017_income_2017_brac_df =
 write_csv(x = mtm_2017_income_2017_brac_df, "mtm_2017_income_2017_brac_df.csv")
 ```
 
-### Chart D
+### Percent of Individuals in Each Income Bracket in Each County by Food Insecurity Rate
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 income_brac_plot =
   
