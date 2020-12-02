@@ -129,7 +129,7 @@ write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
 Row
 -----------------------------------------------------------------------
 
-### Chart A
+### Percent of Each Race Within Each County by Food Insecurity Rate
 
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 race_per_plot =
@@ -224,7 +224,7 @@ mtm_2017_edu_2017_att_df =
 write_csv(x = mtm_2017_edu_2017_att_df, "mtm_2017_edu_2017_att_df.csv")
 ```
 
-### Chart B
+### Percent of Individuals in Levels of Education Attainment by Food Insecurity Rate
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 edu_per_plot =
   
@@ -324,7 +324,7 @@ write_csv(x = mtm_2017_ins_2017_status_df, "mtm_2017_ins_2017_status_df.csv")
 Row
 -----------------------------------------------------------------------
 
-### Chart C
+### Percent of Individuals in Insurance Status Groups by Food Insecurity Rate
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 ins_status_plot =
   
@@ -417,7 +417,7 @@ mtm_2017_income_2017_brac_df =
 write_csv(x = mtm_2017_income_2017_brac_df, "mtm_2017_income_2017_brac_df.csv")
 ```
 
-### Chart D
+### Percent of Individuals in Income Brackets by Food Insecurity Rate
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 income_brac_plot =
   

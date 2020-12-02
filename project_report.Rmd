@@ -25,15 +25,24 @@ read_csv("map_the_meal_gap_df.csv") %>%
                              "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
                              "westchester_NY")) %>%
   select(county, state, year, fi_rate, child_fi_rate) %>%
-  rename(
-    Food_Insecurity_Rate = "fi_rate",  
-    Child_Food_Insecurity_Rate = "child_fi_rate") %>%
   pivot_longer(
-    Food_Insecurity_Rate:Child_Food_Insecurity_Rate,
+    fi_rate:child_fi_rate,
     names_to = "rate",
     values_to = "measure"
   ) %>%
-  mutate(county = fct_reorder(county, desc(measure))) %>%
+  mutate(
+    county = fct_reorder(county, desc(measure)),
+    rate = str_replace(rate, "fi_rate", "Food Insecurity Rate"),
+    rate = str_replace(rate, "child_Food Insecurity Rate", "Child Food Insecurity Rate"),
+    county = str_replace(county, "albany", "Albany"),
+    county = str_replace(county, "bronx", "Bronx"),
+    county = str_replace(county, "chautauqua", "Chautauqua"),
+    county = str_replace(county, "kings", "Kings"),
+    county = str_replace(county, "saint lawrence", "Saint Lawrence"),
+    county = str_replace(county, "new york", "New York"),
+    county = str_replace(county, "westchester", "Westchester"),
+    county = str_replace(county, "queens", "Queens")
+    ) %>%
   ggplot(aes(x = county, y = measure, color = rate)) + 
   geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
@@ -42,12 +51,9 @@ read_csv("map_the_meal_gap_df.csv") %>%
     y = "Food Insecurity Measure"
   ) +
   theme_bw() +
-  transition_states(rate, transition_length = 1, state_length = 3, wrap = TRUE) + 
-  enter_fade() + 
-  exit_fade() +
-  ease_aes('cubic-in-out')
+  transition_states(rate, transition_length = 1, state_length = 3, wrap = TRUE)
   
-animate(fi_rates, fps = 5, height = 500, width = 1000)
+animate(fi_rates, fps = 10, height = 500, width = 1000)
   
 ```  
 
@@ -59,15 +65,23 @@ read_csv("map_the_meal_gap_df.csv") %>%
                              "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
                              "westchester_NY")) %>%
   select(county, state, year, number_food_insecure_individuals, number_food_insecure_children) %>%
-  rename(
-    Number_of_Food_Insecure_Individuals = "number_food_insecure_individuals",  
-    Number_of_Food_Insecure_Children = "number_food_insecure_children") %>%
   pivot_longer(
-    Number_of_Food_Insecure_Individuals:Number_of_Food_Insecure_Children,
+    number_food_insecure_individuals:number_food_insecure_children,
     names_to = "indicator",
     values_to = "number"
   ) %>%
-  mutate(county = fct_reorder(county, desc(number))) %>%
+  mutate(
+    county = fct_reorder(county, desc(number)),
+    indicator = str_replace(indicator, "number_food_insecure_individuals", "Number Food Insecure Individuals"),
+    indicator = str_replace(indicator, "number_food_insecure_children", "Number Food Insecure Children"),
+    county = str_replace(county, "albany", "Albany"),
+    county = str_replace(county, "bronx", "Bronx"),
+    county = str_replace(county, "chautauqua", "Chautauqua"),
+    county = str_replace(county, "kings", "Kings"),
+    county = str_replace(county, "saint lawrence", "Saint Lawrence"),
+    county = str_replace(county, "new york", "New York"),
+    county = str_replace(county, "westchester", "Westchester"),
+    county = str_replace(county, "queens", "Queens")) %>%
   ggplot(aes(x = county, y = number, color = indicator)) + 
   geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
@@ -76,12 +90,9 @@ read_csv("map_the_meal_gap_df.csv") %>%
     y = "Number of Food Insecure Individuals/Children"
   ) +
   theme_bw() +
-  transition_states(indicator, transition_length = 1, state_length = 3, wrap = TRUE) + 
-  enter_fade() + 
-  exit_fade() +
-  ease_aes('cubic-in-out')
+  transition_states(indicator, transition_length = 1, state_length = 3, wrap = TRUE)
   
-animate(fi_numbers, fps = 5, height = 500, width = 1000)
+animate(fi_numbers, fps = 10, height = 500, width = 1000)
   
 ```
 
