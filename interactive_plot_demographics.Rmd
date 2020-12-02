@@ -1,7 +1,5 @@
 ---
 title: "US Food Insecurity Rate with Demographic Indicators"
-author: "Stella Li"
-date: "11/25/2020"
 output: html_document
 runtime: shiny
 ---
@@ -32,12 +30,15 @@ edu_2017_df <- read_csv("mtm_2017_edu_2017_att_df.csv")
 edu_2017_df <- edu_2017_df %>%
   select(geo_id, fi_rate, county_state, less_9th, nineth_to_12th, hs_grad, some_coll, assoc_deg, bach_deg, grad_or_prof)
 
+insurance_2017_df <- read_csv("mtm_2017_ins_2017_status_df.csv")
 income_2017_df <- read_csv("mtm_2017_income_2017_brac_df.csv")
-income_2017_df <- income_2017_df %>%
-  select(geo_id, county_state, estimate_total_less_than_20_000, estimate_total_20_000_to_39_999, estimate_total_40_000_to_59_999, estimate_total_60_000_to_99_999, estimate_total_100_000_to_149_999, estimate_total_150_000_to_199_999, estimate_total_200_000_or_more)
-  
-```
 
+  
+final_demographics_df  = inner_join(x = edu_2017_df, y = race_2017_df, by = "geo_id", all = TRUE)
+final_demographics_df =  inner_join(x = final_demographics_df, y = insurance_2017_df, by = "geo_id", all = TRUE)
+final_demographics_df = inner_join(x = final_demographics_df, y = income_2017_df, by = "geo_id", all = TRUE)
+    
+```
 
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
 # race input
@@ -66,8 +67,8 @@ renderPrint(
 
 # income level input
 selectInput(
-  "Education Indicators",
-  h3("Education Indicators"),
+  "Income Level Indicators",
+  h3("Income Level Indicators"),
   choices = c("Food Insecurity Rate" = "fi_rate",  )
 )
 
@@ -75,7 +76,7 @@ renderPrint(
   input[["Demographic Indicators"]]
 )
 
-# immigration status input
+# insurance status input
 selectInput(
   "Education Indicators",
   h3("Education Indicators"),
