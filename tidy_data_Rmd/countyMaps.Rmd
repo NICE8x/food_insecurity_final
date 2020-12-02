@@ -77,7 +77,7 @@ mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state") %>%
 
 
 
-
+## Select a year, food insecurity metric of interest, and location (the entire USA or a particular state):
 
 ```{r plot attempt 3, message = FALSE, warning = FALSE}
 
@@ -259,7 +259,7 @@ plot_ly() %>%
 
 ```
 
-
+## Find your local food bank:
 
 ```{r food bank with shiny attempt, message = FALSE, warning = FALSE}
 food_banks_df = read_csv("./food_banks_df.csv") %>%
