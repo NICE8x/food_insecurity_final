@@ -1,29 +1,33 @@
 ---
-title: "Project Report"
-author: "Caroline Andy"
-date: "11/25/2020"
+title: "Food Insecurity Project Report"
+author: "Caroline Andy, Vasili Fokaidis, Stella Li, Tessa Senders"
 output:
   html_document:
     toc: true
     toc_float: true
     code_folding: hide
 ---
+## *Motivation*
+### *Food Insecurity Prevalence and Significance*
 
 Motivation: Provide an overview of the project goals and motivation.
 
-(On home page:) 
-
-Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 approximately forty million Americans were food insecure.
+Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 an estimated 40 million Americans (12.5 percent) were food insecure.
 
 Food insecurity is associated with numerous adverse health outcomes, including mental health problems, diabetes, hypertension, asthma and poorer general health. As a result of the COVID-19 pandemic, millions of Americans have lost stable employment; early estimates suggest more than 50 million people, including 17 million children, may be experiencing food insecurity in 2020. 
 
-Existing research has shown food insecurity to disproportionately impact Black and Hispanic populations, as well as those with 
+Existing research has shown food insecurity to disproportionately impact non-White populations, as well as immigrants, and those with lower educational attainment.  
 
-We are collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health to understand the specific regions and/or subpopulations at the greatest risk for food insecurity. This information will help identify targets for future health policy implementation, which is of particular importance during/following the COVID-19 pandemic. 
+![](FI_prevalence_by_race.png)\
+Image from [Center on Budget and Policy Priorities](https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-reveals-stark-disparities)
+
+As a result of the increasing prevalence of food insecurity during the COVID-19 pandemic, we are collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health. 
+
+This is of particular importance, since research has shown 
+
+Understanding the specific regions and/or subpopulations at the greatest risk for food insecurity may help identify targets for future health policy implementation.
 
 Related work: Anything that inspired you, such as a paper, a website, or something we discussed in class.
-
-Caroline: previous/ongoing work experience using ACS data to assess associations between demographic/social determinants and healthcare quality indicators (health policy economics research); personally impacted by FI
 
 
 Find an article about food insecurity during covid
@@ -93,10 +97,6 @@ INSERT SUMMARY TABLES HERE :
 map_the_meal_gap_df %>% group_by(year) %>% summarize(sum(number_food_insecure_children, na.rm = TRUE))
 
 
-
-Caroline: 
-Add to discussion
-Line plot of NYC food insecurity by county overtime - put in project report, not dashboard
 
 Box plots:
 Make sure titles are standardized (caps vs lowercase)

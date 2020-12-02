@@ -9,11 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Caroline Andy" />
+<meta name="author" content="Caroline Andy, Vasili Fokaidis, Stella Li, Tessa Senders" />
 
-<meta name="date" content="2020-11-25" />
 
-<title>Project Report</title>
+<title>Food Insecurity Project Report</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -406,21 +405,26 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Project Report</h1>
-<h4 class="author">Caroline Andy</h4>
-<h4 class="date">11/25/2020</h4>
+<h1 class="title toc-ignore">Food Insecurity Project Report</h1>
+<h4 class="author">Caroline Andy, Vasili Fokaidis, Stella Li, Tessa Senders</h4>
 
 </div>
 
 
+<div id="motivation" class="section level2">
+<h2><em>Motivation</em></h2>
+<div id="food-insecurity-prevalence-and-significance" class="section level3">
+<h3><em>Food Insecurity Prevalence and Significance</em></h3>
 <p>Motivation: Provide an overview of the project goals and motivation.</p>
-<p>(On home page:)</p>
-<p>Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 approximately forty million Americans were food insecure.</p>
+<p>Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 an estimated 40 million Americans (12.5 percent) were food insecure.</p>
 <p>Food insecurity is associated with numerous adverse health outcomes, including mental health problems, diabetes, hypertension, asthma and poorer general health. As a result of the COVID-19 pandemic, millions of Americans have lost stable employment; early estimates suggest more than 50 million people, including 17 million children, may be experiencing food insecurity in 2020.</p>
-<p>Existing research has shown food insecurity to disproportionately impact Black and Hispanic populations, as well as those with</p>
-<p>We are collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health to understand the specific regions and/or subpopulations at the greatest risk for food insecurity. This information will help identify targets for future health policy implementation, which is of particular importance during/following the COVID-19 pandemic.</p>
+<p>Existing research has shown food insecurity to disproportionately impact non-White populations, as well as immigrants, and those with lower educational attainment.</p>
+<p><img src="FI_prevalence_by_race.png" /><br />
+Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-reveals-stark-disparities">Center on Budget and Policy Priorities</a></p>
+<p>As a result of the increasing prevalence of food insecurity during the COVID-19 pandemic, we are collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health.</p>
+<p>This is of particular importance, since research has shown</p>
+<p>Understanding the specific regions and/or subpopulations at the greatest risk for food insecurity may help identify targets for future health policy implementation.</p>
 <p>Related work: Anything that inspired you, such as a paper, a website, or something we discussed in class.</p>
-<p>Caroline: previous/ongoing work experience using ACS data to assess associations between demographic/social determinants and healthcare quality indicators (health policy economics research); personally impacted by FI</p>
 <p>Find an article about food insecurity during covid</p>
 <p>Initial questions: What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?</p>
 <p>Our overarching question was, what does the food disparity across the United States look like on national, regional and county-levels? After investigating the variables in our datasets, we had access to a plethora of information that could help us answer more specific questions such as: Which geographical areas are disproportionately affected? Are affected individuals of predominantly one race, or do they reside in specific income brackets, for example? And, can we visualize food insecurity and give people accessible information on how they can help?</p>
@@ -449,9 +453,10 @@ div.tocify {
 <p>The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.2% to about 13.2%. The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).</p>
 <p>INSERT SUMMARY TABLES HERE : map_the_meal_gap_df %&gt;% group_by(year) %&gt;% summarize(sum(number_food_insecure_children))</p>
 <p>map_the_meal_gap_df %&gt;% group_by(year) %&gt;% summarize(sum(number_food_insecure_children, na.rm = TRUE))</p>
-<p>Caroline: Add to discussion Line plot of NYC food insecurity by county overtime - put in project report, not dashboard</p>
 <p>Box plots: Make sure titles are standardized (caps vs lowercase) Axis labels</p>
 <p>General: Remove names/dates Make neat/label code Write home page abstract Add on home page contributor list at bottom (alphabetical order by last name)</p>
+</div>
+</div>
 <div id="food-insecurity-in-ny-state-counties" class="section level2">
 <h2>Food insecurity in NY state counties</h2>
 <p>Food insecurity rates by county</p>
