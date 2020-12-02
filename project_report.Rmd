@@ -6,15 +6,14 @@ output:
   html_document:
     toc: true
     toc_float: true
+    code_folding: hide
 ---
 
-## Food insecurity by selected NY state counties
+## Food insecurity in NY state counties
 
-Counties = New York, Queens, Kings, Bronx, Saint Lawrence
+Food insecurity rates by county
 
-Food insecurity rate by county
-
-```{r}
+```{r, messages = FALSE, warning = FALSE}
 library(tidyverse)
 library(ggplot2)
 library(gganimate)
@@ -31,8 +30,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     values_to = "measure"
   ) %>%
   mutate(
-    county = fct_reorder(county, desc(measure)),
-    rate = str_replace(rate, "fi_rate", "Food Insecurity Rate"),
+    rate = str_replace(rate, "fi_rate", "Overall Food Insecurity Rate"),
     rate = str_replace(rate, "child_Food Insecurity Rate", "Child Food Insecurity Rate"),
     county = str_replace(county, "albany", "Albany"),
     county = str_replace(county, "bronx", "Bronx"),
@@ -41,14 +39,16 @@ read_csv("map_the_meal_gap_df.csv") %>%
     county = str_replace(county, "saint lawrence", "Saint Lawrence"),
     county = str_replace(county, "new york", "New York"),
     county = str_replace(county, "westchester", "Westchester"),
-    county = str_replace(county, "queens", "Queens")
+    county = str_replace(county, "queens", "Queens"),
+    county = factor(county, levels = c("Bronx", "Kings", "Saint Lawrence", "Chautauqua", 
+                                       "New York", "Queens", "Albany", "Westchester"))
     ) %>%
   ggplot(aes(x = county, y = measure, color = rate)) + 
   geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
     title = '{closest_state}',
     x = "County",
-    y = "Food Insecurity Measure"
+    y = "Food Insecurity Rate"
   ) +
   theme_bw() +
   transition_states(rate, transition_length = 1, state_length = 3, wrap = TRUE)
@@ -57,8 +57,9 @@ animate(fi_rates, fps = 10, height = 500, width = 1000)
   
 ```  
 
+Number of food insecure people by county
 
-```{r}
+```{r, messages = FALSE, warning = FALSE}
 fi_numbers = 
 read_csv("map_the_meal_gap_df.csv") %>%
   filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
@@ -71,7 +72,6 @@ read_csv("map_the_meal_gap_df.csv") %>%
     values_to = "number"
   ) %>%
   mutate(
-    county = fct_reorder(county, desc(number)),
     indicator = str_replace(indicator, "number_food_insecure_individuals", "Number Food Insecure Individuals"),
     indicator = str_replace(indicator, "number_food_insecure_children", "Number Food Insecure Children"),
     county = str_replace(county, "albany", "Albany"),
@@ -81,7 +81,10 @@ read_csv("map_the_meal_gap_df.csv") %>%
     county = str_replace(county, "saint lawrence", "Saint Lawrence"),
     county = str_replace(county, "new york", "New York"),
     county = str_replace(county, "westchester", "Westchester"),
-    county = str_replace(county, "queens", "Queens")) %>%
+    county = str_replace(county, "queens", "Queens"),
+    county = factor(county, levels = c("Kings", "Bronx", "Queens", "New York", 
+                              "Westchester",  "Albany", "Chautauqua", "Saint Lawrence"))
+    ) %>%
   ggplot(aes(x = county, y = number, color = indicator)) + 
   geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
@@ -95,6 +98,102 @@ read_csv("map_the_meal_gap_df.csv") %>%
 animate(fi_numbers, fps = 10, height = 500, width = 1000)
   
 ```
+
+
+## Food Insecurity in US Regions
+
+Food insecurity rates by US region
+
+```{r, messages = FALSE, warning = FALSE}
+state = c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL",
+          "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT",
+          "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
+          "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY")
+region = c("S", "W", "W", "S", "W", "W", "NE", "S", "S", "S", "W", "W", "MW", "MW", 
+           "MW", "MW", "S", "S", "NE", "S", "NE", "MW", "MW", "S", "MW", "W", "MW", 
+           "W", "NE", "NE", "W", "NE", "S", "MW", "MW", "S", "W", "NE", "NE", "S", 
+           "MW", "S", "S", "W", "NE", "S", "W", "S", "MW", "W")
+
+x_walk = tibble(state, region)
+food = read_csv("map_the_meal_gap_df.csv") 
+
+fi_rates_region = 
+  merge(food, x_walk, by = "state") %>%
+  mutate(region = str_replace(region, "MW", "Midwest"),
+         region = str_replace(region, "W", "West"),
+         region = str_replace(region, "NE", "Northeast"),
+         region = str_replace(region, "S", "South"),
+         region = factor(region, levels = c("South", "West", "Midwest", "Northeast"))
+         ) %>%
+  group_by(region, year) %>%
+  summarize(mean_fi = mean(fi_rate), mean_child_fi = mean(child_fi_rate)) %>%
+  pivot_longer(
+    mean_fi:mean_child_fi,
+    names_to = "mean_rate",
+    values_to = "measure"
+  ) %>%
+  mutate(
+    mean_rate = str_replace(mean_rate, "mean_fi_rate", "Mean Food Insecurity Rate"),
+    mean_rate = str_replace(mean_rate, "mean_child_fi_rate", "Mean Child Food Insecurity Rate")) %>%
+  ggplot(aes(x = region, y = measure, color = mean_rate)) + 
+  geom_boxplot(show.legend = FALSE, alpha = 0.8) +
+  labs(
+    title = '{closest_state}',
+    x = "Region",
+    y = "Food Insecurity Measure"
+  ) +
+  theme_bw() +
+  transition_states(mean_rate, transition_length = 1, state_length = 3, wrap = TRUE)
+  
+animate(fi_rates_region, fps = 10, height = 500, width = 1000)
+``` 
+
+Number of food insecure people by region
+
+```{r, messages = FALSE, warning = FALSE}
+num_fi_region = 
+  merge(food, x_walk, by = "state") %>%
+  mutate(region = str_replace(region, "MW", "Midwest"),
+         region = str_replace(region, "W", "West"),
+         region = str_replace(region, "NE", "Northeast"),
+         region = str_replace(region, "S", "South"),
+         region = factor(region, levels = c("South", "West", "Midwest", "Northeast"))
+         ) %>%
+  group_by(region, year) %>%
+  summarize(tot_num_fi = sum(number_food_insecure_individuals), tot_num_child_fi = sum(number_food_insecure_children)) %>%
+  pivot_longer(
+    tot_num_fi:tot_num_child_fi,
+    names_to = "tot_num",
+    values_to = "measure"
+  ) %>%
+  mutate(
+    tot_num = str_replace(tot_num, "tot_num_fi", "Total Number of Total Food Insecure Individuals"),
+    tot_num = str_replace(tot_num, "tot_num_child_fi", "Total Number of Food Insecure Children")) %>%
+  ggplot(aes(x = region, y = measure, color = tot_num)) + 
+  geom_boxplot(show.legend = FALSE, alpha = 0.8) +
+  labs(
+    title = '{closest_state}',
+    x = "Region",
+    y = "Total Number of Food Insecure People"
+  ) +
+  theme_bw() +
+  transition_states(tot_num, transition_length = 1, state_length = 3, wrap = TRUE)
+  
+animate(num_fi_region, fps = 10, height = 500, width = 1000)
+``` 
+
+
+
+
+
+
+
+
+
+
+DELETE EVERYTHING BELOW:
+
+
 
 Number of food insecure individuals by county
 
