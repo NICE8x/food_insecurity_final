@@ -262,8 +262,7 @@ plot_ly() %>%
 ## Find your local food bank:
 
 ```{r food bank with shiny attempt, message = FALSE, warning = FALSE}
-food_banks_df = read_csv("./food_banks_df.csv") %>%
-  mutate(website_list = paste0("<a href='",website_list,"'>",website_list,"</a>"))
+food_banks_df = read_csv("./food_banks_df.csv") 
 
 
 
