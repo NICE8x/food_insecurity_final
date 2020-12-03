@@ -62,7 +62,8 @@ Initially, our overarching question was, what does the food disparity across the
 - How has food insecurity changed overtime in the USA and specifically NY state? 
 - And, can we visualize food insecurity in an accessible way to give people information on how they can help and/or access nutrition assistance resources? 
 
-## Data: Source, scraping method, cleaning, etc.
+## Data
+### *Source, scraping method, cleaning, etc.*
 
 We utilized Feeding America's Map the Meal Gap data to quantify food insecurity on a county and regional level. [Map the Meal Gap](./Map the Meal Gap Overview and FAQ 10.2020.pdf) is an annual study conducted by Feeding America to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. For this project, we used Map the Meal Gap annual study reports from years 2011 to 2019, where each report is based on US Census data from the preceding two years. Thus, the study data range from years 2009 - 2017.  
 
@@ -148,7 +149,7 @@ To supplement the above exploratory analyses, we became interested in comparing 
 Regions were defined according to the United States Census definitions of US regions. (link to site) 
  
 
-### Discussion
+## Discussion
 
 There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties in which more than 35 percent of total people are food insecure. 
 
