@@ -15,7 +15,7 @@ h1, h2 {
 
 body {
     font-family: 'Montserrat';
-    font-size: 19px;
+    font-size: 13px;
 }
 
 /* links */
@@ -118,11 +118,16 @@ body {
   border: none;
 }
 
+#TOC {
+  font-family: Montserrat;
+  font-size: 19px;
+}
 
 /*----------------NAVBAR ---------------*/
 .navbar-default {
     background-color: #141c25f2;
     font-family:    Staatliches;
+    font-size: 19px;
 }
 
 .navbar-default .navbar-nav>.open>a, 
