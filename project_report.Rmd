@@ -7,6 +7,32 @@ output:
     toc_float: true
     code_folding: hide
 ---
+
+```{r, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(gganimate)
+library(kableExtra)
+
+
+knitr::opts_chunk$set(
+	echo = TRUE,
+	warning = FALSE,
+	fig.width = 8, 
+  fig.height = 6,
+  out.width = "90%"
+)
+
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+
+options(
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis"
+)
+
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
+```
+
 ## *Motivation*
 ### *Food Insecurity Prevalence and Significance*
 
@@ -70,6 +96,45 @@ To create the animated scatterplots, we joined the tidy American Community Surve
  
 Using `gganimate` we created animated scatterplots that transition through the levels of each demographic variable with percent level on the y-axis, and food insecurity measure on the x-axis.
 
+```{r, warning = FALSE, message = FALSE}
+# Create dataset containing percent of each race within each county using tidy-ed CSV file
+race_per_plot =
+  read_csv("mtm_2017_acs_2017_race_df.csv") %>%
+    pivot_longer(
+      white:hispanic,
+      names_to = "race",
+      values_to = "percents"
+    ) %>%
+    mutate(
+      race = str_replace(race, "white", "White"),
+      race = str_replace(race, "black", "Black"),
+      race = str_replace(race, "am_ind_al_nat", "American Indian and Alaska Native"),
+      race = str_replace(race, "asian", "Asian"),
+      race = str_replace(race, "nat_ha_pac_isl", "Native Hawaiian and Other Pacific Islander"),
+      race = str_replace(race, "other", "Other Race"),
+      race = str_replace(race, "two_or_more", "Two or More Races"),
+      race = str_replace(race, "hispanic", "Hispanic")
+    ) %>%
+    select(geo_id, total, race, percents, fi_rate) %>%
+    drop_na() %>%
+    ggplot(aes(x = fi_rate, y = percents, size = total, color = race)) + 
+    geom_point(show.legend = FALSE, alpha = 0.8) +
+    labs(
+      title = '{closest_state}',
+      x = "Food Insecurity Rate",
+      y = "% of Individuals of Each Race"
+    ) +
+    theme_bw() +
+    theme(text = element_text(size = 20)) +
+    transition_states(race, transition_length = 1, state_length = 3, wrap = TRUE) + 
+    enter_fade() + 
+    exit_fade() +
+    ease_aes('cubic-in-out')
+
+## gganimate with settings
+animate(race_per_plot, fps = 5, height = 500, width = 1000)
+```
+
 ## *United States Food Insecurity ShinyApp Maps*
 
 To view geographic trends in food insecurity indicators across the United States and over time, we also generated an interactive county map of the US which allows users to view and compare food insecurity measures across all counties simultaneously. Users may select the food insecurity metric of interest, as well as the year and particular states, if desired. 
@@ -98,8 +163,6 @@ Correspondingly, the number of food insecure individuals in the entire USA has b
 The average cost per meal decreased from about `$2.55` to `$2.52` from 2009 to 2010 but after 2010 has been steadily increasing.  In 2017 the average cost per meal was `$3.02`.  The average weighted annual food budget shortfall in the US increased from about 6.3 million (6,325,000) in 2009 to almost 7.5 million(7,498,000) in 2014.  Since 2014 the average weighted annual food budget shortfall has decreased to about 6.9 million(6,914,000) in 2017. 
 
 ```{r summary table 1, message = FALSE, warning = FALSE}
-library(tidyverse)
-library(kableExtra)
 map_the_meal_gap_df = read_csv("./map_the_meal_gap_df.csv")
 
 map_the_meal_gap_df %>%
@@ -146,10 +209,6 @@ Add on home page contributor list at bottom (alphabetical order by last name)
 Food insecurity rates by county
 
 ```{r, message = FALSE, warning = FALSE}
-library(tidyverse)
-library(ggplot2)
-library(gganimate)
-
 fi_rates = 
 read_csv("map_the_meal_gap_df.csv") %>%
   filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 

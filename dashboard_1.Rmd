@@ -1,5 +1,6 @@
 ---
 title: "See the Gap"
+author: "Vasili Fokaidis"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
@@ -159,6 +160,7 @@ mtm_2017_acs_2017_race_df %>%
     y = "% of Individuals of Each Race"
   ) +
   theme_bw() +
+  theme(text = element_text(size = 20)) +
   transition_states(race, transition_length = 1, state_length = 3, wrap = TRUE) + 
   enter_fade() + 
   exit_fade() +
@@ -252,6 +254,7 @@ mtm_2017_edu_2017_att_df %>%
     y = "% of Individuals in Each Education Level of Attainment"
   ) +
   theme_bw() +
+  theme(text = element_text(size = 20)) +
   transition_states(edu_att, transition_length = 1, state_length = 3, wrap = TRUE) + 
   enter_fade() + 
   exit_fade() +
@@ -352,6 +355,7 @@ mtm_2017_ins_2017_status_df %>%
     y = "% of Individuals in Each Insurance Status Group"
   ) +
   theme_bw() +
+  theme(text = element_text(size = 20)) +
   transition_states(ins_status, transition_length = 1, state_length = 3, wrap = TRUE) + 
   enter_fade() + 
   exit_fade() +
@@ -445,6 +449,7 @@ mtm_2017_income_2017_brac_df %>%
     y = "% of Individuals in Each Income Bracket"
   ) +
   theme_bw() +
+  theme(text = element_text(size = 20)) +
   transition_states(income_brac, transition_length = 1, state_length = 3, wrap = TRUE) + 
   enter_fade() + 
   exit_fade() +
