@@ -40,7 +40,17 @@ Initially, our overarching question was, what does the food disparity across the
 
 We utilized Feeding America's Map the Meal Gap data to quantify food insecurity on a county and regional level. [Map the Meal Gap](./Map the Meal Gap Overview and FAQ 10.2020.pdf) is an annual study conducted by Feeding America to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. For this project, we used Map the Meal Gap annual study reports from years 2011 to 2019, where each report is based on US Census data from the preceding two years. Thus, the study data range from years 2009 - 2017.  
 
-Each report presents estimates of 15 food insecurity indicators generated using predictive modeling. These include variables such as overall and child food insecurity rate, and the number of food insecure people and children. Data were presented on the state, county, and congressional district-level. For this project, we used county-level data. 
+Each report presents estimates of 15 food insecurity indicators generated using predictive modeling.  Data were presented on the state, county, and congressional district-level. For this project, we used county-level data.  We chose to specifically focus on 8 of those 15 indicators for our analysis. 
+
+8 Food Insecurity Indicators:
+- Food Insecurity Rate(the % of food insecure people)
+- Number of Food Insecure Individuals
+- Weighted Annual Food Budget Shortfall($)
+- Cost Per Meal(Average cost per meal in $)
+- Child Food Insecurity Rate(the % of food insecure children)
+- Number of Food Insecure Children
+- % of Children in Food Insecure Households with Household Incomes Below 185% of the Federal Poverty Level
+- % of Children in Food Insecure Households with Household Incomes Above 185% of the Federal Poverty Level
 
 As these data were contained on multiple Excel files, we used the map function to import the data across files. Since column naming was not always consistent across files, the coalesce function was used to combine data from columns representing the same variables. We then generated a unique county-state field, and re-valued select county entries using stringr to be consistent with the US Healthcare.gov Geocodes dataset county naming convention (https://data.healthcare.gov/resource/geocodes-usa-with-counties.json).
 
