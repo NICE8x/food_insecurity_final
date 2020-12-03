@@ -1,7 +1,5 @@
 ---
-title: "dashboard_2"
-author: "Caroline Andy"
-date: "11/27/2020"
+title: "NY and More"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
