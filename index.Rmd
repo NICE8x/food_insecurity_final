@@ -13,12 +13,12 @@ output:
 <style>
 body {
     position: relative;
-    padding-left: 6em;
+    padding-left: 1em;
     left: 0px;}
 </style>
 
-![](hero_image_ny.jpg)\
-Image from [NPR](https://www.npr.org/2020/09/27/912486921/food-insecurity-in-the-u-s-by-the-numbers)
+![](https://registerforum.org/wp-content/uploads/2020/06/COVIDFoodLaraGaray.jpg)\
+Image from [Register Forum](https://registerforum.org/12158/opinion/covid-19-sheds-light-on-food-disparity/)
 
 Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 approximately forty million Americans were food insecure. As a result of the COVID-19 pandemic, millions of Americans have lost stable employment; early estimates suggest more than 50 million people, including 17 million children, may be experiencing food insecurity in 2020. 
 
