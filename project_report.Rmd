@@ -95,7 +95,7 @@ The national food insecurity rate has been slowly decreasing from 2009 to 2017 f
 
 Correspondingly, the number of food insecure individuals in the entire USA has been slowly decreasing from 2009 to 2017 from almost 47 million (46,972,100) to just above than 40 million (40,286,060).  The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).
 
-The average cost per meal decreased from about `$2.55` to `$2.52` from 2009 to 2010 but after 2010 has been steadily increasing.  In 2017 the average cost per meal was `$3.02`.
+The average cost per meal decreased from about `$2.55` to `$2.52` from 2009 to 2010 but after 2010 has been steadily increasing.  In 2017 the average cost per meal was `$3.02`.  The average weighted annual food budget shortfall in the US increased from about 6.3 million (6,325,000) in 2009 to almost 7.5 million(7,498,000) in 2014.  Since 2014 the average weighted annual food budget shortfall has decreased to about 6.9 million(6,914,000) in 2017. 
 
 ```{r summary table 1, message = FALSE, warning = FALSE}
 library(tidyverse)
