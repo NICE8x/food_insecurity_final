@@ -10,6 +10,7 @@ runtime: shiny
 ---
 
 ```{r import libraries, message = FALSE, warning = FALSE}
+#import libraries
 library(tidyverse)
 library(plotly)
 library(rjson)
@@ -25,6 +26,8 @@ library(rsconnect)
 
 
 ```{r fips data, message = FALSE, warning = FALSE}
+#Import FIPS csv
+#Fix county strings to match the Map the Meal Gap Data.  Create a county_state variable to match the data to the Map the Meal Gap Data.  
 fips_df = readxl::read_xls("./fips_data/US_FIPS_Codes.xls", skip = 1) %>%
   janitor::clean_names() %>%
   rename(county = county_name) %>%
@@ -64,12 +67,11 @@ unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
 ) %>%
   select(county_state, fips)
 
-
+#Read in tidy-ed Map the Meal Gap data and join to FIPS data
 map_the_meal_gap_df = read_csv("./map_the_meal_gap_df.csv")
 
 mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state") %>%
   drop_na(fips)
-
 ```
 
 
@@ -80,7 +82,7 @@ mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state") %>%
 ## Select a year, food insecurity metric of interest, and location (the entire USA or a particular state):
 
 ```{r plot attempt 3, message = FALSE, warning = FALSE}
-
+#Create plotly drop down menus and corresponding inputs
 year_choices = mtm_fips_df %>%
 pull(year) %>% 
   unique() %>%
@@ -119,9 +121,11 @@ renderPrint(
   input[["state"]]
 )
 
+#Import county/FIPs data from Plotly
 url <- 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
 counties <- rjson::fromJSON(file=url)
 
+#Create outline of map
 g <- list(
   scope = 'usa',
   projection = list(type = 'albers usa'),
@@ -129,6 +133,7 @@ g <- list(
   lakecolor = toRGB('white')
 )
 
+#Mutate percent variables to be percents rather than decimals
 z_df = mtm_fips_df %>%
   mutate(fi_rate = fi_rate * 100,
          percent_fi_low_threshold = percent_fi_low_threshold * 100,
@@ -140,7 +145,7 @@ z_df = mtm_fips_df %>%
   )
 
 
-  
+#Create interactive Plotly county map.  Filter by year and food insecurity metric.  If input for state is USA, do not filter.  If input is a state, filter by state.  
 renderPlotly({
 if(input[["state"]] != "USA"){
   
@@ -255,23 +260,23 @@ plot_ly() %>%
 }
 
   )
-  
-
 ```
 
 ## Find your local food bank:
 
 ```{r food bank with shiny attempt, message = FALSE, warning = FALSE}
+#Read in previously tidy-ed food bank data scraped from FeedingAmerica
 food_banks_df = read_csv("./food_banks_df.csv") 
 
 
-
+#Create Leaflet drop down menus and corresponding inputs
   selectInput("state_2",
   h3("State"),
   choices = list("USA", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
 "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY")
 )
 
+#Create interactive Leaflet map of food banks.  If input for state is USA, do not filter.  If input is a state, filter by state.  
 renderLeaflet({
   if(input[["state_2"]] != "USA"){
 food_banks_df %>%
