@@ -27,6 +27,15 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.9.2.1/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -414,6 +423,7 @@ div.tocify {
 <pre class="r"><code>library(tidyverse)
 library(gganimate)
 library(kableExtra)
+library(plotly)
 
 
 knitr::opts_chunk$set(
@@ -699,7 +709,8 @@ animate(num_fi_region, fps = 10, height = 500, width = 1000)</code></pre>
 <p><img src="project_report_files/figure-html/unnamed-chunk-6-1.gif" width="90%" /></p>
 <p>We also compared state-level food insecurity rate across the 50 US states. Click <a href="https://nice8x.github.io/food_insecurity_final/dashboard_2.html">here</a> to see an interactive boxplot containing state level breakdowns of overall food insecurity rate.</p>
 <p>After observing regional and county level differences in food insecurity rates, we became interested in assessing how food insecurity may have evolved overtime in select areas. The below line graph shows trends in overall food insecurity rate overtime from 2009 - 2017 in the 8 selected New York state counties of interest.</p>
-<p><img src="project_report_files/figure-html/unnamed-chunk-7-1.png" width="90%" /></p>
+<div id="htmlwidget-47d4b49e4569ab1af314" style="width:90%;height:576px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-47d4b49e4569ab1af314">{"x":{"visdat":{"1169c382ca720":["function () ","plotlyVisDat"]},"cur_data":"1169c382ca720","attrs":{"1169c382ca720":{"x":{},"y":{},"mode":"markers","color":{},"frame":{},"colors":"viridis","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Food Insecurity Rate Over Time in Select New York State Counties","xaxis":{"domain":[0,1],"automargin":true,"title":"Year","tickfont":{"size":10},"range":[2008.6,2017.4]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Food Insecurity Rate","range":[0.06925,0.23975]},"hovermode":"closest","showlegend":true,"sliders":[{"currentvalue":{"prefix":"year: ","xanchor":"right","font":{"size":16,"color":"rgba(204,204,204,1)"}},"steps":[{"method":"animate","args":[["2009"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":false},"mode":"immediate"}],"label":"2009","value":"2009"},{"method":"animate","args":[["2010"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":false},"mode":"immediate"}],"label":"2010","value":"2010"},{"method":"animate","args":[["2011"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":false},"mode":"immediate"}],"label":"2011","value":"2011"},{"method":"animate","args":[["2012"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":false},"mode":"immediate"}],"label":"2012","value":"2012"},{"method":"animate","args":[["2013"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":false},"mode":"immediate"}],"label":"2013","value":"2013"},{"method":"animate","args":[["2014"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":false},"mode":"immediate"}],"label":"2014","value":"2014"},{"method":"animate","args":[["2015"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":false},"mode":"immediate"}],"label":"2015","value":"2015"},{"method":"animate","args":[["2016"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":false},"mode":"immediate"}],"label":"2016","value":"2016"},{"method":"animate","args":[["2017"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":false},"mode":"immediate"}],"label":"2017","value":"2017"}],"visible":true,"pad":{"t":40}}],"updatemenus":[{"type":"buttons","direction":"right","showactive":false,"y":0,"x":0,"yanchor":"top","xanchor":"right","pad":{"t":60,"r":5},"buttons":[{"label":"Play","method":"animate","args":[null,{"fromcurrent":true,"mode":"immediate","transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":false}}]}]}]},"source":"A","config":{"showSendToCloud":false},"data":[{"x":[2009],"y":[0.118],"mode":"markers","frame":"2009","type":"scatter","name":"Albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"textfont":{"color":"rgba(159,218,58,1)"},"error_y":{"color":"rgba(159,218,58,1)"},"error_x":{"color":"rgba(159,218,58,1)"},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.212],"mode":"markers","frame":"2009","type":"scatter","name":"Bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"textfont":{"color":"rgba(68,1,84,1)"},"error_y":{"color":"rgba(68,1,84,1)"},"error_x":{"color":"rgba(68,1,84,1)"},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.139],"mode":"markers","frame":"2009","type":"scatter","name":"Chautauqua","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"textfont":{"color":"rgba(74,193,109,1)"},"error_y":{"color":"rgba(74,193,109,1)"},"error_x":{"color":"rgba(74,193,109,1)"},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.184],"mode":"markers","frame":"2009","type":"scatter","name":"Kings","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"textfont":{"color":"rgba(70,50,126,1)"},"error_y":{"color":"rgba(70,50,126,1)"},"error_x":{"color":"rgba(70,50,126,1)"},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.14],"mode":"markers","frame":"2009","type":"scatter","name":"New York","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"textfont":{"color":"rgba(54,92,141,1)"},"error_y":{"color":"rgba(54,92,141,1)"},"error_x":{"color":"rgba(54,92,141,1)"},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.132],"mode":"markers","frame":"2009","type":"scatter","name":"Queens","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"textfont":{"color":"rgba(31,161,135,1)"},"error_y":{"color":"rgba(31,161,135,1)"},"error_x":{"color":"rgba(31,161,135,1)"},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.153],"mode":"markers","frame":"2009","type":"scatter","name":"Saint Lawrence","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"textfont":{"color":"rgba(39,127,142,1)"},"error_y":{"color":"rgba(39,127,142,1)"},"error_x":{"color":"rgba(39,127,142,1)"},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.1],"mode":"markers","frame":"2009","type":"scatter","name":"Westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"textfont":{"color":"rgba(253,231,37,1)"},"error_y":{"color":"rgba(253,231,37,1)"},"error_x":{"color":"rgba(253,231,37,1)"},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","visible":true}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"frames":[{"name":"2009","data":[{"x":[2009],"y":[0.118],"mode":"markers","frame":"2009","type":"scatter","name":"Albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"textfont":{"color":"rgba(159,218,58,1)"},"error_y":{"color":"rgba(159,218,58,1)"},"error_x":{"color":"rgba(159,218,58,1)"},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.212],"mode":"markers","frame":"2009","type":"scatter","name":"Bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"textfont":{"color":"rgba(68,1,84,1)"},"error_y":{"color":"rgba(68,1,84,1)"},"error_x":{"color":"rgba(68,1,84,1)"},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.139],"mode":"markers","frame":"2009","type":"scatter","name":"Chautauqua","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"textfont":{"color":"rgba(74,193,109,1)"},"error_y":{"color":"rgba(74,193,109,1)"},"error_x":{"color":"rgba(74,193,109,1)"},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.184],"mode":"markers","frame":"2009","type":"scatter","name":"Kings","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"textfont":{"color":"rgba(70,50,126,1)"},"error_y":{"color":"rgba(70,50,126,1)"},"error_x":{"color":"rgba(70,50,126,1)"},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.14],"mode":"markers","frame":"2009","type":"scatter","name":"New York","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"textfont":{"color":"rgba(54,92,141,1)"},"error_y":{"color":"rgba(54,92,141,1)"},"error_x":{"color":"rgba(54,92,141,1)"},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.132],"mode":"markers","frame":"2009","type":"scatter","name":"Queens","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"textfont":{"color":"rgba(31,161,135,1)"},"error_y":{"color":"rgba(31,161,135,1)"},"error_x":{"color":"rgba(31,161,135,1)"},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.153],"mode":"markers","frame":"2009","type":"scatter","name":"Saint Lawrence","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"textfont":{"color":"rgba(39,127,142,1)"},"error_y":{"color":"rgba(39,127,142,1)"},"error_x":{"color":"rgba(39,127,142,1)"},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2009],"y":[0.1],"mode":"markers","frame":"2009","type":"scatter","name":"Westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"textfont":{"color":"rgba(253,231,37,1)"},"error_y":{"color":"rgba(253,231,37,1)"},"error_x":{"color":"rgba(253,231,37,1)"},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","visible":true}],"traces":[0,1,2,3,4,5,6,7]},{"name":"2010","data":[{"x":[2010],"y":[0.121],"mode":"markers","frame":"2010","type":"scatter","name":"Albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"textfont":{"color":"rgba(159,218,58,1)"},"error_y":{"color":"rgba(159,218,58,1)"},"error_x":{"color":"rgba(159,218,58,1)"},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2010],"y":[0.201],"mode":"markers","frame":"2010","type":"scatter","name":"Bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"textfont":{"color":"rgba(68,1,84,1)"},"error_y":{"color":"rgba(68,1,84,1)"},"error_x":{"color":"rgba(68,1,84,1)"},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2010],"y":[0.133],"mode":"markers","frame":"2010","type":"scatter","name":"Chautauqua","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"textfont":{"color":"rgba(74,193,109,1)"},"error_y":{"color":"rgba(74,193,109,1)"},"error_x":{"color":"rgba(74,193,109,1)"},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2010],"y":[0.184],"mode":"markers","frame":"2010","type":"scatter","name":"Kings","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"textfont":{"color":"rgba(70,50,126,1)"},"error_y":{"color":"rgba(70,50,126,1)"},"error_x":{"color":"rgba(70,50,126,1)"},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2010],"y":[0.131],"mode":"markers","frame":"2010","type":"scatter","name":"New York","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"textfont":{"color":"rgba(54,92,141,1)"},"error_y":{"color":"rgba(54,92,141,1)"},"error_x":{"color":"rgba(54,92,141,1)"},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2010],"y":[0.127],"mode":"markers","frame":"2010","type":"scatter","name":"Queens","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"textfont":{"color":"rgba(31,161,135,1)"},"error_y":{"color":"rgba(31,161,135,1)"},"error_x":{"color":"rgba(31,161,135,1)"},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2010],"y":[0.147],"mode":"markers","frame":"2010","type":"scatter","name":"Saint Lawrence","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"textfont":{"color":"rgba(39,127,142,1)"},"error_y":{"color":"rgba(39,127,142,1)"},"error_x":{"color":"rgba(39,127,142,1)"},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2010],"y":[0.101],"mode":"markers","frame":"2010","type":"scatter","name":"Westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"textfont":{"color":"rgba(253,231,37,1)"},"error_y":{"color":"rgba(253,231,37,1)"},"error_x":{"color":"rgba(253,231,37,1)"},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","visible":true}],"traces":[0,1,2,3,4,5,6,7]},{"name":"2011","data":[{"x":[2011],"y":[0.115],"mode":"markers","frame":"2011","type":"scatter","name":"Albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"textfont":{"color":"rgba(159,218,58,1)"},"error_y":{"color":"rgba(159,218,58,1)"},"error_x":{"color":"rgba(159,218,58,1)"},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2011],"y":[0.232],"mode":"markers","frame":"2011","type":"scatter","name":"Bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"textfont":{"color":"rgba(68,1,84,1)"},"error_y":{"color":"rgba(68,1,84,1)"},"error_x":{"color":"rgba(68,1,84,1)"},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2011],"y":[0.11],"mode":"markers","frame":"2011","type":"scatter","name":"Chautauqua","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"textfont":{"color":"rgba(74,193,109,1)"},"error_y":{"color":"rgba(74,193,109,1)"},"error_x":{"color":"rgba(74,193,109,1)"},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2011],"y":[0.204],"mode":"markers","frame":"2011","type":"scatter","name":"Kings","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"textfont":{"color":"rgba(70,50,126,1)"},"error_y":{"color":"rgba(70,50,126,1)"},"error_x":{"color":"rgba(70,50,126,1)"},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2011],"y":[0.163],"mode":"markers","frame":"2011","type":"scatter","name":"New York","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"textfont":{"color":"rgba(54,92,141,1)"},"error_y":{"color":"rgba(54,92,141,1)"},"error_x":{"color":"rgba(54,92,141,1)"},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2011],"y":[0.14],"mode":"markers","frame":"2011","type":"scatter","name":"Queens","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"textfont":{"color":"rgba(31,161,135,1)"},"error_y":{"color":"rgba(31,161,135,1)"},"error_x":{"color":"rgba(31,161,135,1)"},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2011],"y":[0.125],"mode":"markers","frame":"2011","type":"scatter","name":"Saint Lawrence","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"textfont":{"color":"rgba(39,127,142,1)"},"error_y":{"color":"rgba(39,127,142,1)"},"error_x":{"color":"rgba(39,127,142,1)"},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2011],"y":[0.098],"mode":"markers","frame":"2011","type":"scatter","name":"Westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"textfont":{"color":"rgba(253,231,37,1)"},"error_y":{"color":"rgba(253,231,37,1)"},"error_x":{"color":"rgba(253,231,37,1)"},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","visible":true}],"traces":[0,1,2,3,4,5,6,7]},{"name":"2012","data":[{"x":[2012],"y":[0.126],"mode":"markers","frame":"2012","type":"scatter","name":"Albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"textfont":{"color":"rgba(159,218,58,1)"},"error_y":{"color":"rgba(159,218,58,1)"},"error_x":{"color":"rgba(159,218,58,1)"},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2012],"y":[0.218],"mode":"markers","frame":"2012","type":"scatter","name":"Bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"textfont":{"color":"rgba(68,1,84,1)"},"error_y":{"color":"rgba(68,1,84,1)"},"error_x":{"color":"rgba(68,1,84,1)"},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2012],"y":[0.126],"mode":"markers","frame":"2012","type":"scatter","name":"Chautauqua","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"textfont":{"color":"rgba(74,193,109,1)"},"error_y":{"color":"rgba(74,193,109,1)"},"error_x":{"color":"rgba(74,193,109,1)"},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2012],"y":[0.201],"mode":"markers","frame":"2012","type":"scatter","name":"Kings","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"textfont":{"color":"rgba(70,50,126,1)"},"error_y":{"color":"rgba(70,50,126,1)"},"error_x":{"color":"rgba(70,50,126,1)"},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2012],"y":[0.162],"mode":"markers","frame":"2012","type":"scatter","name":"New York","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"textfont":{"color":"rgba(54,92,141,1)"},"error_y":{"color":"rgba(54,92,141,1)"},"error_x":{"color":"rgba(54,92,141,1)"},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2012],"y":[0.14],"mode":"markers","frame":"2012","type":"scatter","name":"Queens","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"textfont":{"color":"rgba(31,161,135,1)"},"error_y":{"color":"rgba(31,161,135,1)"},"error_x":{"color":"rgba(31,161,135,1)"},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2012],"y":[0.136],"mode":"markers","frame":"2012","type":"scatter","name":"Saint Lawrence","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"textfont":{"color":"rgba(39,127,142,1)"},"error_y":{"color":"rgba(39,127,142,1)"},"error_x":{"color":"rgba(39,127,142,1)"},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2012],"y":[0.101],"mode":"markers","frame":"2012","type":"scatter","name":"Westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"textfont":{"color":"rgba(253,231,37,1)"},"error_y":{"color":"rgba(253,231,37,1)"},"error_x":{"color":"rgba(253,231,37,1)"},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","visible":true}],"traces":[0,1,2,3,4,5,6,7]},{"name":"2013","data":[{"x":[2013],"y":[0.133],"mode":"markers","frame":"2013","type":"scatter","name":"Albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"textfont":{"color":"rgba(159,218,58,1)"},"error_y":{"color":"rgba(159,218,58,1)"},"error_x":{"color":"rgba(159,218,58,1)"},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2013],"y":[0.188],"mode":"markers","frame":"2013","type":"scatter","name":"Bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"textfont":{"color":"rgba(68,1,84,1)"},"error_y":{"color":"rgba(68,1,84,1)"},"error_x":{"color":"rgba(68,1,84,1)"},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2013],"y":[0.137],"mode":"markers","frame":"2013","type":"scatter","name":"Chautauqua","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"textfont":{"color":"rgba(74,193,109,1)"},"error_y":{"color":"rgba(74,193,109,1)"},"error_x":{"color":"rgba(74,193,109,1)"},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2013],"y":[0.198],"mode":"markers","frame":"2013","type":"scatter","name":"Kings","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"textfont":{"color":"rgba(70,50,126,1)"},"error_y":{"color":"rgba(70,50,126,1)"},"error_x":{"color":"rgba(70,50,126,1)"},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2013],"y":[0.153],"mode":"markers","frame":"2013","type":"scatter","name":"New York","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"textfont":{"color":"rgba(54,92,141,1)"},"error_y":{"color":"rgba(54,92,141,1)"},"error_x":{"color":"rgba(54,92,141,1)"},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2013],"y":[0.133],"mode":"markers","frame":"2013","type":"scatter","name":"Queens","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"textfont":{"color":"rgba(31,161,135,1)"},"error_y":{"color":"rgba(31,161,135,1)"},"error_x":{"color":"rgba(31,161,135,1)"},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2013],"y":[0.148],"mode":"markers","frame":"2013","type":"scatter","name":"Saint Lawrence","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"textfont":{"color":"rgba(39,127,142,1)"},"error_y":{"color":"rgba(39,127,142,1)"},"error_x":{"color":"rgba(39,127,142,1)"},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2013],"y":[0.094],"mode":"markers","frame":"2013","type":"scatter","name":"Westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"textfont":{"color":"rgba(253,231,37,1)"},"error_y":{"color":"rgba(253,231,37,1)"},"error_x":{"color":"rgba(253,231,37,1)"},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","visible":true}],"traces":[0,1,2,3,4,5,6,7]},{"name":"2014","data":[{"x":[2014],"y":[0.131],"mode":"markers","frame":"2014","type":"scatter","name":"Albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"textfont":{"color":"rgba(159,218,58,1)"},"error_y":{"color":"rgba(159,218,58,1)"},"error_x":{"color":"rgba(159,218,58,1)"},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2014],"y":[0.187],"mode":"markers","frame":"2014","type":"scatter","name":"Bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"textfont":{"color":"rgba(68,1,84,1)"},"error_y":{"color":"rgba(68,1,84,1)"},"error_x":{"color":"rgba(68,1,84,1)"},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2014],"y":[0.13],"mode":"markers","frame":"2014","type":"scatter","name":"Chautauqua","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"textfont":{"color":"rgba(74,193,109,1)"},"error_y":{"color":"rgba(74,193,109,1)"},"error_x":{"color":"rgba(74,193,109,1)"},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2014],"y":[0.2],"mode":"markers","frame":"2014","type":"scatter","name":"Kings","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"textfont":{"color":"rgba(70,50,126,1)"},"error_y":{"color":"rgba(70,50,126,1)"},"error_x":{"color":"rgba(70,50,126,1)"},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2014],"y":[0.151],"mode":"markers","frame":"2014","type":"scatter","name":"New York","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"textfont":{"color":"rgba(54,92,141,1)"},"error_y":{"color":"rgba(54,92,141,1)"},"error_x":{"color":"rgba(54,92,141,1)"},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2014],"y":[0.131],"mode":"markers","frame":"2014","type":"scatter","name":"Queens","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"textfont":{"color":"rgba(31,161,135,1)"},"error_y":{"color":"rgba(31,161,135,1)"},"error_x":{"color":"rgba(31,161,135,1)"},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2014],"y":[0.139],"mode":"markers","frame":"2014","type":"scatter","name":"Saint Lawrence","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"textfont":{"color":"rgba(39,127,142,1)"},"error_y":{"color":"rgba(39,127,142,1)"},"error_x":{"color":"rgba(39,127,142,1)"},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2014],"y":[0.088],"mode":"markers","frame":"2014","type":"scatter","name":"Westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"textfont":{"color":"rgba(253,231,37,1)"},"error_y":{"color":"rgba(253,231,37,1)"},"error_x":{"color":"rgba(253,231,37,1)"},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","visible":true}],"traces":[0,1,2,3,4,5,6,7]},{"name":"2015","data":[{"x":[2015],"y":[0.13],"mode":"markers","frame":"2015","type":"scatter","name":"Albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"textfont":{"color":"rgba(159,218,58,1)"},"error_y":{"color":"rgba(159,218,58,1)"},"error_x":{"color":"rgba(159,218,58,1)"},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2015],"y":[0.161],"mode":"markers","frame":"2015","type":"scatter","name":"Bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"textfont":{"color":"rgba(68,1,84,1)"},"error_y":{"color":"rgba(68,1,84,1)"},"error_x":{"color":"rgba(68,1,84,1)"},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2015],"y":[0.127],"mode":"markers","frame":"2015","type":"scatter","name":"Chautauqua","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"textfont":{"color":"rgba(74,193,109,1)"},"error_y":{"color":"rgba(74,193,109,1)"},"error_x":{"color":"rgba(74,193,109,1)"},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2015],"y":[0.188],"mode":"markers","frame":"2015","type":"scatter","name":"Kings","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"textfont":{"color":"rgba(70,50,126,1)"},"error_y":{"color":"rgba(70,50,126,1)"},"error_x":{"color":"rgba(70,50,126,1)"},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2015],"y":[0.139],"mode":"markers","frame":"2015","type":"scatter","name":"New York","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"textfont":{"color":"rgba(54,92,141,1)"},"error_y":{"color":"rgba(54,92,141,1)"},"error_x":{"color":"rgba(54,92,141,1)"},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2015],"y":[0.115],"mode":"markers","frame":"2015","type":"scatter","name":"Queens","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"textfont":{"color":"rgba(31,161,135,1)"},"error_y":{"color":"rgba(31,161,135,1)"},"error_x":{"color":"rgba(31,161,135,1)"},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2015],"y":[0.139],"mode":"markers","frame":"2015","type":"scatter","name":"Saint Lawrence","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"textfont":{"color":"rgba(39,127,142,1)"},"error_y":{"color":"rgba(39,127,142,1)"},"error_x":{"color":"rgba(39,127,142,1)"},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2015],"y":[0.081],"mode":"markers","frame":"2015","type":"scatter","name":"Westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"textfont":{"color":"rgba(253,231,37,1)"},"error_y":{"color":"rgba(253,231,37,1)"},"error_x":{"color":"rgba(253,231,37,1)"},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","visible":true}],"traces":[0,1,2,3,4,5,6,7]},{"name":"2016","data":[{"x":[2016],"y":[0.122],"mode":"markers","frame":"2016","type":"scatter","name":"Albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"textfont":{"color":"rgba(159,218,58,1)"},"error_y":{"color":"rgba(159,218,58,1)"},"error_x":{"color":"rgba(159,218,58,1)"},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2016],"y":[0.161],"mode":"markers","frame":"2016","type":"scatter","name":"Bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"textfont":{"color":"rgba(68,1,84,1)"},"error_y":{"color":"rgba(68,1,84,1)"},"error_x":{"color":"rgba(68,1,84,1)"},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2016],"y":[0.124],"mode":"markers","frame":"2016","type":"scatter","name":"Chautauqua","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"textfont":{"color":"rgba(74,193,109,1)"},"error_y":{"color":"rgba(74,193,109,1)"},"error_x":{"color":"rgba(74,193,109,1)"},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2016],"y":[0.182],"mode":"markers","frame":"2016","type":"scatter","name":"Kings","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"textfont":{"color":"rgba(70,50,126,1)"},"error_y":{"color":"rgba(70,50,126,1)"},"error_x":{"color":"rgba(70,50,126,1)"},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2016],"y":[0.133],"mode":"markers","frame":"2016","type":"scatter","name":"New York","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"textfont":{"color":"rgba(54,92,141,1)"},"error_y":{"color":"rgba(54,92,141,1)"},"error_x":{"color":"rgba(54,92,141,1)"},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2016],"y":[0.109],"mode":"markers","frame":"2016","type":"scatter","name":"Queens","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"textfont":{"color":"rgba(31,161,135,1)"},"error_y":{"color":"rgba(31,161,135,1)"},"error_x":{"color":"rgba(31,161,135,1)"},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2016],"y":[0.134],"mode":"markers","frame":"2016","type":"scatter","name":"Saint Lawrence","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"textfont":{"color":"rgba(39,127,142,1)"},"error_y":{"color":"rgba(39,127,142,1)"},"error_x":{"color":"rgba(39,127,142,1)"},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2016],"y":[0.077],"mode":"markers","frame":"2016","type":"scatter","name":"Westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"textfont":{"color":"rgba(253,231,37,1)"},"error_y":{"color":"rgba(253,231,37,1)"},"error_x":{"color":"rgba(253,231,37,1)"},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","visible":true}],"traces":[0,1,2,3,4,5,6,7]},{"name":"2017","data":[{"x":[2017],"y":[0.12],"mode":"markers","frame":"2017","type":"scatter","name":"Albany","marker":{"color":"rgba(159,218,58,1)","line":{"color":"rgba(159,218,58,1)"}},"textfont":{"color":"rgba(159,218,58,1)"},"error_y":{"color":"rgba(159,218,58,1)"},"error_x":{"color":"rgba(159,218,58,1)"},"line":{"color":"rgba(159,218,58,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2017],"y":[0.16],"mode":"markers","frame":"2017","type":"scatter","name":"Bronx","marker":{"color":"rgba(68,1,84,1)","line":{"color":"rgba(68,1,84,1)"}},"textfont":{"color":"rgba(68,1,84,1)"},"error_y":{"color":"rgba(68,1,84,1)"},"error_x":{"color":"rgba(68,1,84,1)"},"line":{"color":"rgba(68,1,84,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2017],"y":[0.123],"mode":"markers","frame":"2017","type":"scatter","name":"Chautauqua","marker":{"color":"rgba(74,193,109,1)","line":{"color":"rgba(74,193,109,1)"}},"textfont":{"color":"rgba(74,193,109,1)"},"error_y":{"color":"rgba(74,193,109,1)"},"error_x":{"color":"rgba(74,193,109,1)"},"line":{"color":"rgba(74,193,109,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2017],"y":[0.171],"mode":"markers","frame":"2017","type":"scatter","name":"Kings","marker":{"color":"rgba(70,50,126,1)","line":{"color":"rgba(70,50,126,1)"}},"textfont":{"color":"rgba(70,50,126,1)"},"error_y":{"color":"rgba(70,50,126,1)"},"error_x":{"color":"rgba(70,50,126,1)"},"line":{"color":"rgba(70,50,126,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2017],"y":[0.126],"mode":"markers","frame":"2017","type":"scatter","name":"New York","marker":{"color":"rgba(54,92,141,1)","line":{"color":"rgba(54,92,141,1)"}},"textfont":{"color":"rgba(54,92,141,1)"},"error_y":{"color":"rgba(54,92,141,1)"},"error_x":{"color":"rgba(54,92,141,1)"},"line":{"color":"rgba(54,92,141,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2017],"y":[0.105],"mode":"markers","frame":"2017","type":"scatter","name":"Queens","marker":{"color":"rgba(31,161,135,1)","line":{"color":"rgba(31,161,135,1)"}},"textfont":{"color":"rgba(31,161,135,1)"},"error_y":{"color":"rgba(31,161,135,1)"},"error_x":{"color":"rgba(31,161,135,1)"},"line":{"color":"rgba(31,161,135,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2017],"y":[0.132],"mode":"markers","frame":"2017","type":"scatter","name":"Saint Lawrence","marker":{"color":"rgba(39,127,142,1)","line":{"color":"rgba(39,127,142,1)"}},"textfont":{"color":"rgba(39,127,142,1)"},"error_y":{"color":"rgba(39,127,142,1)"},"error_x":{"color":"rgba(39,127,142,1)"},"line":{"color":"rgba(39,127,142,1)"},"xaxis":"x","yaxis":"y","visible":true},{"x":[2017],"y":[0.077],"mode":"markers","frame":"2017","type":"scatter","name":"Westchester","marker":{"color":"rgba(253,231,37,1)","line":{"color":"rgba(253,231,37,1)"}},"textfont":{"color":"rgba(253,231,37,1)"},"error_y":{"color":"rgba(253,231,37,1)"},"error_x":{"color":"rgba(253,231,37,1)"},"line":{"color":"rgba(253,231,37,1)"},"xaxis":"x","yaxis":"y","visible":true}],"traces":[0,1,2,3,4,5,6,7]}],"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="discussion" class="section level2">
@@ -710,6 +721,245 @@ animate(num_fi_region, fps = 10, height = 500, width = 1000)</code></pre>
 <p>The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.16% to about 13.24%. The average child food insecurity rate has also been decreasing, from about 25.8% to 19.36%. The average rate of child food insecurity in the USA is consistently higher than the overall average rate of food insecurity from year to year.</p>
 <p>Correspondingly, the number of food insecure individuals in the entire USA has been slowly decreasing from 2009 to 2017 from almost 47 million (46,972,100) to just above than 40 million (40,286,060). The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).</p>
 <p>The average cost per meal decreased from about <code>$2.55</code> to <code>$2.52</code> from 2009 to 2010 but after 2010 has been steadily increasing. In 2017 the average cost per meal was <code>$3.02</code>. The average weighted annual food budget shortfall in the US increased from about 6.3 million (6,325,000) in 2009 to almost 7.5 million(7,498,000) in 2014. Since 2014 the average weighted annual food budget shortfall has decreased to about 6.9 million(6,914,000) in 2017.</p>
+<table class=" lightable-classic" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+National Food Insecurity Metrics
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Year
+</th>
+<th style="text-align:right;">
+Avg FI Rate(%)
+</th>
+<th style="text-align:right;">
+Avg Child FI Rate(%)
+</th>
+<th style="text-align:right;">
+Total Num FI Indvs
+</th>
+<th style="text-align:right;">
+Total Num FI Children
+</th>
+<th style="text-align:right;">
+Avg Cost Per Meal
+</th>
+<th style="text-align:right;">
+Avg Weighted Annual Food Budget Shortfall($)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+2009
+</td>
+<td style="text-align:right;">
+16.16
+</td>
+<td style="text-align:right;">
+25.80
+</td>
+<td style="text-align:right;">
+46972100
+</td>
+<td style="text-align:right;">
+18281540
+</td>
+<td style="text-align:right;">
+2.55
+</td>
+<td style="text-align:right;">
+6325000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2010
+</td>
+<td style="text-align:right;">
+15.57
+</td>
+<td style="text-align:right;">
+23.10
+</td>
+<td style="text-align:right;">
+46657180
+</td>
+<td style="text-align:right;">
+16236840
+</td>
+<td style="text-align:right;">
+2.52
+</td>
+<td style="text-align:right;">
+6465000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2011
+</td>
+<td style="text-align:right;">
+14.71
+</td>
+<td style="text-align:right;">
+22.53
+</td>
+<td style="text-align:right;">
+46368470
+</td>
+<td style="text-align:right;">
+16168360
+</td>
+<td style="text-align:right;">
+2.63
+</td>
+<td style="text-align:right;">
+6513000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2012
+</td>
+<td style="text-align:right;">
+14.74
+</td>
+<td style="text-align:right;">
+22.96
+</td>
+<td style="text-align:right;">
+45934370
+</td>
+<td style="text-align:right;">
+16410580
+</td>
+<td style="text-align:right;">
+2.74
+</td>
+<td style="text-align:right;">
+7162000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2013
+</td>
+<td style="text-align:right;">
+15.06
+</td>
+<td style="text-align:right;">
+23.73
+</td>
+<td style="text-align:right;">
+45744430
+</td>
+<td style="text-align:right;">
+16615160
+</td>
+<td style="text-align:right;">
+2.79
+</td>
+<td style="text-align:right;">
+7400000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2014
+</td>
+<td style="text-align:right;">
+14.68
+</td>
+<td style="text-align:right;">
+22.81
+</td>
+<td style="text-align:right;">
+44879260
+</td>
+<td style="text-align:right;">
+15714050
+</td>
+<td style="text-align:right;">
+2.89
+</td>
+<td style="text-align:right;">
+7498000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2015
+</td>
+<td style="text-align:right;">
+14.13
+</td>
+<td style="text-align:right;">
+21.08
+</td>
+<td style="text-align:right;">
+42814880
+</td>
+<td style="text-align:right;">
+14487350
+</td>
+<td style="text-align:right;">
+2.94
+</td>
+<td style="text-align:right;">
+7452000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2016
+</td>
+<td style="text-align:right;">
+13.69
+</td>
+<td style="text-align:right;">
+20.06
+</td>
+<td style="text-align:right;">
+41494300
+</td>
+<td style="text-align:right;">
+13698100
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+7057000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:right;">
+13.24
+</td>
+<td style="text-align:right;">
+19.36
+</td>
+<td style="text-align:right;">
+40286060
+</td>
+<td style="text-align:right;">
+13268380
+</td>
+<td style="text-align:right;">
+3.02
+</td>
+<td style="text-align:right;">
+6914000
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
