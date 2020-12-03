@@ -85,20 +85,47 @@ Regions were defined according to the United States Census definitions of US reg
 
 ### *Discussion*
 
-What were your findings? Are they what you expect? What insights into the data can you make?
-
 There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties in which more than 35 percent of total people are food insecure. 
 
 Preliminary analysis of the box plot data shows substantial variation in food insecurity between several selected counties within New York state. We selected Kings, Bronx, New York, Queens, Westchester, Albany, Chautauqua and Saint Lawrence counties to compare food insecurity across both rural and urban communities. 
 
 On a state level, Mississippi was shown to have the highest rate of overall food insecurity, while North Dakota had the lowest. Regionally, the South had the highest rates of overall and child food insecurity, and the Northeast had the lowest. Due to population size differences, the Northeast, however, had the greatest number of total food insecure individuals and food insecure children. 
 
-The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.2% to about 13.2%.  The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).
+The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.16% to about 13.24%.  The average child food insecurity rate has also been decreasing, from about 25.8% to 19.36%.  The average rate of child food insecurity in the USA is consistently higher than the overall average rate of food insecurity from year to year.
 
-INSERT SUMMARY TABLES HERE :
- map_the_meal_gap_df %>% group_by(year) %>% summarize(sum(number_food_insecure_children))
+Correspondingly, the number of food insecure individuals in the entire USA has been slowly decreasing from 2009 to 2017 from almost 47 million (46,972,100) to just above than 40 million (40,286,060).  The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).
 
-map_the_meal_gap_df %>% group_by(year) %>% summarize(sum(number_food_insecure_children, na.rm = TRUE))
+The average cost per meal decreased from about `$2.55` to `$2.52` from 2009 to 2010 but after 2010 has been steadily increasing.  In 2017 the average cost per meal was `$3.02`.
+
+```{r summary table 1, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(kableExtra)
+map_the_meal_gap_df = read_csv("./map_the_meal_gap_df.csv")
+
+map_the_meal_gap_df %>%
+  mutate(fi_rate = fi_rate * 100,
+         child_fi_rate = child_fi_rate * 100) %>%
+  group_by(year) %>%
+  summarize(signif(mean(fi_rate), digits = 4),
+            signif(mean(child_fi_rate, na.rm = TRUE), digits = 4),
+            sum(number_food_insecure_individuals, na.rm = TRUE),
+            sum(number_food_insecure_children, na.rm = TRUE),
+            signif(mean(cost_per_meal, na.rm = TRUE), digits = 3),
+            signif(mean(weighted_annual_food_budget_shortfall, na.rm = TRUE), digits = 4)) %>%
+  rename(Year = year,
+         `Avg FI Rate(%)` = `signif(mean(fi_rate), digits = 4)`,
+         `Avg Child FI Rate(%)` = `signif(mean(child_fi_rate, na.rm = TRUE), digits = 4)`,
+         `Total Num FI Indvs` = `sum(number_food_insecure_individuals, na.rm = TRUE)`,
+         `Total Num FI Children` = `sum(number_food_insecure_children, na.rm = TRUE)`,
+         `Avg Cost Per Meal` = `signif(mean(cost_per_meal, na.rm = TRUE), digits = 3)`,
+         `Avg Weighted Annual \n Food Budget Shortfall($)` = `signif(...)`) %>%
+  kbl(caption = "National Food Insecurity Metrics") %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+```
+
+
+
+
 
 
 

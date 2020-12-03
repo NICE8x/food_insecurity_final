@@ -14,6 +14,7 @@
 
 <title>Food Insecurity Project Report</title>
 
+<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -27,6 +28,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -431,7 +434,7 @@ Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-r
 <ul>
 <li>Which counties, states and regions are most disproportionately affected by food insecurity?</li>
 <li>What are the demographic breakdowns of food insecure counties?</li>
-<li>How has food insecurity changed overtime in NY state?</li>
+<li>How has food insecurity changed overtime in the USA and specifically NY state?</li>
 <li>And, can we visualize food insecurity in an accessible way to give people information on how they can help and/or access nutrition assistance resources?</li>
 </ul>
 </div>
@@ -439,7 +442,8 @@ Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-r
 <div id="data-source-scraping-method-cleaning-etc." class="section level2">
 <h2>Data: Source, scraping method, cleaning, etc.</h2>
 <p>We utilized Feeding America’s Map the Meal Gap data to quantify food insecurity on a county and regional level. <a href="./Map%20the%20Meal%20Gap%20Overview%20and%20FAQ%2010.2020.pdf">Map the Meal Gap</a> is an annual study conducted by Feeding America to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. For this project, we used Map the Meal Gap annual study reports from years 2011 to 2019, where each report is based on US Census data from the preceding two years. Thus, the study data range from years 2009 - 2017.</p>
-<p>Each report presents estimates of 15 food insecurity indicators generated using predictive modeling. These include variables such as overall and child food insecurity rate, and the number of food insecure people and children. Data were presented on the state, county, and congressional district-level. For this project, we used county-level data.</p>
+<p>Each report presents estimates of 15 food insecurity indicators generated using predictive modeling. Data were presented on the state, county, and congressional district-level. For this project, we used county-level data. We chose to specifically focus on 8 of those 15 indicators for our analysis.</p>
+<p>8 Food Insecurity Indicators: - Food Insecurity Rate(the % of food insecure people) - Number of Food Insecure Individuals - Weighted Annual Food Budget Shortfall($) - Cost Per Meal(Average cost per meal in $) - Child Food Insecurity Rate(the % of food insecure children) - Number of Food Insecure Children - % of Children in Food Insecure Households with Household Incomes Below 185% of the Federal Poverty Level - % of Children in Food Insecure Households with Household Incomes Above 185% of the Federal Poverty Level</p>
 <p>As these data were contained on multiple Excel files, we used the map function to import the data across files. Since column naming was not always consistent across files, the coalesce function was used to combine data from columns representing the same variables. We then generated a unique county-state field, and re-valued select county entries using stringr to be consistent with the US Healthcare.gov Geocodes dataset county naming convention (<a href="https://data.healthcare.gov/resource/geocodes-usa-with-counties.json" class="uri">https://data.healthcare.gov/resource/geocodes-usa-with-counties.json</a>).</p>
 <p>In addition to the Map the Meal Gap data, we also used 2017 US Census American Community Survey (ACS) datasets (link to site), which provide county-level breakdowns of relevant social determinants of health, including county racial and ethnic makeup, percent uninsured, percent foreign born, educational attainment breakdowns, and income category breakdowns. We merged these datasets on the county variable to generate a singular tidied table containing county-level food insecurity estimates and demographic breakdowns.</p>
 <p>Like the Map the Meal Gap data, the ACS data were contained on multiple CSV files. Thus, we used the map function to import the data across files. To merge this dataset with the Map the Meal Gap data on the county variable, we also re-valued county entries using stringr to be consistent with the above mentioned county naming convention.</p>
@@ -448,7 +452,6 @@ Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-r
 </div>
 <div id="exploratory-analysis" class="section level2">
 <h2><em>Exploratory analysis</em></h2>
-<p>Visualizations, summaries, and exploratory statistical analyses. Justify the steps you took, and show any major changes to your ideas. Additional analysis: If you undertake formal statistical analyses, describe these in detail</p>
 <div id="animated-scatterplots" class="section level3">
 <h3><em>Animated Scatterplots</em></h3>
 <p>To create the animated scatterplots, we joined the tidy American Community Survey data with the tidy Feeding America data to develop datasets containing specific variables of interest to compare against food insecurity rates. These variables included race, education level of attainment, insurance status, and income bracket within each county in the U.S. To compare these variables against the food insecurity rate, we converted the counts to percents.</p>
@@ -457,8 +460,8 @@ Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-r
 </div>
 <div id="united-states-food-insecurity-shinyapp-maps" class="section level2">
 <h2><em>United States Food Insecurity ShinyApp Maps</em></h2>
-<p>To view geographic trends in food insecurity indicators across the United States, we also generated an interactive county map of the US which allows users to view and compare food insecurity measures across all counties simultaneously. Users may select the food insecurity metric of interest, as well as the year and particular states, if desired.</p>
-<p>We also created an interactive map which contains the locations of food banks around the United States to encourage utilization and/or donation.</p>
+<p>To view geographic trends in food insecurity indicators across the United States and over time, we also generated an interactive county map of the US which allows users to view and compare food insecurity measures across all counties simultaneously. Users may select the food insecurity metric of interest, as well as the year and particular states, if desired.</p>
+<p>We also created an interactive map which contains the locations of food banks across the United States to encourage utilization and/or donation.</p>
 </div>
 <div id="box-plots" class="section level2">
 <h2><em>Box Plots</em></h2>
@@ -466,13 +469,274 @@ Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-r
 <p>Regions were defined according to the United States Census definitions of US regions. (link to site)</p>
 <div id="discussion" class="section level3">
 <h3><em>Discussion</em></h3>
-<p>What were your findings? Are they what you expect? What insights into the data can you make?</p>
 <p>There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties in which more than 35 percent of total people are food insecure.</p>
 <p>Preliminary analysis of the box plot data shows substantial variation in food insecurity between several selected counties within New York state. We selected Kings, Bronx, New York, Queens, Westchester, Albany, Chautauqua and Saint Lawrence counties to compare food insecurity across both rural and urban communities.</p>
 <p>On a state level, Mississippi was shown to have the highest rate of overall food insecurity, while North Dakota had the lowest. Regionally, the South had the highest rates of overall and child food insecurity, and the Northeast had the lowest. Due to population size differences, the Northeast, however, had the greatest number of total food insecure individuals and food insecure children.</p>
-<p>The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.2% to about 13.2%. The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).</p>
-<p>INSERT SUMMARY TABLES HERE : map_the_meal_gap_df %&gt;% group_by(year) %&gt;% summarize(sum(number_food_insecure_children))</p>
-<p>map_the_meal_gap_df %&gt;% group_by(year) %&gt;% summarize(sum(number_food_insecure_children, na.rm = TRUE))</p>
+<p>The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.16% to about 13.24%. The average child food insecurity rate has also been decreasing, from about 25.8% to 19.36%. The average rate of child food insecurity in the USA is consistently higher than the overall average rate of food insecurity from year to year.</p>
+<p>Correspondingly, the number of food insecure individuals in the entire USA has been slowly decreasing from 2009 to 2017 from almost 47 million (46,972,100) to just above than 40 million (40,286,060). The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).</p>
+<p>The average cost per meal decreased from about <code>$2.55</code> to <code>$2.52</code> from 2009 to 2010 but after 2010 has been steadily increasing. In 2017 the average cost per meal was <code>$3.02</code>.</p>
+<pre class="r"><code>library(tidyverse)
+library(kableExtra)
+map_the_meal_gap_df = read_csv(&quot;./map_the_meal_gap_df.csv&quot;)
+
+map_the_meal_gap_df %&gt;%
+  mutate(fi_rate = fi_rate * 100,
+         child_fi_rate = child_fi_rate * 100) %&gt;%
+  group_by(year) %&gt;%
+  summarize(signif(mean(fi_rate), digits = 4),
+            signif(mean(child_fi_rate, na.rm = TRUE), digits = 4),
+            sum(number_food_insecure_individuals, na.rm = TRUE),
+            sum(number_food_insecure_children, na.rm = TRUE),
+            signif(mean(cost_per_meal, na.rm = TRUE), digits = 3),
+            signif(mean(weighted_annual_food_budget_shortfall, na.rm = TRUE), digits = 4)) %&gt;%
+  rename(Year = year,
+         `Avg FI Rate(%)` = `signif(mean(fi_rate), digits = 4)`,
+         `Avg Child FI Rate(%)` = `signif(mean(child_fi_rate, na.rm = TRUE), digits = 4)`,
+         `Total Num FI Indvs` = `sum(number_food_insecure_individuals, na.rm = TRUE)`,
+         `Total Num FI Children` = `sum(number_food_insecure_children, na.rm = TRUE)`,
+         `Avg Cost Per Meal` = `signif(mean(cost_per_meal, na.rm = TRUE), digits = 3)`,
+         `Avg Weighted Annual \n Food Budget Shortfall($)` = `signif(...)`) %&gt;%
+  kbl(caption = &quot;National Food Insecurity Metrics&quot;) %&gt;%
+  kable_classic(full_width = F, html_font = &quot;Cambria&quot;)</code></pre>
+<table class=" lightable-classic" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+National Food Insecurity Metrics
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Year
+</th>
+<th style="text-align:right;">
+Avg FI Rate(%)
+</th>
+<th style="text-align:right;">
+Avg Child FI Rate(%)
+</th>
+<th style="text-align:right;">
+Total Num FI Indvs
+</th>
+<th style="text-align:right;">
+Total Num FI Children
+</th>
+<th style="text-align:right;">
+Avg Cost Per Meal
+</th>
+<th style="text-align:right;">
+Avg Weighted Annual Food Budget Shortfall($)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+2009
+</td>
+<td style="text-align:right;">
+16.16
+</td>
+<td style="text-align:right;">
+25.80
+</td>
+<td style="text-align:right;">
+46972100
+</td>
+<td style="text-align:right;">
+18281540
+</td>
+<td style="text-align:right;">
+2.55
+</td>
+<td style="text-align:right;">
+6325000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2010
+</td>
+<td style="text-align:right;">
+15.57
+</td>
+<td style="text-align:right;">
+23.10
+</td>
+<td style="text-align:right;">
+46657180
+</td>
+<td style="text-align:right;">
+16236840
+</td>
+<td style="text-align:right;">
+2.52
+</td>
+<td style="text-align:right;">
+6465000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2011
+</td>
+<td style="text-align:right;">
+14.71
+</td>
+<td style="text-align:right;">
+22.53
+</td>
+<td style="text-align:right;">
+46368470
+</td>
+<td style="text-align:right;">
+16168360
+</td>
+<td style="text-align:right;">
+2.63
+</td>
+<td style="text-align:right;">
+6513000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2012
+</td>
+<td style="text-align:right;">
+14.74
+</td>
+<td style="text-align:right;">
+22.96
+</td>
+<td style="text-align:right;">
+45934370
+</td>
+<td style="text-align:right;">
+16410580
+</td>
+<td style="text-align:right;">
+2.74
+</td>
+<td style="text-align:right;">
+7162000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2013
+</td>
+<td style="text-align:right;">
+15.06
+</td>
+<td style="text-align:right;">
+23.73
+</td>
+<td style="text-align:right;">
+45744430
+</td>
+<td style="text-align:right;">
+16615160
+</td>
+<td style="text-align:right;">
+2.79
+</td>
+<td style="text-align:right;">
+7400000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2014
+</td>
+<td style="text-align:right;">
+14.68
+</td>
+<td style="text-align:right;">
+22.81
+</td>
+<td style="text-align:right;">
+44879260
+</td>
+<td style="text-align:right;">
+15714050
+</td>
+<td style="text-align:right;">
+2.89
+</td>
+<td style="text-align:right;">
+7498000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2015
+</td>
+<td style="text-align:right;">
+14.13
+</td>
+<td style="text-align:right;">
+21.08
+</td>
+<td style="text-align:right;">
+42814880
+</td>
+<td style="text-align:right;">
+14487350
+</td>
+<td style="text-align:right;">
+2.94
+</td>
+<td style="text-align:right;">
+7452000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2016
+</td>
+<td style="text-align:right;">
+13.69
+</td>
+<td style="text-align:right;">
+20.06
+</td>
+<td style="text-align:right;">
+41494300
+</td>
+<td style="text-align:right;">
+13698100
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+7057000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:right;">
+13.24
+</td>
+<td style="text-align:right;">
+19.36
+</td>
+<td style="text-align:right;">
+40286060
+</td>
+<td style="text-align:right;">
+13268380
+</td>
+<td style="text-align:right;">
+3.02
+</td>
+<td style="text-align:right;">
+6914000
+</td>
+</tr>
+</tbody>
+</table>
 <p>Box plots: Make sure titles are standardized (caps vs lowercase) Axis labels</p>
 <p>General: Remove names/dates Make neat/label code Write home page abstract Add on home page contributor list at bottom (alphabetical order by last name)</p>
 </div>
@@ -636,8 +900,6 @@ animate(fi_rates_region, fps = 10, height = 500, width = 1000)</code></pre>
   
 animate(num_fi_region, fps = 10, height = 500, width = 1000)</code></pre>
 <p><img src="project_report_files/figure-html/unnamed-chunk-4-1.gif" /><!-- --></p>
-<p>Line plot of NY state counties overtime</p>
-<p><img src="project_report_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 </div>
 
 
