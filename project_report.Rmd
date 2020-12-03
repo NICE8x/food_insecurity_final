@@ -23,18 +23,19 @@ Image from [Center on Budget and Policy Priorities](https://www.cbpp.org/food-in
 
 As a result of the increasing prevalence of food insecurity during the COVID-19 pandemic, we are collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health. 
 
-This is of particular importance, since research has shown the COVID-19 pandemic to be disproportionately impacting many of these same sub-populations. Moreover, a majority of food insecure individuals surveyed in Feeding America's 2014 Hunger in America study report having to choose between food and medical care. Increasing financial burden in 2020 due to job and/or health insurance loss may be further enhancing this effect.  
+This is of particular importance, since research has shown the COVID-19 pandemic to be disproportionately impacting many of these same sub-populations. Moreover, a majority of food insecure individuals surveyed in Feeding America's 2014 Hunger in America study reported having to choose between food and medical care. Increasing financial burden in 2020 due to job and/or health insurance loss may be further exacerbating this phenomenon.
 
-Thus, identifying the specific regions and/or sub-populations at the greatest risk for food insecurity is imperative to enact targeted, effective public health intervention strategies, which reduce preventable morbidity and mortality.
+Thus, identifying the specific regions and/or sub-populations at the greatest risk for food insecurity is essential to develop and enact targeted, effective intervention strategies to reduce the burden of food insecurity.
 
 ### *Project goals*
 
 Initial questions: What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?
 
 Initially, our overarching question was, what does the food disparity across the United States look like on national, regional and county-levels? After investigating the variables in our datasets, we developed more specific research questions, including:
-- Which counties, states and regions are most disproportionately affected?
-- What are the demographic breakdowns of food insecure individuals? Are affected individuals of predominantly one race? Do they reside in specific income brackets, for example?
-- And, can we visualize food insecurity in an accessible way to give people  information on how they can access resources and/or donate? 
+- Which counties, states and regions are most disproportionately affected by food insecurity?
+- What are the demographic breakdowns of food insecure counties? 
+- How has food insecurity changed overtime in NY state? 
+- And, can we visualize food insecurity in an accessible way to give people information on how they can help and/or access nutrition assistance resources? 
 
 ## Data: Source, scraping method, cleaning, etc.
 
@@ -53,32 +54,33 @@ In order to map these data elements onto a US county map, we also joined the zip
 
 Finally a list of food banks from the Feeding America website was scraped by running a shell of the Docker software in R.  Docker was used to click the button on the website hiding the data and then the correct data was scraped using the CSS selector tool to identify the data’s CSS selectors.  This data was also matched to the zip code, latitude and longitude data elements in order to map the food bank locations.
 
-Exploratory analysis: Visualizations, summaries, and exploratory statistical analyses. Justify the steps you took, and show any major changes to your ideas.
+## *Exploratory analysis* 
+
+Visualizations, summaries, and exploratory statistical analyses. Justify the steps you took, and show any major changes to your ideas.
 Additional analysis: If you undertake formal statistical analyses, describe these in detail
 
-Animated Scatterplots
+### *Animated Scatterplots*
  
 To create the animated scatterplots, we joined the tidy American Community Survey data with the tidy Feeding America data to develop datasets containing specific variables of interest to compare against food insecurity rates. These variables included race, education level of attainment, insurance status, and income bracket within each county in the U.S. To compare these variables against the food insecurity rate, we converted the counts to percents.
  
 Using `gganimate` we created animated scatterplots that transition through the levels of each demographic variable with percent level on the y-axis, and food insecurity measure on the x-axis.
 
-
-United States Food Insecurity ShinyApp Maps
+## *United States Food Insecurity ShinyApp Maps*
 
 To view geographic trends in food insecurity indicators across the United States, we also generated an interactive county map of the US which allows users to view and compare food insecurity measures across all counties simultaneously. Users may select the food insecurity metric of interest, as well as the year and particular states, if desired. 
  
 We also created an interactive map which contains the locations of food banks around the United States to encourage utilization and/or donation. 
 
-
-
-Box Plots
+## *Box Plots*
 
 To supplement the above exploratory analyses, we became interested in comparing and characterizing the prevalence of food insecurity within i) select New York state counties, ii) US states, and iii) US regions. We generated animated boxplots which transition through four food insecurity indicators: overall food insecurity rate, the total number of food insecure individuals, child food insecurity rate and the number of food insecure children. 
 
 Regions were defined according to the United States Census definitions of US regions. (link to site) 
  
 
-Discussion: What were your findings? Are they what you expect? What insights into the data can you make?
+### *Discussion*
+
+What were your findings? Are they what you expect? What insights into the data can you make?
 
 There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties in which more than 35 percent of total people are food insecure. 
 

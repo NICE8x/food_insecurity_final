@@ -12,6 +12,7 @@ output:
 library(tidyverse)
 library(plotly)
 library(flexdashboard)
+library(gganimate)
 
 knitr::opts_chunk$set(
 	echo = TRUE,
@@ -51,7 +52,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
   ) %>%
   mutate(
     rate = str_replace(rate, "fi_rate", "Overall Food Insecurity Rate"),
-    rate = str_replace(rate, "child_Food Insecurity Rate", "Child Food Insecurity Rate"),
+    rate = str_replace(rate, "child_Overall Food Insecurity", "Child Food Insecurity Rate"),
     county = str_replace(county, "albany", "Albany"),
     county = str_replace(county, "bronx", "Bronx"),
     county = str_replace(county, "chautauqua", "Chautauqua"),
@@ -63,7 +64,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     county = factor(county, levels = c("Bronx", "Kings", "Saint Lawrence", "Chautauqua", 
                                        "New York", "Queens", "Albany", "Westchester"))
     ) %>%
-  ggplot(aes(x = county, y = measure, color = rate)) + 
+  ggplot(aes(x = county, y = measure, color = county)) + 
   geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
     title = '{closest_state}',
@@ -106,7 +107,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     county = factor(county, levels = c("Kings", "Bronx", "Queens", "New York", 
                               "Westchester",  "Albany", "Chautauqua", "Saint Lawrence"))
     ) %>%
-  ggplot(aes(x = county, y = number, color = indicator)) + 
+  ggplot(aes(x = county, y = number, color = county)) + 
   geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
     title = '{closest_state}',
@@ -152,9 +153,9 @@ fi_rates_region =
     values_to = "measure"
   ) %>%
   mutate(
-    mean_rate = str_replace(mean_rate, "mean_fi_rate", "Mean Food Insecurity Rate"),
-    mean_rate = str_replace(mean_rate, "mean_child_fi_rate", "Mean Child Food Insecurity Rate")) %>%
-  ggplot(aes(x = region, y = measure, color = mean_rate)) + 
+    mean_rate = str_replace(mean_rate, "mean_fi", "Mean Food Insecurity Rate"),
+    mean_rate = str_replace(mean_rate, "mean_child_fi", "Mean Child Food Insecurity Rate")) %>%
+  ggplot(aes(x = region, y = measure, color = region)) + 
   geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
     title = '{closest_state}',
@@ -190,7 +191,7 @@ num_fi_region =
   mutate(
     tot_num = str_replace(tot_num, "tot_num_fi", "Total Number of Total Food Insecure Individuals"),
     tot_num = str_replace(tot_num, "tot_num_child_fi", "Total Number of Food Insecure Children")) %>%
-  ggplot(aes(x = region, y = measure, color = tot_num)) + 
+  ggplot(aes(x = region, y = measure, color = region)) + 
   geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
     title = '{closest_state}',
@@ -207,7 +208,11 @@ animate(num_fi_region, fps = 10, height = 500, width = 1000)
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 read_csv("map_the_meal_gap_df.csv") %>%
   mutate(state = fct_reorder(state, desc(fi_rate))) %>%
-  plot_ly(y = ~fi_rate, color = ~state, type = "box", colors = "viridis")
+  plot_ly(y = ~fi_rate, color = ~state, type = "box", colors = "viridis") %>%
+  layout(
+    title = "Food Insecurity Rate by US State",
+    xaxis = list(title = "State"),
+    yaxis = list(title = "Food Insecurity Rate")) 
 #add axis labels and rotate x axis state names
 ```
 
