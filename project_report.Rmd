@@ -95,7 +95,7 @@ Finally a list of food banks from the Feeding America website was scraped by run
  
 To create the animated scatterplots, we joined the tidy American Community Survey data with the tidy Feeding America data to develop datasets containing specific variables of interest to compare against food insecurity rates. These variables included race, education level of attainment, insurance status, and income bracket within each county in the U.S. To compare these variables against the food insecurity rate, we converted the counts to percents.
  
-Using `gganimate` we created animated scatterplots that transition through the levels of each demographic variable with percent level on the y-axis, and food insecurity measure on the x-axis.
+Using `gganimate` we created [animated scatterplots](https://nice8x.github.io/food_insecurity_final/dashboard_1.html) that transition through the levels of each demographic variable with percent level on the y-axis, and food insecurity measure on the x-axis.
 
 ```{r, warning = FALSE, message = FALSE}
 # Create dataset containing percent of each race within each county using tidy-ed CSV file
@@ -136,13 +136,13 @@ race_per_plot =
 animate(race_per_plot, fps = 5, height = 500, width = 1000)
 ```
 
-## United States Food Insecurity ShinyApp Maps
+### *United States Food Insecurity ShinyApp Maps*
 
-To view geographic trends in food insecurity indicators across the United States and over time, we also generated an interactive county map of the US which allows users to view and compare food insecurity measures across all counties simultaneously. Users may select the food insecurity metric of interest, as well as the year and particular states, if desired. 
+To view geographic trends in food insecurity indicators across the United States and over time, we also generated an interactive [county map](https://tessas.shinyapps.io/countymaps/) of the US which allows users to view and compare food insecurity measures across all counties simultaneously. Users may select the food insecurity metric of interest, as well as the year and particular states, if desired. 
  
-We also created an interactive map which contains the locations of food banks across the United States to encourage utilization and/or donation. 
+We also created an [interactive map](https://tessas.shinyapps.io/countymaps/) which contains the locations of food banks across the United States to encourage utilization and/or donation. 
 
-## Box Plots
+### *Box Plots*
 
 To supplement the above exploratory analyses, we became interested in comparing and characterizing the prevalence of food insecurity within i) select New York state counties, ii) US states, and iii) US regions. We generated animated boxplots which transition through four food insecurity indicators: overall food insecurity rate, the total number of food insecure individuals, child food insecurity rate and the number of food insecure children. 
 
@@ -243,6 +243,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     y = "Food Insecurity Rate"
   ) +
   theme_bw() +
+  theme(text = element_text(size = 20)) +
   transition_states(rate, transition_length = 1, state_length = 3, wrap = TRUE)
   
 animate(fi_rates, fps = 10, height = 500, width = 1000)
@@ -285,6 +286,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     y = "Number of Food Insecure Individuals/Children"
   ) +
   theme_bw() +
+  theme(text = element_text(size = 20)) +
   transition_states(indicator, transition_length = 1, state_length = 3, wrap = TRUE)
   
 animate(fi_numbers, fps = 10, height = 500, width = 1000)
@@ -335,6 +337,7 @@ fi_rates_region =
     y = "Food Insecurity Measure"
   ) +
   theme_bw() +
+  theme(text = element_text(size = 20)) +
   transition_states(mean_rate, transition_length = 1, state_length = 3, wrap = TRUE)
   
 animate(fi_rates_region, fps = 10, height = 500, width = 1000)
@@ -368,6 +371,7 @@ num_fi_region =
     x = "Region",
     y = "Total Number of Food Insecure People"
   ) +
+  theme(text = element_text(size = 20)) +
   theme_bw() +
   transition_states(tot_num, transition_length = 1, state_length = 3, wrap = TRUE)
   
