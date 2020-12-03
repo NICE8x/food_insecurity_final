@@ -49,6 +49,8 @@ Image from [Center on Budget and Policy Priorities](https://www.cbpp.org/food-in
 
 As a result of the increasing prevalence of food insecurity during the COVID-19 pandemic, we are collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health. 
 
+## Related Work
+
 This is of particular importance, since [research](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/investigations-discovery/hospitalization-death-by-race-ethnicity.html) has shown the COVID-19 pandemic to be disproportionately impacting many of these same sub-populations. Moreover, a majority of food insecure individuals surveyed in Feeding America's 2014 Hunger in America [study](https://www.feedingamerica.org/hunger-in-america/impact-of-hunger#:~:text=Hunger%20and%20health%20are%20deeply,adverse%20effects%20to%20overall%20health.) reported having to choose between food and medical care. Increasing financial burden in 2020 due to job and/or health insurance loss may be further exacerbating this phenomenon.
 
 Thus, identifying the specific regions and/or sub-populations at the greatest risk for food insecurity is essential to develop and enact targeted, effective intervention strategies to reduce the burden of food insecurity.
@@ -63,7 +65,6 @@ Initially, our overarching question was, what does the food disparity across the
 - And, can we visualize food insecurity in an accessible way to give people information on how they can help and/or access nutrition assistance resources? 
 
 ## Data
-### *Source, scraping method, cleaning, etc.*
 
 We utilized Feeding America's Map the Meal Gap data to quantify food insecurity on a county and regional level. [Map the Meal Gap](./Map the Meal Gap Overview and FAQ 10.2020.pdf) is an annual study conducted by Feeding America to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. For this project, we used Map the Meal Gap annual study reports from years 2011 to 2019, where each report is based on US Census data from the preceding two years. Thus, the study data range from years 2009 - 2017.  
 
