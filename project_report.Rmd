@@ -33,7 +33,7 @@ Initially, our overarching question was, what does the food disparity across the
 
 - Which counties, states and regions are most disproportionately affected by food insecurity?
 - What are the demographic breakdowns of food insecure counties? 
-- How has food insecurity changed overtime in NY state? 
+- How has food insecurity changed overtime in the USA and specifically NY state? 
 - And, can we visualize food insecurity in an accessible way to give people information on how they can help and/or access nutrition assistance resources? 
 
 ## Data: Source, scraping method, cleaning, etc.
