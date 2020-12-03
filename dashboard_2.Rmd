@@ -70,6 +70,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     y = "Food Insecurity Rate"
   ) +
   theme_bw() +
+  theme(text = element_text(size = 20)) +
   transition_states(rate, transition_length = 1, state_length = 3, wrap = TRUE)
   
 animate(fi_rates, fps = 10, height = 500, width = 1000)
