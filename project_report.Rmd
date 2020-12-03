@@ -144,9 +144,9 @@ We also created an [interactive map](https://tessas.shinyapps.io/countymaps/) wh
 
 ### *Box Plots*
 
-To supplement the above exploratory analyses, we became interested in comparing and characterizing the prevalence of food insecurity within i) select New York state counties, ii) US states, and iii) US regions. We generated animated boxplots which transition through four food insecurity indicators: overall food insecurity rate, the total number of food insecure individuals, child food insecurity rate and the number of food insecure children. 
+To supplement the above exploratory analyses, we became interested in comparing and characterizing the prevalence of food insecurity within i) select New York state counties, ii) US states, and iii) US regions. We generated [animated boxplots](https://nice8x.github.io/food_insecurity_final/dashboard_2.html) which transition through four food insecurity indicators: overall food insecurity rate, the total number of food insecure individuals, child food insecurity rate and the number of food insecure children. 
 
-Regions were defined according to the United States Census definitions of US regions. (link to site) 
+Regions were defined according to the United States Census definitions of US regions.
  
 
 ## Discussion
