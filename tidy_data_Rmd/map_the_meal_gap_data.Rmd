@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r import libraries}
+#import libraries
 library(tidyverse)
 library(readxl)
 library(rvest)
@@ -21,6 +22,7 @@ library(stringr)
 Import Map the Meal Gap County Data 
 
 ```{r import map the meal data}
+#import Map the Meal Gap County data using map function
 path_1_df = 
 tibble(
 path = list.files("food_insecurity_county1_data"))
@@ -48,6 +50,7 @@ map_the_meal_gap_df = bind_rows(path_1_df, path_2_df)
 Fix the variable types on datasets that do not match the other datasets.
 
 ```{r fix varable types}
+#Fix the variable types on datasets that do not match the other datasets.
 map_the_meal_gap_df[[2]][[1]]$FIPS = as.numeric(map_the_meal_gap_df[[2]][[1]]$FIPS)
 map_the_meal_gap_df[[2]][[2]]$`% FI Btwn Thresholds` = as.numeric(map_the_meal_gap_df[[2]][[2]]$`% FI Btwn Thresholds`)
 map_the_meal_gap_df[[2]][[1]]$`Cost Per Meal` = as.numeric(map_the_meal_gap_df[[2]][[1]]$`Cost Per Meal`)
@@ -57,6 +60,7 @@ map_the_meal_gap_df[[2]][[1]]$`Cost Per Meal` = as.numeric(map_the_meal_gap_df[[
 Unnest the data and clean names.
 
 ```{r unnest}
+#Unnest the data and clean names.
 map_the_meal_gap_df = map_the_meal_gap_df %>%
   unnest(data) %>%
   janitor::clean_names() 
@@ -66,6 +70,7 @@ map_the_meal_gap_df = map_the_meal_gap_df %>%
 Fix the county names to match location data and coalesce the same variables into one column.  Create an additional county_state variable to match data to location data.  Select only the new columns from coalescing.
 
 ```{r mutate}
+#Fix the county names to match location data and coalesce the same variables into one column.  Create an additional county_state variable to match data to location data.  Select only the new columns from coalescing.
 map_the_meal_gap_df = map_the_meal_gap_df %>%
   mutate(year = str_extract(path, "_[0-9]{4}"),
          year = str_remove(year, "_"),
@@ -131,6 +136,7 @@ map_the_meal_gap_df = map_the_meal_gap_df %>%
 Use Docker to go to the Feeding America website and scrape for the names, address/phone number, and website of 200 food banks in America. 
 
 ```{r use docker for food bank list}
+#Use Docker to go to the Feeding America website and scrape for the names, address/phone number, and website of 200 food banks in America. 
 shell('docker run -d -p 4445:4444 selenium/standalone-chrome')
 remDr <- remoteDriver(remoteServerAddr = "localhost", port = 4445L, browserName = "chrome")
 remDr$open()
@@ -149,10 +155,6 @@ food_banks_df = tibble(
   website_list = unlist(map(website_list, function(x){x$getElementText()}))
 )
 
-#write_csv(x = food_banks_df, "food_banks_df.csv")
-
-
-
 remDr$close()
 ```
 
@@ -160,7 +162,7 @@ remDr$close()
 Extract phone number and zip code from the address variable and create new columns for these two additional variables.
 
 ```{r clean up food banks df}
-
+#Extract phone number and zip code from the address variable and create new columns for these two additional variables.
 food_banks_df <- food_banks_df %>%
   mutate(phone_number = str_extract(address_phone, "[1-9]\\d{2}\\.\\d{3}\\.\\d{4}"),
          address_phone = str_replace(address_phone, "[1-9]\\d{2}\\.\\d{3}\\.\\d{4}", ""),
@@ -175,11 +177,13 @@ food_banks_df <- food_banks_df %>%
 Import location data (zip, county, longitude, and latitude) from government website.  Fix county strings to match the Map the Meal Gap Data.  Create a county_state variable to match the data to the Map the Meal Gap Data.  Save data as a csv.
 
 ```{r get county and zipcode info}
+#Import location data (zip, county, longitude, and latitude) from government website.
 location_data = GET("https://data.healthcare.gov/resource/geocodes-usa-with-counties.json",  query = list("$limit" = 42522)) %>% 
   content("text") %>%
   jsonlite::fromJSON() %>%
   as_tibble() 
 
+#Fix county strings to match the Map the Meal Gap Data.  Create a county_state variable to match the data to the Map the Meal Gap Data.  
 location_data = location_data %>%
   mutate(county = tolower(county)) %>%
   select(zip, state, latitude, longitude, county) %>%
@@ -195,6 +199,7 @@ location_data = location_data %>%
   unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
   mutate(county_state = str_replace(county_state, "prince of wales-outer ketchikan_AK", "prince of wales-hyder_AK"))
 
+#Save data as a csv.
 write_csv(x = location_data, "location_data.csv")
 
 ```
@@ -207,10 +212,12 @@ Select one zip code within a county to represent each county and save this data 
 Save the two new csv files.
 
 ```{r join data}
+#Join the food bank data and location data.
 food_banks_df = left_join(food_banks_df, location_data, by = "zip") %>%
   rename(state = state.x) %>%
   select(-state.y)
 
+#Select one zip code within a county to represent each county and save this data as a new dataframe.  Match this new dataframe to the Map the Meal Gap data (joining by county_state).
 random_zip_from_county = location_data %>%
   group_by(county_state) %>%
 filter(row_number() == 1)
@@ -221,13 +228,9 @@ map_the_meal_gap_df = left_join(map_the_meal_gap_df, random_zip_from_county, by 
   select(-state.y, -county.y) %>%
   drop_na(latitude)
 
+#Save the two new csv files.
 write_csv(x = map_the_meal_gap_df, "map_the_meal_gap_df.csv")
 write_csv(x = food_banks_df, "food_banks_df.csv")
-
-
-#new_DF <- map_the_meal_gap_df_2[is.na(map_the_meal_gap_df_2$latitude),]
-
-
 ```
 
 
