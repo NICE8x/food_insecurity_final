@@ -64,10 +64,6 @@ In order to map these data elements onto a US county map, we also joined the zip
 Finally a list of food banks from the Feeding America website was scraped by running a shell of the Docker software in R.  Docker was used to click the button on the website hiding the data and then the correct data was scraped using the CSS selector tool to identify the data’s CSS selectors.  This data was also matched to the zip code, latitude and longitude data elements in order to map the food bank locations.
 
 ## *Exploratory analysis* 
-
-Visualizations, summaries, and exploratory statistical analyses. Justify the steps you took, and show any major changes to your ideas.
-Additional analysis: If you undertake formal statistical analyses, describe these in detail
-
 ### *Animated Scatterplots*
  
 To create the animated scatterplots, we joined the tidy American Community Survey data with the tidy Feeding America data to develop datasets containing specific variables of interest to compare against food insecurity rates. These variables included race, education level of attainment, insurance status, and income bracket within each county in the U.S. To compare these variables against the food insecurity rate, we converted the counts to percents.
@@ -76,9 +72,9 @@ Using `gganimate` we created animated scatterplots that transition through the l
 
 ## *United States Food Insecurity ShinyApp Maps*
 
-To view geographic trends in food insecurity indicators across the United States, we also generated an interactive county map of the US which allows users to view and compare food insecurity measures across all counties simultaneously. Users may select the food insecurity metric of interest, as well as the year and particular states, if desired. 
+To view geographic trends in food insecurity indicators across the United States and over time, we also generated an interactive county map of the US which allows users to view and compare food insecurity measures across all counties simultaneously. Users may select the food insecurity metric of interest, as well as the year and particular states, if desired. 
  
-We also created an interactive map which contains the locations of food banks around the United States to encourage utilization and/or donation. 
+We also created an interactive map which contains the locations of food banks across the United States to encourage utilization and/or donation. 
 
 ## *Box Plots*
 
