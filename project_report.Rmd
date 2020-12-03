@@ -288,7 +288,42 @@ fi_rates_region =
 animate(fi_rates_region, fps = 10, height = 500, width = 1000)
 ``` 
 
-We also compared state-level food insecurity rate across the 50 US states. Click [here](https://nice8x.github.io/food_insecurity_final/dashboard_2.html) to see an interactive boxplot containing state level breakdowns of overall food insecurity rate using the 9 years of data (2009-2017). 
+The following plots show the total numbers of food insecure individuals and children within each US region:
+
+```{r, message = FALSE, warning = FALSE}
+num_fi_region = 
+  merge(food, x_walk, by = "state") %>%
+  mutate(region = str_replace(region, "MW", "Midwest"),
+         region = str_replace(region, "W", "West"),
+         region = str_replace(region, "NE", "Northeast"),
+         region = str_replace(region, "S", "South"),
+         region = factor(region, levels = c("South", "West", "Midwest", "Northeast"))
+         ) %>%
+  group_by(region, year) %>%
+  summarize(tot_num_fi = sum(number_food_insecure_individuals), tot_num_child_fi = sum(number_food_insecure_children)) %>%
+  pivot_longer(
+    tot_num_fi:tot_num_child_fi,
+    names_to = "tot_num",
+    values_to = "measure"
+  ) %>%
+  mutate(
+    tot_num = str_replace(tot_num, "tot_num_fi", "Total Number of Total Food Insecure Individuals"),
+    tot_num = str_replace(tot_num, "tot_num_child_fi", "Total Number of Food Insecure Children")) %>%
+  ggplot(aes(x = region, y = measure, color = region)) + 
+  geom_boxplot(show.legend = FALSE, alpha = 0.8) +
+  labs(
+    title = '{closest_state}',
+    x = "Region",
+    y = "Total Number of Food Insecure People"
+  ) +
+  theme(text = element_text(size = 20)) +
+  theme_bw() +
+  transition_states(tot_num, transition_length = 1, state_length = 3, wrap = TRUE)
+  
+animate(num_fi_region, fps = 10, height = 500, width = 1000)
+``` 
+
+We also compared state-level food insecurity rate across the 50 US states. Click [here](https://nice8x.github.io/food_insecurity_final/dashboard_2.html) to see an interactive boxplot containing state level breakdowns of overall food insecurity rate.
 
 ## Discussion
 
@@ -332,37 +367,3 @@ Number of food insecure people by county
 ## Food Insecurity in US Regions
 
 Number of food insecure people by region
-
-```{r, message = FALSE, warning = FALSE}
-num_fi_region = 
-  merge(food, x_walk, by = "state") %>%
-  mutate(region = str_replace(region, "MW", "Midwest"),
-         region = str_replace(region, "W", "West"),
-         region = str_replace(region, "NE", "Northeast"),
-         region = str_replace(region, "S", "South"),
-         region = factor(region, levels = c("South", "West", "Midwest", "Northeast"))
-         ) %>%
-  group_by(region, year) %>%
-  summarize(tot_num_fi = sum(number_food_insecure_individuals), tot_num_child_fi = sum(number_food_insecure_children)) %>%
-  pivot_longer(
-    tot_num_fi:tot_num_child_fi,
-    names_to = "tot_num",
-    values_to = "measure"
-  ) %>%
-  mutate(
-    tot_num = str_replace(tot_num, "tot_num_fi", "Total Number of Total Food Insecure Individuals"),
-    tot_num = str_replace(tot_num, "tot_num_child_fi", "Total Number of Food Insecure Children")) %>%
-  ggplot(aes(x = region, y = measure, color = region)) + 
-  geom_boxplot(show.legend = FALSE, alpha = 0.8) +
-  labs(
-    title = '{closest_state}',
-    x = "Region",
-    y = "Total Number of Food Insecure People"
-  ) +
-  theme(text = element_text(size = 20)) +
-  theme_bw() +
-  transition_states(tot_num, transition_length = 1, state_length = 3, wrap = TRUE)
-  
-animate(num_fi_region, fps = 10, height = 500, width = 1000)
-``` 
-
