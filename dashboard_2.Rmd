@@ -113,6 +113,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     y = "Number of Food Insecure Individuals/Children"
   ) +
   theme_bw() +
+  theme(text = element_text(size = 20)) +
   transition_states(indicator, transition_length = 1, state_length = 3, wrap = TRUE)
   
 animate(fi_numbers, fps = 10, height = 500, width = 1000)
@@ -161,6 +162,7 @@ fi_rates_region =
     y = "Food Insecurity Measure"
   ) +
   theme_bw() +
+  theme(text = element_text(size = 20)) +
   transition_states(mean_rate, transition_length = 1, state_length = 3, wrap = TRUE)
   
 animate(fi_rates_region, fps = 10, height = 500, width = 1000)
@@ -197,6 +199,7 @@ num_fi_region =
     y = "Total Number of Food Insecure People"
   ) +
   theme_bw() +
+  theme(text = element_text(size = 20)) +
   transition_states(tot_num, transition_length = 1, state_length = 3, wrap = TRUE)
   
 animate(num_fi_region, fps = 10, height = 500, width = 1000)
