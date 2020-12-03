@@ -447,9 +447,12 @@ scale_fill_discrete = scale_fill_viridis_d</code></pre>
 <p><img src="FI_prevalence_by_race.png" /><br />
 Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-reveals-stark-disparities">Center on Budget and Policy Priorities</a></p>
 <p>As a result of the increasing prevalence of food insecurity during the COVID-19 pandemic, we are collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health.</p>
+</div>
+</div>
+<div id="related-work" class="section level2">
+<h2>Related Work</h2>
 <p>This is of particular importance, since <a href="https://www.cdc.gov/coronavirus/2019-ncov/covid-data/investigations-discovery/hospitalization-death-by-race-ethnicity.html">research</a> has shown the COVID-19 pandemic to be disproportionately impacting many of these same sub-populations. Moreover, a majority of food insecure individuals surveyed in Feeding America’s 2014 Hunger in America <a href="https://www.feedingamerica.org/hunger-in-america/impact-of-hunger#:~:text=Hunger%20and%20health%20are%20deeply,adverse%20effects%20to%20overall%20health.">study</a> reported having to choose between food and medical care. Increasing financial burden in 2020 due to job and/or health insurance loss may be further exacerbating this phenomenon.</p>
 <p>Thus, identifying the specific regions and/or sub-populations at the greatest risk for food insecurity is essential to develop and enact targeted, effective intervention strategies to reduce the burden of food insecurity.</p>
-</div>
 </div>
 <div id="initial-questions" class="section level2">
 <h2>Initial Questions</h2>
@@ -463,8 +466,6 @@ Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-r
 </div>
 <div id="data" class="section level2">
 <h2>Data</h2>
-<div id="source-scraping-method-cleaning-etc." class="section level3">
-<h3><em>Source, scraping method, cleaning, etc.</em></h3>
 <p>We utilized Feeding America’s Map the Meal Gap data to quantify food insecurity on a county and regional level. <a href="./Map%20the%20Meal%20Gap%20Overview%20and%20FAQ%2010.2020.pdf">Map the Meal Gap</a> is an annual study conducted by Feeding America to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. For this project, we used Map the Meal Gap annual study reports from years 2011 to 2019, where each report is based on US Census data from the preceding two years. Thus, the study data range from years 2009 - 2017.</p>
 <p>Each report presents estimates of 15 food insecurity indicators generated using predictive modeling. Data were presented on the state, county, and congressional district-level. For this project, we used county-level data. We chose to specifically focus on 8 of those 15 indicators for our analysis.</p>
 <p>8 Food Insecurity Indicators: - Food Insecurity Rate(the % of food insecure people) - Number of Food Insecure Individuals - Weighted Annual Food Budget Shortfall($) - Cost Per Meal(Average cost per meal in $) - Child Food Insecurity Rate(the % of food insecure children) - Number of Food Insecure Children - % of Children in Food Insecure Households with Household Incomes Below 185% of the Federal Poverty Level - % of Children in Food Insecure Households with Household Incomes Above 185% of the Federal Poverty Level</p>
@@ -473,7 +474,6 @@ Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-r
 <p>Like the Map the Meal Gap data, the ACS data were contained on multiple CSV files. Thus, we used the map function to import the data across files. To merge this dataset with the Map the Meal Gap data on the county variable, we also re-valued county entries using stringr to be consistent with the above mentioned county naming convention.</p>
 <p>In order to map these data elements onto a US county map, we also joined the zip code, latitude and longitude fields from the US Healthcare.gov Geocodes dataset onto the table. Federal Information Processing Standards (FIPS) county codes were also separately joined onto the tidied table from an educational website. (<a href="https://mdreducation.com/" class="uri">https://mdreducation.com/</a> &gt;pdfs &gt; US_FIPS_Codes)</p>
 <p>Finally a list of food banks from the Feeding America website was scraped by running a shell of the Docker software in R. Docker was used to click the button on the website hiding the data and then the correct data was scraped using the CSS selector tool to identify the data’s CSS selectors. This data was also matched to the zip code, latitude and longitude data elements in order to map the food bank locations.</p>
-</div>
 </div>
 <div id="exploratory-analysis" class="section level2">
 <h2>Exploratory analysis</h2>
