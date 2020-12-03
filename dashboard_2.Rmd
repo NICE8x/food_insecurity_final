@@ -211,9 +211,8 @@ read_csv("map_the_meal_gap_df.csv") %>%
   plot_ly(y = ~fi_rate, color = ~state, type = "box", colors = "viridis") %>%
   layout(
     title = "Food Insecurity Rate by US State",
-    xaxis = list(title = "State"),
+    xaxis = list(title = "State", tickfont = list(size = 10)),
     yaxis = list(title = "Food Insecurity Rate")) 
-#add axis labels and rotate x axis state names
 ```
 
 
