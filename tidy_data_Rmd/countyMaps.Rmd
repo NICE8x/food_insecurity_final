@@ -108,8 +108,6 @@ renderPrint(
   input[["food insecurity metric"]]
 )
 
-#state_abbs = c(state.abb, "DC")
-
 selectInput(
   "state",
   h3("State"),
