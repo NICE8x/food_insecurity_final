@@ -14,7 +14,6 @@
 
 <title>Food Insecurity Project Report</title>
 
-<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -414,6 +413,28 @@ div.tocify {
 </div>
 
 
+<pre class="r"><code>library(tidyverse)
+library(gganimate)
+library(kableExtra)
+
+
+knitr::opts_chunk$set(
+    echo = TRUE,
+    warning = FALSE,
+    fig.width = 8, 
+  fig.height = 6,
+  out.width = &quot;90%&quot;
+)
+
+theme_set(theme_minimal() + theme(legend.position = &quot;bottom&quot;))
+
+options(
+  ggplot2.continuous.colour = &quot;viridis&quot;,
+  ggplot2.continuous.fill = &quot;viridis&quot;
+)
+
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d</code></pre>
 <div id="motivation" class="section level2">
 <h2><em>Motivation</em></h2>
 <div id="food-insecurity-prevalence-and-significance" class="section level3">
@@ -456,6 +477,43 @@ Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-r
 <h3><em>Animated Scatterplots</em></h3>
 <p>To create the animated scatterplots, we joined the tidy American Community Survey data with the tidy Feeding America data to develop datasets containing specific variables of interest to compare against food insecurity rates. These variables included race, education level of attainment, insurance status, and income bracket within each county in the U.S. To compare these variables against the food insecurity rate, we converted the counts to percents.</p>
 <p>Using <code>gganimate</code> we created animated scatterplots that transition through the levels of each demographic variable with percent level on the y-axis, and food insecurity measure on the x-axis.</p>
+<pre class="r"><code># Create dataset containing percent of each race within each county using tidy-ed CSV file
+race_per_plot =
+  read_csv(&quot;mtm_2017_acs_2017_race_df.csv&quot;) %&gt;%
+    pivot_longer(
+      white:hispanic,
+      names_to = &quot;race&quot;,
+      values_to = &quot;percents&quot;
+    ) %&gt;%
+    mutate(
+      race = str_replace(race, &quot;white&quot;, &quot;White&quot;),
+      race = str_replace(race, &quot;black&quot;, &quot;Black&quot;),
+      race = str_replace(race, &quot;am_ind_al_nat&quot;, &quot;American Indian and Alaska Native&quot;),
+      race = str_replace(race, &quot;asian&quot;, &quot;Asian&quot;),
+      race = str_replace(race, &quot;nat_ha_pac_isl&quot;, &quot;Native Hawaiian and Other Pacific Islander&quot;),
+      race = str_replace(race, &quot;other&quot;, &quot;Other Race&quot;),
+      race = str_replace(race, &quot;two_or_more&quot;, &quot;Two or More Races&quot;),
+      race = str_replace(race, &quot;hispanic&quot;, &quot;Hispanic&quot;)
+    ) %&gt;%
+    select(geo_id, total, race, percents, fi_rate) %&gt;%
+    drop_na() %&gt;%
+    ggplot(aes(x = fi_rate, y = percents, size = total, color = race)) + 
+    geom_point(show.legend = FALSE, alpha = 0.8) +
+    labs(
+      title = &#39;{closest_state}&#39;,
+      x = &quot;Food Insecurity Rate&quot;,
+      y = &quot;% of Individuals of Each Race&quot;
+    ) +
+    theme_bw() +
+    theme(text = element_text(size = 20)) +
+    transition_states(race, transition_length = 1, state_length = 3, wrap = TRUE) + 
+    enter_fade() + 
+    exit_fade() +
+    ease_aes(&#39;cubic-in-out&#39;)
+
+## gganimate with settings
+animate(race_per_plot, fps = 5, height = 500, width = 1000)</code></pre>
+<p><img src="project_report_files/figure-html/unnamed-chunk-2-1.gif" width="90%" /></p>
 </div>
 </div>
 <div id="united-states-food-insecurity-shinyapp-maps" class="section level2">
@@ -475,9 +533,7 @@ Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-r
 <p>The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.16% to about 13.24%. The average child food insecurity rate has also been decreasing, from about 25.8% to 19.36%. The average rate of child food insecurity in the USA is consistently higher than the overall average rate of food insecurity from year to year.</p>
 <p>Correspondingly, the number of food insecure individuals in the entire USA has been slowly decreasing from 2009 to 2017 from almost 47 million (46,972,100) to just above than 40 million (40,286,060). The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).</p>
 <p>The average cost per meal decreased from about <code>$2.55</code> to <code>$2.52</code> from 2009 to 2010 but after 2010 has been steadily increasing. In 2017 the average cost per meal was <code>$3.02</code>. The average weighted annual food budget shortfall in the US increased from about 6.3 million (6,325,000) in 2009 to almost 7.5 million(7,498,000) in 2014. Since 2014 the average weighted annual food budget shortfall has decreased to about 6.9 million(6,914,000) in 2017.</p>
-<pre class="r"><code>library(tidyverse)
-library(kableExtra)
-map_the_meal_gap_df = read_csv(&quot;./map_the_meal_gap_df.csv&quot;)
+<pre class="r"><code>map_the_meal_gap_df = read_csv(&quot;./map_the_meal_gap_df.csv&quot;)
 
 map_the_meal_gap_df %&gt;%
   mutate(fi_rate = fi_rate * 100,
@@ -744,11 +800,7 @@ Avg Weighted Annual Food Budget Shortfall($)
 <div id="food-insecurity-in-ny-state-counties" class="section level2">
 <h2>Food insecurity in NY state counties</h2>
 <p>Food insecurity rates by county</p>
-<pre class="r"><code>library(tidyverse)
-library(ggplot2)
-library(gganimate)
-
-fi_rates = 
+<pre class="r"><code>fi_rates = 
 read_csv(&quot;map_the_meal_gap_df.csv&quot;) %&gt;%
   filter(county_state %in% c(&quot;saint lawrence_NY&quot;, &quot;albany_NY&quot;, &quot;chautauqua_NY&quot;, 
                              &quot;new york_NY&quot;, &quot;queens_NY&quot;, &quot;kings_NY&quot;, &quot;bronx_NY&quot;,
@@ -784,7 +836,7 @@ read_csv(&quot;map_the_meal_gap_df.csv&quot;) %&gt;%
   transition_states(rate, transition_length = 1, state_length = 3, wrap = TRUE)
   
 animate(fi_rates, fps = 10, height = 500, width = 1000)</code></pre>
-<p><img src="project_report_files/figure-html/unnamed-chunk-1-1.gif" /><!-- --></p>
+<p><img src="project_report_files/figure-html/unnamed-chunk-3-1.gif" width="90%" /></p>
 <p>Number of food insecure people by county</p>
 <pre class="r"><code>fi_numbers = 
 read_csv(&quot;map_the_meal_gap_df.csv&quot;) %&gt;%
@@ -822,7 +874,7 @@ read_csv(&quot;map_the_meal_gap_df.csv&quot;) %&gt;%
   transition_states(indicator, transition_length = 1, state_length = 3, wrap = TRUE)
   
 animate(fi_numbers, fps = 10, height = 500, width = 1000)</code></pre>
-<p><img src="project_report_files/figure-html/unnamed-chunk-2-1.gif" /><!-- --></p>
+<p><img src="project_report_files/figure-html/unnamed-chunk-4-1.gif" width="90%" /></p>
 </div>
 <div id="food-insecurity-in-us-regions" class="section level2">
 <h2>Food Insecurity in US Regions</h2>
@@ -868,7 +920,7 @@ fi_rates_region =
   transition_states(mean_rate, transition_length = 1, state_length = 3, wrap = TRUE)
   
 animate(fi_rates_region, fps = 10, height = 500, width = 1000)</code></pre>
-<p><img src="project_report_files/figure-html/unnamed-chunk-3-1.gif" /><!-- --></p>
+<p><img src="project_report_files/figure-html/unnamed-chunk-5-1.gif" width="90%" /></p>
 <p>Number of food insecure people by region</p>
 <pre class="r"><code>num_fi_region = 
   merge(food, x_walk, by = &quot;state&quot;) %&gt;%
@@ -899,7 +951,7 @@ animate(fi_rates_region, fps = 10, height = 500, width = 1000)</code></pre>
   transition_states(tot_num, transition_length = 1, state_length = 3, wrap = TRUE)
   
 animate(num_fi_region, fps = 10, height = 500, width = 1000)</code></pre>
-<p><img src="project_report_files/figure-html/unnamed-chunk-4-1.gif" /><!-- --></p>
+<p><img src="project_report_files/figure-html/unnamed-chunk-6-1.gif" width="90%" /></p>
 </div>
 
 
