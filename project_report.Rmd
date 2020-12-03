@@ -70,6 +70,7 @@ We utilized Feeding America's Map the Meal Gap data to quantify food insecurity 
 Each report presents estimates of 15 food insecurity indicators generated using predictive modeling.  Data were presented on the state, county, and congressional district-level. For this project, we used county-level data.  We chose to specifically focus on 8 of those 15 indicators for our analysis. 
 
 8 Food Insecurity Indicators:
+
 - Food Insecurity Rate(the % of food insecure people)
 - Number of Food Insecure Individuals
 - Weighted Annual Food Budget Shortfall($)

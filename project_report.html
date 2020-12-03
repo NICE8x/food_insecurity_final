@@ -14,7 +14,6 @@
 
 <title>Food Insecurity Project Report</title>
 
-<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -467,7 +466,17 @@ Image from <a href="https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-r
 <h3><em>Source, scraping method, cleaning, etc.</em></h3>
 <p>We utilized Feeding America’s Map the Meal Gap data to quantify food insecurity on a county and regional level. <a href="./Map%20the%20Meal%20Gap%20Overview%20and%20FAQ%2010.2020.pdf">Map the Meal Gap</a> is an annual study conducted by Feeding America to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. For this project, we used Map the Meal Gap annual study reports from years 2011 to 2019, where each report is based on US Census data from the preceding two years. Thus, the study data range from years 2009 - 2017.</p>
 <p>Each report presents estimates of 15 food insecurity indicators generated using predictive modeling. Data were presented on the state, county, and congressional district-level. For this project, we used county-level data. We chose to specifically focus on 8 of those 15 indicators for our analysis.</p>
-<p>8 Food Insecurity Indicators: - Food Insecurity Rate(the % of food insecure people) - Number of Food Insecure Individuals - Weighted Annual Food Budget Shortfall($) - Cost Per Meal(Average cost per meal in $) - Child Food Insecurity Rate(the % of food insecure children) - Number of Food Insecure Children - % of Children in Food Insecure Households with Household Incomes Below 185% of the Federal Poverty Level - % of Children in Food Insecure Households with Household Incomes Above 185% of the Federal Poverty Level</p>
+<p>8 Food Insecurity Indicators:</p>
+<ul>
+<li>Food Insecurity Rate(the % of food insecure people)</li>
+<li>Number of Food Insecure Individuals</li>
+<li>Weighted Annual Food Budget Shortfall($)</li>
+<li>Cost Per Meal(Average cost per meal in $)</li>
+<li>Child Food Insecurity Rate(the % of food insecure children)</li>
+<li>Number of Food Insecure Children</li>
+<li>% of Children in Food Insecure Households with Household Incomes Below 185% of the Federal Poverty Level</li>
+<li>% of Children in Food Insecure Households with Household Incomes Above 185% of the Federal Poverty Level</li>
+</ul>
 <p>As these data were contained on multiple Excel files, we used the map function to import the data across files. Since column naming was not always consistent across files, the coalesce function was used to combine data from columns representing the same variables. We then generated a unique county-state field, and re-valued select county entries using stringr to be consistent with the US Healthcare.gov Geocodes dataset county naming convention (<a href="https://data.healthcare.gov/resource/geocodes-usa-with-counties.json" class="uri">https://data.healthcare.gov/resource/geocodes-usa-with-counties.json</a>).</p>
 <p>In addition to the Map the Meal Gap data, we also used 2017 US Census American Community Survey (ACS) datasets (link to site), which provide county-level breakdowns of relevant social determinants of health, including county racial and ethnic makeup, percent uninsured, percent foreign born, educational attainment breakdowns, and income category breakdowns. We merged these datasets on the county variable to generate a singular tidied table containing county-level food insecurity estimates and demographic breakdowns.</p>
 <p>Like the Map the Meal Gap data, the ACS data were contained on multiple CSV files. Thus, we used the map function to import the data across files. To merge this dataset with the Map the Meal Gap data on the county variable, we also re-valued county entries using stringr to be consistent with the above mentioned county naming convention.</p>
