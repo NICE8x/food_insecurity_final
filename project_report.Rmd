@@ -10,7 +10,7 @@ output:
 ## *Motivation*
 ### *Food Insecurity Prevalence and Significance*
 
-Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 an estimated 40 million Americans (12.5 percent) were food insecure.
+Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 an estimated [40 million Americans](https://www.feedingamerica.org/sites/default/files/research/map-the-meal-gap/2016/2016-map-the-meal-gap-health-implications.pdf) (12.5 percent) were food insecure.
 
 Food insecurity is associated with numerous adverse health outcomes, including mental health problems, diabetes, hypertension, asthma and poorer general health. As a result of the COVID-19 pandemic, millions of Americans have lost stable employment; early estimates suggest more than 50 million people, including 17 million children, may be experiencing food insecurity in 2020. 
 
@@ -23,15 +23,14 @@ Image from [Center on Budget and Policy Priorities](https://www.cbpp.org/food-in
 
 As a result of the increasing prevalence of food insecurity during the COVID-19 pandemic, we are collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health. 
 
-This is of particular importance, since research has shown the COVID-19 pandemic to be disproportionately impacting many of these same sub-populations. Moreover, a majority of food insecure individuals surveyed in Feeding America's 2014 Hunger in America study reported having to choose between food and medical care. Increasing financial burden in 2020 due to job and/or health insurance loss may be further exacerbating this phenomenon.
+This is of particular importance, since [research](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/investigations-discovery/hospitalization-death-by-race-ethnicity.html) has shown the COVID-19 pandemic to be disproportionately impacting many of these same sub-populations. Moreover, a majority of food insecure individuals surveyed in Feeding America's 2014 Hunger in America [study](https://www.feedingamerica.org/hunger-in-america/impact-of-hunger#:~:text=Hunger%20and%20health%20are%20deeply,adverse%20effects%20to%20overall%20health.) reported having to choose between food and medical care. Increasing financial burden in 2020 due to job and/or health insurance loss may be further exacerbating this phenomenon.
 
 Thus, identifying the specific regions and/or sub-populations at the greatest risk for food insecurity is essential to develop and enact targeted, effective intervention strategies to reduce the burden of food insecurity.
 
 ### *Project goals*
 
-Initial questions: What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?
+Initially, our overarching question was, what does the food disparity across the United States look like on national, regional and county-levels? After investigating the variables in our datasets, we developed more specific research questions and goals, including:
 
-Initially, our overarching question was, what does the food disparity across the United States look like on national, regional and county-levels? After investigating the variables in our datasets, we developed more specific research questions, including:
 - Which counties, states and regions are most disproportionately affected by food insecurity?
 - What are the demographic breakdowns of food insecure counties? 
 - How has food insecurity changed overtime in NY state? 
@@ -39,7 +38,7 @@ Initially, our overarching question was, what does the food disparity across the
 
 ## Data: Source, scraping method, cleaning, etc.
 
-We utilized Feeding America's Map the Meal Gap data to quantify food insecurity on a county and regional level. Map the Meal Gap is an annual study conducted by Feeding America to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. For this project, we used Map the Meal Gap annual study reports from years 2011 to 2019, where each report is based on US Census data from the preceding two years. Thus, the study data range from years 2009 - 2017.  
+We utilized Feeding America's Map the Meal Gap data to quantify food insecurity on a county and regional level. [Map the Meal Gap](./Map the Meal Gap Overview and FAQ 10.2020.pdf) is an annual study conducted by Feeding America to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. For this project, we used Map the Meal Gap annual study reports from years 2011 to 2019, where each report is based on US Census data from the preceding two years. Thus, the study data range from years 2009 - 2017.  
 
 Each report presents estimates of 15 food insecurity indicators generated using predictive modeling. These include variables such as overall and child food insecurity rate, and the number of food insecure people and children. Data were presented on the state, county, and congressional district-level. For this project, we used county-level data. 
 
