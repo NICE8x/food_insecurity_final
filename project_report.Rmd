@@ -53,7 +53,7 @@ This is of particular importance, since [research](https://www.cdc.gov/coronavir
 
 Thus, identifying the specific regions and/or sub-populations at the greatest risk for food insecurity is essential to develop and enact targeted, effective intervention strategies to reduce the burden of food insecurity.
 
-### *Project goals*
+## Initial Questions
 
 Initially, our overarching question was, what does the food disparity across the United States look like on national, regional and county-levels? After investigating the variables in our datasets, we developed more specific research questions and goals, including:
 
