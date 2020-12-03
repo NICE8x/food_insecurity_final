@@ -146,74 +146,14 @@ We also created an [interactive map](https://tessas.shinyapps.io/countymaps/) wh
 
 ### *Box Plots*
 
-To supplement the above exploratory analyses, we became interested in comparing and characterizing the prevalence of food insecurity within i) select New York state counties, ii) US states, and iii) US regions. We generated [animated boxplots](https://nice8x.github.io/food_insecurity_final/dashboard_2.html) which transition through four food insecurity indicators: overall food insecurity rate, the total number of food insecure individuals, child food insecurity rate and the number of food insecure children. 
+To supplement the above exploratory analyses, we became interested in comparing and characterizing the prevalence of food insecurity within select New York state counties, and US regions. We generated [animated boxplots](https://nice8x.github.io/food_insecurity_final/dashboard_2.html) which transition through four food insecurity indicators: overall food insecurity rate, the total number of food insecure individuals, child food insecurity rate and the number of food insecure children. 
 
-Regions were defined according to the United States Census definitions of US regions.
- 
-
-## Discussion
-
-There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties in which more than 35 percent of total people are food insecure. 
-
-Preliminary analysis of the box plot data shows substantial variation in food insecurity between several selected counties within New York state. We selected Kings, Bronx, New York, Queens, Westchester, Albany, Chautauqua and Saint Lawrence counties to compare food insecurity across both rural and urban communities. 
-
-On a state level, Mississippi was shown to have the highest rate of overall food insecurity, while North Dakota had the lowest. Regionally, the South had the highest rates of overall and child food insecurity, and the Northeast had the lowest. Due to population size differences, the Northeast, however, had the greatest number of total food insecure individuals and food insecure children. 
-
-The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.16% to about 13.24%.  The average child food insecurity rate has also been decreasing, from about 25.8% to 19.36%.  The average rate of child food insecurity in the USA is consistently higher than the overall average rate of food insecurity from year to year.
-
-Correspondingly, the number of food insecure individuals in the entire USA has been slowly decreasing from 2009 to 2017 from almost 47 million (46,972,100) to just above than 40 million (40,286,060).  The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).
-
-The average cost per meal decreased from about `$2.55` to `$2.52` from 2009 to 2010 but after 2010 has been steadily increasing.  In 2017 the average cost per meal was `$3.02`.  The average weighted annual food budget shortfall in the US increased from about 6.3 million (6,325,000) in 2009 to almost 7.5 million(7,498,000) in 2014.  Since 2014 the average weighted annual food budget shortfall has decreased to about 6.9 million(6,914,000) in 2017. 
-
-```{r summary table 1, message = FALSE, warning = FALSE}
-map_the_meal_gap_df = read_csv("./map_the_meal_gap_df.csv")
-
-map_the_meal_gap_df %>%
-  mutate(fi_rate = fi_rate * 100,
-         child_fi_rate = child_fi_rate * 100) %>%
-  group_by(year) %>%
-  summarize(signif(mean(fi_rate), digits = 4),
-            signif(mean(child_fi_rate, na.rm = TRUE), digits = 4),
-            sum(number_food_insecure_individuals, na.rm = TRUE),
-            sum(number_food_insecure_children, na.rm = TRUE),
-            signif(mean(cost_per_meal, na.rm = TRUE), digits = 3),
-            signif(mean(weighted_annual_food_budget_shortfall, na.rm = TRUE), digits = 4)) %>%
-  rename(Year = year,
-         `Avg FI Rate(%)` = `signif(mean(fi_rate), digits = 4)`,
-         `Avg Child FI Rate(%)` = `signif(mean(child_fi_rate, na.rm = TRUE), digits = 4)`,
-         `Total Num FI Indvs` = `sum(number_food_insecure_individuals, na.rm = TRUE)`,
-         `Total Num FI Children` = `sum(number_food_insecure_children, na.rm = TRUE)`,
-         `Avg Cost Per Meal` = `signif(mean(cost_per_meal, na.rm = TRUE), digits = 3)`,
-         `Avg Weighted Annual \n Food Budget Shortfall($)` = `signif(...)`) %>%
-  kbl(caption = "National Food Insecurity Metrics") %>%
-  kable_classic(full_width = F, html_font = "Cambria")
-```
-
-
-
-
-
-
-
-Box plots:
-Make sure titles are standardized (caps vs lowercase)
-Axis labels
-
-General:
-Remove names/dates 
-Make neat/label code
-Write home page abstract
-Add on home page contributor list at bottom (alphabetical order by last name) 
-
-
-
-## Food insecurity in NY state counties
-
-Food insecurity rates by county
+The below plot shows the overall rate of food insecurity in over the 9 year period (2009-2017): 
 
 ```{r, message = FALSE, warning = FALSE}
 fi_rates = 
 read_csv("map_the_meal_gap_df.csv") %>%
+# filter to include only counties of interest
   filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
                              "new york_NY", "queens_NY", "kings_NY", "bronx_NY",
                              "westchester_NY")) %>%
@@ -223,6 +163,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     names_to = "rate",
     values_to = "measure"
   ) %>%
+# rename values that will appear on the boxplots for easier visualization
   mutate(
     rate = str_replace(rate, "fi_rate", "Overall Food Insecurity Rate"),
     rate = str_replace(rate, "child_Overall Food Insecurity", "Child Food Insecurity Rate"),
@@ -237,6 +178,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     county = factor(county, levels = c("Bronx", "Kings", "Saint Lawrence", "Chautauqua", 
                                        "New York", "Queens", "Albany", "Westchester"))
     ) %>%
+  # generate the boxplot through ggplot
   ggplot(aes(x = county, y = measure, color = county)) + 
   geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
@@ -247,14 +189,14 @@ read_csv("map_the_meal_gap_df.csv") %>%
   theme_bw() +
   theme(text = element_text(size = 20)) +
   transition_states(rate, transition_length = 1, state_length = 3, wrap = TRUE)
-  
+# animate the boxplot to transition between the two measures: overall food insecurity and child food insecurity rates
 animate(fi_rates, fps = 10, height = 500, width = 1000)
-  
 ```  
 
-Number of food insecure people by county
+We also generated population based plots to show the total number of food insecure individuals and children within each selected New York state county: 
 
 ```{r, message = FALSE, warning = FALSE}
+# load the data and filter so that only the counties of interest are included
 fi_numbers = 
 read_csv("map_the_meal_gap_df.csv") %>%
   filter(county_state %in% c("saint lawrence_NY", "albany_NY", "chautauqua_NY", 
@@ -280,6 +222,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     county = factor(county, levels = c("Kings", "Bronx", "Queens", "New York", 
                               "Westchester",  "Albany", "Chautauqua", "Saint Lawrence"))
     ) %>%
+  # create boxplot using ggplot
   ggplot(aes(x = county, y = number, color = county)) + 
   geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
@@ -290,17 +233,14 @@ read_csv("map_the_meal_gap_df.csv") %>%
   theme_bw() +
   theme(text = element_text(size = 20)) +
   transition_states(indicator, transition_length = 1, state_length = 3, wrap = TRUE)
-  
+# use animate feature to transition between total numbers of food insecure people and children within each county
 animate(fi_numbers, fps = 10, height = 500, width = 1000)
-  
 ```
 
-
-## Food Insecurity in US Regions
-
-Food insecurity rates by US region
+Regions were defined according to the United States Census definitions of US regions. The below plot compares the overall food insecurity rates of four US regions (Northeast, South, West and Midwest) over the 9 year period (2009-2017): 
 
 ```{r, message = FALSE, warning = FALSE}
+# create state and region vectors
 state = c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL",
           "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT",
           "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
@@ -309,12 +249,13 @@ region = c("S", "W", "W", "S", "W", "W", "NE", "S", "S", "S", "W", "W", "MW", "M
            "MW", "MW", "S", "S", "NE", "S", "NE", "MW", "MW", "S", "MW", "W", "MW", 
            "W", "NE", "NE", "W", "NE", "S", "MW", "MW", "S", "W", "NE", "NE", "S", 
            "MW", "S", "S", "W", "NE", "S", "W", "S", "MW", "W")
-
+# generate a crosswalk file containing the region each state corresponds to 
 x_walk = tibble(state, region)
 food = read_csv("map_the_meal_gap_df.csv") 
-
+# merge the food insecurity data with the region crosswalk
 fi_rates_region = 
   merge(food, x_walk, by = "state") %>%
+# rename region entries for better visualization on the generated plot
   mutate(region = str_replace(region, "MW", "Midwest"),
          region = str_replace(region, "W", "West"),
          region = str_replace(region, "NE", "Northeast"),
@@ -322,6 +263,7 @@ fi_rates_region =
          region = factor(region, levels = c("South", "West", "Midwest", "Northeast"))
          ) %>%
   group_by(region, year) %>%
+# create a mean food insecurity rate variable for each region and year
   summarize(mean_fi = mean(fi_rate), mean_child_fi = mean(child_fi_rate)) %>%
   pivot_longer(
     mean_fi:mean_child_fi,
@@ -331,6 +273,7 @@ fi_rates_region =
   mutate(
     mean_rate = str_replace(mean_rate, "mean_fi", "Mean Food Insecurity Rate"),
     mean_rate = str_replace(mean_rate, "mean_child_fi", "Mean Child Food Insecurity Rate")) %>%
+  # generate boxplot using ggplot
   ggplot(aes(x = region, y = measure, color = region)) + 
   geom_boxplot(show.legend = FALSE, alpha = 0.8) +
   labs(
@@ -341,9 +284,52 @@ fi_rates_region =
   theme_bw() +
   theme(text = element_text(size = 20)) +
   transition_states(mean_rate, transition_length = 1, state_length = 3, wrap = TRUE)
-  
+# animate plots so that they transition between mean and child food insecurity rates
 animate(fi_rates_region, fps = 10, height = 500, width = 1000)
 ``` 
+
+We also compared state-level food insecurity rate across the 50 US states. Click [here](https://nice8x.github.io/food_insecurity_final/dashboard_2.html) to see an interactive boxplot containing state level breakdowns of overall food insecurity rate using the 9 years of data (2009-2017). 
+
+## Discussion
+
+There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties in which more than 35 percent of total people are food insecure. 
+
+Preliminary analysis of the box plot data shows substantial variation in food insecurity between several selected counties within New York state. We selected Kings, Bronx, New York, Queens, Westchester, Albany, Chautauqua and Saint Lawrence counties to compare food insecurity across both rural and urban communities. 
+
+On a state level, Mississippi was shown to have the highest rate of overall food insecurity, while North Dakota had the lowest. Regionally, the South had the highest rates of overall and child food insecurity, and the Northeast had the lowest. Due to population size differences, the Northeast, however, had the greatest number of total food insecure individuals and food insecure children. 
+
+The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.16% to about 13.24%.  The average child food insecurity rate has also been decreasing, from about 25.8% to 19.36%.  The average rate of child food insecurity in the USA is consistently higher than the overall average rate of food insecurity from year to year.
+
+Correspondingly, the number of food insecure individuals in the entire USA has been slowly decreasing from 2009 to 2017 from almost 47 million (46,972,100) to just above than 40 million (40,286,060).  The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).
+
+The average cost per meal decreased from about `$2.55` to `$2.52` from 2009 to 2010 but after 2010 has been steadily increasing.  In 2017 the average cost per meal was `$3.02`.  The average weighted annual food budget shortfall in the US increased from about 6.3 million (6,325,000) in 2009 to almost 7.5 million(7,498,000) in 2014.  Since 2014 the average weighted annual food budget shortfall has decreased to about 6.9 million(6,914,000) in 2017. 
+
+
+
+
+
+
+
+
+
+
+
+General:
+Remove names/dates 
+Make neat/label code
+Write home page abstract
+Add on home page contributor list at bottom (alphabetical order by last name) 
+
+
+
+## Food insecurity in NY state counties
+
+Number of food insecure people by county
+
+
+
+
+## Food Insecurity in US Regions
 
 Number of food insecure people by region
 
