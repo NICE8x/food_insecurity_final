@@ -16,6 +16,7 @@ library(leaflet)
 library(RColorBrewer)
 library(maptools)
 library(readr)
+library(rsconnect)
 ```
 
 
@@ -37,6 +38,56 @@ income_2017_df <- read_csv("mtm_2017_income_2017_brac_df.csv")
 final_demographics_df  = inner_join(x = edu_2017_df, y = race_2017_df, by = "geo_id", all = TRUE)
 final_demographics_df =  inner_join(x = final_demographics_df, y = insurance_2017_df, by = "geo_id", all = TRUE)
 final_demographics_df = inner_join(x = final_demographics_df, y = income_2017_df, by = "geo_id", all = TRUE)
+
+fips_df = readxl::read_xls("./US_FIPS_Codes.xls", skip = 1) %>%
+  janitor::clean_names() %>%
+  rename(county = county_name) %>%
+  unite("fips", c("fips_state", "fips_county"), sep = "") %>%
+  mutate(county = tolower(county),
+         state = state2abbr(state),
+         county = str_replace(county, ",.*", ""),
+         county = str_replace(county, "\\scounty",""),
+         county = str_replace(county, "\\sparish",""),
+         county = str_replace(county, "\\sborough", ""),
+         county = str_replace(county, "\\scensus area", ""),
+         county = str_replace(county, "\\smunicipality of", ""),
+         county = str_replace(county, "dona ana", "doña ana"),
+         county = str_replace(county, "^st\\s|^st\\.", "saint "),
+         county = str_replace(county, "de kalb", "dekalb")
+  ) %>%
+unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
+  mutate(county_state = str_replace(county_state, "prince of wales-outer ketchikan_AK", "prince of wales-hyder_AK"),
+         county_state = str_replace(county_state, "matanuska susitna_AK", "matanuska-susitna_AK"),
+         county_state = str_replace(county_state, "valdez cordova_AK", "valdez-cordova_AK"),
+         county_state = str_replace(county_state, "juneau_AK", "city and of juneau_AK"),
+         county_state = str_replace(county_state, "dekalb_TN", "de kalb_TN"),
+         county_state = str_replace(county_state, "dekalb_IN", "de kalb_IN"),
+         county_state = str_replace(county_state, "dewitt_IL", "de witt_IL"),
+         county_state = str_replace(county_state, "de soto_MS", "desoto_MS"),
+         county_state = str_replace(county_state, "de soto_FL", "desoto_FL"),
+         county_state = str_replace(county_state, "du page_IL", "dupage_IL"),
+         county_state = str_replace(county_state, "skagway hoonah angoon_AK", "hoonah-angoon_AK"),
+         county_state = str_replace(county_state, "skagway hoonah angoon_AK", "hoonah-angoon_AK"),
+         county_state = str_replace(county_state, "wrangell petersburg_AK", "petersburg_AK"),
+         county_state = str_replace(county_state, "prince georges_MD", "prince george's_MD"),
+         county_state = str_replace(county_state, "prince wales ketchikan_AK", "prince of wales-hyder_AK"),
+         county_state = str_replace(county_state, "queen annes_MD", "queen anne's_MD"),
+         county_state = str_replace(county_state, "radford_VA", "radford city_VA"),
+         county_state = str_replace(county_state, "saint marys_MD", "saint mary's_MD"),
+         county_state = str_replace(county_state, "yukon koyukuk_AK", "yukon-koyukuk_AK")
+) %>%
+  select(county_state, fips)
+
+#Read in tidy-ed Map the Meal Gap data and join to FIPS data
+map_the_meal_gap_df = read_csv("./map_the_meal_gap_df.csv")
+
+final_demographics_df <- final_demographics_df %>%
+  rename(county_state = county_state.x)
+
+mtm_fips_df = left_join(final_demographics_df, fips_df, by = "county_state") %>%
+  drop_na(fips)
+
+
 ```
 
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
@@ -117,7 +168,6 @@ g <- list(
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
 z_df = final_demographics_df %>%
   mutate(fi_rate = fi_rate * 100,
-         percent_fi_low_threshold = percent_fi_low_threshold * 100,
          white = white * 100,
          black = black * 100,
          am_ind_al_nat = am_ind_al_nat * 100,
@@ -132,12 +182,17 @@ z_df = final_demographics_df %>%
          grad_or_prof = grad_or_prof * 100,
          less_20 = less_20 * 100,
          twenty_39 = twenty_39 * 100,
-         other = other * 100,
-         other = other * 100,
-         other = other * 100,
-         other = other * 100,
-         other = other * 100,
-         other = other * 100,
+         forty_59 = forty_59 * 100,
+         sixty_99 = sixty_99 * 100,
+         hun_149 = hun_149 * 100,
+         hunfifty_199 = hunfifty_199 * 100,
+         twohun_more = twohun_more * 100,
+         y_under_19 = y_under_19 * 100,
+         n_under_19 = n_under_19 * 100,
+         y_19_64 = y_19_64 * 100,
+         n_19_64 = n_19_64 * 100,
+         y_65_over = y_65_over * 100,
+         n_65_over = n_65_over * 100
   )
 
 
@@ -150,24 +205,62 @@ plot_ly() %>%
   add_trace(
     type="choropleth",
     geojson=counties,
-    locations=~(fips),
+    locations=~(zip.x),
     z=~(eval(as.name(input[["food insecurity metric"]]))), 
     text = ~county_state,
     colorscale="Viridis",
     zmin=0,
     zmax=case_when(
   input[["food insecurity metric"]] == "fi_rate" ~ 40,
+  input[["food insecurity metric"]] == "white" ~ 97.55838,
+  input[["food insecurity metric"]] == "black" ~ 75.91811,
+  input[["food insecurity metric"]] == "am_ind_al_nat" ~ 76.09972,
+  input[["food insecurity metric"]] == "nat_ha_pac_isl" ~ 11.59192,
+  input[["food insecurity metric"]] == "others" ~ 38.98933,
+  input[["food insecurity metric"]] == "two_or_more"  ~ 28.96782,
+  input[["food insecurity metric"]] == "less_9th" ~ 36.86442,
+  input[["food insecurity metric"]] == "nineth_to_12th" ~ 25.72923,
+  input[["food insecurity metric"]] == "child_fi_rate" ~ 53,
+  input[["food insecurity metric"]] == "hs_grad" ~ 59.18574,
+  input[["food insecurity metric"]] == "some_coll" ~ 37.36831,
+  input[["food insecurity metric"]] ==  "bach_deg" ~  38.84332,
+  input[["food insecurity metric"]] ==  "grad_or_prof" ~  40.45154,
+  input[["food insecurity metric"]] ==  "less_20" ~  48.8295,
+  input[["food insecurity metric"]] ==  "twenty_39" ~  43.02717,
+  input[["food insecurity metric"]] ==  "forty_59" ~  30.35589,
+  input[["food insecurity metric"]] ==  "sixty_99" ~  37.81273,
+  input[["food insecurity metric"]] ==  "hun_149" ~  29.68648,
+  input[["food insecurity metric"]] ==  "hunfifty_199" ~  18.93056,
+  input[["food insecurity metric"]] ==  "twohun_more" ~  26.68995,
+  input[["food insecurity metric"]] ==  "y_under_19" ~  100,
+  input[["food insecurity metric"]] ==  "n_under_19" ~  61.08799,
+  input[["food insecurity metric"]] ==  "y_19_64" ~  99.04901,
+  input[["food insecurity metric"]] ==  "n_19_64" ~  52.39353,
+  input[["food insecurity metric"]] ==  "y_65_over" ~  100,
+  input[["food insecurity metric"]] ==  "n_65_over" ~   18.49644
 ),
     marker=list(line=list(
       width=0)
     )
   ) %>%
   colorbar(title = case_when(
-  input[["food insecurity metric"]] == "fi_rate" ~ "Food Insecurity Rate (%)"
+  input[["food insecurity metric"]] == "fi_rate" ~ "Food Insecurity Rate (%)",
+  input[["food insecurity metric"]] == "white" ~ "White",
+  input[["food insecurity metric"]] == "black" ~ "Black",
+  input[["food insecurity metric"]] == "high_threshold_in_state" ~ "High Threshold in State",
+  input[["food insecurity metric"]] == "percent_fi_low_threshold" ~ "Food Insecurity Rate Low Threshold (%)",
+  input[["food insecurity metric"]] == "percent_fi_btwn_thresholds" ~ "Food Insecurity Rate Between Threshold (%)",
+  input[["food insecurity metric"]] == "percent_fi_high_threshold"  ~ "Food Insecurity Rate High Threshold (%)",
+  input[["food insecurity metric"]] == "weighted_annual_food_budget_shortfall" ~ "Weighted Annual Food Budget Shortfall ($)",
+  input[["food insecurity metric"]] == "cost_per_meal" ~ "Cost Per Meal ($)",
+  input[["food insecurity metric"]] == "child_fi_rate" ~ "Child Food Insecurity Rate (%)",
+  input[["food insecurity metric"]] == "number_food_insecure_children" ~ "Number of Food Insecure Children",
+  input[["food insecurity metric"]] == "percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl" ~ "Children in Food Insecure Households with Household Incomes Below 185 Percent of the Federal Poverty Levell (%)",
+  input[["food insecurity metric"]] ==  "percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl" ~ "Children in Food Insecure Households with Household Incomes Above 185 Percent of the Federal Poverty Levell (%)"
 )
            ) %>% 
   layout(
-    title = "US Food Insecurity Metrics by Education Level",
+    title = "US Food Insecurity Metrics by County",
     geo = g
 )
 
@@ -177,35 +270,70 @@ plot_ly() %>%
 else{
   
 z_df %>% 
-  dplyr::filter(year == rlang::sym(input[["year"]]))%>%
 plot_ly() %>% 
   add_trace(
     type="choropleth",
     geojson=counties,
-    locations=~(fips),
+    locations=~(zip.x),
     z=~(eval(as.name(input[["food insecurity metric"]]))), 
     text = ~county_state,
     colorscale="Viridis",
     zmin=0,
     zmax=case_when(
-  input[["food insecurity metric"]] == "fi_rate" ~ 40,
- 
+   input[["food insecurity metric"]] == "fi_rate" ~ 40,
+  input[["food insecurity metric"]] == "white" ~ 97.55838,
+  input[["food insecurity metric"]] == "black" ~ 75.91811,
+  input[["food insecurity metric"]] == "am_ind_al_nat" ~ 76.09972,
+  input[["food insecurity metric"]] == "nat_ha_pac_isl" ~ 11.59192,
+  input[["food insecurity metric"]] == "others" ~ 38.98933,
+  input[["food insecurity metric"]] == "two_or_more"  ~ 28.96782,
+  input[["food insecurity metric"]] == "less_9th" ~ 36.86442,
+  input[["food insecurity metric"]] == "nineth_to_12th" ~ 25.72923,
+  input[["food insecurity metric"]] == "child_fi_rate" ~ 53,
+  input[["food insecurity metric"]] == "hs_grad" ~ 59.18574,
+  input[["food insecurity metric"]] == "some_coll" ~ 37.36831,
+  input[["food insecurity metric"]] ==  "bach_deg" ~  38.84332,
+  input[["food insecurity metric"]] ==  "grad_or_prof" ~  40.45154,
+  input[["food insecurity metric"]] ==  "less_20" ~  48.8295,
+  input[["food insecurity metric"]] ==  "twenty_39" ~  43.02717,
+  input[["food insecurity metric"]] ==  "forty_59" ~  30.35589,
+  input[["food insecurity metric"]] ==  "sixty_99" ~  37.81273,
+  input[["food insecurity metric"]] ==  "hun_149" ~  29.68648,
+  input[["food insecurity metric"]] ==  "hunfifty_199" ~  18.93056,
+  input[["food insecurity metric"]] ==  "twohun_more" ~  26.68995,
+  input[["food insecurity metric"]] ==  "y_under_19" ~  100,
+  input[["food insecurity metric"]] ==  "n_under_19" ~  61.08799,
+  input[["food insecurity metric"]] ==  "y_19_64" ~  99.04901,
+  input[["food insecurity metric"]] ==  "n_19_64" ~  52.39353,
+  input[["food insecurity metric"]] ==  "y_65_over" ~  100,
+  input[["food insecurity metric"]] ==  "n_65_over" ~   18.49644
 ),
     marker=list(line=list(
       width=0)
     )
   ) %>%
-    
   colorbar(title = case_when(
   input[["food insecurity metric"]] == "fi_rate" ~ "Food Insecurity Rate (%)",
-  
+  input[["food insecurity metric"]] == "number_food_insecure_individuals" ~ "Number of Food Insecure Individuals",
+  input[["food insecurity metric"]] == "low_threshold_in_state" ~ "Low Threshold in State",
+  input[["food insecurity metric"]] == "high_threshold_in_state" ~ "High Threshold in State",
+  input[["food insecurity metric"]] == "percent_fi_low_threshold" ~ "Food Insecurity Rate Low Threshold (%)",
+  input[["food insecurity metric"]] == "percent_fi_btwn_thresholds" ~ "Food Insecurity Rate Between Threshold (%)",
+  input[["food insecurity metric"]] == "percent_fi_high_threshold"  ~ "Food Insecurity Rate High Threshold (%)",
+  input[["food insecurity metric"]] == "weighted_annual_food_budget_shortfall" ~ "Weighted Annual Food Budget Shortfall ($)",
+  input[["food insecurity metric"]] == "cost_per_meal" ~ "Cost Per Meal ($)",
+  input[["food insecurity metric"]] == "child_fi_rate" ~ "Child Food Insecurity Rate (%)",
+  input[["food insecurity metric"]] == "number_food_insecure_children" ~ "Number of Food Insecure Children",
+  input[["food insecurity metric"]] == "percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl" ~ "Children in Food Insecure Households with Household Incomes Below 185 Percent of the Federal Poverty Levell (%)",
+  input[["food insecurity metric"]] ==  "percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl" ~ "Children in Food Insecure Households with Household Incomes Above 185 Percent of the Federal Poverty Levell (%)"
 )
            ) %>% 
   layout(
-    title = "US Food Insecurity Metrics by Education Level",
+    title = "US Food Insecurity Metrics by County",
     geo = g
 )
 }
 }
+
   )
-other = other * 100,```
+```
