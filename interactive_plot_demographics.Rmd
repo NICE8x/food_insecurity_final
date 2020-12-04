@@ -39,54 +39,6 @@ final_demographics_df  = inner_join(x = edu_2017_df, y = race_2017_df, by = "geo
 final_demographics_df =  inner_join(x = final_demographics_df, y = insurance_2017_df, by = "geo_id", all = TRUE)
 final_demographics_df = inner_join(x = final_demographics_df, y = income_2017_df, by = "geo_id", all = TRUE)
 
-fips_df = readxl::read_xls("./US_FIPS_Codes.xls", skip = 1) %>%
-  janitor::clean_names() %>%
-  rename(county = county_name) %>%
-  unite("fips", c("fips_state", "fips_county"), sep = "") %>%
-  mutate(county = tolower(county),
-         state = state2abbr(state),
-         county = str_replace(county, ",.*", ""),
-         county = str_replace(county, "\\scounty",""),
-         county = str_replace(county, "\\sparish",""),
-         county = str_replace(county, "\\sborough", ""),
-         county = str_replace(county, "\\scensus area", ""),
-         county = str_replace(county, "\\smunicipality of", ""),
-         county = str_replace(county, "dona ana", "doña ana"),
-         county = str_replace(county, "^st\\s|^st\\.", "saint "),
-         county = str_replace(county, "de kalb", "dekalb")
-  ) %>%
-unite("county_state", c("county", "state"), sep = "_", remove = FALSE) %>%
-  mutate(county_state = str_replace(county_state, "prince of wales-outer ketchikan_AK", "prince of wales-hyder_AK"),
-         county_state = str_replace(county_state, "matanuska susitna_AK", "matanuska-susitna_AK"),
-         county_state = str_replace(county_state, "valdez cordova_AK", "valdez-cordova_AK"),
-         county_state = str_replace(county_state, "juneau_AK", "city and of juneau_AK"),
-         county_state = str_replace(county_state, "dekalb_TN", "de kalb_TN"),
-         county_state = str_replace(county_state, "dekalb_IN", "de kalb_IN"),
-         county_state = str_replace(county_state, "dewitt_IL", "de witt_IL"),
-         county_state = str_replace(county_state, "de soto_MS", "desoto_MS"),
-         county_state = str_replace(county_state, "de soto_FL", "desoto_FL"),
-         county_state = str_replace(county_state, "du page_IL", "dupage_IL"),
-         county_state = str_replace(county_state, "skagway hoonah angoon_AK", "hoonah-angoon_AK"),
-         county_state = str_replace(county_state, "skagway hoonah angoon_AK", "hoonah-angoon_AK"),
-         county_state = str_replace(county_state, "wrangell petersburg_AK", "petersburg_AK"),
-         county_state = str_replace(county_state, "prince georges_MD", "prince george's_MD"),
-         county_state = str_replace(county_state, "prince wales ketchikan_AK", "prince of wales-hyder_AK"),
-         county_state = str_replace(county_state, "queen annes_MD", "queen anne's_MD"),
-         county_state = str_replace(county_state, "radford_VA", "radford city_VA"),
-         county_state = str_replace(county_state, "saint marys_MD", "saint mary's_MD"),
-         county_state = str_replace(county_state, "yukon koyukuk_AK", "yukon-koyukuk_AK")
-) %>%
-  select(county_state, fips)
-
-#Read in tidy-ed Map the Meal Gap data and join to FIPS data
-map_the_meal_gap_df = read_csv("./map_the_meal_gap_df.csv")
-
-final_demographics_df <- final_demographics_df %>%
-  rename(county_state = county_state.x)
-
-mtm_fips_df = left_join(final_demographics_df, fips_df, by = "county_state") %>%
-  drop_na(fips)
-
 
 ```
 
@@ -107,9 +59,7 @@ renderPrint(
 selectInput(
   "Education Indicators",
   h3("Education Indicators"),
-  choices = c("Food Insecurity Rate" = "fi_rate", "Less than 9th Grade" = "less_9th", "9th to 12th Grade" = "nineth_to_12th", "High School Graduate" = "hs_grad", "Some College" = "some_coll", "Bachelor Degree" = "bach_deg", "Graduate Students or Professional" = "grad_or_prof")                                                        
-                                                    
-)
+  choices = c("Food Insecurity Rate" = "fi_rate", "Less than 9th Grade" = "less_9th", "9th to 12th Grade" = "nineth_to_12th", "High School Graduate" = "hs_grad", "Some College" = "some_coll", "Bachelor Degree" = "bach_deg", "Graduate Students or Professional" = "grad_or_prof")             )
 
 renderPrint(
   input[["Education Indicators"]]
@@ -206,8 +156,7 @@ plot_ly() %>%
     type="choropleth",
     geojson=counties,
     locations=~(zip.x),
-    z=~(eval(as.name(input[["food insecurity metric"]]))), 
-    text = ~county_state,
+    text = ~county_state.x,
     colorscale="Viridis",
     zmin=0,
     zmax=case_when(
@@ -295,8 +244,8 @@ plot_ly() %>%
     type="choropleth",
     geojson=counties,
     locations=~(zip.x),
-    z=~(eval(as.name(input[["food insecurity metric"]]))), 
-    text = ~county_state,
+    
+    text = ~county_state.x,
     colorscale="Viridis",
     zmin=0,
     zmax=case_when(
@@ -349,7 +298,7 @@ plot_ly() %>%
 )
            ) %>% 
   layout(
-    title = "US Food Insecurity Metrics by County",
+    title = "US Food Insecurity Metrics with Demographics Indicators",
     geo = g
 )
 }
