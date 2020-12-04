@@ -607,6 +607,16 @@ plot_ly(
 
 ### Analysis of National Trends
 
+```{r, message = FALSE, warning = FALSE}
+read_csv("./map_the_meal_gap_df.csv") %>%
+  group_by(year) %>%
+  summarize(mean_fi_rate = signif(mean(fi_rate), digits = 4)) %>%
+  plot_ly(x = ~year, y = ~mean_fi_rate, color = ~mean_fi_rate, type = "bar", colors = "viridis") %>%
+  layout(
+    title = "US National Food Insecurity Rate Over Time (2009-2017)",
+    xaxis = list(title = "Year", tickfont = list(size = 10)),
+    yaxis = list(title = "Food Insecurity Rate"))
+```
 
 
 ## Discussion
