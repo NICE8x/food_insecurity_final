@@ -34,12 +34,12 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
-### Motivation
+### *Motivation*
 ## *Food Insecurity Prevalence and Significance*
 
 Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 an estimated [40 million Americans](https://www.feedingamerica.org/sites/default/files/research/map-the-meal-gap/2016/2016-map-the-meal-gap-health-implications.pdf) (13.2 percent) were food insecure.
 
-Food insecurity is associated with numerous adverse health outcomes, including mental health problems, diabetes, hypertension, asthma and poorer general health. As a result of the COVID-19 pandemic, millions of Americans have lost stable employment; early estimates suggest more than 50 million people, including 17 million children, may be experiencing food insecurity in 2020. 
+Food insecurity is associated with numerous adverse [health outcomes](https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2015.0645#:~:text=The%20majority%20of%20research%20examining,9%20and%20aggression%20and%20anxiety.), including mental health problems, diabetes, hypertension, asthma and poorer general health. As a result of the COVID-19 pandemic, millions of Americans have lost stable employment; early estimates suggest more than [50 million people](https://www.feedingamerica.org/sites/default/files/2020-10/Brief_Local%20Impact_10.2020_0.pdf), including 1 in 4 children, may be experiencing food insecurity in 2020. 
 
 Existing research has shown food insecurity to disproportionately impact non-White populations, as well as immigrants, those lacking health insurance, and those with lower educational attainment.  
 
@@ -50,11 +50,13 @@ Image from [Center on Budget and Policy Priorities](https://www.cbpp.org/food-in
 
 As a result of the increasing prevalence of food insecurity during the COVID-19 pandemic, we are collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health. 
 
+## *Related Work*
+
 This is of particular importance, since [research](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/investigations-discovery/hospitalization-death-by-race-ethnicity.html) has shown the COVID-19 pandemic to be disproportionately impacting many of these same sub-populations. Moreover, a majority of food insecure individuals surveyed in Feeding America's 2014 Hunger in America [study](https://www.feedingamerica.org/hunger-in-america/impact-of-hunger#:~:text=Hunger%20and%20health%20are%20deeply,adverse%20effects%20to%20overall%20health.) reported having to choose between food and medical care. Increasing financial burden in 2020 due to job and/or health insurance loss may be further exacerbating this phenomenon.
 
 Thus, identifying the specific regions and/or sub-populations at the greatest risk for food insecurity is essential to develop and enact targeted, effective intervention strategies to reduce the burden of food insecurity.
 
-## Initial Questions
+### *Initial Questions*
 
 Initially, our overarching question was, what does the food disparity across the United States look like on national, regional and county-levels? After investigating the variables in our datasets, we developed more specific research questions and goals, including:
 
@@ -63,7 +65,7 @@ Initially, our overarching question was, what does the food disparity across the
 - How has food insecurity changed overtime in the USA and specifically NY state? 
 - And, can we visualize food insecurity in an accessible way to give people information on how they can help and/or access nutrition assistance resources? 
 
-## Data
+### *Data*
 
 We utilized Feeding America's Map the Meal Gap data to quantify food insecurity on a county and regional level. [Map the Meal Gap](./Map the Meal Gap Overview and FAQ 10.2020.pdf) is an annual study conducted by Feeding America to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. For this project, we used Map the Meal Gap annual study reports from years 2011 to 2019, where each report is based on US Census data from the preceding two years. Thus, the study data range from years 2009 - 2017.  
 
@@ -407,7 +409,7 @@ food_banks_df = left_join(food_banks_df, location_data, by = "zip") %>%
 write_csv(x = food_banks_df, "food_banks_df.csv")
 ```
 
-### Exploratory analysis 
+### *Exploratory analysis*
 ## *Food insecurity and county demographic breakdowns*
  
 We created animated scatterplots joining the tidy American Community Survey data on the tidy Feeding America data to develop and compare specific variables of interest against food insecurity rates. These variables included percent race, educational attainment, insurance status, and income bracket within each county in the U.S. To compare these variables against the food insecurity rate, we converted raw counts to percents.
@@ -605,7 +607,7 @@ plot_ly(
     yaxis = list(title = "Food Insecurity Rate"))
 ```
 
-### Analysis of National Trends
+### *Analysis of National Trends*
 
 ```{r, message = FALSE, warning = FALSE}
 read_csv("./map_the_meal_gap_df.csv") %>%
@@ -619,9 +621,9 @@ read_csv("./map_the_meal_gap_df.csv") %>%
 ```
 
 
-## Discussion
+### *Discussion*
 
-### Regional variation in food insecurity
+## *Regional variation in food insecurity*
 
 There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties with over 35 percent overall food insecurity rates. 
 
@@ -629,7 +631,7 @@ Preliminary analysis of the box plot data shows substantial variation in food in
 
 On a state level, Mississippi was shown to have the highest rate of overall food insecurity, while North Dakota had the lowest. Regionally, the South had the highest rates of overall and child food insecurity, as well as the greatest numbers of food insecure individuals and children. The Northeast had the lowest rates of food insecurity and fewest food insecure people. 
 
-## Food insecurity and county demographic breakdowns
+## *Food insecurity and county demographic breakdowns*
 
 Observational analysis of the scatterplot data suggests that there is a difference in food insecurity rates between races, levels of educational attainment, income brackets, and insurance statuses. 
 
@@ -641,7 +643,7 @@ Among the educational attainment categories, there appears to be a negative asso
 
 The insurance status plots suggest a positive association between percent uninsured people (ages 19-64) and food insecurity rate. Lastly, income brackets do show stark differences in distribution of individuals. As expected, higher proportions of upper quartile earners were associated with reduced county-level food insecurity rate.
 
-## Trends in national food insecurity rates
+## *Trends in national food insecurity rates*
 
 The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.16% to about 13.24%.  The average child food insecurity rate has also been decreasing, from about 25.8% to 19.36%.  The average rate of child food insecurity in the USA is consistently higher than the overall average rate of food insecurity from year to year.
 
