@@ -35,4 +35,5 @@ In addition to the Map the Meal Gap data, we also used Census American Community
 There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. 
 
 
-*_Contributors:* = Caroline Andy, Vasili Fokaidis, Stella Li, Tessa Senders
+### *Contributors:* 
+Caroline Andy, Vasili Fokaidis, Stella Li, Tessa Senders
