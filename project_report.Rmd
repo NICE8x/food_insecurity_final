@@ -265,8 +265,7 @@ mtm_acs_2017_df = left_join(mtm_2017_df, acs_df, by = "county_state") %>%
 write_csv(x = mtm_acs_2017_df, "mtm_acs_2017_df.csv")
 ```
 
-In order to map these data elements onto a US county map, we also joined the zip code, latitude and longitude fields from the US Healthcare.gov Geocodes dataset onto the table. Federal Information Processing Standards (FIPS) county codes were also separately joined onto the tidied table from an educational website. 
-(https://mdreducation.com/ >pdfs > US_FIPS_Codes)
+In order to map these data elements onto a US county map, we also joined the zip code, latitude and longitude fields from the US Healthcare.gov Geocodes dataset onto the table. Federal Information Processing Standards [(FIPS)](https://mdreducation.com/pdfs/US_FIPS_Codes) county codes were also separately joined onto the tidied table from an educational website. 
 
 ```{r get county and zipcode info, eval = FALSE}
 #Import location data (zip, county, longitude, and latitude) from government website.
@@ -361,7 +360,7 @@ mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state") %>%
   drop_na(fips)
 ```
 
-Finally a list of food banks from the Feeding America website was scraped by running a shell of the Docker software in R.  Docker was used to click the button on the website hiding the data and then the correct data was scraped using the CSS selector tool to identify the data’s CSS selectors.  This data was also matched to the zip code, latitude and longitude data elements in order to map the food bank locations.
+Finally a list of food banks from the Feeding America website was scraped by running a shell of the Docker software in R.  We used Docker to navigate the website and unhide the data of interest, before using the CSS selector tool to identify the data’s CSS selectors.  This data was also matched to the zip code, latitude and longitude data elements in order to map the food bank locations.
 
 ```{r use docker for food bank list, eval = FALSE}
 #Use Docker to go to the Feeding America website and scrape for the names, address/phone number, and website of 200 food banks in America. 
@@ -408,10 +407,10 @@ food_banks_df = left_join(food_banks_df, location_data, by = "zip") %>%
 write_csv(x = food_banks_df, "food_banks_df.csv")
 ```
 
-## Exploratory analysis 
-### *Animated Scatterplots*
+### Exploratory analysis 
+## *Food insecurity and county demographic breakdowns*
  
-To create the animated scatterplots, we joined the tidy American Community Survey data with the tidy Feeding America data to develop datasets containing specific variables of interest to compare against food insecurity rates. These variables included race, education level of attainment, insurance status, and income bracket within each county in the U.S. To compare these variables against the food insecurity rate, we converted the counts to percents.
+We created animated scatterplots joining the tidy American Community Survey data on the tidy Feeding America data to develop and compare specific variables of interest against food insecurity rates. These variables included percent race, educational attainment, insurance status, and income bracket within each county in the U.S. To compare these variables against the food insecurity rate, we converted raw counts to percents.
  
 Using `gganimate` we created [animated scatterplots](https://nice8x.github.io/food_insecurity_final/dashboard_1.html) that transition through the levels of each demographic variable with percent level on the y-axis, and food insecurity measure on the x-axis.
 
@@ -456,13 +455,11 @@ race_per_plot =
 animate(race_per_plot, fps = 5, height = 500, width = 1000)
 ```
 
-### *United States Food Insecurity ShinyApp Maps*
+## *Regional variation in food insecurity*
 
 To view geographic trends in food insecurity indicators across the United States and over time, we also generated an interactive [county map](https://tessas.shinyapps.io/countymaps/) of the US which allows users to view and compare food insecurity measures across all counties simultaneously. Users may select the food insecurity metric of interest, as well as the year and particular states, if desired. 
  
 We also created an [interactive map](https://tessas.shinyapps.io/countymaps/) which contains the locations of food banks across the United States to encourage utilization and/or donation. 
-
-### *Box Plots*
 
 To supplement the above exploratory analyses, we became interested in comparing and characterizing the prevalence of food insecurity within select New York state counties, and US regions. We generated [animated boxplots](https://nice8x.github.io/food_insecurity_final/dashboard_2.html) which transition through four food insecurity indicators: overall food insecurity rate, the total number of food insecure individuals, child food insecurity rate and the number of food insecure children. 
 
@@ -608,9 +605,13 @@ plot_ly(
     yaxis = list(title = "Food Insecurity Rate"))
 ```
 
-### Discussion
+### Analysis of National Trends
 
-## Regional variation in food insecurity
+
+
+## Discussion
+
+### Regional variation in food insecurity
 
 There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties with over 35 percent overall food insecurity rates. 
 
