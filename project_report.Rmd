@@ -612,7 +612,6 @@ plot_ly(
 
 ## Discussion
 
-<<<<<<< HEAD
 ### Regional variation in food insecurity
 
 There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties with over 35 percent overall food insecurity rates. 
@@ -626,7 +625,7 @@ On a state level, Mississippi was shown to have the highest rate of overall food
 There appears to be a positive association between percent black race and food insecurity rate, and a negative association between percent white race and food insecurity rate on the county-level. While a vast majority of US counties contain marginally small percentages of American Indian and/or Alaskan Native people, there appears to be a positive association between percent Native and food insecurity among the handful of counties with percentages between 15 and 75 percent. 
 
 Among the educational attainment categories, there appears to be a negative association between bachelor's degree attainment and food insecurity rate. Conversely, the scatterplot shows a slight positive trend between 9-12th grade educational level and food insecurity rate. 
-=======
+
 There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties in which more than 35 percent of total people are food insecure.
 
 Observational analysis of the scatterplot data suggests that there is a difference in food insecurity rates (F.I.R.) between races, levels of educational attainment, income brackets, and insurance statuses. Some notable differences in F.I.R. appear between White, Black, and Hispanic individuals where White individuals appear to populate the majority of the counties they reside in and tend toward lower F.I.R. whereas Black individuals appear to populate roughly 25-50% of the counties they reside in and have a wider range of F.I.R. than White individuals. And, Hispanic individuals populate roughly <50% of the counties they reside in and have a greater range of F.I.R. than do White individuals. Furthermore, Native Hawaiian and Other Pacific Islander, Asian, and American Indian and Alaskan Native individuals populate counties least overall, yet have a wider range of F.I.R. reaching higher than White individuals as well.
@@ -634,7 +633,6 @@ Observational analysis of the scatterplot data suggests that there is a differen
 As for individuals in differing levels of educational attainment, those with higher degrees generally tend to populate less and have lower F.I.R. Although no formal analysis was conducted, perhaps there is association between the two considering it requires more money to attend higher levels of education meaning these individuals have more access to food resources in general.
 
 Insurance status groups have interesting trends where roughly equal amounts of individuals have, and do not have, insurance coverage. In terms of F.I.R., there appears to be no group that drastically exceeds another. Lastly, income brackets do show stark differences in distribution of individuals. The bracket of $200,000 or more contains individuals that populate their counties the least. They also tend toward lower F.I.R. whereas every other  group has a larger range and more individuals overall.
->>>>>>> 7f843820b4c62b3c976c2fcbeb65c71f4a7f2c94
 
 The insurance status plots suggest a positive association between percent uninsured people (ages 19-64) and food insecurity rate. As expected, higher proportions of upper quartile earners were associated with reduced county-level food insecurity rate.  
 
