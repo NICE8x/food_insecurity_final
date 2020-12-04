@@ -200,7 +200,7 @@ renderPlotly({
 if(input[["state"]] != "USA"){
   
 z_df %>% 
-  dplyr:: filter(state == input[["state"]]) %>%
+  
 plot_ly() %>% 
   add_trace(
     type="choropleth",
@@ -247,16 +247,36 @@ plot_ly() %>%
   input[["food insecurity metric"]] == "fi_rate" ~ "Food Insecurity Rate (%)",
   input[["food insecurity metric"]] == "white" ~ "White",
   input[["food insecurity metric"]] == "black" ~ "Black",
-  input[["food insecurity metric"]] == "high_threshold_in_state" ~ "High Threshold in State",
-  input[["food insecurity metric"]] == "percent_fi_low_threshold" ~ "Food Insecurity Rate Low Threshold (%)",
-  input[["food insecurity metric"]] == "percent_fi_btwn_thresholds" ~ "Food Insecurity Rate Between Threshold (%)",
-  input[["food insecurity metric"]] == "percent_fi_high_threshold"  ~ "Food Insecurity Rate High Threshold (%)",
-  input[["food insecurity metric"]] == "weighted_annual_food_budget_shortfall" ~ "Weighted Annual Food Budget Shortfall ($)",
-  input[["food insecurity metric"]] == "cost_per_meal" ~ "Cost Per Meal ($)",
-  input[["food insecurity metric"]] == "child_fi_rate" ~ "Child Food Insecurity Rate (%)",
-  input[["food insecurity metric"]] == "number_food_insecure_children" ~ "Number of Food Insecure Children",
-  input[["food insecurity metric"]] == "percent_of_children_in_fi_hh_with_hh_incomes_below_185_percent_fpl" ~ "Children in Food Insecure Households with Household Incomes Below 185 Percent of the Federal Poverty Levell (%)",
-  input[["food insecurity metric"]] ==  "percent_of_children_in_fi_hh_with_hh_incomes_above_185_percent_fpl" ~ "Children in Food Insecure Households with Household Incomes Above 185 Percent of the Federal Poverty Levell (%)"
+  input[["food insecurity metric"]] == "am_ind_al_nat" ~ "American Indian/Alaska Native",
+  input[["food insecurity metric"]] == "nat_ha_pac_isl" ~ "Native Hawaiian or Other Pacific Islander",
+  input[["food insecurity metric"]] == "other" ~ "other",
+  input[["food insecurity metric"]] == "two_or_more"  ~ "Two or More races",
+  input[["food insecurity metric"]] == "less_9th" ~ "Less than 9th Grade",
+  input[["food insecurity metric"]] == "nineth_to_12th" ~ "9th to 12th Grade",
+  input[["food insecurity metric"]] == "hs_grad" ~ "High School Graduate",
+  input[["food insecurity metric"]] == "some_col" ~ "Some College",
+  input[["food insecurity metric"]] == "bach_deg" ~ "Bachelor Degree",
+  input[["food insecurity metric"]] ==  "grad_or_prof" ~ "Graduate Students or Professional",
+  input[["food insecurity metric"]] == "fi_rate" ~ "Food Insecurity Rate (%)",
+  input[["food insecurity metric"]] == "white" ~ "White",
+  input[["food insecurity metric"]] == "black" ~ "Black",
+  input[["food insecurity metric"]] == "am_ind_al_nat" ~ "American Indian/Alaska Native",
+  input[["food insecurity metric"]] == "nat_ha_pac_isl" ~ "Native Hawaiian or Other Pacific Islander",
+  
+  input[["food insecurity metric"]] == "less_20" ~ "Less Than $20,000",
+  input[["food insecurity metric"]] == "twenty_39"  ~ "Between $20,000 and $39,999",
+  input[["food insecurity metric"]] == "forty_59" ~ "Between $40,000 and $59,999",
+  input[["food insecurity metric"]] == "sixty_99" ~ "Between $60,000 and $99,999",
+  input[["food insecurity metric"]] == "hun_149" ~ "Between $100,000 and $149,999",
+  input[["food insecurity metric"]] == "hunfifty_199" ~ "Between $150,000 and $199,999",
+  input[["food insecurity metric"]] == "twohun_more" ~ "$200,000 or More",
+  
+  input[["food insecurity metric"]] == "y_under_19" ~ "Under Age 19 With Insurance",
+  input[["food insecurity metric"]] == "n_under_19"  ~ "Under Age 19 Without Insurance",
+  input[["food insecurity metric"]] == "y_19_64" ~ "Ages 19 to 64 With Insurance",
+  input[["food insecurity metric"]] == "n_19_64" ~ "Ages 19 to 64 Without Insurance",
+  input[["food insecurity metric"]] == "y_65_over" ~ "Over Age 65 With Insurance",
+  input[["food insecurity metric"]] == "n_65_over" ~ "Over Age 65 Without Insurance"
 )
            ) %>% 
   layout(
