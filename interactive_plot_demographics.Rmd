@@ -37,7 +37,6 @@ income_2017_df <- read_csv("mtm_2017_income_2017_brac_df.csv")
 final_demographics_df  = inner_join(x = edu_2017_df, y = race_2017_df, by = "geo_id", all = TRUE)
 final_demographics_df =  inner_join(x = final_demographics_df, y = insurance_2017_df, by = "geo_id", all = TRUE)
 final_demographics_df = inner_join(x = final_demographics_df, y = income_2017_df, by = "geo_id", all = TRUE)
-    
 ```
 
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
@@ -57,35 +56,36 @@ renderPrint(
 selectInput(
   "Education Indicators",
   h3("Education Indicators"),
-  choices = c("Food Insecurity Rate" = "fi_rate", "Less than 9th Grade" = "estimate_total_less_than_9th_grade" )
+  choices = c("Food Insecurity Rate" = "fi_rate", "Less than 9th Grade" = "less_9th", "9th to 12th Grade" = "nineth_to_12th", "High School Graduate" = "hs_grad", "Some College" = "some_coll", "Bachelor Degree" = "bach_deg", "Graduate Students or Professional" = "grad_or_prof")                                                        
+                                                    
 )
 
 renderPrint(
-  input[["Demographic Indicators"]]
+  input[["Education Indicators"]]
 )
-
 
 # income level input
 selectInput(
   "Income Level Indicators",
   h3("Income Level Indicators"),
-  choices = c("Food Insecurity Rate" = "fi_rate",  )
+  choices = c("Food Insecurity Rate" = "fi_rate", "Less Than $20,000" = "less_20", "Between $20,000 and $39,999" = "twenty_39", "Between $40,000 and $59,999" = "forty_59", "Between $60,000 and $99,999" = "sixty_99", "Between $100,000 and $149,999" = "hun_149", "Between $150,000 and $199,999" = "hunfifty_199", "$200,000 or More" = "twohun_more")
 )
 
 renderPrint(
-  input[["Demographic Indicators"]]
+  input[["Income Level Indicators"]]
 )
 
 # insurance status input
 selectInput(
-  "Education Indicators",
-  h3("Education Indicators"),
-  choices = c("Food Insecurity Rate" = "fi_rate",  )
+  "Insurance Status Indicators",
+  h3("Insurance Status Indicators"),
+  choices = c("Food Insecurity Rate" = "fi_rate", "Under Age 19 With Insurance" =  "y_under_19", "Under Age 19 Without Insurance" = "n_under_19", "Ages 19 to 64 With Insurance" = "y_19_64", "Ages 19 to 64 Without Insurance" = "n_19_64", "Over Age 65 With Insurance" = "y_65_over", "Over Age 65 Without Insurance" = "n_65_over")
 )
 
 renderPrint(
-  input[["Demographic Indicators"]]
-  
+  input[["Insurance Status Indicators"]]
+)
+
   
 # state input
 selectInput(
@@ -98,16 +98,6 @@ renderPrint(
   input[["state"]]
 )
 
-url <- 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
-counties <- rjson::fromJSON(file=url)
-
-g <- list(
-  scope = 'usa',
-  projection = list(type = 'albers usa'),
-  showlakes = TRUE,
-  lakecolor = toRGB('white')
-)
-
 ```
 
 
@@ -125,11 +115,36 @@ g <- list(
 
 
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
+z_df = final_demographics_df %>%
+  mutate(fi_rate = fi_rate * 100,
+         percent_fi_low_threshold = percent_fi_low_threshold * 100,
+         white = white * 100,
+         black = black * 100,
+         am_ind_al_nat = am_ind_al_nat * 100,
+         nat_ha_pac_isl = nat_ha_pac_isl * 100,
+         two_or_more = two_or_more * 100,
+         other = other * 100,
+         less_9th = less_9th * 100,
+         nineth_to_12th = nineth_to_12th * 100,
+         hs_grad = hs_grad * 100,
+         some_coll = some_coll * 100,
+         bach_deg = bach_deg * 100,
+         grad_or_prof = grad_or_prof * 100,
+         less_20 = less_20 * 100,
+         twenty_39 = twenty_39 * 100,
+         other = other * 100,
+         other = other * 100,
+         other = other * 100,
+         other = other * 100,
+         other = other * 100,
+         other = other * 100,
+  )
+
+
 renderPlotly({
 if(input[["state"]] != "USA"){
   
 z_df %>% 
-  dplyr::filter(year == rlang::sym(input[["year"]]))%>%
   dplyr:: filter(state == input[["state"]]) %>%
 plot_ly() %>% 
   add_trace(
@@ -193,4 +208,4 @@ plot_ly() %>%
 }
 }
   )
-```
+other = other * 100,```
