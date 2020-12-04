@@ -715,7 +715,7 @@ map_the_meal_gap_df %>%
          `Total Num FI Children` = `sum(number_food_insecure_children, na.rm = TRUE)`,
          `Avg Cost Per Meal` = `signif(mean(cost_per_meal, na.rm = TRUE), digits = 3)`,
          `Avg Weighted Annual \n Food Budget Shortfall($)` = `signif(...)`) %>%
-  kbl(caption = "National Food Insecurity Metrics") %>%
+  kbl(caption = "<b>National Food Insecurity Metrics<b>", format = 'html') %>%
   kable_classic(full_width = F, html_font = "Montserrat")
 ```
 
