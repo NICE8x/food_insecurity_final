@@ -34,8 +34,8 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
-## Motivation
-### *Food Insecurity Prevalence and Significance*
+### Motivation
+## *Food Insecurity Prevalence and Significance*
 
 Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 an estimated [40 million Americans](https://www.feedingamerica.org/sites/default/files/research/map-the-meal-gap/2016/2016-map-the-meal-gap-health-implications.pdf) (13.2 percent) were food insecure.
 
@@ -49,8 +49,6 @@ Existing research has shown food insecurity to disproportionately impact non-Whi
 Image from [Center on Budget and Policy Priorities](https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-reveals-stark-disparities)
 
 As a result of the increasing prevalence of food insecurity during the COVID-19 pandemic, we are collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health. 
-
-## Related Work
 
 This is of particular importance, since [research](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/investigations-discovery/hospitalization-death-by-race-ethnicity.html) has shown the COVID-19 pandemic to be disproportionately impacting many of these same sub-populations. Moreover, a majority of food insecure individuals surveyed in Feeding America's 2014 Hunger in America [study](https://www.feedingamerica.org/hunger-in-america/impact-of-hunger#:~:text=Hunger%20and%20health%20are%20deeply,adverse%20effects%20to%20overall%20health.) reported having to choose between food and medical care. Increasing financial burden in 2020 due to job and/or health insurance loss may be further exacerbating this phenomenon.
 
@@ -610,9 +608,9 @@ plot_ly(
     yaxis = list(title = "Food Insecurity Rate"))
 ```
 
-## Discussion
+### Discussion
 
-### Regional variation in food insecurity
+## Regional variation in food insecurity
 
 There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties with over 35 percent overall food insecurity rates. 
 
@@ -620,23 +618,19 @@ Preliminary analysis of the box plot data shows substantial variation in food in
 
 On a state level, Mississippi was shown to have the highest rate of overall food insecurity, while North Dakota had the lowest. Regionally, the South had the highest rates of overall and child food insecurity, as well as the greatest numbers of food insecure individuals and children. The Northeast had the lowest rates of food insecurity and fewest food insecure people. 
 
-### Food insecurity and county demographic breakdowns
+## Food insecurity and county demographic breakdowns
 
-There appears to be a positive association between percent black race and food insecurity rate, and a negative association between percent white race and food insecurity rate on the county-level. While a vast majority of US counties contain marginally small percentages of American Indian and/or Alaskan Native people, there appears to be a positive association between percent Native and food insecurity among the handful of counties with percentages between 15 and 75 percent. 
+Observational analysis of the scatterplot data suggests that there is a difference in food insecurity rates between races, levels of educational attainment, income brackets, and insurance statuses. 
 
-Among the educational attainment categories, there appears to be a negative association between bachelor's degree attainment and food insecurity rate. Conversely, the scatterplot shows a slight positive trend between 9-12th grade educational level and food insecurity rate. 
+There appears to be a positive association between percent Black race and food insecurity rate, and a negative association between percent White race and food insecurity rate on the county-level. White individuals populate the majority of virtually all counties, where increasing food insecurity rates are seen among counties in which the percentage of white individuals begins to drop. As the percentage of Black individuals increases within a county to above ~25%, food insecurity rates begin to increase. 
 
-There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties in which more than 35 percent of total people are food insecure.
+While a vast majority of US counties contain marginally small percentages of American Indian and/or Alaskan Native people, there appears to be a positive association between percent Native and food insecurity among the handful of counties with percentages between 15 and 75 percent. 
 
-Observational analysis of the scatterplot data suggests that there is a difference in food insecurity rates (F.I.R.) between races, levels of educational attainment, income brackets, and insurance statuses. Some notable differences in F.I.R. appear between White, Black, and Hispanic individuals where White individuals appear to populate the majority of the counties they reside in and tend toward lower F.I.R. whereas Black individuals appear to populate roughly 25-50% of the counties they reside in and have a wider range of F.I.R. than White individuals. And, Hispanic individuals populate roughly <50% of the counties they reside in and have a greater range of F.I.R. than do White individuals. Furthermore, Native Hawaiian and Other Pacific Islander, Asian, and American Indian and Alaskan Native individuals populate counties least overall, yet have a wider range of F.I.R. reaching higher than White individuals as well.
+Among the educational attainment categories, there appears to be a negative association between bachelor's degree attainment and food insecurity rate. Conversely, the scatterplot shows a slight positive trend between 9-12th grade educational level and food insecurity rate. While no formal analysis was conducted, this finding is supported by the increased availability of higher paying jobs for college-educated individuals, and by the fact that college-educated individuals tend to have access to more financial resources than non-college-educated individuals. 
 
-As for individuals in differing levels of educational attainment, those with higher degrees generally tend to populate less and have lower F.I.R. Although no formal analysis was conducted, perhaps there is association between the two considering it requires more money to attend higher levels of education meaning these individuals have more access to food resources in general.
+The insurance status plots suggest a positive association between percent uninsured people (ages 19-64) and food insecurity rate. Lastly, income brackets do show stark differences in distribution of individuals. As expected, higher proportions of upper quartile earners were associated with reduced county-level food insecurity rate.
 
-Insurance status groups have interesting trends where roughly equal amounts of individuals have, and do not have, insurance coverage. In terms of F.I.R., there appears to be no group that drastically exceeds another. Lastly, income brackets do show stark differences in distribution of individuals. The bracket of $200,000 or more contains individuals that populate their counties the least. They also tend toward lower F.I.R. whereas every other  group has a larger range and more individuals overall.
-
-The insurance status plots suggest a positive association between percent uninsured people (ages 19-64) and food insecurity rate. As expected, higher proportions of upper quartile earners were associated with reduced county-level food insecurity rate.  
-
-### Trends in national food insecurity rates
+## Trends in national food insecurity rates
 
 The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.16% to about 13.24%.  The average child food insecurity rate has also been decreasing, from about 25.8% to 19.36%.  The average rate of child food insecurity in the USA is consistently higher than the overall average rate of food insecurity from year to year.
 
