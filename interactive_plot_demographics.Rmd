@@ -116,7 +116,7 @@ g <- list(
 
 
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
-z_df = final_demographics_df %>%
+f_df = final_demographics_df %>%
   mutate(fi_rate = fi_rate * 100,
          white = white * 100,
          black = black * 100,
@@ -149,7 +149,8 @@ z_df = final_demographics_df %>%
 renderPlotly({
 if(input[["state"]] != "USA"){
   
-z_df %>% 
+f_df %>% 
+    dplyr:: filter(state.x == input[["state"]]) %>%
   
 plot_ly() %>% 
   add_trace(
@@ -229,7 +230,7 @@ plot_ly() %>%
 )
            ) %>% 
   layout(
-    title = "US Food Insecurity Metrics by County",
+    title = "US Food Insecurity Metrics with Demographics Indicators",
     geo = g
 )
 
@@ -238,7 +239,7 @@ plot_ly() %>%
 
 else{
   
-z_df %>% 
+f_df %>% 
 plot_ly() %>% 
   add_trace(
     type="choropleth",
