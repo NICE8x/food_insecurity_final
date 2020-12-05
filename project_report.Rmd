@@ -463,7 +463,7 @@ To view geographic trends in food insecurity indicators across the United States
  
 We also created an [interactive map](https://tessas.shinyapps.io/countymaps/) which contains the locations of food banks across the United States to encourage utilization and/or donation. 
 
-To supplement the above exploratory analyses, we became interested in comparing and characterizing the prevalence of food insecurity within select New York state counties, and US regions. We generated [animated boxplots](https://nice8x.github.io/food_insecurity_final/dashboard_2.html) which transition through four food insecurity indicators: overall food insecurity rate, the total number of food insecure individuals, child food insecurity rate and the number of food insecure children. 
+To supplement the above exploratory analyses, we became interested in comparing and characterizing the prevalence of food insecurity within select New York state counties, and US states and regions. We generated [animated boxplots](https://nice8x.github.io/food_insecurity_final/dashboard_2.html) which transition through four food insecurity indicators: overall food insecurity rate, the total number of food insecure individuals, child food insecurity rate and the number of food insecure children. 
 
 The below plot shows the overall and child food insecurity rates in select New York state counties of interest (New York, Queens, Kings, Bronx, Westchester, Albany, Saint Lawrence and Chautauqua) over the 9 year period (2009-2017): 
 
