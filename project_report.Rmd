@@ -13,6 +13,12 @@ library(tidyverse)
 library(gganimate)
 library(kableExtra)
 library(plotly)
+library(readxl)
+library(rvest)
+library(httr)
+library(RSelenium)
+library(stringr)
+library(usdata)
 
 
 knitr::opts_chunk$set(
@@ -43,8 +49,6 @@ Food insecurity is associated with numerous adverse [health outcomes](https://ww
 
 Existing [research](https://alliancetoendhunger.org/wp-content/uploads/2017/07/Hill-advocacy-fact-sheet__HUNGER-IS-A-RACIAL-EQUITY-ISSUE_Alliance-to-End-Hunger.pdf) has shown food insecurity to disproportionately impact non-White populations, as well as immigrants, those lacking health insurance, and those with lower educational attainment.  
 
-*Figure 1.* National food insecurity prevalence by race and ethnicity
-
 ![](FI_prevalence_by_race.png)\
 Image from [Center on Budget and Policy Priorities](https://www.cbpp.org/food-insecurity-by-race-and-ethnicity-reveals-stark-disparities)
 
@@ -52,11 +56,11 @@ As a result of the increasing prevalence of food insecurity during the COVID-19 
 
 #### _Related Work_
 
-This is of particular importance, since [research](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/investigations-discovery/hospitalization-death-by-race-ethnicity.html) has shown the COVID-19 pandemic to be disproportionately impacting many of these same sub-populations. Moreover, a majority of food insecure individuals surveyed in Feeding America's 2014 Hunger in America [study](https://www.feedingamerica.org/hunger-in-america/impact-of-hunger#:~:text=Hunger%20and%20health%20are%20deeply,adverse%20effects%20to%20overall%20health.) reported having to choose between food and medical care. Increasing financial burden in 2020 due to job and/or health insurance loss may be further exacerbating this phenomenon.
+This is of particular importance, since [research](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/investigations-discovery/hospitalization-death-by-race-ethnicity.html) has shown the COVID-19 pandemic to be disproportionately impacting many of these same sub-populations. Moreover, a majority of food insecure individuals surveyed in [Feeding America's 2014 Hunger in America](https://www.feedingamerica.org/hunger-in-america/impact-of-hunger#:~:text=Hunger%20and%20health%20are%20deeply,adverse%20effects%20to%20overall%20health.) study reported having to choose between food and medical care. Increasing financial burden in 2020 due to job and/or health insurance loss may be further exacerbating this phenomenon.
 
 Thus, identifying the specific regions and/or sub-populations at the greatest risk for food insecurity is essential to develop and enact targeted, effective intervention strategies to reduce the burden of food insecurity.
 
-## *Initial Questions*
+## *Research Questions*
 
 Initially, our overarching question was, what does the food disparity across the United States look like on national, regional, state and county levels? After investigating the variables in our datasets, we developed more specific research questions and goals, including:
 
@@ -81,16 +85,6 @@ Each report presents estimates of 15 food insecurity indicators generated using 
 - Percent of Children in Food Insecure Households with Household Incomes Above 185% of the Federal Poverty Level
 
 As these data were contained on multiple Excel files, we used the map function to import the data across files. Since column naming was not always consistent across files, the coalesce function was used to combine data from columns representing the same variables. We then generated a unique county-state field, and re-valued select county entries using stringr to be consistent with the US Healthcare.gov [Geocodes dataset](https://data.healthcare.gov/resource/geocodes-usa-with-counties.json) county naming convention.
-
-```{r import libraries, eval = FALSE}
-#import libraries
-library(tidyverse)
-library(readxl)
-library(rvest)
-library(httr)
-library(RSelenium)
-library(stringr)
-```
 
 ```{r import map the meal data, eval = FALSE}
 #import Map the Meal Gap County data using map function
@@ -198,13 +192,6 @@ In addition to the Map the Meal Gap data, we also used [2017 US Census American 
 
 Like the Map the Meal Gap data, the ACS data were contained on multiple CSV files. Thus, we used the map function to import the data across files. To merge this dataset with the Map the Meal Gap data on the county variable, we also re-valued county entries using stringr to be consistent with the above mentioned geocodes dataset county naming convention. 
 
-```{r load, message=FALSE, warning=FALSE, eval = FALSE}
-#import libraries
-library(tidyverse)
-library(stringr)
-library(usdata)
-```
-
 ```{r try something else, eval = FALSE}
 #Import demographic data for 2017 using map function
 path_acs_df = 
@@ -292,7 +279,6 @@ location_data = location_data %>%
 
 #Save data as a csv.
 write_csv(x = location_data, "location_data.csv")
-
 ```
 
 ```{r join data, eval = FALSE}
@@ -675,4 +661,4 @@ map_the_meal_gap_df %>%
 
 Overall, we found that while the national rate of food insecurity in the US has decreased from 2009 to 2017, there is still a significant percentage of the population experiencing food insecurity, and there are particular subpopulations and regions at heightened risk. 
 
-[Studies](https://www.aacu.org/aacu-news/newsletter/majority-college-students-experience-food-insecurity-housing-insecurity-or) show a majority of college students experience food insecurity in the US. To volunteer or access immediate nutrition assistance resources, visit Columbia University's [food pantry](https://thefoodpantry.studentgroups.columbia.edu/) or [Feeding America](feedingamerica.com). 
+To volunteer or access nutrition assistance resources, visit Columbia University's [food pantry](https://thefoodpantry.studentgroups.columbia.edu/) or [Feeding America](feedingamerica.com). 
