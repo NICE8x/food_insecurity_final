@@ -34,8 +34,8 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
-### *Motivation*
-## _Food Insecurity Prevalence and Significance_
+## *Motivation*
+#### _Food Insecurity Prevalence and Significance_
 
 Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 an estimated [40 million Americans](https://www.feedingamerica.org/sites/default/files/research/map-the-meal-gap/2016/2016-map-the-meal-gap-health-implications.pdf) (13.2 percent) were food insecure.
 
