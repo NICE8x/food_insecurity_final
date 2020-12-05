@@ -20,9 +20,16 @@ body {
 ![](https://registerforum.org/wp-content/uploads/2020/06/COVIDFoodLaraGaray.jpg)\
 Image from [Register Forum](https://registerforum.org/12158/opinion/covid-19-sheds-light-on-food-disparity/)
 
-Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 approximately forty million Americans were food insecure. As a result of the COVID-19 pandemic, millions of Americans have lost stable employment; early estimates suggest more than [50 million people](https://www.feedingamerica.org/sites/default/files/2020-10/Brief_Local%20Impact_10.2020_0.pdf), including 1 in 4 children, may be experiencing food insecurity in 2020. 
+Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 approximately 40 million Americans were food insecure. As a result of the COVID-19 pandemic, millions of Americans have lost stable employment; early estimates suggest more than [50 million people](https://www.feedingamerica.org/sites/default/files/2020-10/Brief_Local%20Impact_10.2020_0.pdf), including 1 in 4 children, may be experiencing food insecurity in 2020. 
 
 We were collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health to understand the specific regions and/or sub-populations at the greatest risk for food insecurity. This information may be used to help identify targets for future health policy implementation. 
+
+Our goals are to: 
+
+- Identify counties, states and regions that are most disproportionately affected by food insecurity
+- Investigate the demographic breakdowns of food insecure counties
+- Assess how food insecurity has changed overtime in the USA and specifically in NY state
+- And, visualize food insecurity in an accessible way to empower people to help and/or access nutrition assistance resources 
 
 ## Datasets
 
