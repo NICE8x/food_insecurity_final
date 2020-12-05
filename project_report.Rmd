@@ -35,13 +35,13 @@ scale_fill_discrete = scale_fill_viridis_d
 ```
 
 ### *Motivation*
-## *Food Insecurity Prevalence and Significance*
+## _Food Insecurity Prevalence and Significance_
 
 Food insecurity, the state of being without reliable access to a sufficient quantity of affordable, nutritious food, is a leading health and nutrition issue in the United States. In 2017 an estimated [40 million Americans](https://www.feedingamerica.org/sites/default/files/research/map-the-meal-gap/2016/2016-map-the-meal-gap-health-implications.pdf) (13.2 percent) were food insecure.
 
 Food insecurity is associated with numerous adverse [health outcomes](https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2015.0645#:~:text=The%20majority%20of%20research%20examining,9%20and%20aggression%20and%20anxiety.), including mental health problems, diabetes, hypertension, asthma and poorer general health. As a result of the COVID-19 pandemic, millions of Americans have lost stable employment; early estimates suggest more than [50 million people](https://www.feedingamerica.org/sites/default/files/2020-10/Brief_Local%20Impact_10.2020_0.pdf), including 1 in 4 children, may be experiencing food insecurity in 2020. 
 
-Existing research has shown food insecurity to disproportionately impact non-White populations, as well as immigrants, those lacking health insurance, and those with lower educational attainment.  
+Existing [research](https://alliancetoendhunger.org/wp-content/uploads/2017/07/Hill-advocacy-fact-sheet__HUNGER-IS-A-RACIAL-EQUITY-ISSUE_Alliance-to-End-Hunger.pdf) has shown food insecurity to disproportionately impact non-White populations, as well as immigrants, those lacking health insurance, and those with lower educational attainment.  
 
 *Figure 1.* National food insecurity prevalence by race and ethnicity
 
@@ -50,7 +50,7 @@ Image from [Center on Budget and Policy Priorities](https://www.cbpp.org/food-in
 
 As a result of the increasing prevalence of food insecurity during the COVID-19 pandemic, we are collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health. 
 
-## *Related Work*
+## _Related Work_
 
 This is of particular importance, since [research](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/investigations-discovery/hospitalization-death-by-race-ethnicity.html) has shown the COVID-19 pandemic to be disproportionately impacting many of these same sub-populations. Moreover, a majority of food insecure individuals surveyed in Feeding America's 2014 Hunger in America [study](https://www.feedingamerica.org/hunger-in-america/impact-of-hunger#:~:text=Hunger%20and%20health%20are%20deeply,adverse%20effects%20to%20overall%20health.) reported having to choose between food and medical care. Increasing financial burden in 2020 due to job and/or health insurance loss may be further exacerbating this phenomenon.
 
@@ -58,7 +58,7 @@ Thus, identifying the specific regions and/or sub-populations at the greatest ri
 
 ### *Initial Questions*
 
-Initially, our overarching question was, what does the food disparity across the United States look like on national, regional and county-levels? After investigating the variables in our datasets, we developed more specific research questions and goals, including:
+Initially, our overarching question was, what does the food disparity across the United States look like on national, regional, state and county levels? After investigating the variables in our datasets, we developed more specific research questions and goals, including:
 
 - Which counties, states and regions are most disproportionately affected by food insecurity?
 - What are the demographic breakdowns of food insecure counties? 
@@ -67,11 +67,9 @@ Initially, our overarching question was, what does the food disparity across the
 
 ### *Data*
 
-We utilized Feeding America's Map the Meal Gap data to quantify food insecurity on a county and regional level. [Map the Meal Gap](./Map the Meal Gap Overview and FAQ 10.2020.pdf) is an annual study conducted by Feeding America to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. For this project, we used Map the Meal Gap annual study reports from years 2011 to 2019, where each report is based on US Census data from the preceding two years. Thus, the study data range from years 2009 - 2017.  
+We utilized Feeding America's Map the Meal Gap data to quantify food insecurity on a county, state, regional and national level. [Map the Meal Gap](./Map the Meal Gap Overview and FAQ 10.2020.pdf) is an annual study conducted by Feeding America to characterize how food insecurity and food costs vary at the local level. Understanding these variations may allow communities to develop targeted strategies to reach people struggling with hunger. For this project, we used Map the Meal Gap annual study reports from years 2011 to 2019, where each report is based on US Census data from the preceding two years. Thus, the study data range from years 2009 - 2017.  
 
-Each report presents estimates of 15 food insecurity indicators generated using predictive modeling.  Data were presented on the state, county, and congressional district-level. For this project, we used county-level data.  We chose to specifically focus on 8 of those 15 indicators for our analysis. 
-
-8 Food Insecurity Indicators:
+Each report presents estimates of 15 food insecurity indicators generated using predictive modeling. Data were presented on the state, county, and congressional district-level. We chose to specifically focus on 8 of those 15 indicators for our analysis, which include: 
 
 - Food Insecurity Rate(the % of food insecure people)
 - Number of Food Insecure Individuals
@@ -79,10 +77,10 @@ Each report presents estimates of 15 food insecurity indicators generated using 
 - Cost Per Meal(Average cost per meal in $)
 - Child Food Insecurity Rate(the % of food insecure children)
 - Number of Food Insecure Children
-- % of Children in Food Insecure Households with Household Incomes Below 185% of the Federal Poverty Level
-- % of Children in Food Insecure Households with Household Incomes Above 185% of the Federal Poverty Level
+- Percent of Children in Food Insecure Households with Household Incomes Below 185% of the Federal Poverty Level
+- Percent of Children in Food Insecure Households with Household Incomes Above 185% of the Federal Poverty Level
 
-As these data were contained on multiple Excel files, we used the map function to import the data across files. Since column naming was not always consistent across files, the coalesce function was used to combine data from columns representing the same variables. We then generated a unique county-state field, and re-valued select county entries using stringr to be consistent with the US Healthcare.gov Geocodes dataset county naming convention (https://data.healthcare.gov/resource/geocodes-usa-with-counties.json).
+As these data were contained on multiple Excel files, we used the map function to import the data across files. Since column naming was not always consistent across files, the coalesce function was used to combine data from columns representing the same variables. We then generated a unique county-state field, and re-valued select county entries using stringr to be consistent with the US Healthcare.gov [Geocodes dataset](https://data.healthcare.gov/resource/geocodes-usa-with-counties.json) county naming convention.
 
 ```{r import libraries, eval = FALSE}
 #import libraries
@@ -198,7 +196,7 @@ map_the_meal_gap_df = map_the_meal_gap_df %>%
 
 In addition to the Map the Meal Gap data, we also used [2017 US Census American Community Survey (ACS) datasets](https://www.census.gov/acs/www/data/data-tables-and-tools/geographic-comparison-tables/), which provide county-level breakdowns of relevant social determinants of health, including county racial and ethnic makeup, percent uninsured, percent foreign born, educational attainment breakdowns, and income category breakdowns. We merged these datasets on the county variable to generate a singular tidied table containing county-level food insecurity estimates and demographic breakdowns.
 
-Like the Map the Meal Gap data, the ACS data were contained on multiple CSV files. Thus, we used the map function to import the data across files. To merge this dataset with the Map the Meal Gap data on the county variable, we also re-valued county entries using stringr to be consistent with the above mentioned county naming convention. 
+Like the Map the Meal Gap data, the ACS data were contained on multiple CSV files. Thus, we used the map function to import the data across files. To merge this dataset with the Map the Meal Gap data on the county variable, we also re-valued county entries using stringr to be consistent with the above mentioned geocodes dataset county naming convention. 
 
 ```{r load, message=FALSE, warning=FALSE, eval = FALSE}
 #import libraries
@@ -267,7 +265,7 @@ mtm_acs_2017_df = left_join(mtm_2017_df, acs_df, by = "county_state") %>%
 write_csv(x = mtm_acs_2017_df, "mtm_acs_2017_df.csv")
 ```
 
-In order to map these data elements onto a US county map, we also joined the zip code, latitude and longitude fields from the US Healthcare.gov Geocodes dataset onto the table. Federal Information Processing Standards [(FIPS)](https://mdreducation.com/pdfs/US_FIPS_Codes) county codes were also separately joined onto the tidied table from an educational website. 
+In order to map these data elements onto a US county map, we also joined the zip code, latitude and longitude fields from the US Healthcare.gov Geocodes dataset onto the table. Federal Information Processing Standards [(FIPS)](https://www.census.gov/geographies/reference-files/2018/demo/popest/2018-fips.html) county codes from the US Census Bureau were also separately joined onto the tidied table. 
 
 ```{r get county and zipcode info, eval = FALSE}
 #Import location data (zip, county, longitude, and latitude) from government website.
@@ -362,7 +360,7 @@ mtm_fips_df = left_join(map_the_meal_gap_df, fips_df, by = "county_state") %>%
   drop_na(fips)
 ```
 
-Finally a list of food banks from the Feeding America website was scraped by running a shell of the Docker software in R.  We used Docker to navigate the website and unhide the data of interest, before using the CSS selector tool to identify the data’s CSS selectors.  This data was also matched to the zip code, latitude and longitude data elements in order to map the food bank locations.
+Finally a list of food banks from the Feeding America website was scraped by running a shell of the Docker software in R. We used Docker to navigate the website and unhide the data of interest, before using the CSS selector tool to identify the data’s CSS selectors. This data was also matched to the zip code, latitude and longitude data elements in order to map the food bank locations.
 
 ```{r use docker for food bank list, eval = FALSE}
 #Use Docker to go to the Feeding America website and scrape for the names, address/phone number, and website of 200 food banks in America. 
@@ -410,7 +408,7 @@ write_csv(x = food_banks_df, "food_banks_df.csv")
 ```
 
 ### *Exploratory analysis*
-## *Food insecurity and county demographic breakdowns*
+## _Food insecurity and county demographic breakdowns_
  
 We created animated scatterplots joining the tidy American Community Survey data on the tidy Feeding America data to develop and compare specific variables of interest against food insecurity rates. These variables included percent race, educational attainment, insurance status, and income bracket within each county in the U.S. To compare these variables against the food insecurity rate, we converted raw counts to percents.
  
@@ -457,7 +455,7 @@ race_per_plot =
 animate(race_per_plot, fps = 5, height = 500, width = 1000)
 ```
 
-## *Regional variation in food insecurity*
+## _Regional variation in food insecurity_
 
 To view geographic trends in food insecurity indicators across the United States and over time, we also generated an interactive [county map](https://tessas.shinyapps.io/countymaps/) of the US which allows users to view and compare food insecurity measures across all counties simultaneously. Users may select the food insecurity metric of interest, as well as the year and particular states, if desired. 
  
@@ -522,7 +520,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
     yaxis = list(title = "Food Insecurity Rate")) 
 ```
 
-We also generated a region variable using the United States Census definitions of US regions to compare region-level food insecurity indicators. The below plot compares the overall and child food insecurity rates by US region (Northeast, South, West, Midwest) over the 9 year period (2009-2017): 
+We also generated a region variable using the United States Census [definitions of US regions](https://www.census.gov/geographies/reference-files/2018/demo/popest/2018-fips.html) to compare region-level food insecurity indicators. The below plot compares the overall and child food insecurity rates by US region (Northeast, South, West, Midwest) over the 9 year period (2009-2017): 
 
 ```{r, message = FALSE, warning = FALSE}
 # create state and region vectors
@@ -575,7 +573,7 @@ animate(fi_rates_region, fps = 10, height = 500, width = 1000)
 
 To see population-based plots depicting the number of food insecure people and children in each selected New York State county and in each US region, visit our [NY and More dashboard](https://nice8x.github.io/food_insecurity_final/dashboard_2.html).
 
-After observing county, state, and region-level differences in food insecurity rates, we became interested in assessing how food insecurity may have evolved overtime in select areas. The below line graph shows trends in overall food insecurity rate overtime from 2009 - 2017 in the 8 selected New York state counties of interest.   
+After observing county, state, and region-level differences in food insecurity rates, we became interested in assessing how food insecurity may have evolved overtime in select areas. The below graph shows trends in overall food insecurity rate overtime from 2009 - 2017 in the 8 selected New York state counties of interest.   
 
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 read_csv("map_the_meal_gap_df.csv") %>%
@@ -607,7 +605,9 @@ plot_ly(
     yaxis = list(title = "Food Insecurity Rate"))
 ```
 
-### *Analysis of National Trends*
+### _Analysis of National Trends_
+
+To visualize national trends in food insecurity, we also developed the below bar graph which shows the US food insecurity rate overtime (2009 - 2017). 
 
 ```{r, message = FALSE, warning = FALSE}
 read_csv("./map_the_meal_gap_df.csv") %>%
@@ -621,36 +621,33 @@ read_csv("./map_the_meal_gap_df.csv") %>%
   colorbar(title = "Avg Food Insecurity Rate")
 ```
 
-
 ### *Discussion*
 
-## *Regional variation in food insecurity*
+## _Regional variation in food insecurity_
 
-There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and individuals across the United States. North Dakota, northern Virginia and Maryland contain counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contain counties with over 35 percent overall food insecurity rates. 
+There exists substantial regional variation in food insecurity and child food insecurity rates, and in the number of food insecure children and people across the United States. Through the US county map, we found that North Dakota, northern Virginia and Maryland contained counties with some of the lowest rates of food insecurity (less than 10 percent). Alabama and Mississippi, on the other hand, contained counties with some of the highest overall rates (over 35 percent). 
 
-Preliminary analysis of the box plot data shows substantial variation in food insecurity between several selected counties within New York state. We selected Kings, Bronx, New York, Queens, Westchester, Albany, Chautauqua and Saint Lawrence counties to compare food insecurity across both rural and urban communities. While the Bronx had the highest rates of overall and child food insecurity, Kings county had the largest number of food insecure individuals and children due to differences in population size. The selected rural counties (Saint Lawrence and Chautauqua) had particularly high child food insecurity rates; higher rates were observed only in Bronx county. 
+Preliminary analysis of the box plot data showed substantial variation in food insecurity between several selected counties within New York state. We selected Kings, Bronx, New York, Queens, Westchester, Albany, Chautauqua and Saint Lawrence counties to compare food insecurity across both rural and urban communities. While the Bronx had the highest rates of overall and child food insecurity, Kings county had the largest number of food insecure individuals and children due to differences in population size. The selected rural counties (Saint Lawrence and Chautauqua) had particularly high child food insecurity rates; higher rates were observed only in Bronx county. 
 
 On a state level, Mississippi was shown to have the highest rate of overall food insecurity, while North Dakota had the lowest. Regionally, the South had the highest rates of overall and child food insecurity, as well as the greatest numbers of food insecure individuals and children. The Northeast had the lowest rates of food insecurity and fewest food insecure people. 
 
-## *Food insecurity and county demographic breakdowns*
+## _Food insecurity and county demographic breakdowns_
 
-Observational analysis of the scatterplot data suggests that there is a difference in food insecurity rates between races, levels of educational attainment, income brackets, and insurance statuses. 
+Observational analysis of the scatterplot data suggests that there is a difference in food insecurity rates between races, levels of educational attainment, income brackets, and insurance status. 
 
-There appears to be a positive association between percent Black race and food insecurity rate, and a negative association between percent White race and food insecurity rate on the county-level. White individuals populate the majority of virtually all counties, where increasing food insecurity rates are seen among counties in which the percentage of white individuals begins to drop. As the percentage of Black individuals increases within a county to above ~25%, food insecurity rates begin to increase. 
+Our results showed a positive association between percent Black race and food insecurity rate, and a negative association between percent White race and food insecurity rate on the county-level. While the vast majority of US counties contain very small percentages of American Indian and/or Alaskan Native people, there appeared to be a positive association between percent Native and food insecurity rate based on the handful of counties with large Native populations. 
 
-While a vast majority of US counties contain marginally small percentages of American Indian and/or Alaskan Native people, there appears to be a positive association between percent Native and food insecurity among the handful of counties with percentages between 15 and 75 percent. 
+Among the educational attainment categories, there was a negative association between bachelor's degree attainment and food insecurity rate. Conversely, the scatterplot showed a slight positive trend between 9-12th grade educational level and food insecurity rate. While no formal analysis was conducted, this finding is supported by the increased availability of higher paying jobs for college-educated individuals, and by the fact that college-educated individuals tend to have access to more financial resources than non-college-educated individuals. 
 
-Among the educational attainment categories, there appears to be a negative association between bachelor's degree attainment and food insecurity rate. Conversely, the scatterplot shows a slight positive trend between 9-12th grade educational level and food insecurity rate. While no formal analysis was conducted, this finding is supported by the increased availability of higher paying jobs for college-educated individuals, and by the fact that college-educated individuals tend to have access to more financial resources than non-college-educated individuals. 
+The insurance status plots showed a positive association between percent uninsured people (ages 19-64) and food insecurity rate. Lastly, as expected, income plots showed a higher proportions of upper quartile earners were associated with reduced county-level food insecurity rate.
 
-The insurance status plots suggest a positive association between percent uninsured people (ages 19-64) and food insecurity rate. Lastly, income brackets do show stark differences in distribution of individuals. As expected, higher proportions of upper quartile earners were associated with reduced county-level food insecurity rate.
+## _Trends in national food insecurity rates_
 
-## *Trends in national food insecurity rates*
+The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.16% to about 13.24%. The average child food insecurity rate has also been decreasing, from about 25.8% to 19.36%. The average rate of child food insecurity in the USA is consistently higher than the overall average rate of food insecurity from year to year.
 
-The national food insecurity rate has been slowly decreasing from 2009 to 2017 from about 16.16% to about 13.24%.  The average child food insecurity rate has also been decreasing, from about 25.8% to 19.36%.  The average rate of child food insecurity in the USA is consistently higher than the overall average rate of food insecurity from year to year.
+Correspondingly, the number of food insecure individuals in the entire USA has been slowly decreasing from 2009 to 2017 from almost 47 million (46,972,100) to just above than 40 million (40,286,060). The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).
 
-Correspondingly, the number of food insecure individuals in the entire USA has been slowly decreasing from 2009 to 2017 from almost 47 million (46,972,100) to just above than 40 million (40,286,060).  The number of food insecure children in the entire USA has also been slowly decreasing from 2009 to 2017 from over 18 million (18,281,540) to less than 14 million (13,268,380).
-
-The average cost per meal decreased from about `$2.55` to `$2.52` from 2009 to 2010 but after 2010 has been steadily increasing.  In 2017 the average cost per meal was `$3.02`.  The average weighted annual food budget shortfall in the US increased from about 6.3 million (6,325,000) in 2009 to almost 7.5 million(7,498,000) in 2014.  Since 2014 the average weighted annual food budget shortfall has decreased to about 6.9 million(6,914,000) in 2017. 
+The average cost per meal decreased from about `$2.55` to `$2.52` from 2009 to 2010 but after 2010 has been steadily increasing.  In 2017 the average cost per meal was `$3.02`.  The average weighted annual food budget shortfall in the US increased from about 6.3 million (6,325,000) in 2009 to almost 7.5 million (7,498,000) in 2014.  Since 2014 the average weighted annual food budget shortfall has decreased to about 6.9 million (6,914,000) in 2017. 
 
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 map_the_meal_gap_df = read_csv("./map_the_meal_gap_df.csv")
@@ -676,3 +673,6 @@ map_the_meal_gap_df %>%
   kable_classic(full_width = F, html_font = "Montserrat")
 ```
 
+Overall, we found that while the national rate of food insecurity in the US has decreased from 2009 to 2017, there is still a significant percentage of the population experiencing food insecurity, and there are particular subpopulations and regions at heightened risk. 
+
+[Studies](https://www.aacu.org/aacu-news/newsletter/majority-college-students-experience-food-insecurity-housing-insecurity-or) show a majority of college students experience food insecurity in the US. To volunteer or access immediate nutrition assistance resources, visit Columbia University's [food pantry](https://thefoodpantry.studentgroups.columbia.edu/) or [Feeding America](feedingamerica.com). 
