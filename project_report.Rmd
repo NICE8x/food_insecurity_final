@@ -617,7 +617,8 @@ read_csv("./map_the_meal_gap_df.csv") %>%
   layout(
     title = "US National Food Insecurity Rate Over Time (2009-2017)",
     xaxis = list(title = "Year", tickfont = list(size = 10)),
-    yaxis = list(title = "Food Insecurity Rate"))
+    yaxis = list(title = "Food Insecurity Rate")) %>%
+  colorbar(title = "Avg Food Insecurity Rate")
 ```
 
 
