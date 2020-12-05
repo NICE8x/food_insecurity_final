@@ -3,7 +3,7 @@ title: "NY and More"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
-    vertical_layout: fill
+    vertical_layout: scroll
 ---
 
 ```{r setup, include=FALSE, message = FALSE, warning = FALSE, echo = FALSE}
@@ -31,6 +31,7 @@ scale_colour_discrete = scale_colour_viridis_d
 scale_fill_discrete = scale_fill_viridis_d
 ```
 
+Row
 -----------------------------------------------------------------------
 
 ### Food Insecurity Rates in Select New York State Counties
@@ -76,7 +77,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
 animate(fi_rates, fps = 10, height = 500, width = 1000)
 ```
 
------------------------------------------------------------------------
+
 
 ### Number of Food Insecure People by New York State County
 
@@ -120,6 +121,7 @@ read_csv("map_the_meal_gap_df.csv") %>%
 animate(fi_numbers, fps = 10, height = 500, width = 1000)
 ```
 
+Row
 -----------------------------------------------------------------------
 
 ### Food Insecurity Rates by US Region
@@ -169,7 +171,7 @@ fi_rates_region =
 animate(fi_rates_region, fps = 10, height = 500, width = 1000)
 ```
 
------------------------------------------------------------------------
+
 
 ### Number of Food Insecure People by US Region
 
@@ -205,6 +207,9 @@ num_fi_region =
   
 animate(num_fi_region, fps = 10, height = 500, width = 1000)
 ```
+
+Row
+---------------------------------------------------
 
 ### Overall Food Insecurity Rate by State
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}

@@ -129,7 +129,7 @@ write_csv(x = mtm_2017_acs_2017_race_df, "mtm_2017_acs_2017_race_df.csv")
 Row
 -----------------------------------------------------------------------
 
-### Percent of Each Race Within Each County by Food Insecurity Rate
+### Percent of Each Race in Each County by Food Insecurity Rate
 
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 race_per_plot =
