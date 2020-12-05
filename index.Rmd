@@ -24,7 +24,7 @@ Food insecurity, the state of being without reliable access to a sufficient quan
 
 We were collectively interested in investigating the prevalence of food insecurity on the county-level and its association with select social determinants of health to understand the specific regions and/or sub-populations at the greatest risk for food insecurity. This information may be used to help identify targets for future health policy implementation. 
 
-Our goals are to: 
+Our goals are to:
 
 - Identify counties, states and regions that are most disproportionately affected by food insecurity
 - Investigate the demographic breakdowns of food insecure counties
